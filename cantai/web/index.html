@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cantai - Planejamento de Hinos</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <h1>🎼 Cantai</h1>
+    <p class="subtitle">Planejamento de Hinos</p>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>Momento do culto</h2>
+      <select id="momento">
+        <option value="adoracao">Adoração</option>
+        <option value="ceia">Santa Ceia</option>
+        <option value="batismo">Batismo</option>
+        <option value="evangelismo">Evangelismo</option>
+        <option value="missoes">Missões</option>
+        <option value="convite">Convite</option>
+        <option value="natal">Natal</option>
+        <option value="pascoa">Páscoa</option>
+        <option value="gratidao">Gratidão</option>
+        <option value="funeral">Funeral</option>
+        <option value="casamento">Casamento</option>
+        <option value="infantil">Infantil</option>
+      </select>
+    </section>
+
+    <section class="card">
+      <h2>Hinários</h2>
+      <div class="checkbox-group">
+        <label class="checkbox-label">
+          <input type="checkbox" id="hctp" checked>
+          <span>Cantai Todos os Povos</span>
+        </label>
+        <label class="checkbox-label">
+          <input type="checkbox" id="harpa" checked>
+          <span>Harpa Cristã</span>
+        </label>
+        <label class="checkbox-label">
+          <input type="checkbox" id="cantor" checked>
+          <span>Cantor Cristão</span>
+        </label>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Evitar repetição</h2>
+      <select id="repeticao">
+        <option value="30">30 dias</option>
+        <option value="60">60 dias</option>
+        <option value="90" selected>90 dias</option>
+        <option value="180">180 dias</option>
+        <option value="365">1 ano</option>
+      </select>
+    </section>
+
+    <button class="btn-primary" onclick="suggestHymns()">
+      🎵 SUGERIR HINOS
+    </button>
+
+    <section id="resultados" class="resultados"></section>
+  </main>
+
+  <footer class="footer">
+    <p>Versão: <span id="db-version">-</span> · <span id="db-count">-</span> hinos carregados</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
