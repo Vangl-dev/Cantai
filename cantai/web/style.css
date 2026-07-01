@@ -120,6 +120,26 @@ select {
   cursor: pointer;
 }
 
+.input-busca {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  color: var(--text);
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.input-busca:focus {
+  border-color: var(--primary);
+}
+
+.input-busca::placeholder {
+  color: var(--text-secondary);
+}
+
 .btn-primary {
   width: 100%;
   padding: 1rem;

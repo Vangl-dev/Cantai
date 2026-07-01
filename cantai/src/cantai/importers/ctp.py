@@ -11,8 +11,20 @@ from cantai.schemas import AuditIssue, AuditReport, Hymn
 
 _HYMNAL = "CTP"
 _DATA_TEMP_PPTX = Path(__file__).resolve().parent.parent.parent.parent / "data" / "temp" / "pptx"
+_DATA_TEMP = _DATA_TEMP_PPTX.parent
 _FILTROS = {"IPIVILANOVAVOTORANTIM"}
 _RE_SLIDE_NUM = re.compile(r"^\d+/\d+$")
+
+
+def _validar_pasta_origem(path: Path) -> None:
+    """Valida se a pasta informada não é uma pasta temporária do Builder."""
+    resolved = path.resolve()
+    temp_resolved = _DATA_TEMP.resolve()
+    if resolved == temp_resolved or str(resolved).startswith(str(temp_resolved) + "/"):
+        raise ValueError(
+            "A pasta informada é uma pasta temporária do Builder. "
+            "Informe a pasta ORIGINAL que contém os arquivos PPT/PPTX."
+        )
 
 
 def _convert_ppt_to_pptx(ppt_path: Path, output_dir: Path) -> bool:
@@ -97,6 +109,8 @@ def import_ctp(path: Path) -> tuple[list[Hymn], AuditReport]:
 
     Retorna uma tupla (hinos, relatorio).
     """
+    _validar_pasta_origem(path)
+
     report = AuditReport()
 
     _DATA_TEMP_PPTX.mkdir(parents=True, exist_ok=True)
@@ -108,9 +122,11 @@ def import_ctp(path: Path) -> tuple[list[Hymn], AuditReport]:
     report.pptx_encontrados = len(pptx_existentes)
 
     convertidos = 0
+    pptx_novos: list[Path] = []
     for ppt_file in ppt_files:
         if _convert_ppt_to_pptx(ppt_file, _DATA_TEMP_PPTX):
             convertidos += 1
+            pptx_novos.append(_DATA_TEMP_PPTX / f"{ppt_file.stem}.pptx")
         else:
             report.erros.append(AuditIssue(
                 arquivo=ppt_file.name,
@@ -118,8 +134,7 @@ def import_ctp(path: Path) -> tuple[list[Hymn], AuditReport]:
             ))
     report.convertidos = convertidos
 
-    pptx_convertidos = sorted(_DATA_TEMP_PPTX.glob("*.pptx"))
-    todos = list(pptx_convertidos) + list(pptx_existentes)
+    todos = list(pptx_novos) + list(pptx_existentes)
 
     vistos: set[Path] = set()
     lista_apresentacoes: list[Path] = []

@@ -1,13 +1,22 @@
 """Interface de linha de comando do Cantai Builder."""
 
+import re
+import shutil
 from pathlib import Path
 
 import typer
 from rich.console import Console
 
-from cantai.database import create_database, count_hymns, load_hymns, save_hymns
+from cantai.database import count_hymns, create_database, load_hymns, save_hymns
 from cantai.exporters.json import export_json
+from cantai.importers.cantor_cristao import import_cantor_cristao
+from cantai.importers.cantor_cristao_index import import_cc_index
 from cantai.importers.ctp import import_ctp
+from cantai.importers.ctp_index import import_ctp_index
+from cantai.importers.harpa import import_harpa
+from cantai.importers.harpa_index import import_harpa_index
+from cantai.importers.novo_cantico import import_novo_cantico
+from cantai.importers.salmos_hinos import import_salmos_hinos
 
 app = typer.Typer(
     name="Cantai Builder",
@@ -16,7 +25,9 @@ app = typer.Typer(
 )
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent
+DATA_INPUT = PROJECT_ROOT / "data" / "input"
 JSON_OUTPUT = PROJECT_ROOT / "data" / "output" / "cantai.json"
+WEB_OUTPUT = PROJECT_ROOT / "web" / "cantai.json"
 
 console = Console()
 
@@ -63,7 +74,11 @@ def importar(pasta: Path = typer.Argument(..., help="Pasta contendo arquivos .pp
 
     create_database()
 
-    hinos, report = import_ctp(pasta)
+    try:
+        hinos, report = import_ctp(pasta)
+    except ValueError as e:
+        console.print(f"[red]Erro:[/red] {e}")
+        raise typer.Exit(code=1)
     novos, atualizados = save_hymns(hinos)
     total = count_hymns()
 
@@ -77,6 +92,177 @@ def importar(pasta: Path = typer.Argument(..., help="Pasta contendo arquivos .pp
     console.print(f"Atualizados:       {atualizados}")
     console.print(f"Total no banco:    {total}")
     console.print("─" * 50)
+
+
+@app.command()
+def importar_indice() -> None:
+    """Importar índice temático do CTP."""
+    resultado = import_ctp_index()
+
+    if "erro" in resultado:
+        console.print(f"[red]Erro:[/red] {resultado['erro']}")
+        raise typer.Exit(code=1)
+
+    console.print()
+    console.print("─" * 50)
+    console.print("[bold]Índice Temático do CTP[/bold]")
+    console.print("─" * 50)
+    console.print(f"Categorias encontradas:           {resultado['categorias_encontradas']}")
+    console.print(f"Categorias importadas:            {resultado['categorias_importadas']}")
+    console.print(f"Hinos atualizados:                {resultado['hinos_atualizados']}")
+    console.print(f"Hinos não encontrados:            {resultado['hinos_nao_encontrados']}")
+    console.print(f"Hinos pertencentes a mais de 1:   {resultado['hinos_multipla_categoria']}")
+    console.print("─" * 50)
+
+    if resultado["multi_topics"]:
+        console.print()
+        console.print("[bold]Hinos com múltiplas categorias:[/bold]")
+        for num, topics in sorted(resultado["multi_topics"].items()):
+            console.print(f"  CTP {num}: {', '.join(topics)}")
+
+
+@app.command()
+def auditar_indice() -> None:
+    """Auditar e normalizar o índice temático do CTP."""
+    from cantai.importers.ctp_index_data import CTP_INDEX
+
+    console.print()
+    console.print("═" * 60)
+    console.print("[bold]Categorias do Índice Temático[/bold]")
+    console.print("═" * 60)
+
+    for cat_name in sorted(CTP_INDEX.keys()):
+        nums = CTP_INDEX[cat_name]
+        nums_sorted = sorted(nums, key=_sort_key)
+        console.print()
+        console.print(f"[bold]{cat_name}[/bold] ({len(nums)} hinos)")
+        console.print(f"  {', '.join(nums_sorted)}")
+
+    console.print()
+    console.print("═" * 60)
+    console.print("[bold]Validações[/bold]")
+    console.print("═" * 60)
+
+    duplicados_cat = len(CTP_INDEX) - len(set(CTP_INDEX.keys()))
+    vazias = [cat for cat, nums in CTP_INDEX.items() if not nums]
+
+    duplicados_interno = 0
+    for cat, nums in CTP_INDEX.items():
+        vistos = set()
+        for n in nums:
+            if n in vistos:
+                duplicados_interno += 1
+            vistos.add(n)
+
+    invalidos = []
+    for cat, nums in CTP_INDEX.items():
+        for n in nums:
+            motivo = _check_invalid_number(n)
+            if motivo:
+                invalidos.append((cat, n, motivo))
+
+    console.print(f"Categorias:             {len(CTP_INDEX)}")
+    console.print(f"Categorias duplicadas:  {duplicados_cat}")
+    console.print(f"Categorias vazias:      {len(vazias)}")
+    console.print(f"Duplicados removíveis:  {duplicados_interno}")
+    console.print(f"Números inválidos:      {len(invalidos)}")
+    console.print("═" * 60)
+
+    if duplicados_interno > 0:
+        console.print()
+        console.print("[yellow]Duplicados encontrados e removidos:[/yellow]")
+        for cat in sorted(CTP_INDEX.keys()):
+            vistos = []
+            duplicados = []
+            for n in CTP_INDEX[cat]:
+                if n in vistos:
+                    duplicados.append(n)
+                else:
+                    vistos.append(n)
+            if duplicados:
+                console.print(f"  {cat}: {', '.join(duplicados)}")
+
+    if invalidos:
+        console.print()
+        console.print("[bold]Números inválidos[/bold]")
+        console.print()
+        for cat, num, motivo in invalidos:
+            console.print(f"[bold]Categoria:[/bold] {cat}")
+            console.print(f"[bold]Valor:[/bold]     {num}")
+            console.print(f"[bold]Motivo:[/bold]    {motivo}")
+            console.print()
+
+    normalized = {}
+    for cat in sorted(CTP_INDEX.keys()):
+        nums = list(dict.fromkeys(CTP_INDEX[cat]))
+        normalized[cat] = sorted(nums, key=_sort_key)
+
+    _save_normalized_index(normalized)
+    console.print("[green]Arquivo normalizado salvo.[/green]")
+
+
+def _check_invalid_number(num_str: str) -> str | None:
+    """Verifica se um número é inválido e retorna o motivo."""
+    match = re.match(r"^(\d+)(.*)", num_str)
+    if not match:
+        return "formato inválido"
+
+    val = int(match.group(1))
+    suffix = match.group(2)
+
+    if val < 1 or val > 500:
+        return f"fora do intervalo (1-500): {val}"
+
+    if suffix:
+        if re.match(r"^[A-Z]$", suffix):
+            return "harmonização alternativa"
+        if re.match(r"^\(\d+[a-z]?\)$", suffix):
+            return "versão alternativa"
+        return f"sufixo inválido: {suffix}"
+
+    return None
+
+
+def _sort_key(num_str: str):
+    match = re.match(r"^(\d+)", num_str)
+    return int(match.group(1)) if match else 0
+
+
+def _save_normalized_index(data: dict) -> None:
+    """Salva o índice normalizado em ctp_index_data.py."""
+
+    lines = [
+        '"""Índice temático do CTP - dados extraídos manualmente do PDF."""',
+        "",
+        "CTP_INDEX: dict[str, list[str]] = {",
+    ]
+
+    for cat_name in sorted(data.keys()):
+        nums = data[cat_name]
+        nums_repr = ", ".join(f'"{n}"' for n in nums)
+        if len(nums_repr) + 8 <= 88:
+            lines.append(f'    "{cat_name}": [{nums_repr}],')
+        else:
+            lines.append(f'    "{cat_name}": [')
+            chunks = []
+            chunk = "        "
+            for n in nums:
+                entry = f'"{n}", '
+                if len(chunk) + len(entry) > 80:
+                    chunks.append(chunk.rstrip())
+                    chunk = "        " + entry
+                else:
+                    chunk += entry
+            if chunk.strip():
+                chunks.append(chunk.rstrip())
+            lines.extend(chunks)
+            lines.append("    ],")
+
+    lines.append("}")
+    lines.append("")
+
+    target = Path(__file__).resolve().parent / "importers" / "ctp_index_data.py"
+    target.write_text("\n".join(lines), encoding="utf-8")
 
 
 @app.command()
@@ -105,3 +291,301 @@ def validar() -> None:
 def estatisticas() -> None:
     """Exibir estatísticas."""
     console.print("Não implementado", style="yellow")
+
+
+@app.command()
+def importar_harpa(
+    pdf: Path = typer.Argument(..., help="PDF da Harpa Crista"),
+) -> None:
+    """Importar hinário Harpa Cristã de PDF."""
+    if not pdf.is_file():
+        console.print(f"[red]Erro:[/red] '{pdf}' não é um arquivo válido.")
+        raise typer.Exit(code=1)
+
+    create_database()
+
+    hinos, report = import_harpa(pdf)
+    novos, atualizados = save_hymns(hinos)
+    total = count_hymns()
+
+    _imprimir_relatorio(report)
+
+    console.print()
+    console.print("─" * 50)
+    console.print("[bold]Relatório da Harpa[/bold]")
+    console.print("─" * 50)
+    console.print(f"Hinos importados:  {report.hinos_criados}")
+    console.print(f"Novos:             {novos}")
+    console.print(f"Atualizados:       {atualizados}")
+    console.print(f"Total no banco:    {total}")
+    console.print("─" * 50)
+
+
+@app.command()
+def importar_indice_harpa() -> None:
+    """Importar índice temático da Harpa Cristã."""
+    resultado = import_harpa_index()
+
+    if "erro" in resultado:
+        console.print(f"[red]Erro:[/red] {resultado['erro']}")
+        raise typer.Exit(code=1)
+
+    console.print()
+    console.print("─" * 50)
+    console.print("[bold]Índice Temático da Harpa Cristã[/bold]")
+    console.print("─" * 50)
+    console.print(f"Categorias encontradas:           {resultado['categorias_encontradas']}")
+    console.print(f"Categorias importadas:            {resultado['categorias_importadas']}")
+    console.print(f"Hinos atualizados:                {resultado['hinos_atualizados']}")
+    console.print(f"Hinos não encontrados:            {resultado['hinos_nao_encontrados']}")
+    console.print(f"Hinos pertencentes a mais de 1:   {resultado['hinos_multipla_categoria']}")
+    console.print("─" * 50)
+
+    if resultado["multi_topics"]:
+        console.print()
+        console.print("[bold]Hinos com múltiplas categorias:[/bold]")
+        for num, topics in sorted(resultado["multi_topics"].items()):
+            console.print(f"  HARPA {num}: {', '.join(topics)}")
+
+
+@app.command()
+def importar_cc(
+    pdf: Path = typer.Argument(..., help="PDF do Cantor Cristao"),
+) -> None:
+    """Importar hinário Cantor Cristão de PDF."""
+    if not pdf.is_file():
+        console.print(f"[red]Erro:[/red] '{pdf}' não é um arquivo válido.")
+        raise typer.Exit(code=1)
+
+    create_database()
+
+    hinos, report = import_cantor_cristao(pdf)
+    novos, atualizados = save_hymns(hinos)
+    total = count_hymns()
+
+    _imprimir_relatorio(report)
+
+    console.print()
+    console.print("─" * 50)
+    console.print("[bold]Relatório do Cantor Cristão[/bold]")
+    console.print("─" * 50)
+    console.print(f"Hinos importados:  {report.hinos_criados}")
+    console.print(f"Novos:             {novos}")
+    console.print(f"Atualizados:       {atualizados}")
+    console.print(f"Total no banco:    {total}")
+    console.print("─" * 50)
+
+
+@app.command()
+def importar_indice_cc() -> None:
+    """Importar índice temático do Cantor Cristão."""
+    resultado = import_cc_index()
+
+    if "erro" in resultado:
+        console.print(f"[red]Erro:[/red] {resultado['erro']}")
+        raise typer.Exit(code=1)
+
+    console.print()
+    console.print("─" * 50)
+    console.print("[bold]Índice Temático do Cantor Cristão[/bold]")
+    console.print("─" * 50)
+    console.print(f"Categorias encontradas:           {resultado['categorias_encontradas']}")
+    console.print(f"Categorias importadas:            {resultado['categorias_importadas']}")
+    console.print(f"Hinos atualizados:                {resultado['hinos_atualizados']}")
+    console.print(f"Hinos não encontrados:            {resultado['hinos_nao_encontrados']}")
+    console.print(f"Hinos pertencentes a mais de 1:   {resultado['hinos_multipla_categoria']}")
+    console.print("─" * 50)
+
+    if resultado["multi_topics"]:
+        console.print()
+        console.print("[bold]Hinos com múltiplas categorias:[/bold]")
+        for num, topics in sorted(resultado["multi_topics"].items()):
+            console.print(f"  CC {num}: {', '.join(topics)}")
+
+
+@app.command()
+def importar_sh(
+    pdf: Path = typer.Argument(..., help="PDF de Salmos e Hinos"),
+) -> None:
+    """Importar hinário Salmos e Hinos de PDF."""
+    if not pdf.is_file():
+        console.print(f"[red]Erro:[/red] '{pdf}' não é um arquivo válido.")
+        raise typer.Exit(code=1)
+
+    create_database()
+
+    hinos, report = import_salmos_hinos(pdf)
+    novos, atualizados = save_hymns(hinos)
+    total = count_hymns()
+
+    _imprimir_relatorio(report)
+
+    console.print()
+    console.print("─" * 50)
+    console.print("[bold]Relatório de Salmos e Hinos[/bold]")
+    console.print("─" * 50)
+    console.print(f"Hinos importados:  {report.hinos_criados}")
+    console.print(f"Novos:             {novos}")
+    console.print(f"Atualizados:       {atualizados}")
+    console.print(f"Total no banco:    {total}")
+    console.print("─" * 50)
+
+
+@app.command()
+def importar_nc(
+    pdf: Path = typer.Argument(..., help="PDF do Novo Cantico"),
+) -> None:
+    """Importar hinário Novo Cântico de PDF."""
+    if not pdf.is_file():
+        console.print(f"[red]Erro:[/red] '{pdf}' não é um arquivo válido.")
+        raise typer.Exit(code=1)
+
+    create_database()
+
+    hinos, report = import_novo_cantico(pdf)
+    novos, atualizados = save_hymns(hinos)
+    total = count_hymns()
+
+    _imprimir_relatorio(report)
+
+    console.print()
+    console.print("─" * 50)
+    console.print("[bold]Relatório do Novo Cântico[/bold]")
+    console.print("─" * 50)
+    console.print(f"Hinos importados:  {report.hinos_criados}")
+    console.print(f"Novos:             {novos}")
+    console.print(f"Atualizados:       {atualizados}")
+    console.print(f"Total no banco:    {total}")
+    console.print("─" * 50)
+
+
+@app.command()
+def build(
+    ctp_dir: Path = typer.Option(
+        None, "--ctp-dir", help="Pasta original do CTP (PPT/PPTX)"
+    ),
+) -> None:
+    """Build completo: importa todos os hinários e exporta JSON."""
+    create_database()
+
+    console.print()
+    console.print("═" * 50)
+    console.print("[bold]Cantai Builder — Build V1.0[/bold]")
+    console.print("═" * 50)
+
+    counts: dict[str, int] = {}
+
+    # 1. Importar CTP
+    if ctp_dir and ctp_dir.is_dir():
+        console.print()
+        console.print("[bold]1/10[/bold] Importando CTP...")
+        try:
+            hinos, report = import_ctp(ctp_dir)
+            save_hymns(hinos)
+            counts["CTP"] = report.hinos_criados
+            console.print(f"  CTP: {report.hinos_criados} hinos")
+        except (ValueError, Exception) as e:
+            console.print(f"  [red]CTP: Erro — {e}[/red]")
+            counts["CTP"] = 0
+    else:
+        console.print()
+        console.print("[bold]1/10[/bold] CTP ignorado (sem --ctp-dir)")
+
+    # 2. Importar índice CTP
+    console.print("[bold]2/10[/bold] Importando índice CTP...")
+    try:
+        import_ctp_index()
+        console.print("  Índice CTP: OK")
+    except Exception as e:
+        console.print(f"  [yellow]Índice CTP: {e}[/yellow]")
+
+    # 3. Importar Harpa
+    harpa_pdf = DATA_INPUT / "HARPA CRISTÃ.pdf"
+    console.print("[bold]3/10[/bold] Importando Harpa Cristã...")
+    if harpa_pdf.is_file():
+        hinos, report = import_harpa(harpa_pdf)
+        save_hymns(hinos)
+        counts["HARPA"] = report.hinos_criados
+        console.print(f"  HARPA: {report.hinos_criados} hinos")
+    else:
+        console.print("  [yellow]HARPA: PDF não encontrado[/yellow]")
+        counts["HARPA"] = 0
+
+    # 4. Importar índice Harpa
+    console.print("[bold]4/10[/bold] Importando índice Harpa...")
+    try:
+        import_harpa_index()
+        console.print("  Índice Harpa: OK")
+    except Exception as e:
+        console.print(f"  [yellow]Índice Harpa: {e}[/yellow]")
+
+    # 5. Importar Cantor Cristão
+    cc_pdf = DATA_INPUT / "Cantor Cristão em formato pdf.pdf"
+    console.print("[bold]5/10[/bold] Importando Cantor Cristão...")
+    if cc_pdf.is_file():
+        hinos, report = import_cantor_cristao(cc_pdf)
+        save_hymns(hinos)
+        counts["CC"] = report.hinos_criados
+        console.print(f"  CC: {report.hinos_criados} hinos")
+    else:
+        console.print("  [yellow]CC: PDF não encontrado[/yellow]")
+        counts["CC"] = 0
+
+    # 6. Importar índice CC
+    console.print("[bold]6/10[/bold] Importando índice CC...")
+    try:
+        import_cc_index()
+        console.print("  Índice CC: OK")
+    except Exception as e:
+        console.print(f"  [yellow]Índice CC: {e}[/yellow]")
+
+    # 7. Importar Salmos e Hinos
+    sh_pdf = DATA_INPUT / "Coletania de Salmos & Hinos.pdf"
+    console.print("[bold]7/10[/bold] Importando Salmos e Hinos...")
+    if sh_pdf.is_file():
+        hinos, report = import_salmos_hinos(sh_pdf)
+        save_hymns(hinos)
+        counts["SH"] = report.hinos_criados
+        console.print(f"  SH: {report.hinos_criados} hinos")
+    else:
+        console.print("  [yellow]SH: PDF não encontrado[/yellow]")
+        counts["SH"] = 0
+
+    # 8. Importar Novo Cântico
+    nc_pdf = DATA_INPUT / "novo_cantico.pdf"
+    console.print("[bold]8/10[/bold] Importando Novo Cântico...")
+    if nc_pdf.is_file():
+        hinos, report = import_novo_cantico(nc_pdf)
+        save_hymns(hinos)
+        counts["NC"] = report.hinos_criados
+        console.print(f"  NC: {report.hinos_criados} hinos")
+    else:
+        console.print("  [yellow]NC: PDF não encontrado[/yellow]")
+        counts["NC"] = 0
+
+    # 9. Exportar JSON
+    console.print("[bold]9/10[/bold] Exportando JSON...")
+    all_hymns = load_hymns()
+    export_json(all_hymns, JSON_OUTPUT)
+    console.print(f"  {JSON_OUTPUT.relative_to(PROJECT_ROOT)}: {len(all_hymns)} hinos")
+
+    # 10. Sincronizar web
+    console.print("[bold]10/10[/bold] Sincronizando web...")
+    shutil.copy2(JSON_OUTPUT, WEB_OUTPUT)
+    console.print(f"  {WEB_OUTPUT.relative_to(PROJECT_ROOT)}: copiado")
+
+    # Resumo
+    total = sum(counts.values())
+    console.print()
+    console.print("═" * 50)
+    console.print("[bold]Builder concluído[/bold]")
+    console.print("─" * 50)
+    for hymnal in ["CTP", "HARPA", "CC", "SH", "NC"]:
+        console.print(f"  {hymnal:15s} {counts.get(hymnal, 0):4d}")
+    console.print("─" * 50)
+    console.print(f"  {'TOTAL':15s} {total:4d}")
+    console.print("═" * 50)
+    console.print("  SQLite atualizado")
+    console.print("  JSON atualizado")
+    console.print("  Web sincronizada")
+    console.print("═" * 50)

@@ -19,3 +19,6 @@ env/
 htmlcov/
 docs/_build/
 data/temp/
+data/database/
+data/input/*.ppt
+data/input/*.pptx

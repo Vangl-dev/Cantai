@@ -16,18 +16,23 @@
     <section class="card">
       <h2>Momento do culto</h2>
       <select id="momento">
-        <option value="adoracao">Adoração</option>
-        <option value="ceia">Santa Ceia</option>
-        <option value="batismo">Batismo</option>
-        <option value="evangelismo">Evangelismo</option>
-        <option value="missoes">Missões</option>
-        <option value="convite">Convite</option>
-        <option value="natal">Natal</option>
-        <option value="pascoa">Páscoa</option>
-        <option value="gratidao">Gratidão</option>
-        <option value="funeral">Funeral</option>
-        <option value="casamento">Casamento</option>
-        <option value="infantil">Infantil</option>
+        <option value="Adoração">Adoração</option>
+        <option value="Ação de Graças">Ação de Graças</option>
+        <option value="Confiança" selected>Confiança</option>
+        <option value="Consagração">Consagração</option>
+        <option value="Evangelho">Evangelho</option>
+        <option value="Envio">Envio</option>
+        <option value="Oração">Oração</option>
+        <option value="Louvor">Louvor</option>
+        <option value="Comunhão">Comunhão</option>
+        <option value="Afirmação de Fé">Afirmação de Fé</option>
+        <option value="Confissão">Confissão</option>
+        <option value="Intercessão">Intercessão</option>
+        <option value="Paixão de Cristo">Paixão de Cristo</option>
+        <option value="Advento">Advento</option>
+        <option value="Emergência">Emergência</option>
+        <option value="Obediência">Obediência</option>
+        <option value="Aniversário">Aniversário</option>
       </select>
     </section>
 
@@ -60,7 +65,18 @@
       </select>
     </section>
 
-    <button class="btn-primary" onclick="suggestHymns()">
+    <section class="card">
+      <h2>Procurar hino</h2>
+      <input
+        type="text"
+        id="busca"
+        class="input-busca"
+        placeholder="🔍 Procurar hino..."
+        autocomplete="off"
+      >
+    </section>
+
+    <button class="btn-primary" id="btn-sugerir" onclick="suggestHymns()">
       🎵 SUGERIR HINOS
     </button>
 

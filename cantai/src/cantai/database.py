@@ -1,5 +1,6 @@
 """Camada de persistência SQLite com SQLModel."""
 
+import json
 from pathlib import Path
 
 from sqlmodel import Session, SQLModel, create_engine, select
@@ -86,6 +87,40 @@ def load_hymns() -> list[Hymn]:
             lyrics=m.lyrics,
             slide_count=m.slide_count,
             source_file=_Path(m.source_file),
+            topics=json.loads(m.topics) if m.topics else [],
         )
         for m in models
     ]
+
+
+def update_hymn_categories(updates: dict[str, dict], hymnal: str = "CTP") -> tuple[int, int]:
+    """Atualiza category e topics dos hinos.
+
+    updates: {number: {"category": str, "topics": list[str]}}
+    hymnal: identificador do hinário (CTP, HARPA, CC).
+    Retorna (atualizados, nao_encontrados).
+    """
+    atualizados = 0
+    nao_encontrados = 0
+
+    with Session(engine) as session:
+        for number, data in updates.items():
+            stmt = select(HymnModel).where(
+                HymnModel.hymnal == hymnal,
+                HymnModel.number == number,
+            )
+            model = session.exec(stmt).first()
+
+            if model:
+                if data.get("category"):
+                    model.category = data["category"]
+                if data.get("topics"):
+                    model.topics = json.dumps(data["topics"], ensure_ascii=False)
+                session.add(model)
+                atualizados += 1
+            else:
+                nao_encontrados += 1
+
+        session.commit()
+
+    return atualizados, nao_encontrados
