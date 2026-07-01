@@ -80,30 +80,73 @@ function renderSearchResults(results) {
   }
 }
 
+function getSelectedHymnals() {
+  const map = {
+    hctp: "CTP",
+    harpa: "HARPA",
+    cantor: "CC",
+    sh: "SH",
+    nc: "NC",
+  };
+  const selected = [];
+  for (const [id, name] of Object.entries(map)) {
+    if (document.getElementById(id).checked) {
+      selected.push(name);
+    }
+  }
+  return selected;
+}
+
 function suggestHymns() {
   const momento = document.getElementById("momento").value;
   const resultados = document.getElementById("resultados");
+  const selected = getSelectedHymnals();
 
-  const ctpHymns = database.hymns.filter((h) => h.hymnal === "CTP");
+  if (selected.length === 0) {
+    resultados.innerHTML =
+      "<p style='text-align:center;color:var(--text-secondary)'>Selecione pelo menos um hinário.</p>";
+    return;
+  }
 
-  const filtrados = ctpHymns.filter((h) => h.category === momento);
+  const byHymnal = {};
+  for (const h of database.hymns) {
+    if (!selected.includes(h.hymnal)) continue;
+    if (h.hymnal === "CTP" && h.category !== momento) continue;
+    if (!byHymnal[h.hymnal]) byHymnal[h.hymnal] = [];
+    byHymnal[h.hymnal].push(h);
+  }
 
-  if (filtrados.length === 0) {
+  const picks = [];
+  const shuffled = {};
+  for (const h of selected) {
+    shuffled[h] = [...(byHymnal[h] || [])].sort(() => Math.random() - 0.5);
+  }
+
+  for (const h of selected) {
+    if (shuffled[h].length > 0 && picks.length < 3) {
+      picks.push(shuffled[h].shift());
+    }
+  }
+
+  if (picks.length < 3) {
+    for (const h of selected) {
+      while (shuffled[h].length > 0 && picks.length < 3) {
+        picks.push(shuffled[h].shift());
+      }
+    }
+  }
+
+  if (picks.length === 0) {
     resultados.innerHTML =
       "<p style='text-align:center;color:var(--text-secondary)'>Nenhum hino encontrado para esta categoria.</p>";
     return;
   }
 
-  const embaralhados = [...filtrados].sort(() => Math.random() - 0.5);
-
-  const selecionados = embaralhados.slice(0, 3);
-
   resultados.innerHTML = "";
 
-  selecionados.forEach((hymn) => {
+  picks.forEach((hymn) => {
     const card = document.createElement("div");
     card.className = "hino-card";
-
     card.innerHTML = `
       <div class="hino-cabecalho">
         <span class="hino-hinario">${hymn.hymnal}</span>
@@ -113,7 +156,6 @@ function suggestHymns() {
       <div class="hino-primeira-linha">${hymn.first_line}</div>
       <button class="btn-escolher" onclick="chooseHymn(${hymn.number})">✓ Escolher</button>
     `;
-
     resultados.appendChild(card);
   });
 
