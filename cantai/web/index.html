@@ -89,6 +89,28 @@
     </button>
 
     <section id="resultados" class="resultados"></section>
+
+    <section id="secao-culto" class="card card-culto" style="display:none">
+      <h2>Hinos deste culto</h2>
+      <div id="culto-lista" class="culto-lista"></div>
+      <div class="culto-botoes">
+        <button class="btn-copiar" id="btn-copiar" onclick="copyProgramacao()">
+          📋 Copiar programação
+        </button>
+        <button class="btn-novas" onclick="suggestHymns()">
+          🔄 Nova sugestão
+        </button>
+      </div>
+    </section>
+
+    <section class="card card-dados">
+      <h2>⚙ Dados</h2>
+      <div class="dados-botoes">
+        <button class="btn-dado" onclick="exportHistorico()">⬇ Exportar histórico</button>
+        <button class="btn-dado" onclick="importHistorico()">⬆ Importar histórico</button>
+        <button class="btn-dado btn-dado-perigo" onclick="limparHistorico()">🗑 Limpar histórico</button>
+      </div>
+    </section>
   </main>
 
   <footer class="footer">

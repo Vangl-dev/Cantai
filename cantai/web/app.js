@@ -1,4 +1,5 @@
 let database = { version: null, hymns: [] };
+let cultoHymns = JSON.parse(localStorage.getItem("cultoHymns") || "[]");
 
 async function loadDatabase() {
   try {
@@ -12,6 +13,7 @@ async function loadDatabase() {
     document.getElementById("db-version").textContent = "erro";
     document.getElementById("db-count").textContent = "0";
   }
+  renderCulto();
 }
 
 function normalize(str) {
@@ -25,14 +27,12 @@ function searchHymns(query) {
   if (!query || query.trim().length === 0) return [];
   const q = normalize(query.trim());
   if (q.length === 0) return [];
-
   const results = [];
   for (const h of database.hymns) {
     const numStr = String(h.number);
     const titleNorm = normalize(h.title || "");
     const firstLineNorm = normalize(h.first_line || "");
     const lyricsNorm = normalize(h.lyrics || "");
-
     if (
       numStr.includes(q) ||
       titleNorm.includes(q) ||
@@ -52,25 +52,11 @@ function renderSearchResults(results) {
       "<p style='text-align:center;color:var(--text-secondary)'>Nenhum hino encontrado.</p>";
     return;
   }
-
   container.innerHTML = "";
   const limit = Math.min(results.length, 50);
   for (let i = 0; i < limit; i++) {
-    const h = results[i];
-    const card = document.createElement("div");
-    card.className = "hino-card";
-    card.innerHTML = `
-      <div class="hino-cabecalho">
-        <span class="hino-hinario">${h.hymnal}</span>
-        <span class="hino-numero">${h.number}</span>
-      </div>
-      <div class="hino-titulo">${h.title}</div>
-      <div class="hino-primeira-linha">${h.first_line}</div>
-      <button class="btn-escolher" onclick="chooseHymn(${h.number})">✓ Escolher</button>
-    `;
-    container.appendChild(card);
+    container.appendChild(makeCard(results[i]));
   }
-
   if (results.length > limit) {
     const more = document.createElement("p");
     more.style.textAlign = "center";
@@ -81,18 +67,10 @@ function renderSearchResults(results) {
 }
 
 function getSelectedHymnals() {
-  const map = {
-    hctp: "CTP",
-    harpa: "HARPA",
-    cantor: "CC",
-    sh: "SH",
-    nc: "NC",
-  };
+  const map = { hctp: "CTP", harpa: "HARPA", cantor: "CC", sh: "SH", nc: "NC" };
   const selected = [];
   for (const [id, name] of Object.entries(map)) {
-    if (document.getElementById(id).checked) {
-      selected.push(name);
-    }
+    if (document.getElementById(id).checked) selected.push(name);
   }
   return selected;
 }
@@ -108,32 +86,22 @@ function suggestHymns() {
     return;
   }
 
-  const byHymnal = {};
-  for (const h of database.hymns) {
-    if (!selected.includes(h.hymnal)) continue;
-    if (h.hymnal === "CTP" && h.category !== momento) continue;
-    if (!byHymnal[h.hymnal]) byHymnal[h.hymnal] = [];
-    byHymnal[h.hymnal].push(h);
-  }
+  const ctpHymns = database.hymns
+    .filter((h) => h.hymnal === "CTP" && h.category === momento);
+  const otherHymnals = selected.filter((h) => h !== "CTP");
+  const otherHymns = database.hymns.filter(
+    (h) => otherHymnals.includes(h.hymnal)
+  );
 
   const picks = [];
-  const shuffled = {};
-  for (const h of selected) {
-    shuffled[h] = [...(byHymnal[h] || [])].sort(() => Math.random() - 0.5);
+  const shuffledCTP = [...ctpHymns].sort(() => Math.random() - 0.5);
+  for (let i = 0; i < 3 && shuffledCTP.length > 0; i++) {
+    picks.push(shuffledCTP.shift());
   }
 
-  for (const h of selected) {
-    if (shuffled[h].length > 0 && picks.length < 3) {
-      picks.push(shuffled[h].shift());
-    }
-  }
-
-  if (picks.length < 3) {
-    for (const h of selected) {
-      while (shuffled[h].length > 0 && picks.length < 3) {
-        picks.push(shuffled[h].shift());
-      }
-    }
+  if (otherHymnals.length > 0 && otherHymns.length > 0) {
+    const shuffled = [...otherHymns].sort(() => Math.random() - 0.5);
+    picks.push(shuffled[0]);
   }
 
   if (picks.length === 0) {
@@ -143,51 +111,144 @@ function suggestHymns() {
   }
 
   resultados.innerHTML = "";
-
-  picks.forEach((hymn) => {
-    const card = document.createElement("div");
-    card.className = "hino-card";
-    card.innerHTML = `
-      <div class="hino-cabecalho">
-        <span class="hino-hinario">${hymn.hymnal}</span>
-        <span class="hino-numero">${hymn.number}</span>
-      </div>
-      <div class="hino-titulo">${hymn.title}</div>
-      <div class="hino-primeira-linha">${hymn.first_line}</div>
-      <button class="btn-escolher" onclick="chooseHymn(${hymn.number})">✓ Escolher</button>
-    `;
-    resultados.appendChild(card);
-  });
+  picks.forEach((hymn) => resultados.appendChild(makeCard(hymn)));
 
   const btnNovas = document.createElement("button");
   btnNovas.className = "btn-novas";
   btnNovas.textContent = "🔄 Outras sugestões";
-  btnNovas.onclick = newSuggestions;
+  btnNovas.onclick = () => suggestHymns();
   resultados.appendChild(btnNovas);
 }
 
-function chooseHymn(number) {
-  const chosen = JSON.parse(localStorage.getItem("chosenHymns") || "[]");
-  if (!chosen.includes(number)) {
-    chosen.push(number);
-    localStorage.setItem("chosenHymns", JSON.stringify(chosen));
+function makeCard(hymn) {
+  const card = document.createElement("div");
+  card.className = "hino-card";
+  card.innerHTML = `
+    <div class="hino-cabecalho">
+      <span class="hino-hinario">${hymn.hymnal}</span>
+      <span class="hino-numero">${hymn.number}</span>
+    </div>
+    <div class="hino-titulo">${hymn.title}</div>
+    <div class="hino-primeira-linha">${hymn.first_line}</div>
+    <button class="btn-escolher" onclick="addToCulto('${hymn.hymnal}','${hymn.number}','${hymn.title.replace(/'/g, "\\'")}')">✓ Escolher</button>
+  `;
+  return card;
+}
+
+function addToCulto(hymnal, number, title) {
+  const exists = cultoHymns.some(
+    (h) => h.hymnal === hymnal && h.number === number
+  );
+  if (!exists) {
+    cultoHymns.push({ hymnal, number, title });
+    localStorage.setItem("cultoHymns", JSON.stringify(cultoHymns));
+    renderCulto();
   }
 }
 
-function newSuggestions() {
-  suggestHymns();
+function removeFromCulto(index) {
+  cultoHymns.splice(index, 1);
+  localStorage.setItem("cultoHymns", JSON.stringify(cultoHymns));
+  renderCulto();
+}
+
+function renderCulto() {
+  const container = document.getElementById("culto-lista");
+  const section = document.getElementById("secao-culto");
+  if (cultoHymns.length === 0) {
+    section.style.display = "none";
+    return;
+  }
+  section.style.display = "";
+  container.innerHTML = "";
+  cultoHymns.forEach((h, i) => {
+    const item = document.createElement("div");
+    item.className = "culto-item";
+    item.innerHTML = `
+      <div class="culto-item-info">
+        <span class="culto-item-hinario">${h.hymnal}</span>
+        <span class="culto-item-numero">${h.number}</span>
+        <span class="culto-item-titulo">${h.title}</span>
+      </div>
+      <button class="culto-item-remover" onclick="removeFromCulto(${i})">✕</button>
+    `;
+    container.appendChild(item);
+  });
+}
+
+function copyProgramacao() {
+  if (cultoHymns.length === 0) return;
+  const lines = ["Culto", ""];
+  for (const h of cultoHymns) {
+    lines.push(`${h.hymnal} ${h.number} – ${h.title}`);
+  }
+  const text = lines.join("\n");
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.getElementById("btn-copiar");
+    const original = btn.textContent;
+    btn.textContent = "✓ Copiado!";
+    setTimeout(() => (btn.textContent = original), 2000);
+  });
+}
+
+function exportHistorico() {
+  if (cultoHymns.length === 0) return;
+  const data = {
+    exported_at: new Date().toISOString(),
+    hymns: cultoHymns,
+  };
+  const blob = new Blob([JSON.stringify(data, null, 2)], {
+    type: "application/json",
+  });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = `cantai-culto-${new Date().toISOString().slice(0, 10)}.json`;
+  a.click();
+  URL.revokeObjectURL(url);
+}
+
+function importHistorico() {
+  const input = document.createElement("input");
+  input.type = "file";
+  input.accept = ".json";
+  input.onchange = (e) => {
+    const file = e.target.files[0];
+    if (!file) return;
+    const reader = new FileReader();
+    reader.onload = (ev) => {
+      try {
+        const data = JSON.parse(ev.target.result);
+        if (data.hymns && Array.isArray(data.hymns)) {
+          cultoHymns = data.hymns;
+          localStorage.setItem("cultoHymns", JSON.stringify(cultoHymns));
+          renderCulto();
+        }
+      } catch {
+        alert("Arquivo inválido.");
+      }
+    };
+    reader.readAsText(file);
+  };
+  input.click();
+}
+
+function limparHistorico() {
+  if (cultoHymns.length === 0) return;
+  if (!confirm("Limpar todos os hinos deste culto?")) return;
+  cultoHymns = [];
+  localStorage.setItem("cultoHymns", JSON.stringify(cultoHymns));
+  renderCulto();
 }
 
 function handleSearch() {
   const input = document.getElementById("busca");
   const query = input.value.trim();
   const btnSugerir = document.getElementById("btn-sugerir");
-
   if (query.length === 0) {
     btnSugerir.style.display = "";
     return;
   }
-
   btnSugerir.style.display = "none";
   const results = searchHymns(query);
   renderSearchResults(results);

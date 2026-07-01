@@ -248,6 +248,136 @@ select {
   color: var(--text);
 }
 
+.card-culto {
+  border: 2px solid var(--primary);
+}
+
+.culto-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.culto-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.6rem 0.75rem;
+  background: var(--bg);
+  border-radius: var(--radius-sm);
+}
+
+.culto-item-info {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  min-width: 0;
+}
+
+.culto-item-hinario {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--primary);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  flex-shrink: 0;
+}
+
+.culto-item-numero {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  flex-shrink: 0;
+}
+
+.culto-item-titulo {
+  font-size: 0.9rem;
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.culto-item-remover {
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 0.25rem;
+  flex-shrink: 0;
+  transition: color 0.2s;
+}
+
+.culto-item-remover:hover {
+  color: #ff3b30;
+}
+
+.culto-botoes {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.culto-botoes .btn-copiar {
+  flex: 1;
+  padding: 0.6rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--primary);
+  background: transparent;
+  border: 1.5px solid var(--primary);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.culto-botoes .btn-copiar:hover {
+  background: var(--primary);
+  color: #ffffff;
+}
+
+.culto-botoes .btn-novas {
+  margin-top: 0;
+}
+
+.card-dados {
+  margin-top: 0.5rem;
+}
+
+.dados-botoes {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.btn-dado {
+  width: 100%;
+  padding: 0.6rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text);
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all 0.2s;
+  text-align: left;
+}
+
+.btn-dado:hover {
+  border-color: var(--text-secondary);
+}
+
+.btn-dado-perigo {
+  color: #ff3b30;
+  border-color: #ff3b30;
+}
+
+.btn-dado-perigo:hover {
+  background: #ff3b30;
+  color: #ffffff;
+}
+
 .footer {
   text-align: center;
   padding: 1.5rem 1rem;
