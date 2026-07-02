@@ -595,6 +595,146 @@ select {
   border-radius: 6px;
 }
 
+.busca-info {
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.temas-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.tema-chip {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  background: var(--bg);
+  border: 1.5px solid var(--border);
+  border-radius: 20px;
+  padding: 0.3rem 0.7rem;
+  cursor: pointer;
+  transition: all 0.15s;
+  white-space: nowrap;
+}
+
+.tema-chip:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.tema-chip-active {
+  background: var(--primary);
+  color: #ffffff;
+  border-color: var(--primary);
+}
+
+.tema-chip-active:hover {
+  background: var(--primary-hover);
+  color: #ffffff;
+}
+
+.btn-mostrar-mais {
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--primary);
+  background: transparent;
+  border: none;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  margin-top: 0.5rem;
+  transition: color 0.2s;
+}
+
+.btn-mostrar-mais:hover {
+  text-decoration: underline;
+}
+
+.modal-historico-content {
+  max-width: 500px;
+}
+
+.historico-lista {
+  max-height: 60vh;
+  overflow-y: auto;
+}
+
+.historico-sep {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.historico-sep:first-child {
+  margin-top: 0;
+}
+
+.historico-linha {
+  height: 1px;
+  background: var(--border);
+  margin: 0.75rem 0;
+}
+
+.historico-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 0.6rem;
+  background: var(--bg);
+  border-radius: var(--radius-sm);
+  margin-bottom: 0.35rem;
+  gap: 0.5rem;
+}
+
+.historico-item-hinos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  min-width: 0;
+}
+
+.historico-hino {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--primary);
+  background: var(--surface);
+  padding: 0.15rem 0.4rem;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+
+.historico-item-botoes {
+  display: flex;
+  gap: 0.25rem;
+  flex-shrink: 0;
+}
+
+.historico-btn {
+  background: none;
+  border: none;
+  font-size: 0.85rem;
+  cursor: pointer;
+  padding: 0.2rem;
+  color: var(--text-secondary);
+  transition: color 0.2s;
+}
+
+.historico-btn:hover {
+  color: var(--primary);
+}
+
+.historico-btn-perigo:hover {
+  color: #ff3b30;
+}
+
 @media (max-width: 480px) {
   .header h1 {
     font-size: 2rem;

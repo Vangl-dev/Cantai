@@ -1,6 +1,60 @@
 let database = { version: null, hymns: [] };
 let cultoHymns = JSON.parse(localStorage.getItem("cultoHymns") || "[]");
+let historico = JSON.parse(localStorage.getItem("cantaiHistorico") || "[]");
 let currentModalHymn = null;
+let selectedTopics = [];
+let allTopicsSorted = [];
+const SHOW_INITIAL_TOPICS = 12;
+
+const CANONICAL_TOPICS = [
+  "Adoração","Louvor","Santidade","Trindade","Santa Ceia","Comunhão",
+  "Natal","Páscoa","Pentecostes","Missões","Evangelização","Consagração",
+  "Confiança","Esperança","Consolo","Chamado","Oração","Família",
+  "Casamento","Batismo","Juventude","Crianças","Funeral","Ressurreição",
+  "Vida Cristã","Gratidão","Serviço","Soberania de Deus","Redenção",
+  "Cruz","Graça","Salvação"
+];
+
+const SYNONYMS = {
+  "Adoração":["Adoração","Exaltação","Glória","Magnificar","Louvores ao Deus Trino","Introito","Convite à Adoração"],
+  "Louvor":["Louvor","Jubilação","Gozo","Satisfação"],
+  "Santidade":["Santidade","Afirmação de Fé","Credo (Após o)","Profissão de Fé","Reforma Protestante"],
+  "Trindade":["Trindade","Deus, o Pai","Deus, o Filho - Louvores","Deus, o Espírito Santo","Cristo, Rei do Universo"],
+  "Santa Ceia":["Santa Ceia","Santa Ceia (Após a Celebração da)","Santa Ceia (Durante a)","Igreja - Ceia do Senhor","Partir do Pão (Após o)","Oração Eucarística","Oração Eucarística (Após a)","Oração Eucarística (Na)","Pai Nosso"],
+  "Comunhão":["Comunhão","Igreja","União Fraternal"],
+  "Natal":["Natal","Ciclo do Natal","Epifania","Deus, o Filho - Natal"],
+  "Páscoa":["Páscoa","Tempo Pascal","Semana da Paixão","Domingo de Ramos","Transfiguração do Senhor","Ascensão do Senhor"],
+  "Pentecostes":["Pentecostes","Espírito Santo"],
+  "Missões":["Missões","Missão","Envio","Envio (Após o)","FATIPI","IPIB","UMPI"],
+  "Evangelização":["Evangelização","Evangelho","Culto - Evangelho","Culto - Apelo","Culto - Decisão","Testemunho"],
+  "Consagração":["Consagração","Igreja - Consagração","Ofertório","Ofertório (Antes do)","Primícias","Obediência","Diacônia","Serviço"],
+  "Confiança":["Confiança","Firmeza","Proteção e Ajuda","Guia"],
+  "Esperança":["Esperança","Segunda Vinda","Advento","Passagem do Ano","Ano Novo"],
+  "Consolo":["Consolo","Paz e Descanso","Despedida"],
+  "Chamado":["Chamado","Admoestação"],
+  "Oração":["Oração","Oração por Iluminação","Oração de Confissão (Antes ou após a)","Oração de Confissão (Após a)","Orações (Após as)","Orações de Intercessão (Após as)","Oração de Gratidão (Após a)","Intercessão","Súplica"],
+  "Família":["Família","Lar","Aniversário","Dia Internacional da Mulher","Dia das Mães","Dia dos Pais"],
+  "Casamento":["Casamento","Matrimônio"],
+  "Batismo":["Batismo","Batismo Infantil","Batismo do Senhor","Igreja - Batismo"],
+  "Juventude":["Juventude"],
+  "Crianças":["Crianças"],
+  "Funeral":["Funeral"],
+  "Ressurreição":["Ressurreição","Deus, o Filho - Sua Ressurreição"],
+  "Vida Cristã":["Vida Cristã","Declaração de Perdão","Declaração de Perdão (Após a)","Confissão","Contrição","Quaresma","Quaresma (Início da)"],
+  "Gratidão":["Gratidão","Ação de Graças"],
+  "Serviço":["Serviço","Diacônia"],
+  "Soberania de Deus":["Soberania de Deus","Glória"],
+  "Redenção":["Redenção","Paixão de Cristo","Cruz"],
+  "Graça":["Graça","Emergência"],
+  "Salvação":["Salvação","Leitura da Palavra (Após a)","Leitura do Evangelho (Antes ou após a)","Leitura do Evangelho (Após a)","Proclamação da Palavra (Após a)"]
+};
+
+let _synonymToCanonical = {};
+for (const [canon, variants] of Object.entries(SYNONYMS)) {
+  for (const v of variants) {
+    _synonymToCanonical[normalize(v)] = canon;
+  }
+}
 
 async function loadDatabase() {
   try {
@@ -14,6 +68,8 @@ async function loadDatabase() {
     document.getElementById("db-version").textContent = "erro";
     document.getElementById("db-count").textContent = "0";
   }
+  buildTopicCounts();
+  renderTopicTags();
   renderCulto();
 }
 
@@ -22,6 +78,57 @@ function normalize(str) {
     .normalize("NFD")
     .replace(/[\u0300-\u036f]/g, "")
     .toLowerCase();
+}
+
+function buildTopicCounts() {
+  const counts = {};
+  for (const t of CANONICAL_TOPICS) counts[t] = 0;
+  for (const h of database.hymns) {
+    for (const t of (h.topics || [])) {
+      const canonical = _synonymToCanonical[normalize(t)] || t;
+      if (counts[canonical] !== undefined) counts[canonical]++;
+    }
+  }
+  allTopicsSorted = CANONICAL_TOPICS.slice().sort((a, b) => counts[b] - counts[a]);
+}
+
+function renderTopicTags() {
+  const container = document.getElementById("temas-tags");
+  const btnMais = document.getElementById("btn-mais-temas");
+  container.innerHTML = "";
+  const showAll = selectedTopics._showAll || false;
+  const limit = showAll ? allTopicsSorted.length : SHOW_INITIAL_TOPICS;
+  const visible = allTopicsSorted.slice(0, limit);
+
+  for (const topic of visible) {
+    const chip = document.createElement("button");
+    chip.className = "tema-chip" + (selectedTopics.includes(topic) ? " tema-chip-active" : "");
+    chip.textContent = topic;
+    chip.onclick = () => toggleTopic(topic);
+    container.appendChild(chip);
+  }
+
+  if (allTopicsSorted.length > SHOW_INITIAL_TOPICS) {
+    btnMais.style.display = "";
+    btnMais.textContent = showAll ? "Mostrar menos" : "Mostrar mais";
+  } else {
+    btnMais.style.display = "none";
+  }
+}
+
+function toggleTopic(topic) {
+  const idx = selectedTopics.indexOf(topic);
+  if (idx >= 0) {
+    selectedTopics.splice(idx, 1);
+  } else {
+    selectedTopics.push(topic);
+  }
+  renderTopicTags();
+}
+
+function toggleMoreTopics() {
+  selectedTopics._showAll = !selectedTopics._showAll;
+  renderTopicTags();
 }
 
 function searchHymns(query) {
@@ -34,38 +141,71 @@ function searchHymns(query) {
     const titleNorm = normalize(h.title || "");
     const firstLineNorm = normalize(h.first_line || "");
     const lyricsNorm = normalize(h.lyrics || "");
-    const topicsNorm = (h.topics || []).map(t => normalize(t)).join(" ");
-    if (
-      numStr.includes(q) ||
+    const topicsArr = (h.topics || []).map(t => normalize(t));
+
+    let score = 0;
+    const matched = numStr.includes(q) ||
       titleNorm.includes(q) ||
       firstLineNorm.includes(q) ||
       lyricsNorm.includes(q) ||
-      topicsNorm.includes(q)
-    ) {
-      results.push(h);
-    }
+      topicsArr.some(t => t.includes(q));
+    if (!matched) continue;
+
+    if (topicsArr.some(t => t.includes(q))) score += 100;
+    if (titleNorm.includes(q)) score += 50;
+    if (firstLineNorm.includes(q)) score += 30;
+    if (topicsArr.some(t => t.includes(q))) score += 10;
+    if (lyricsNorm.includes(q)) score += 5;
+    if (numStr === q) score += 200;
+
+    results.push({ hymn: h, score });
   }
-  return results;
+  results.sort((a, b) => b.score - a.score);
+  return results.map(r => r.hymn);
 }
 
+let searchShowAll = false;
+
 function renderSearchResults(results) {
-  const container = document.getElementById("resultados");
+  const container = document.getElementById("resultados-busca");
+  const info = document.getElementById("busca-info");
+  container.style.display = "";
+
   if (results.length === 0) {
-    container.innerHTML =
-      "<p style='text-align:center;color:var(--text-secondary)'>Nenhum hino encontrado.</p>";
+    container.innerHTML = "";
+    info.style.display = "none";
     return;
   }
+
+  info.style.display = "";
+  const limit = searchShowAll ? results.length : Math.min(results.length, 5);
+  const shown = results.slice(0, limit);
+
+  info.innerHTML = `Encontrados: <strong>${results.length}</strong> hinos`;
+
   container.innerHTML = "";
-  const limit = Math.min(results.length, 50);
-  for (let i = 0; i < limit; i++) {
-    container.appendChild(makeCard(results[i]));
+  for (const h of shown) {
+    container.appendChild(makeCard(h));
   }
-  if (results.length > limit) {
-    const more = document.createElement("p");
-    more.style.textAlign = "center";
-    more.style.color = "var(--text-secondary)";
-    more.textContent = `... e mais ${results.length - limit} hinos`;
-    container.appendChild(more);
+
+  if (results.length > 5 && !searchShowAll) {
+    const btn = document.createElement("button");
+    btn.className = "btn-mostrar-mais";
+    btn.textContent = `Mostrar todos (${results.length})`;
+    btn.onclick = () => {
+      searchShowAll = true;
+      renderSearchResults(results);
+    };
+    container.appendChild(btn);
+  } else if (searchShowAll && results.length > 5) {
+    const btn = document.createElement("button");
+    btn.className = "btn-mostrar-mais";
+    btn.textContent = "Mostrar menos";
+    btn.onclick = () => {
+      searchShowAll = false;
+      renderSearchResults(results);
+    };
+    container.appendChild(btn);
   }
 }
 
@@ -81,38 +221,55 @@ function getSelectedHymnals() {
 function suggestHymns() {
   const momento = document.getElementById("momento").value;
   const resultados = document.getElementById("resultados");
-  const selected = getSelectedHymnals();
+  const selectedHymnals = getSelectedHymnals();
+  const activeTopics = selectedTopics.filter(t => typeof t === "string");
 
-  if (selected.length === 0) {
+  if (selectedHymnals.length === 0) {
     resultados.innerHTML =
       "<p style='text-align:center;color:var(--text-secondary)'>Selecione pelo menos um hinário.</p>";
     return;
   }
 
   const momentoNormalized = normalize(momento);
-  const ctpHymns = database.hymns.filter((h) => {
-    if (h.hymnal !== "CTP") return false;
+
+  function hymnMatchesTopics(h) {
+    if (!h.topics || h.topics.length === 0) return false;
+    const hTopics = h.topics.map(t => _synonymToCanonical[normalize(t)] || t);
+    for (const sel of activeTopics) {
+      if (hTopics.includes(sel)) return true;
+    }
+    return false;
+  }
+
+  function hymnMatchesMomento(h) {
     if (h.category && normalize(h.category) === momentoNormalized) return true;
     if (h.topics && h.topics.some(t => normalize(t) === momentoNormalized)) return true;
     return false;
-  });
-
-  const otherHymnals = selected.filter((h) => h !== "CTP");
-  const otherHymns = database.hymns.filter(
-    (h) => otherHymnals.includes(h.hymnal) && h.topics && h.topics.some(t => normalize(t) === momentoNormalized)
-  );
-
-  const allMatching = [...ctpHymns, ...otherHymns];
-
-  const picks = [];
-  const shuffled = [...allMatching].sort(() => Math.random() - 0.5);
-  for (let i = 0; i < 4 && shuffled.length > 0; i++) {
-    picks.push(shuffled.shift());
   }
+
+  let candidates;
+  if (activeTopics.length > 0) {
+    candidates = database.hymns.filter(h =>
+      selectedHymnals.includes(h.hymnal) && hymnMatchesTopics(h)
+    );
+  } else {
+    candidates = database.hymns.filter(h =>
+      selectedHymnals.includes(h.hymnal) && hymnMatchesMomento(h)
+    );
+  }
+
+  if (candidates.length === 0 && activeTopics.length > 0) {
+    candidates = database.hymns.filter(h =>
+      selectedHymnals.includes(h.hymnal) && hymnMatchesMomento(h)
+    );
+  }
+
+  const shuffled = [...candidates].sort(() => Math.random() - 0.5);
+  const picks = shuffled.slice(0, 4);
 
   if (picks.length === 0) {
     resultados.innerHTML =
-      "<p style='text-align:center;color:var(--text-secondary)'>Nenhum hino encontrado para esta categoria.</p>";
+      "<p style='text-align:center;color:var(--text-secondary)'>Nenhum hino encontrado para esta seleção.</p>";
     return;
   }
 
@@ -240,6 +397,14 @@ function copyProgramacao() {
     btn.textContent = "✓ Copiado!";
     setTimeout(() => (btn.textContent = original), 2000);
   });
+
+  const entry = {
+    date: new Date().toISOString(),
+    hymns: cultoHymns.map(h => ({ hymnal: h.hymnal, number: h.number, title: h.title }))
+  };
+  historico.unshift(entry);
+  if (historico.length > 50) historico = historico.slice(0, 50);
+  localStorage.setItem("cantaiHistorico", JSON.stringify(historico));
 }
 
 function exportHistorico() {
@@ -296,13 +461,101 @@ function handleSearch() {
   const input = document.getElementById("busca");
   const query = input.value.trim();
   const btnSugerir = document.getElementById("btn-sugerir");
+  const resultadosBusca = document.getElementById("resultados-busca");
+  const info = document.getElementById("busca-info");
+
+  searchShowAll = false;
+
   if (query.length === 0) {
     btnSugerir.style.display = "";
+    resultadosBusca.style.display = "none";
+    info.style.display = "none";
     return;
   }
   btnSugerir.style.display = "none";
   const results = searchHymns(query);
   renderSearchResults(results);
+}
+
+function formatDate(isoStr) {
+  const d = new Date(isoStr);
+  const now = new Date();
+  const diffMs = now - d;
+  const diffDays = Math.floor(diffMs / 86400000);
+
+  if (diffDays === 0) return "Hoje";
+  if (diffDays === 1) return "Ontem";
+  if (diffDays < 7) return "Semana passada";
+  if (diffDays < 30) return "Este mês";
+  return d.toLocaleDateString("pt-BR", { day: "2-digit", month: "short", year: "numeric" });
+}
+
+function openHistorico() {
+  const container = document.getElementById("historico-lista");
+  container.innerHTML = "";
+
+  if (historico.length === 0) {
+    container.innerHTML = "<p style='text-align:center;color:var(--text-secondary)'>Nenhum culto registrado.</p>";
+    document.getElementById("modal-historico").classList.add("active");
+    return;
+  }
+
+  let lastGroup = "";
+  for (let i = 0; i < historico.length; i++) {
+    const entry = historico[i];
+    const group = formatDate(entry.date);
+
+    if (group !== lastGroup) {
+      const sep = document.createElement("div");
+      sep.className = "historico-sep";
+      if (lastGroup !== "") {
+        const line = document.createElement("div");
+        line.className = "historico-linha";
+        container.appendChild(line);
+      }
+      sep.textContent = group;
+      container.appendChild(sep);
+      lastGroup = group;
+    }
+
+    const item = document.createElement("div");
+    item.className = "historico-item";
+    item.innerHTML = `
+      <div class="historico-item-hinos">
+        ${entry.hymns.map(h => `<span class="historico-hino">${h.hymnal} ${h.number}</span>`).join(" ")}
+      </div>
+      <div class="historico-item-botoes">
+        <button class="historico-btn" onclick="copiarHistorico(${i})" title="Copiar">📋</button>
+        <button class="historico-btn historico-btn-perigo" onclick="removerHistorico(${i})" title="Remover">✕</button>
+      </div>
+    `;
+    container.appendChild(item);
+  }
+
+  document.getElementById("modal-historico").classList.add("active");
+}
+
+function copiarHistorico(index) {
+  const entry = historico[index];
+  const lines = entry.hymns.map(h => `${h.hymnal} ${h.number} – ${h.title}`);
+  navigator.clipboard.writeText(lines.join("\n")).then(() => {
+    alert("Copiado!");
+  });
+}
+
+function removerHistorico(index) {
+  if (!confirm("Remover este culto do histórico?")) return;
+  historico.splice(index, 1);
+  localStorage.setItem("cantaiHistorico", JSON.stringify(historico));
+  openHistorico();
+}
+
+function limparHistoricoCompleto() {
+  if (historico.length === 0) return;
+  if (!confirm("Limpar todo o histórico de cultos?")) return;
+  historico = [];
+  localStorage.setItem("cantaiHistorico", JSON.stringify(historico));
+  openHistorico();
 }
 
 document.addEventListener("DOMContentLoaded", () => {

@@ -14,25 +14,49 @@
 
   <main class="container">
     <section class="card">
+      <h2>Busca rápida</h2>
+      <input
+        type="text"
+        id="busca"
+        class="input-busca"
+        placeholder="🔍 Procurar hino por número, título, letra..."
+        autocomplete="off"
+      >
+      <div id="busca-info" class="busca-info" style="display:none"></div>
+    </section>
+
+    <section class="card">
+      <h2>Temas</h2>
+      <div id="temas-tags" class="temas-tags"></div>
+      <button id="btn-mais-temas" class="btn-mostrar-mais" onclick="toggleMoreTopics()" style="display:none">Mostrar mais</button>
+    </section>
+
+    <section id="resultados-busca" class="resultados" style="display:none"></section>
+
+    <section class="card">
       <h2>Momento do culto</h2>
       <select id="momento">
         <option value="Adoração">Adoração</option>
-        <option value="Ação de Graças">Ação de Graças</option>
+        <option value="Louvor">Louvor</option>
         <option value="Confiança" selected>Confiança</option>
         <option value="Consagração">Consagração</option>
-        <option value="Evangelho">Evangelho</option>
-        <option value="Envio">Envio</option>
+        <option value="Evangelização">Evangelização</option>
+        <option value="Missões">Missões</option>
         <option value="Oração">Oração</option>
-        <option value="Louvor">Louvor</option>
         <option value="Comunhão">Comunhão</option>
-        <option value="Afirmação de Fé">Afirmação de Fé</option>
-        <option value="Confissão">Confissão</option>
-        <option value="Intercessão">Intercessão</option>
-        <option value="Paixão de Cristo">Paixão de Cristo</option>
-        <option value="Advento">Advento</option>
-        <option value="Emergência">Emergência</option>
-        <option value="Obediência">Obediência</option>
-        <option value="Aniversário">Aniversário</option>
+        <option value="Santidade">Santidade</option>
+        <option value="Gratidão">Gratidão</option>
+        <option value="Redenção">Redenção</option>
+        <option value="Esperança">Esperança</option>
+        <option value="Graça">Graça</option>
+        <option value="Família">Família</option>
+        <option value="Santa Ceia">Santa Ceia</option>
+        <option value="Batismo">Batismo</option>
+        <option value="Casamento">Casamento</option>
+        <option value="Funeral">Funeral</option>
+        <option value="Natal">Natal</option>
+        <option value="Páscoa">Páscoa</option>
+        <option value="Pentecostes">Pentecostes</option>
       </select>
     </section>
 
@@ -73,17 +97,6 @@
       </select>
     </section>
 
-    <section class="card">
-      <h2>Procurar hino</h2>
-      <input
-        type="text"
-        id="busca"
-        class="input-busca"
-        placeholder="🔍 Procurar hino..."
-        autocomplete="off"
-      >
-    </section>
-
     <button class="btn-primary" id="btn-sugerir" onclick="suggestHymns()">
       🎵 SUGERIR HINOS
     </button>
@@ -106,9 +119,10 @@
     <section class="card card-dados">
       <h2>⚙ Dados</h2>
       <div class="dados-botoes">
+        <button class="btn-dado" onclick="openHistorico()">🕒 Últimos cultos</button>
         <button class="btn-dado" onclick="exportHistorico()">⬇ Exportar histórico</button>
         <button class="btn-dado" onclick="importHistorico()">⬆ Importar histórico</button>
-        <button class="btn-dado btn-dado-perigo" onclick="limparHistorico()">🗑 Limpar histórico</button>
+        <button class="btn-dado btn-dado-perigo" onclick="limparHistorico()">🗑 Limpar este culto</button>
       </div>
     </section>
   </main>
@@ -144,7 +158,21 @@
         <p><strong>Versão:</strong> <span id="sobre-versao">1.2</span></p>
         <p><strong>Total de hinos:</strong> <span id="sobre-count">0</span></p>
         <p><strong>Licença:</strong> MIT</p>
-        <p><strong>GitHub:</strong> <a href="https://github.com/vanessa/Cantai" target="_blank">github.com/vanessa/Cantai</a></p>
+        <p><strong>GitHub:</strong> <a href="https://github.com/Vangl-dev/Cantai" target="_blank">github.com/Vangl-dev/Cantai</a></p>
+      </div>
+    </div>
+  </div>
+
+  <div id="modal-historico" class="modal" onclick="closeModal(event, 'modal-historico')">
+    <div class="modal-content modal-historico-content">
+      <div class="modal-header">
+        <span class="modal-hinario">HISTÓRICO</span>
+        <button class="modal-close" onclick="closeModalById('modal-historico')">✕</button>
+      </div>
+      <div id="historico-lista" class="historico-lista"></div>
+      <div class="modal-footer">
+        <button class="btn-modal-close" onclick="limparHistoricoCompleto()">🗑 Limpar tudo</button>
+        <button class="btn-modal-close" onclick="closeModalById('modal-historico')">Fechar</button>
       </div>
     </div>
   </div>
