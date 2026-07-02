@@ -1,4 +1,9 @@
-"""Importador do hinário Salmos e Hinos (SH)."""
+"""Importador do hinário Salmos e Hinos (SH).
+
+Suporta tanto o PDF da Coletânea original quanto o novo PDF completo.
+Formato do novo PDF: "NUM TITLE" (ex: "1 O Servo do Senhor"),
+seguido de "SALMO N", versículo bíblico, e depois a letra.
+"""
 
 import re
 from pathlib import Path
@@ -7,15 +12,26 @@ from cantai.schemas import AuditIssue, AuditReport, Hymn
 
 _HYMNAL = "SH"
 _SH_PATTERN = re.compile(r"^(.+?)\s+S\.?\s*H\.?\s+(\d+[A-Z]?)\s*$")
+_SH_PATTERN_ALT = re.compile(r"^(.+?)\s+SH\s+(\d+[A-Z]?)\s*$")
+_SH_PATTERN_NUM = re.compile(r"^(\d+[A-Z]?)\s+(.+?)$")
+_SH_SALMO_LINE = re.compile(r"^SALMO\s+\d+", re.IGNORECASE)
 _VERSE_PATTERN = re.compile(r"^\d+[\.\s]")
+_AUTHOR_PATTERN = re.compile(
+    r"^\(?\d{4}\)?|^[A-Z][a-z]+\s+[A-Z]|^Sarah|^W\.\s*H\.|^F\.",
+    re.IGNORECASE,
+)
+_CHORUS_PATTERN = re.compile(r"^\*|refr[ãa]o|chorus", re.IGNORECASE)
 
 
 def _extract_hymns_from_pdf(pdf_path: Path) -> list[tuple[int, str, str]]:
-    """Extrai hinos do PDF da Coletânea de Salmos e Hinos.
+    """Extrai hinos do PDF de Salmos e Hinos.
 
-    O PDF tem sumário (páginas 1-4) seguido dos hinos.
-    O sumário contém o padrão S.H. mas sem letras abaixo.
-    Identificamos hinos reais verificando se a próxima linha é verso.
+    Formato do novo PDF completo:
+        NUM TITLE
+        SALMO N
+        "... versículo bíblico"
+        1. Primeira linha do verso
+        ...
     """
     import pdfplumber
 
@@ -30,8 +46,13 @@ def _extract_hymns_from_pdf(pdf_path: Path) -> list[tuple[int, str, str]]:
     lines = full_text.split("\n")
 
     hymn_starts: list[tuple[int, int, str]] = []
+
     for idx, line in enumerate(lines):
-        m = _SH_PATTERN.match(line.strip())
+        stripped = line.strip()
+        num = None
+        title = None
+
+        m = _SH_PATTERN.match(stripped)
         if m:
             title = m.group(1).strip()
             num_str = m.group(2)
@@ -39,16 +60,36 @@ def _extract_hymns_from_pdf(pdf_path: Path) -> list[tuple[int, str, str]]:
                 num = int(re.sub(r"[A-Z]", "", num_str))
             except ValueError:
                 continue
-            if 1 <= num <= 700:
-                is_real = False
-                for j in range(idx + 1, min(idx + 5, len(lines))):
-                    next_line = lines[j].strip()
-                    if next_line:
-                        if _VERSE_PATTERN.match(next_line):
-                            is_real = True
-                        break
-                if is_real:
-                    hymn_starts.append((num, idx, title))
+        else:
+            m = _SH_PATTERN_ALT.match(stripped)
+            if m:
+                title = m.group(1).strip()
+                num_str = m.group(2)
+                try:
+                    num = int(re.sub(r"[A-Z]", "", num_str))
+                except ValueError:
+                    continue
+            else:
+                m = _SH_PATTERN_NUM.match(stripped)
+                if m:
+                    num_str = m.group(1)
+                    candidate_title = m.group(2).strip()
+                    try:
+                        num = int(re.sub(r"[A-Z]", "", num_str))
+                    except ValueError:
+                        continue
+                    if candidate_title and not _SH_SALMO_LINE.match(candidate_title):
+                        title = candidate_title
+
+        if num is not None and title and 1 <= num <= 700:
+            is_real = False
+            for j in range(idx + 1, min(idx + 15, len(lines))):
+                next_line = lines[j].strip()
+                if _VERSE_PATTERN.match(next_line):
+                    is_real = True
+                    break
+            if is_real:
+                hymn_starts.append((num, idx, title))
 
     seen: set[int] = set()
     unique: list[tuple[int, int, str]] = []
@@ -75,12 +116,30 @@ def _parse_lyrics(hymn_text: str) -> tuple[str, str]:
     for line in lines:
         stripped = line.strip()
         if not found_header:
-            if _SH_PATTERN.match(stripped):
+            if _SH_PATTERN.match(stripped) or _SH_PATTERN_ALT.match(stripped):
                 found_header = True
-            continue
-        if stripped:
+                continue
+            m = _SH_PATTERN_NUM.match(stripped)
+            if m:
+                found_header = True
+                continue
+            if _VERSE_PATTERN.match(stripped):
+                found_header = True
+        if found_header and stripped:
+            if _SH_SALMO_LINE.match(stripped):
+                continue
+            first_char = stripped[0] if stripped else ""
+            if first_char in ('"', "\u201c", "\u201d", "\u2018", "\u2019"):
+                continue
+            if stripped.startswith("..."):
+                continue
+            if _AUTHOR_PATTERN.match(stripped):
+                continue
+            if stripped.upper() == "COROS":
+                continue
             cleaned = re.sub(r"^\d+[\.\s]+", "", stripped)
-            lyrics_lines.append(cleaned)
+            if not _CHORUS_PATTERN.match(cleaned):
+                lyrics_lines.append(cleaned)
 
     if not lyrics_lines:
         return "", ""

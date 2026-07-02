@@ -115,7 +115,39 @@
 
   <footer class="footer">
     <p>Versão: <span id="db-version">-</span> · <span id="db-count">-</span> hinos carregados</p>
+    <p><a href="#" onclick="openSobre(); return false;" class="footer-link">Sobre</a></p>
   </footer>
+
+  <div id="modal-letra" class="modal" onclick="closeModal(event, 'modal-letra')">
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="modal-hinario" id="modal-hinario"></span>
+        <span class="modal-numero" id="modal-numero"></span>
+        <button class="modal-close" onclick="closeModalById('modal-letra')">✕</button>
+      </div>
+      <h3 class="modal-titulo" id="modal-titulo"></h3>
+      <p class="modal-primeira-linha" id="modal-primeira-linha"></p>
+      <div class="modal-letra-texto" id="modal-letra-texto"></div>
+      <div class="modal-footer">
+        <button class="btn-modal-close" onclick="closeModalById('modal-letra')">Fechar</button>
+        <button class="btn-modal-escolher" id="modal-btn-escolher" onclick="chooseFromModal()">✓ Escolher</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="modal-sobre" class="modal" onclick="closeModal(event, 'modal-sobre')">
+    <div class="modal-content modal-sobre-content">
+      <button class="modal-close" onclick="closeModalById('modal-sobre')">✕</button>
+      <h2>🎼 Cantai</h2>
+      <p class="sobre-descricao">Planejamento de Hinos para cultos e eventos da igreja.</p>
+      <div class="sobre-info">
+        <p><strong>Versão:</strong> <span id="sobre-versao">1.2</span></p>
+        <p><strong>Total de hinos:</strong> <span id="sobre-count">0</span></p>
+        <p><strong>Licença:</strong> MIT</p>
+        <p><strong>GitHub:</strong> <a href="https://github.com/vanessa/Cantai" target="_blank">github.com/vanessa/Cantai</a></p>
+      </div>
+    </div>
+  </div>
 
   <script src="app.js"></script>
 </body>

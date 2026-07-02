@@ -14,6 +14,7 @@ class Hymn:
     lyrics: str
     slide_count: int
     source_file: Path
+    topics: list[str] = field(default_factory=list)
 
 
 @dataclass

@@ -1,5 +1,6 @@
 let database = { version: null, hymns: [] };
 let cultoHymns = JSON.parse(localStorage.getItem("cultoHymns") || "[]");
+let currentModalHymn = null;
 
 async function loadDatabase() {
   try {
@@ -33,11 +34,13 @@ function searchHymns(query) {
     const titleNorm = normalize(h.title || "");
     const firstLineNorm = normalize(h.first_line || "");
     const lyricsNorm = normalize(h.lyrics || "");
+    const topicsNorm = (h.topics || []).map(t => normalize(t)).join(" ");
     if (
       numStr.includes(q) ||
       titleNorm.includes(q) ||
       firstLineNorm.includes(q) ||
-      lyricsNorm.includes(q)
+      lyricsNorm.includes(q) ||
+      topicsNorm.includes(q)
     ) {
       results.push(h);
     }
@@ -86,22 +89,25 @@ function suggestHymns() {
     return;
   }
 
-  const ctpHymns = database.hymns
-    .filter((h) => h.hymnal === "CTP" && h.category === momento);
+  const momentoNormalized = normalize(momento);
+  const ctpHymns = database.hymns.filter((h) => {
+    if (h.hymnal !== "CTP") return false;
+    if (h.category && normalize(h.category) === momentoNormalized) return true;
+    if (h.topics && h.topics.some(t => normalize(t) === momentoNormalized)) return true;
+    return false;
+  });
+
   const otherHymnals = selected.filter((h) => h !== "CTP");
   const otherHymns = database.hymns.filter(
-    (h) => otherHymnals.includes(h.hymnal)
+    (h) => otherHymnals.includes(h.hymnal) && h.topics && h.topics.some(t => normalize(t) === momentoNormalized)
   );
 
-  const picks = [];
-  const shuffledCTP = [...ctpHymns].sort(() => Math.random() - 0.5);
-  for (let i = 0; i < 3 && shuffledCTP.length > 0; i++) {
-    picks.push(shuffledCTP.shift());
-  }
+  const allMatching = [...ctpHymns, ...otherHymns];
 
-  if (otherHymnals.length > 0 && otherHymns.length > 0) {
-    const shuffled = [...otherHymns].sort(() => Math.random() - 0.5);
-    picks.push(shuffled[0]);
+  const picks = [];
+  const shuffled = [...allMatching].sort(() => Math.random() - 0.5);
+  for (let i = 0; i < 4 && shuffled.length > 0; i++) {
+    picks.push(shuffled.shift());
   }
 
   if (picks.length === 0) {
@@ -123,6 +129,15 @@ function suggestHymns() {
 function makeCard(hymn) {
   const card = document.createElement("div");
   card.className = "hino-card";
+
+  let topicsHtml = "";
+  if (hymn.topics && hymn.topics.length > 0) {
+    const tags = hymn.topics.slice(0, 4).map(t =>
+      `<span class="hino-topic-tag">${t}</span>`
+    ).join("");
+    topicsHtml = `<div class="hino-topics">${tags}</div>`;
+  }
+
   card.innerHTML = `
     <div class="hino-cabecalho">
       <span class="hino-hinario">${hymn.hymnal}</span>
@@ -130,9 +145,45 @@ function makeCard(hymn) {
     </div>
     <div class="hino-titulo">${hymn.title}</div>
     <div class="hino-primeira-linha">${hymn.first_line}</div>
-    <button class="btn-escolher" onclick="addToCulto('${hymn.hymnal}','${hymn.number}','${hymn.title.replace(/'/g, "\\'")}')">✓ Escolher</button>
+    ${topicsHtml}
+    <div style="display:flex;gap:0.5rem">
+      <button class="btn-ver-letra" onclick='openLetra(${JSON.stringify(hymn).replace(/'/g, "&#39;")})'>📖 Ver letra</button>
+      <button class="btn-escolher" onclick="addToCulto('${hymn.hymnal}','${hymn.number}','${hymn.title.replace(/'/g, "\\'")}')">✓ Escolher</button>
+    </div>
   `;
   return card;
+}
+
+function openLetra(hymn) {
+  currentModalHymn = hymn;
+  document.getElementById("modal-hinario").textContent = hymn.hymnal;
+  document.getElementById("modal-numero").textContent = hymn.number;
+  document.getElementById("modal-titulo").textContent = hymn.title;
+  document.getElementById("modal-primeira-linha").textContent = hymn.first_line;
+  document.getElementById("modal-letra-texto").textContent = hymn.lyrics || "Letra não disponível.";
+  document.getElementById("modal-letra").classList.add("active");
+}
+
+function chooseFromModal() {
+  if (currentModalHymn) {
+    addToCulto(currentModalHymn.hymnal, currentModalHymn.number, currentModalHymn.title);
+    closeModalById("modal-letra");
+  }
+}
+
+function closeModal(event, modalId) {
+  if (event.target.id === modalId) {
+    document.getElementById(modalId).classList.remove("active");
+  }
+}
+
+function closeModalById(modalId) {
+  document.getElementById(modalId).classList.remove("active");
+}
+
+function openSobre() {
+  document.getElementById("sobre-count").textContent = database.hymns ? database.hymns.length : 0;
+  document.getElementById("modal-sobre").classList.add("active");
 }
 
 function addToCulto(hymnal, number, title) {

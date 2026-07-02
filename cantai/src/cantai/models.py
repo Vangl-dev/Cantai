@@ -13,6 +13,7 @@ class HymnModel(SQLModel, table=True):
     number: str
     title: str
     category: str | None = None
+    topics: str = "[]"
     first_line: str = ""
     lyrics: str = ""
     slide_count: int = 0

@@ -1,12 +1,12 @@
 """Exportador JSON do Cantai Builder."""
 
 import json
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from pathlib import Path
 
 from cantai.schemas import Hymn
 
-_EXPORT_VERSION = 1
+_EXPORT_VERSION = 2
 
 
 def export_json(hymns: list[Hymn], output: Path) -> None:
@@ -15,7 +15,7 @@ def export_json(hymns: list[Hymn], output: Path) -> None:
 
     data = {
         "version": _EXPORT_VERSION,
-        "generated_at": datetime.now(timezone.utc).isoformat(),
+        "generated_at": datetime.now(UTC).isoformat(),
         "hymns": [
             {
                 "hymnal": h.hymnal,
@@ -25,6 +25,7 @@ def export_json(hymns: list[Hymn], output: Path) -> None:
                 "first_line": h.first_line,
                 "lyrics": h.lyrics,
                 "slide_count": h.slide_count,
+                "topics": h.topics,
             }
             for h in hymns
         ],
