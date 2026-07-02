@@ -1,0 +1,1087 @@
+Ação de Graças:
+  aliases:
+    - Gratidão
+
+  CTP:
+    - Ação de Graças
+
+  HARPA:
+    - Gratidão
+
+  CC:
+    - GRATIDÃO
+
+  SH:
+    - Gratidão e Ação de graças
+
+
+Adoração:
+  aliases:
+    - Adoração e Louvor
+
+  CTP:
+    - Adoração
+
+  HARPA:
+    - "DEUS, O FILHO: Louvores"
+
+  CC:
+    - ADORAÇÃO E LOUVOR
+
+  SH:
+    - Convite à Adoração e Louvor
+
+
+Advento:
+  aliases:
+    - Espera do Messias
+
+  CTP:
+    - Advento
+
+  HARPA: []
+
+  CC: []
+
+  SH:
+    - Advento
+
+
+Afirmação de Fé:
+  aliases:
+    - Credo
+    - Confissão de Fé
+
+  CTP:
+    - Afirmação de Fé
+
+  HARPA:
+    - Fé
+
+  CC:
+    - FÉ
+
+  SH:
+    - Confissão da Fé
+
+
+Aniversário:
+  aliases:
+    - Aniversário da Igreja
+
+  CTP:
+    - Aniversário
+
+  HARPA: []
+
+  CC: []
+
+  SH:
+    - Aniversário
+
+
+Ano Novo:
+  CTP:
+    - Ano Novo
+
+  HARPA:
+    - Passagem do ano
+
+  CC:
+    - ANO NOVO
+
+  SH:
+    - Ano Novo
+
+
+Ascensão do Senhor:
+  aliases:
+    - Ascensão
+
+  CTP:
+    - Ascensão do Senhor
+
+  HARPA:
+    - Ascensão
+
+  CC:
+    - ASCENSÃO
+
+  SH:
+    - Ascensão
+
+
+Batismo:
+  CTP:
+    - Batismo
+
+  HARPA:
+    - Batismo nas águas
+
+  CC:
+    - BATISMO
+
+  SH:
+    - Batismo e Recepção de Membros
+
+
+Batismo do Senhor:
+  CTP:
+    - Batismo do Senhor
+
+  HARPA: []
+
+  CC: []
+
+  SH: []
+
+
+Batismo Infantil:
+  CTP:
+    - Batismo Infantil
+
+  HARPA: []
+
+  CC: []
+
+  SH: []
+
+
+Bênção:
+  aliases:
+    - Bênção Final
+
+  CTP:
+    - Bênção
+    - Bênção (Após a)
+
+  HARPA:
+    - Bênção Apostólica
+
+  CC:
+    - BÊNÇÃO
+
+  SH:
+    - Bênção
+
+
+Casamento:
+  aliases:
+    - Matrimônio
+
+  CTP:
+    - Casamento
+
+  HARPA:
+    - Matrimônio
+
+  CC:
+    - CASAMENTO
+
+  SH:
+    - Casamento
+
+
+Ciclo do Natal:
+  CTP:
+    - Ciclo do Natal
+
+  HARPA: []
+
+  CC: []
+
+  SH: []
+
+
+Comunhão:
+  aliases:
+    - Unidade
+
+  CTP:
+    - Comunhão
+
+  HARPA:
+    - Comunhão
+
+  CC:
+    - COMUNHÃO
+
+  SH:
+    - Comunhão
+
+
+Confiança:
+  aliases:
+    - Firmeza
+
+  CTP:
+    - Confiança
+
+  HARPA:
+    - Firmeza
+
+  CC:
+    - CONFIANÇA
+
+  SH:
+    - Confiança
+
+
+Confissão:
+  aliases:
+    - Contrição
+    - Arrependimento
+
+  CTP:
+    - Confissão
+
+  HARPA: []
+
+  CC:
+    - CONTRIÇÃO, DECISÃO E ARREPENDIMENTO
+
+  SH:
+    - Confissão
+
+
+Consagração:
+  aliases:
+    - Dedicação
+
+  CTP:
+    - Consagração
+
+  HARPA:
+    - Consagração
+
+  CC:
+    - VIDA CRISTÃ - CONSAGRAÇÃO
+
+  SH:
+    - Consagração Pessoal
+
+
+Contrição:
+  CTP:
+    - Contrição
+
+  HARPA: []
+
+  CC:
+    - CONTRIÇÃO
+
+  SH:
+    - Contrição
+
+
+Convite à Adoração:
+  CTP:
+    - Convite à Adoração
+
+  HARPA:
+    - Convite ao Culto
+
+  CC: []
+
+  SH: []
+
+
+Credo:
+  CTP:
+    - Credo (Após o)
+
+  HARPA: []
+
+  CC: []
+
+  SH: []
+
+
+Crianças:
+  aliases:
+    - Infantil
+
+  CTP:
+    - Crianças
+
+  HARPA: []
+
+  CC:
+    - CRIANÇAS
+
+  SH:
+    - Crianças
+
+
+Cristo Rei:
+  CTP:
+    - Cristo, Rei do Universo
+
+  HARPA:
+    - Cristo Rei
+
+  CC:
+    - CRISTO REI
+
+  SH:
+    - Cristo Rei
+
+
+Declaração de Perdão:
+  aliases:
+    - Perdão
+
+  CTP:
+    - Declaração de Perdão
+    - Declaração de Perdão (Após a)
+
+  HARPA: []
+
+  CC: []
+
+  SH:
+    - Perdão
+
+
+Dia do Senhor:
+  CTP:
+    - Dia do Senhor
+
+  HARPA:
+    - Domingo
+
+  CC:
+    - DIA DO SENHOR
+
+  SH:
+    - Dia do Senhor
+
+
+Dia dos Pais:
+  CTP:
+    - Dia dos Pais
+
+  HARPA: []
+
+  CC:
+    - DIA DOS PAIS
+
+  SH: []
+
+
+Dia da Mulher:
+  CTP:
+    - Dia Internacional da Mulher
+
+  HARPA: []
+
+  CC: []
+
+  SH: []
+
+
+Diaconia:
+  aliases:
+    - Serviço Cristão
+
+  CTP:
+    - Diaconia
+
+  HARPA:
+    - Serviço
+
+  CC:
+    - SERVIÇO CRISTÃO
+
+  SH:
+    - Serviço Cristão
+
+
+Domingo de Ramos:
+  aliases:
+    - Entrada Triunfal
+
+  CTP:
+    - Domingo de Ramos
+
+  HARPA:
+    - Entrada Triunfal
+
+  CC:
+    - DOMINGO DE RAMOS
+
+  SH:
+    - Entrada Triunfal
+
+
+Emerência:
+  CTP:
+    - Emerência
+
+  HARPA: []
+
+  CC: []
+
+  SH: []
+
+
+Envio:
+  aliases:
+    - Comissionamento
+
+  CTP:
+    - Envio
+    - Envio (Após o)
+
+  HARPA: []
+
+  CC: []
+
+  SH: []
+
+
+Epifania:
+  aliases:
+    - Manifestação de Cristo
+
+  CTP:
+    - Epifania
+
+  HARPA: []
+
+  CC: []
+
+  SH:
+    - Epifania
+
+
+Espírito Santo:
+  aliases:
+    - Espírito
+
+  CTP:
+    - Espírito Santo
+
+  HARPA:
+    - DEUS, O ESPÍRITO SANTO
+
+  CC:
+    - ESPÍRITO SANTO
+
+  SH:
+    - Espírito Santo
+
+
+Evangelho:
+  aliases:
+    - Salvação
+
+  CTP:
+    - Evangelho
+
+  HARPA:
+    - Salvação
+
+  CC:
+    - SALVAÇÃO
+
+  SH:
+    - Evangelho
+
+
+Família:
+  aliases:
+    - Lar
+
+  CTP:
+    - Família
+
+  HARPA:
+    - Família
+
+  CC:
+    - LAR CRISTÃO
+
+  SH:
+    - Família
+
+
+FATIPI:
+  CTP:
+    - FATIPI
+
+  HARPA: []
+
+  CC: []
+
+  SH: []
+
+
+Funeral:
+  aliases:
+    - Consolação
+
+  CTP:
+    - Funeral
+
+  HARPA:
+    - Consolação
+
+  CC:
+    - CONSOLAÇÃO
+
+  SH:
+    - Consolação
+
+
+Igreja:
+  CTP:
+    - Igreja
+
+  HARPA: []
+
+  CC:
+    - IGREJA
+
+  SH:
+    - IGREJA
+
+
+Intercessão:
+  CTP:
+    - Intercessão
+
+  HARPA: []
+
+  CC: []
+
+  SH: []
+
+
+Introito:
+  CTP:
+    - Introito
+
+  HARPA: []
+
+  CC: []
+
+  SH: []
+
+
+IPIB:
+  CTP:
+    - IPIB
+
+  HARPA: []
+
+  CC: []
+
+  SH: []
+
+
+Jubilação:
+  CTP:
+    - Jubilação
+
+  HARPA: []
+
+  CC: []
+
+  SH: []
+
+
+Juventude:
+  aliases:
+    - Mocidade
+
+  CTP:
+    - Juventude
+
+  HARPA:
+    - Mocidade
+
+  CC:
+    - MOCIDADE
+
+  SH:
+    - Mocidade
+
+
+Leitura da Palavra:
+  CTP:
+    - Leitura da Palavra (Após a)
+
+  HARPA: []
+
+  CC: []
+
+  SH:
+    - Para Leitura Bíblica
+
+
+Leitura do Evangelho:
+  CTP:
+    - Leitura do Evangelho (Antes ou após a)
+    - Leitura do Evangelho (Após a)
+
+  HARPA: []
+
+  CC: []
+
+  SH: []
+
+
+Louvor:
+  CTP:
+    - Louvor
+
+  HARPA: []
+
+  CC: []
+
+  SH:
+    - Louvor e Exaltação
+
+
+Missão:
+  CTP:
+    - Missão
+
+  HARPA: []
+
+  CC:
+    - EVANGELIZAÇÃO
+
+  SH:
+    - Evangelização e Missões
+
+
+Missões:
+  aliases:
+    - Evangelização Mundial
+
+  CTP:
+    - Missões
+
+  HARPA:
+    - Missões
+
+  CC:
+    - MISSÕES
+
+  SH:
+    - Missões
+
+
+Ofertório:
+  CTP:
+    - Ofertório
+    - Ofertório (Antes do)
+
+  HARPA: []
+
+  CC: []
+
+  SH:
+    - Ofertório
+
+
+Natal:
+  aliases:
+    - Nascimento de Cristo
+
+  CTP:
+    - Natal
+
+  HARPA:
+    - Seu nascimento (Natal)
+
+  CC:
+    - CRISTO - NATAL DE
+
+  SH:
+    - Nascimento
+
+
+Oração:
+  aliases:
+    - Súplica
+
+  CTP:
+    - Súplica
+
+  HARPA:
+    - Oração
+
+  CC: []
+
+  SH:
+    - Oração e Súplica
+
+
+Oração de Confissão:
+  CTP:
+    - Oração de Confissão (Antes ou após a)
+    - Oração de Confissão (Após a)
+
+  HARPA: []
+
+  CC: []
+
+  SH: []
+
+
+Oração de Gratidão:
+  CTP:
+    - Oração de Gratidão (Após a)
+
+  HARPA: []
+
+  CC: []
+
+  SH: []
+
+
+Oração Eucarística:
+  CTP:
+    - Oração Eucarística
+    - Oração Eucarística (Após a)
+    - Oração Eucarística (Na)
+
+  HARPA: []
+
+  CC: []
+
+  SH: []
+
+
+Oração por Iluminação:
+  CTP:
+    - Oração por Iluminação
+
+  HARPA: []
+
+  CC: []
+
+  SH: []
+
+
+Orações:
+  CTP:
+    - Orações (Após as)
+    - Orações de Intercessão (Após as)
+
+  HARPA: []
+
+  CC: []
+
+  SH: []
+
+
+Pai Nosso:
+  CTP:
+    - Pai Nosso
+
+  HARPA: []
+
+  CC: []
+
+  SH: []
+
+
+Paixão de Cristo:
+  CTP:
+    - Paixão de Cristo
+
+  HARPA:
+    - Seus sofrimentos
+    - Sua morte
+
+  CC:
+    - CRISTO — A CRUZ DE
+    - CRISTO — O SANGUE DE
+
+  SH:
+    - Paixão e Morte
+
+
+Palavra de Deus:
+  aliases:
+    - Bíblia
+    - Escrituras
+
+  CTP:
+    - Palavra de Deus
+
+  HARPA:
+    - A Palavra do Senhor
+
+  CC:
+    - BÍBLIA
+
+  SH:
+    - Bíblia
+
+
+Páscoa:
+  aliases:
+    - Paixão de Cristo
+
+  CTP:
+    - Páscoa
+
+  HARPA:
+    - Paixão
+
+  CC:
+    - CRISTO — PAIXÃO
+
+  SH:
+    - Paixão
+
+
+Partir do Pão:
+  CTP:
+    - Partir do Pão (Após o)
+
+  HARPA: []
+
+  CC: []
+
+  SH: []
+
+
+Pátria:
+  CTP:
+    - Pátria
+
+  HARPA: []
+
+  CC: []
+
+  SH:
+    - Pátria
+
+
+Pentecostes:
+  CTP:
+    - Pentecostes
+
+  HARPA:
+    - Pentecostes
+
+  CC:
+    - PENTECOSTES
+
+  SH:
+    - Pentecostes
+
+
+Primícias:
+  CTP:
+    - Primícias
+
+  HARPA: []
+
+  CC: []
+
+  SH: []
+
+
+Proclamação da Palavra:
+  CTP:
+    - Proclamação da Palavra (Após a)
+
+  HARPA: []
+
+  CC: []
+
+  SH: []
+
+
+Profissão de Fé:
+  CTP:
+    - Profissão de Fé
+
+  HARPA: []
+
+  CC: []
+
+  SH: []
+
+
+Quaresma:
+  CTP:
+    - Quaresma
+    - Quaresma (Início da)
+
+  HARPA: []
+
+  CC: []
+
+  SH: []
+
+
+Reforma:
+  aliases:
+    - Reforma Protestante
+
+  CTP:
+    - Reforma Protestante
+
+  HARPA: []
+
+  CC: []
+
+  SH:
+    - Reforma
+
+
+Ressurreição:
+  aliases:
+    - Ressurreição e Ascensão
+
+  CTP:
+    - Ressurreição
+
+  HARPA:
+    - Sua ressurreição
+
+  CC:
+    - CRISTO - RESSURREIÇÃO DE
+
+  SH:
+    - Ressurreição e Ascensão
+
+
+Santa Ceia:
+  aliases:
+    - Ceia do Senhor
+
+  CTP:
+    - Santa Ceia (Após a)
+    - Santa Ceia (Durante a)
+
+  HARPA:
+    - Ceia do Senhor
+
+  CC:
+    - CEIA
+
+  SH:
+    - Ceia do Senhor
+
+
+Santificação:
+  aliases:
+    - Vida Santa
+
+  CTP: []
+
+  HARPA:
+    - Santificação
+
+  CC:
+    - SANTIFICAÇÃO
+
+  SH:
+    - Santificação
+
+
+Saudação da Paz:
+  CTP:
+    - Saudação da Paz
+
+  HARPA: []
+
+  CC: []
+
+  SH: []
+
+
+Segunda Vinda:
+  aliases:
+    - Volta de Cristo
+
+  CTP:
+    - Segunda Vinda
+
+  HARPA:
+    - Sua segunda vinda
+
+  CC:
+    - CRISTO - A VOLTA DE
+
+  SH:
+    - Segunda Vinda
+
+
+Semana da Paixão:
+  CTP:
+    - Semana da Paixão
+
+  HARPA: []
+
+  CC: []
+
+  SH: []
+
+
+Tempo Pascal:
+  CTP:
+    - Tempo Pascal
+
+  HARPA: []
+
+  CC: []
+
+  SH: []
+
+
+Testemunho:
+  CTP:
+    - Testemunho
+
+  HARPA: []
+
+  CC: []
+
+  SH:
+    - Testemunho Cristão
+
+
+Transfiguração do Senhor:
+  CTP:
+    - Transfiguração do Senhor
+
+  HARPA: []
+
+  CC: []
+
+  SH: []
+
+
+Trindade:
+  CTP:
+    - Trindade
+
+  HARPA:
+    - LOUVORES AO DEUS TRINO
+
+  CC:
+    - DEUS — TRINDADE
+
+  SH:
+    - TRINDADE
+
+
+UMPI:
+  CTP:
+    - UMPI
+
+  HARPA: []
+
+  CC: []
+
+  SH: []

@@ -8,62 +8,32 @@
 </head>
 <body>
   <header class="header">
-    <h1>🎼 Cantai</h1>
+    <h1> Cantai</h1>
     <p class="subtitle">Planejamento de Hinos</p>
   </header>
 
   <main class="container">
     <section class="card">
-      <h2>Busca rápida</h2>
+      <h2>Busca</h2>
       <input
         type="text"
         id="busca"
         class="input-busca"
-        placeholder="🔍 Procurar hino por número, título, letra..."
+        placeholder="Procurar por numero, titulo, letra..."
         autocomplete="off"
       >
       <div id="busca-info" class="busca-info" style="display:none"></div>
     </section>
 
-    <section class="card">
-      <h2>Temas</h2>
-      <div id="temas-tags" class="temas-tags"></div>
-      <button id="btn-mais-temas" class="btn-mostrar-mais" onclick="toggleMoreTopics()" style="display:none">Mostrar mais</button>
-    </section>
-
     <section id="resultados-busca" class="resultados" style="display:none"></section>
 
     <section class="card">
-      <h2>Momento do culto</h2>
-      <select id="momento">
-        <option value="Adoração">Adoração</option>
-        <option value="Confiança" selected>Confiança</option>
-        <option value="Consagração">Consagração</option>
-        <option value="Evangelização">Evangelização</option>
-        <option value="Missões">Missões</option>
-        <option value="Oração">Oração</option>
-        <option value="Ceia do Senhor">Ceia do Senhor</option>
-        <option value="Santidade">Santidade</option>
-        <option value="Gratidão">Gratidão</option>
-        <option value="Redenção">Redenção</option>
-        <option value="Esperança">Esperança</option>
-        <option value="Graça">Graça</option>
-        <option value="Família">Família</option>
-        <option value="Batismo">Batismo</option>
-        <option value="Casamento">Casamento</option>
-        <option value="Funeral">Funeral</option>
-        <option value="Natal">Natal</option>
-        <option value="Páscoa">Páscoa</option>
-        <option value="Pentecostes">Pentecostes</option>
-        <option value="Espírito Santo">Espírito Santo</option>
-        <option value="Despedida">Despedida</option>
-        <option value="Ano Novo">Ano Novo</option>
-        <option value="Palavra de Deus">Palavra de Deus</option>
-      </select>
+      <h2>Tema</h2>
+      <select id="tema"></select>
     </section>
 
     <section class="card">
-      <h2>Hinários</h2>
+      <h2>Hinarios</h2>
       <div class="checkbox-group">
         <label class="checkbox-label">
           <input type="checkbox" id="hctp" checked>
@@ -71,11 +41,11 @@
         </label>
         <label class="checkbox-label">
           <input type="checkbox" id="harpa" checked>
-          <span>Harpa Cristã</span>
+          <span>Harpa Crista</span>
         </label>
         <label class="checkbox-label">
           <input type="checkbox" id="cantor" checked>
-          <span>Cantor Cristão</span>
+          <span>Cantor Cristao</span>
         </label>
         <label class="checkbox-label">
           <input type="checkbox" id="sh" checked>
@@ -83,13 +53,13 @@
         </label>
         <label class="checkbox-label">
           <input type="checkbox" id="nc" checked>
-          <span>Novo Cântico</span>
+          <span>Novo Cantico</span>
         </label>
       </div>
     </section>
 
     <section class="card">
-      <h2>Evitar repetição</h2>
+      <h2>Evitar repeticao</h2>
       <select id="repeticao">
         <option value="30">30 dias</option>
         <option value="60">60 dias</option>
@@ -100,7 +70,7 @@
     </section>
 
     <button class="btn-primary" id="btn-sugerir" onclick="suggestHymns()">
-      🎵 SUGERIR HINOS
+      SUGERIR HINOS
     </button>
 
     <section id="resultados" class="resultados"></section>
@@ -110,27 +80,27 @@
       <div id="culto-lista" class="culto-lista"></div>
       <div class="culto-botoes">
         <button class="btn-copiar" id="btn-copiar" onclick="copyProgramacao()">
-          📋 Copiar programação
+          Copiar programacao
         </button>
         <button class="btn-novas" onclick="suggestHymns()">
-          🔄 Nova sugestão
+          Nova sugestao
         </button>
       </div>
     </section>
 
     <section class="card card-dados">
-      <h2>⚙ Dados</h2>
+      <h2>Dados</h2>
       <div class="dados-botoes">
-        <button class="btn-dado" onclick="openHistorico()">🕒 Últimos cultos</button>
-        <button class="btn-dado" onclick="exportHistorico()">⬇ Exportar histórico</button>
-        <button class="btn-dado" onclick="importHistorico()">⬆ Importar histórico</button>
-        <button class="btn-dado btn-dado-perigo" onclick="limparHistorico()">🗑 Limpar este culto</button>
+        <button class="btn-dado" onclick="openHistorico()">Ultimos cultos</button>
+        <button class="btn-dado" onclick="exportHistorico()">Exportar historico</button>
+        <button class="btn-dado" onclick="importHistorico()">Importar historico</button>
+        <button class="btn-dado btn-dado-perigo" onclick="limparHistorico()">Limpar este culto</button>
       </div>
     </section>
   </main>
 
   <footer class="footer">
-    <p>Versão: <span id="db-version">-</span> · <span id="db-count">-</span> hinos carregados</p>
+    <p>Versao: <span id="db-version">-</span> . <span id="db-count">-</span> hinos carregados</p>
     <p><a href="#" onclick="openSobre(); return false;" class="footer-link">Sobre</a></p>
   </footer>
 
@@ -139,27 +109,27 @@
       <div class="modal-header">
         <span class="modal-hinario" id="modal-hinario"></span>
         <span class="modal-numero" id="modal-numero"></span>
-        <button class="modal-close" onclick="closeModalById('modal-letra')">✕</button>
+        <button class="modal-close" onclick="closeModalById('modal-letra')">X</button>
       </div>
       <h3 class="modal-titulo" id="modal-titulo"></h3>
       <p class="modal-primeira-linha" id="modal-primeira-linha"></p>
       <div class="modal-letra-texto" id="modal-letra-texto"></div>
       <div class="modal-footer">
         <button class="btn-modal-close" onclick="closeModalById('modal-letra')">Fechar</button>
-        <button class="btn-modal-escolher" id="modal-btn-escolher" onclick="chooseFromModal()">✓ Escolher</button>
+        <button class="btn-modal-escolher" id="modal-btn-escolher" onclick="chooseFromModal()">Escolher</button>
       </div>
     </div>
   </div>
 
   <div id="modal-sobre" class="modal" onclick="closeModal(event, 'modal-sobre')">
     <div class="modal-content modal-sobre-content">
-      <button class="modal-close" onclick="closeModalById('modal-sobre')">✕</button>
-      <h2>🎼 Cantai</h2>
+      <button class="modal-close" onclick="closeModalById('modal-sobre')">X</button>
+      <h2>Cantai</h2>
       <p class="sobre-descricao">Planejamento de Hinos para cultos e eventos da igreja.</p>
       <div class="sobre-info">
-        <p><strong>Versão:</strong> <span id="sobre-versao">1.2</span></p>
+        <p><strong>Versao:</strong> <span id="sobre-versao">1.2</span></p>
         <p><strong>Total de hinos:</strong> <span id="sobre-count">0</span></p>
-        <p><strong>Licença:</strong> MIT</p>
+        <p><strong>Licenca:</strong> MIT</p>
         <p><strong>GitHub:</strong> <a href="https://github.com/Vangl-dev/Cantai" target="_blank">github.com/Vangl-dev/Cantai</a></p>
       </div>
     </div>
@@ -168,12 +138,12 @@
   <div id="modal-historico" class="modal" onclick="closeModal(event, 'modal-historico')">
     <div class="modal-content modal-historico-content">
       <div class="modal-header">
-        <span class="modal-hinario">HISTÓRICO</span>
-        <button class="modal-close" onclick="closeModalById('modal-historico')">✕</button>
+        <span class="modal-hinario">HISTORICO</span>
+        <button class="modal-close" onclick="closeModalById('modal-historico')">X</button>
       </div>
       <div id="historico-lista" class="historico-lista"></div>
       <div class="modal-footer">
-        <button class="btn-modal-close" onclick="limparHistoricoCompleto()">🗑 Limpar tudo</button>
+        <button class="btn-modal-close" onclick="limparHistoricoCompleto()">Limpar tudo</button>
         <button class="btn-modal-close" onclick="closeModalById('modal-historico')">Fechar</button>
       </div>
     </div>

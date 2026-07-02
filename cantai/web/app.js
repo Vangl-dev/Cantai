@@ -2,53 +2,104 @@ let database = { version: null, hymns: [] };
 let cultoHymns = JSON.parse(localStorage.getItem("cultoHymns") || "[]");
 let historico = JSON.parse(localStorage.getItem("cantaiHistorico") || "[]");
 let currentModalHymn = null;
-let selectedTopics = [];
-let allTopicsSorted = [];
-const SHOW_INITIAL_TOPICS = 12;
 
 const CANONICAL_TOPICS = [
-  "Adoração","Santidade","Trindade","Ceia do Senhor","Natal","Páscoa",
-  "Pentecostes","Espírito Santo","Missões","Evangelização","Consagração",
-  "Confiança","Esperança","Despedida","Chamado","Oração","Família",
-  "Casamento","Batismo","Juventude","Crianças","Funeral","Ressurreição",
-  "Segunda Vinda","Vida Cristã","Gratidão","Ano Novo","Palavra de Deus",
-  "Serviço","Soberania de Deus","Redenção","Graça","Salvação"
+  "Acao de Gracas","Adoracao","Advento","Afirmacao de Fe","Aniversario",
+  "Ano Novo","Ascensao do Senhor","Batismo","Batismo do Senhor","Batismo Infantil",
+  "Bencao","Casamento","Ciclo do Natal","Comunhao","Confianca","Confissao",
+  "Consagracao","Contricao","Convite a Adoracao","Credo","Criancas","Cristo Rei",
+  "Declaracao de Perdao","Dia da Mulher","Dia do Senhor","Dia dos Pais","Diaconia",
+  "Domingo de Ramos","Emerencia","Envio","Epifania","Espirito Santo","Evangelho",
+  "Familia","FATIPI","Funeral","Igreja","Intercessao","Introito","IPIB",
+  "Jubilacao","Juventude","Leitura da Palavra","Leitura do Evangelho","Louvor",
+  "Missao","Missoes","Natal","Ofertorio","Oracao","Oracao de Confissao",
+  "Oracao de Gratidao","Oracao Eucaristica","Oracao por Iluminacao","Oracoes",
+  "Pai Nosso","Paixao de Cristo","Palavra de Deus","Pascoa","Partir do Pao",
+  "Patria","Pentecostes","Primicias","Proclamacao da Palavra","Profissao de Fe",
+  "Quaresma","Reforma","Ressurreicao","Santa Ceia","Santificacao",
+  "Saudacao da Paz","Segunda Vinda","Semana da Paixao","Tempo Pascal",
+  "Testemunho","Transfiguracao do Senhor","Trindade","UMPI"
 ];
 
 const SYNONYMS = {
-  "Adoração":["Adoração","Louvor","Louvores","Adoração e Louvor","Convite à Adoração","Convite à Adoração e Louvor","Louvores ao Deus Trino","Exaltação","Glória","Magnificar","Introito","Deus, o Filho - Louvores","Culto - Abertura"],
-  "Santidade":["Santidade","Afirmação de Fé","Credo (Após o)","Profissão de Fé","Reforma Protestante"],
-  "Trindade":["Trindade","Deus, o Pai","Cristo, Rei do Universo"],
-  "Ceia do Senhor":["Ceia do Senhor","Santa Ceia","Santa Ceia (Após a Celebração da)","Santa Ceia (Durante a)","Comunhão","Ceia","Igreja - Ceia do Senhor","Partir do Pão (Após o)","Oração Eucarística","Oração Eucarística (Após a)","Oração Eucarística (Na)","Pai Nosso","Igreja","União Fraternal"],
-  "Natal":["Natal","Nascimento","Ciclo do Natal","Epifania","Deus, o Filho - Natal","Seu nascimento (Natal)","CRISTO - NATAL DE","IV. JESUS CRISTO - B. Nascimento"],
-  "Páscoa":["Páscoa","Tempo Pascal","Semana da Paixão","Domingo de Ramos","Transfiguração do Senhor","Ascensão do Senhor"],
+  "Acao de Gracas":["Acao de Gracas","Gratidao","GRATIDAO"],
+  "Adoracao":["Adoracao","Louvor","Louvores","Adoracao e Louvor","Exaltacao","Gloria","Magnificar","Deus, o Filho - Louvores","Culto - Abertura"],
+  "Advento":["Advento","Esperanca"],
+  "Afirmacao de Fe":["Afirmacao de Fe","Credo (Apos o)","Profissao de Fe"],
+  "Aniversario":["Aniversario"],
+  "Ano Novo":["Ano Novo","Passagem do Ano","Passagem do ano","ANO NOVO"],
+  "Ascensao do Senhor":["Ascensao do Senhor","Ascensao"],
+  "Batismo":["Batismo","Batismo nas aguas","Igreja - Batismo","BATISMO"],
+  "Batismo do Senhor":["Batismo do Senhor"],
+  "Batismo Infantil":["Batismo Infantil"],
+  "Bencao":["Bencao","Bencao Apostolica"],
+  "Casamento":["Casamento","Matrimonio"],
+  "Ciclo do Natal":["Ciclo do Natal"],
+  "Comunhao":["Comunhao","Uniao Fraternal"],
+  "Confianca":["Confianca","Firmeza","Protecao e Ajuda","Guia"],
+  "Confissao":["Confissao"],
+  "Consagracao":["Consagracao","Igreja - Consagracao","Obediencia","VIDA CRISTA - CONSAGRACAO"],
+  "Contricao":["Contricao"],
+  "Convite a Adoracao":["Convite a Adoracao","Convite a Adoracao e Louvor","Louvores ao Deus Trino","Introito"],
+  "Credo":["Credo"],
+  "Criancas":["Criancas","CRIANCAS"],
+  "Cristo Rei":["Cristo Rei","Cristo, Rei do Universo"],
+  "Declaracao de Perdao":["Declaracao de Perdao","Perdao"],
+  "Dia da Mulher":["Dia da Mulher","Dia Internacional da Mulher","Dia das Maes"],
+  "Dia do Senhor":["Dia do Senhor"],
+  "Dia dos Pais":["Dia dos Pais"],
+  "Diaconia":["Diaconia","Diakonia"],
+  "Domingo de Ramos":["Domingo de Ramos","Entrada Triunfal"],
+  "Emerencia":["Emerencia","Emergencia"],
+  "Envio":["Envio","Envio (Apos o)","Comissionamento","FATIPI","IPIB","UMPI"],
+  "Epifania":["Epifania","Manifestacao de Cristo"],
+  "Espirito Santo":["Espirito Santo","Deus, o Espirito Santo","ESPIRITO SANTO"],
+  "Evangelho":["Evangelho","Salvacao","Culto - Evangelho"],
+  "Familia":["Familia","Lar"],
+  "FATIPI":["FATIPI"],
+  "Funeral":["Funeral","Consolacao"],
+  "Igreja":["Igreja"],
+  "Intercessao":["Intercessao"],
+  "Introito":["Introito"],
+  "IPIB":["IPIB"],
+  "Jubilacao":["Jubilacao"],
+  "Juventude":["Juventude","Mocidade"],
+  "Leitura da Palavra":["Leitura da Palavra","Leitura da Palavra (Apos a)","Leitura Biblica","Para Leitura Biblica"],
+  "Leitura do Evangelho":["Leitura do Evangelho","Leitura do Evangelho (Apos ou apos a)","Leitura do Evangelho (Apos a)"],
+  "Louvor":["Louvor"],
+  "Missao":["Missao","Evangelizacao"],
+  "Missoes":["Missoes","Evangelizacao Mundial"],
+  "Natal":["Natal","Nascimento","Nascimento de Cristo","Deus, o Filho - Natal","Seu nascimento (Natal)","CRISTO - NATAL DE"],
+  "Ofertorio":["Ofertorio","Ofertorio (Antes do)"],
+  "Oracao":["Oracao","Suplica","Clamor","Reuniao de Oracao"],
+  "Oracao de Confissao":["Oracao de Confissao","Oracao de Confissao (Apos ou apos a)","Oracao de Confissao (Apos a)"],
+  "Oracao de Gratidao":["Oracao de Gratidao","Oracao de Gratidao (Apos a)"],
+  "Oracao Eucaristica":["Oracao Eucaristica","Oracao Eucaristica (Apos a)","Oracao Eucaristica (Na)"],
+  "Oracao por Iluminacao":["Oracao por Iluminacao"],
+  "Oracoes":["Oracoes","Oracoes (Apos as)","Oracoes de Intercessao (Apos as)"],
+  "Pai Nosso":["Pai Nosso"],
+  "Paixao de Cristo":["Paixao de Cristo","Cruz"],
+  "Palavra de Deus":["Palavra de Deus","Biblia","Escrituras","A Palavra do Senhor","BIBLIA"],
+  "Pascoa":["Pascoa","Tempo Pascal","Semana da Paixao","Transfiguracao do Senhor"],
+  "Partir do Pao":["Partir do Pao","Partir do Pao (Apos o)"],
+  "Patria":["Patria"],
   "Pentecostes":["Pentecostes"],
-  "Espírito Santo":["Espírito Santo","Deus, o Espírito Santo","ESPÍRITO SANTO","V. ESPÍRITO SANTO"],
-  "Missões":["Missões","Missão","Envio","Envio (Após o)","FATIPI","IPIB","UMPI"],
-  "Evangelização":["Evangelização","Evangelho","Culto - Evangelho","Culto - Apelo","Culto - Decisão","Testemunho"],
-  "Consagração":["Consagração","Igreja - Consagração","Ofertório","Ofertório (Antes do)","Primícias","Obediência","VIDA CRISTA - CONSAGRAÇÃO","VIII. VIDA CRISTÃ - C. Consagração Pessoal"],
-  "Confiança":["Confiança","Firmeza","Proteção e Ajuda","Guia","VIII. VIDA CRISTÃ - J. Confiança"],
-  "Esperança":["Esperança","Advento"],
-  "Despedida":["Despedida","Consolo","Encerramento","Final do Culto","Paz e Descanso","SAUDAÇÕES - DESPEDIDAS","VI. CULTO PÚBLICO - F. Encerramento do Culto","XIII. ASSUNTOS ESPECIAIS - L. Despedida","Culto - Encerramento"],
-  "Chamado":["Chamado","Admoestação"],
-  "Oração":["Oração","Súplica","Clamor","Reunião de Oração","Oração por Iluminação","Oração de Confissão (Antes ou após a)","Oração de Confissão (Após a)","Orações (Após as)","Orações de Intercessão (Após as)","Oração de Gratidão (Após a)","Intercessão","IX. ORAÇÃO E SÚPLICA"],
-  "Família":["Família","Lar","Aniversário","Dia Internacional da Mulher","Dia das Mães","Dia dos Pais"],
-  "Casamento":["Casamento","Matrimônio","X. IGREJA - G. Casamento"],
-  "Batismo":["Batismo","Batismo Infantil","Batismo do Senhor","Batismo nas águas","Igreja - Batismo","BATISMO","X. IGREJA - B. Batismo e Recepção de Membros"],
-  "Juventude":["Juventude"],
-  "Crianças":["Crianças","CRIANÇAS","XII. CRIANÇAS"],
-  "Funeral":["Funeral"],
-  "Ressurreição":["Ressurreição","Ascensão","Deus, o Filho - Sua Ressurreição","Sua ressurreição","CRISTO - RESSURREIÇÃO DE","IV. JESUS CRISTO - F. Ressurreição e Ascenção"],
-  "Segunda Vinda":["Segunda Vinda","Volta de Cristo","Volta do Senhor","Sua segunda vinda","CRISTO - A VOLTA DE","IV. JESUS CRISTO - G. Segunda Vinda"],
-  "Vida Cristã":["Vida Cristã","Declaração de Perdão","Declaração de Perdão (Após a)","Confissão","Contrição","Quaresma","Quaresma (Início da)","VIII. VIDA CRISTÃ"],
-  "Gratidão":["Gratidão","Ação de Graças","GRATIDÃO","VIII. VIDA CRISTÃ - H. Gratidão e Ação de graças"],
-  "Ano Novo":["Ano Novo","Passagem do Ano","Passagem do ano","ANO NOVO","XIII. ASSUNTOS ESPECIAIS - A. Ano Novo"],
-  "Palavra de Deus":["Palavra de Deus","Bíblia","Leitura Bíblica","A Palavra do Senhor","BÍBLIA","XIII. ASSUNTOS ESPECIAIS - E. Bíblia","VI. CULTO PÚBLICO - D. Para Leitura Bíblica","Culto - Palavra do Senhor"],
-  "Serviço":["Serviço","Diacônia"],
-  "Soberania de Deus":["Soberania de Deus"],
-  "Redenção":["Redenção","Paixão de Cristo","Cruz"],
-  "Graça":["Graça","Emergência"],
-  "Salvação":["Salvação","Leitura da Palavra (Após a)","Leitura do Evangelho (Antes ou após a)","Leitura do Evangelho (Após a)","Proclamação da Palavra (Após a)"]
+  "Primicias":["Primicias"],
+  "Proclamacao da Palavra":["Proclamacao da Palavra","Proclamacao da Palavra (Apos a)"],
+  "Profissao de Fe":["Profissao de Fe"],
+  "Quaresma":["Quaresma","Quaresma (Inicio da)"],
+  "Reforma":["Reforma","Reforma Protestante"],
+  "Ressurreicao":["Ressurreicao","Ressurreicao e Ascensao","Deus, o Filho - Sua Ressurreicao","Sua ressurreicao","CRISTO - RESSURREICAO DE"],
+  "Santa Ceia":["Santa Ceia","Ceia do Senhor","Santa Ceia (Apos a)","Santa Ceia (Apos a Celebracao da)","Santa Ceia (Durante a)","Ceia","Igreja - Ceia do Senhor"],
+  "Santificacao":["Santificacao","Vida Santa","Santidade"],
+  "Saudacao da Paz":["Saudacao da Paz"],
+  "Segunda Vinda":["Segunda Vinda","Volta de Cristo","Volta do Senhor","Sua segunda vinda","CRISTO - A VOLTA DE"],
+  "Semana da Paixao":["Semana da Paixao"],
+  "Tempo Pascal":["Tempo Pascal"],
+  "Testemunho":["Testemunho"],
+  "Transfiguracao do Senhor":["Transfiguracao do Senhor"],
+  "Trindade":["Trindade","Deus, o Pai"],
+  "UMPI":["UMPI"]
 };
 
 let _synonymToCanonical = {};
@@ -70,8 +121,7 @@ async function loadDatabase() {
     document.getElementById("db-version").textContent = "erro";
     document.getElementById("db-count").textContent = "0";
   }
-  buildTopicCounts();
-  renderTopicTags();
+  populateTemaDropdown();
   renderCulto();
 }
 
@@ -82,55 +132,15 @@ function normalize(str) {
     .toLowerCase();
 }
 
-function buildTopicCounts() {
-  const counts = {};
-  for (const t of CANONICAL_TOPICS) counts[t] = 0;
-  for (const h of database.hymns) {
-    for (const t of (h.topics || [])) {
-      const canonical = _synonymToCanonical[normalize(t)] || t;
-      if (counts[canonical] !== undefined) counts[canonical]++;
-    }
+function populateTemaDropdown() {
+  const select = document.getElementById("tema");
+  const sorted = CANONICAL_TOPICS.slice().sort((a, b) => a.localeCompare(b, "pt-BR"));
+  for (const topic of sorted) {
+    const opt = document.createElement("option");
+    opt.value = topic;
+    opt.textContent = topic;
+    select.appendChild(opt);
   }
-  allTopicsSorted = CANONICAL_TOPICS.slice().sort((a, b) => counts[b] - counts[a]);
-}
-
-function renderTopicTags() {
-  const container = document.getElementById("temas-tags");
-  const btnMais = document.getElementById("btn-mais-temas");
-  container.innerHTML = "";
-  const showAll = selectedTopics._showAll || false;
-  const limit = showAll ? allTopicsSorted.length : SHOW_INITIAL_TOPICS;
-  const visible = allTopicsSorted.slice(0, limit);
-
-  for (const topic of visible) {
-    const chip = document.createElement("button");
-    chip.className = "tema-chip" + (selectedTopics.includes(topic) ? " tema-chip-active" : "");
-    chip.textContent = topic;
-    chip.onclick = () => toggleTopic(topic);
-    container.appendChild(chip);
-  }
-
-  if (allTopicsSorted.length > SHOW_INITIAL_TOPICS) {
-    btnMais.style.display = "";
-    btnMais.textContent = showAll ? "Mostrar menos" : "Mostrar mais";
-  } else {
-    btnMais.style.display = "none";
-  }
-}
-
-function toggleTopic(topic) {
-  const idx = selectedTopics.indexOf(topic);
-  if (idx >= 0) {
-    selectedTopics.splice(idx, 1);
-  } else {
-    selectedTopics.push(topic);
-  }
-  renderTopicTags();
-}
-
-function toggleMoreTopics() {
-  selectedTopics._showAll = !selectedTopics._showAll;
-  renderTopicTags();
 }
 
 function searchHymns(query) {
@@ -143,20 +153,16 @@ function searchHymns(query) {
     const titleNorm = normalize(h.title || "");
     const firstLineNorm = normalize(h.first_line || "");
     const lyricsNorm = normalize(h.lyrics || "");
-    const topicsArr = (h.topics || []).map(t => normalize(t));
 
     let score = 0;
     const matched = numStr.includes(q) ||
       titleNorm.includes(q) ||
       firstLineNorm.includes(q) ||
-      lyricsNorm.includes(q) ||
-      topicsArr.some(t => t.includes(q));
+      lyricsNorm.includes(q);
     if (!matched) continue;
 
-    if (topicsArr.some(t => t.includes(q))) score += 100;
     if (titleNorm.includes(q)) score += 50;
     if (firstLineNorm.includes(q)) score += 30;
-    if (topicsArr.some(t => t.includes(q))) score += 10;
     if (lyricsNorm.includes(q)) score += 5;
     if (numStr === q) score += 200;
 
@@ -221,57 +227,54 @@ function getSelectedHymnals() {
 }
 
 function suggestHymns() {
-  const momento = document.getElementById("momento").value;
+  const tema = document.getElementById("tema").value;
   const resultados = document.getElementById("resultados");
   const selectedHymnals = getSelectedHymnals();
-  const activeTopics = selectedTopics.filter(t => typeof t === "string");
 
   if (selectedHymnals.length === 0) {
     resultados.innerHTML =
-      "<p style='text-align:center;color:var(--text-secondary)'>Selecione pelo menos um hinário.</p>";
+      "<p style='text-align:center;color:var(--text-secondary)'>Selecione pelo menos um hinario.</p>";
     return;
   }
 
-  const momentoNormalized = normalize(momento);
+  const temaNormalized = normalize(tema);
+  const canonicalTema = _synonymToCanonical[temaNormalized] || tema;
 
-  function hymnMatchesTopics(h) {
+  function hymnMatchesTema(h) {
     if (!h.topics || h.topics.length === 0) return false;
-    const hTopics = h.topics.map(t => _synonymToCanonical[normalize(t)] || t);
-    for (const sel of activeTopics) {
-      if (hTopics.includes(sel)) return true;
+    for (const t of h.topics) {
+      const tCanonical = _synonymToCanonical[normalize(t)] || t;
+      if (tCanonical === canonicalTema) return true;
     }
     return false;
   }
 
-  function hymnMatchesMomento(h) {
-    if (h.category && normalize(h.category) === momentoNormalized) return true;
-    if (h.topics && h.topics.some(t => normalize(t) === momentoNormalized)) return true;
-    return false;
-  }
-
-  let candidates;
-  if (activeTopics.length > 0) {
-    candidates = database.hymns.filter(h =>
-      selectedHymnals.includes(h.hymnal) && hymnMatchesTopics(h)
-    );
-  } else {
-    candidates = database.hymns.filter(h =>
-      selectedHymnals.includes(h.hymnal) && hymnMatchesMomento(h)
-    );
-  }
-
-  if (candidates.length === 0 && activeTopics.length > 0) {
-    candidates = database.hymns.filter(h =>
-      selectedHymnals.includes(h.hymnal) && hymnMatchesMomento(h)
-    );
-  }
+  const candidates = database.hymns.filter(h =>
+    selectedHymnals.includes(h.hymnal) && hymnMatchesTema(h)
+  );
 
   const shuffled = [...candidates].sort(() => Math.random() - 0.5);
-  const picks = shuffled.slice(0, 4);
+
+  const byHymnal = {};
+  for (const h of shuffled) {
+    if (!byHymnal[h.hymnal]) byHymnal[h.hymnal] = [];
+    byHymnal[h.hymnal].push(h);
+  }
+
+  const picks = [];
+  const limits = { CTP: 3, HARPA: 1, CC: 1, SH: 1, NC: 1 };
+  for (const hymnal of ["CTP", "HARPA", "CC", "SH", "NC"]) {
+    if (!selectedHymnals.includes(hymnal)) continue;
+    const limit = limits[hymnal] || 1;
+    const pool = byHymnal[hymnal] || [];
+    for (let i = 0; i < Math.min(limit, pool.length); i++) {
+      picks.push(pool[i]);
+    }
+  }
 
   if (picks.length === 0) {
     resultados.innerHTML =
-      "<p style='text-align:center;color:var(--text-secondary)'>Nenhum hino encontrado para esta seleção.</p>";
+      "<p style='text-align:center;color:var(--text-secondary)'>Nenhum hino encontrado para esta selecao.</p>";
     return;
   }
 
@@ -280,7 +283,7 @@ function suggestHymns() {
 
   const btnNovas = document.createElement("button");
   btnNovas.className = "btn-novas";
-  btnNovas.textContent = "🔄 Outras sugestões";
+  btnNovas.textContent = "Outras sugestoes";
   btnNovas.onclick = () => suggestHymns();
   resultados.appendChild(btnNovas);
 }
@@ -289,14 +292,6 @@ function makeCard(hymn) {
   const card = document.createElement("div");
   card.className = "hino-card";
 
-  let topicsHtml = "";
-  if (hymn.topics && hymn.topics.length > 0) {
-    const tags = hymn.topics.slice(0, 4).map(t =>
-      `<span class="hino-topic-tag">${t}</span>`
-    ).join("");
-    topicsHtml = `<div class="hino-topics">${tags}</div>`;
-  }
-
   card.innerHTML = `
     <div class="hino-cabecalho">
       <span class="hino-hinario">${hymn.hymnal}</span>
@@ -304,10 +299,9 @@ function makeCard(hymn) {
     </div>
     <div class="hino-titulo">${hymn.title}</div>
     <div class="hino-primeira-linha">${hymn.first_line}</div>
-    ${topicsHtml}
     <div style="display:flex;gap:0.5rem">
-      <button class="btn-ver-letra" onclick='openLetra(${JSON.stringify(hymn).replace(/'/g, "&#39;")})'>📖 Ver letra</button>
-      <button class="btn-escolher" onclick="addToCulto('${hymn.hymnal}','${hymn.number}','${hymn.title.replace(/'/g, "\\'")}')">✓ Escolher</button>
+      <button class="btn-ver-letra" onclick='openLetra(${JSON.stringify(hymn).replace(/'/g, "&#39;")})'>Ver letra</button>
+      <button class="btn-escolher" onclick="addToCulto('${hymn.hymnal}','${hymn.number}','${hymn.title.replace(/'/g, "\\'")}')">Escolher</button>
     </div>
   `;
   return card;
@@ -319,7 +313,7 @@ function openLetra(hymn) {
   document.getElementById("modal-numero").textContent = hymn.number;
   document.getElementById("modal-titulo").textContent = hymn.title;
   document.getElementById("modal-primeira-linha").textContent = hymn.first_line;
-  document.getElementById("modal-letra-texto").textContent = hymn.lyrics || "Letra não disponível.";
+  document.getElementById("modal-letra-texto").textContent = hymn.lyrics || "Letra nao disponivel.";
   document.getElementById("modal-letra").classList.add("active");
 }
 
@@ -380,7 +374,7 @@ function renderCulto() {
         <span class="culto-item-numero">${h.number}</span>
         <span class="culto-item-titulo">${h.title}</span>
       </div>
-      <button class="culto-item-remover" onclick="removeFromCulto(${i})">✕</button>
+      <button class="culto-item-remover" onclick="removeFromCulto(${i})">X</button>
     `;
     container.appendChild(item);
   });
@@ -390,13 +384,13 @@ function copyProgramacao() {
   if (cultoHymns.length === 0) return;
   const lines = ["Culto", ""];
   for (const h of cultoHymns) {
-    lines.push(`${h.hymnal} ${h.number} – ${h.title}`);
+    lines.push(`${h.hymnal} ${h.number} - ${h.title}`);
   }
   const text = lines.join("\n");
   navigator.clipboard.writeText(text).then(() => {
     const btn = document.getElementById("btn-copiar");
     const original = btn.textContent;
-    btn.textContent = "✓ Copiado!";
+    btn.textContent = "Copiado!";
     setTimeout(() => (btn.textContent = original), 2000);
   });
 
@@ -443,7 +437,7 @@ function importHistorico() {
           renderCulto();
         }
       } catch {
-        alert("Arquivo inválido.");
+        alert("Arquivo invalido.");
       }
     };
     reader.readAsText(file);
@@ -488,7 +482,7 @@ function formatDate(isoStr) {
   if (diffDays === 0) return "Hoje";
   if (diffDays === 1) return "Ontem";
   if (diffDays < 7) return "Semana passada";
-  if (diffDays < 30) return "Este mês";
+  if (diffDays < 30) return "Este mes";
   return d.toLocaleDateString("pt-BR", { day: "2-digit", month: "short", year: "numeric" });
 }
 
@@ -527,8 +521,8 @@ function openHistorico() {
         ${entry.hymns.map(h => `<span class="historico-hino">${h.hymnal} ${h.number}</span>`).join(" ")}
       </div>
       <div class="historico-item-botoes">
-        <button class="historico-btn" onclick="copiarHistorico(${i})" title="Copiar">📋</button>
-        <button class="historico-btn historico-btn-perigo" onclick="removerHistorico(${i})" title="Remover">✕</button>
+        <button class="historico-btn" onclick="copiarHistorico(${i})" title="Copiar">Copiar</button>
+        <button class="historico-btn historico-btn-perigo" onclick="removerHistorico(${i})" title="Remover">X</button>
       </div>
     `;
     container.appendChild(item);
@@ -539,14 +533,14 @@ function openHistorico() {
 
 function copiarHistorico(index) {
   const entry = historico[index];
-  const lines = entry.hymns.map(h => `${h.hymnal} ${h.number} – ${h.title}`);
+  const lines = entry.hymns.map(h => `${h.hymnal} ${h.number} - ${h.title}`);
   navigator.clipboard.writeText(lines.join("\n")).then(() => {
     alert("Copiado!");
   });
 }
 
 function removerHistorico(index) {
-  if (!confirm("Remover este culto do histórico?")) return;
+  if (!confirm("Remover este culto do historico?")) return;
   historico.splice(index, 1);
   localStorage.setItem("cantaiHistorico", JSON.stringify(historico));
   openHistorico();
@@ -554,7 +548,7 @@ function removerHistorico(index) {
 
 function limparHistoricoCompleto() {
   if (historico.length === 0) return;
-  if (!confirm("Limpar todo o histórico de cultos?")) return;
+  if (!confirm("Limpar todo o historico de cultos?")) return;
   historico = [];
   localStorage.setItem("cantaiHistorico", JSON.stringify(historico));
   openHistorico();

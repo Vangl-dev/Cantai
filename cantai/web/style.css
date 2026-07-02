@@ -579,61 +579,10 @@ select {
   text-decoration: underline;
 }
 
-.hino-topics {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.35rem;
-  margin-bottom: 0.75rem;
-}
-
-.hino-topic-tag {
-  font-size: 0.7rem;
-  font-weight: 500;
-  color: var(--primary);
-  background: var(--bg);
-  padding: 0.15rem 0.45rem;
-  border-radius: 6px;
-}
-
 .busca-info {
   margin-top: 0.5rem;
   font-size: 0.85rem;
   color: var(--text-secondary);
-}
-
-.temas-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.4rem;
-}
-
-.tema-chip {
-  font-size: 0.8rem;
-  font-weight: 500;
-  color: var(--text-secondary);
-  background: var(--bg);
-  border: 1.5px solid var(--border);
-  border-radius: 20px;
-  padding: 0.3rem 0.7rem;
-  cursor: pointer;
-  transition: all 0.15s;
-  white-space: nowrap;
-}
-
-.tema-chip:hover {
-  border-color: var(--primary);
-  color: var(--primary);
-}
-
-.tema-chip-active {
-  background: var(--primary);
-  color: #ffffff;
-  border-color: var(--primary);
-}
-
-.tema-chip-active:hover {
-  background: var(--primary-hover);
-  color: #ffffff;
 }
 
 .btn-mostrar-mais {
