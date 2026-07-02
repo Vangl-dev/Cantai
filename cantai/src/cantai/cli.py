@@ -581,6 +581,56 @@ def relatorio_qualidade() -> None:
 
 
 @app.command()
+def validar_topicos() -> None:
+    """Validar catálogo de temas e consistência com o banco."""
+    from cantai.topics.validator import validate_all
+
+    create_database()
+
+    console.print()
+    console.print("═" * 60)
+    console.print("[bold]Validação de Temas — Cantai[/bold]")
+    console.print("═" * 60)
+
+    report = validate_all()
+
+    console.print()
+    console.print("[bold]YAML (canonical_topics.yaml)[/bold]")
+    yaml_data = report["yaml"]
+    console.print(f"  Temas:          {yaml_data.get('topics_count', 0)}")
+    console.print(f"  Válido:         {'Sim' if yaml_data['valid'] else 'Não'}")
+
+    for issue in yaml_data.get("issues", []):
+        console.print(f"  [red]✗[/red] {issue}")
+
+    console.print()
+    console.print("[bold]Banco de dados[/bold]")
+    db_data = report["database"]
+    console.print(f"  Total hinos:    {db_data['total_hymns']}")
+    console.print(f"  Sem topics:     {db_data['sem_topics']}")
+
+    nao_canonicos = db_data.get("topicos_nao_canonicos", {})
+    if nao_canonicos:
+        console.print()
+        console.print("[yellow]Temas não canônicos no banco:[/yellow]")
+        for topic, count in sorted(nao_canonicos.items(), key=lambda x: -x[1]):
+            console.print(f"  {topic:30s} {count:5d} hinos")
+
+    for issue in db_data.get("issues", []):
+        if "sem topics" in issue or "não canônico" in issue:
+            continue
+        console.print(f"  [red]✗[/red] {issue}")
+
+    console.print()
+    console.print("═" * 60)
+    if report["valid"]:
+        console.print("[green]✓ Validação concluída sem inconsistências.[/green]")
+    else:
+        console.print(f"[red]✗ {report['issues_count']} inconsistência(s) encontrada(s).[/red]")
+    console.print("═" * 60)
+
+
+@app.command()
 def build(
     ctp_dir: Path = typer.Option(
         None, "--ctp-dir", help="Pasta original do CTP (PPT/PPTX)"
@@ -591,7 +641,7 @@ def build(
 
     console.print()
     console.print("═" * 50)
-    console.print("[bold]Cantai Builder — Build V1.2[/bold]")
+    console.print("[bold]Cantai Builder — Build V1.3[/bold]")
     console.print("═" * 50)
 
     counts: dict[str, int] = {}
@@ -706,9 +756,22 @@ def build(
     console.print(f"  {WEB_OUTPUT.relative_to(PROJECT_ROOT)}: copiado")
 
     # 12. Relatório de qualidade
-    console.print("[bold]12/12[/bold] Relatório de qualidade...")
+    console.print("[bold]12/13[/bold] Relatório de qualidade...")
     sem_topics_final = sum(1 for h in all_hymns if not h.topics)
     console.print(f"  Hinos sem topics: {sem_topics_final}")
+
+    # 13. Validar temas
+    console.print("[bold]13/13[/bold] Validando catálogo de temas...")
+    from cantai.topics.validator import validate_all
+    val_report = validate_all()
+    if val_report["valid"]:
+        console.print("  [green]✓ Temas válidos[/green]")
+    else:
+        console.print(f"  [yellow]✗ {val_report['issues_count']} inconsistência(s)[/yellow]")
+        for issue in val_report["issues"][:5]:
+            console.print(f"    {issue}")
+        if val_report["issues_count"] > 5:
+            console.print(f"    ... e mais {val_report['issues_count'] - 5}")
 
     # Resumo
     total = sum(counts.values())
