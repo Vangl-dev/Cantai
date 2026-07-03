@@ -132,6 +132,7 @@ async function loadDatabase() {
   }
   populateTemaDropdown();
   renderCulto();
+  updateSugerirButton();
 }
 
 function normalize(str) {
@@ -143,12 +144,35 @@ function normalize(str) {
 
 function populateTemaDropdown() {
   const select = document.getElementById("tema");
+  const placeholder = document.createElement("option");
+  placeholder.value = "";
+  placeholder.textContent = "Escolha um tema...";
+  placeholder.disabled = true;
+  placeholder.selected = true;
+  select.appendChild(placeholder);
+
   const sorted = CANONICAL_TOPICS.slice().sort((a, b) => a.localeCompare(b, "pt-BR"));
   for (const topic of sorted) {
     const opt = document.createElement("option");
     opt.value = topic;
     opt.textContent = topic;
     select.appendChild(opt);
+  }
+
+  select.addEventListener("change", updateSugerirButton);
+}
+
+function updateSugerirButton() {
+  const tema = document.getElementById("tema").value;
+  const btn = document.getElementById("btn-sugerir");
+  if (!tema) {
+    btn.disabled = true;
+    btn.style.opacity = "0.5";
+    btn.style.cursor = "not-allowed";
+  } else {
+    btn.disabled = false;
+    btn.style.opacity = "1";
+    btn.style.cursor = "pointer";
   }
 }
 
@@ -164,17 +188,35 @@ function searchHymns(query) {
     const lyricsNorm = normalize(h.lyrics || "");
 
     let score = 0;
-    const matched = numStr.includes(q) ||
-      titleNorm.includes(q) ||
-      firstLineNorm.includes(q) ||
-      lyricsNorm.includes(q);
-    if (!matched) continue;
 
-    if (titleNorm.includes(q)) score += 50;
+    if (numStr === q) {
+      score += 200;
+    } else if (numStr.includes(q)) {
+      score += 100;
+    }
+
+    if (titleNorm === q) {
+      score += 80;
+    } else if (titleNorm.includes(q)) {
+      score += 50;
+    }
+
     if (firstLineNorm.includes(q)) score += 30;
     if (lyricsNorm.includes(q)) score += 5;
-    if (numStr === q) score += 200;
 
+    const words = q.split(/\s+/);
+    if (words.length > 1) {
+      let allWordsInTitle = true;
+      for (const w of words) {
+        if (!titleNorm.includes(w)) {
+          allWordsInTitle = false;
+          break;
+        }
+      }
+      if (allWordsInTitle) score += 60;
+    }
+
+    if (score === 0) continue;
     results.push({ hymn: h, score });
   }
   results.sort((a, b) => b.score - a.score);
@@ -182,11 +224,14 @@ function searchHymns(query) {
 }
 
 let searchShowAll = false;
+let lastSearchResults = [];
 
 function renderSearchResults(results) {
   const container = document.getElementById("resultados-busca");
   const info = document.getElementById("busca-info");
   container.style.display = "";
+
+  lastSearchResults = results;
 
   if (results.length === 0) {
     container.innerHTML = "";
@@ -201,8 +246,31 @@ function renderSearchResults(results) {
   info.innerHTML = `Encontrados: <strong>${results.length}</strong> hinos`;
 
   container.innerHTML = "";
+
+  const byHymnal = {};
   for (const h of shown) {
-    container.appendChild(makeCard(h));
+    if (!byHymnal[h.hymnal]) byHymnal[h.hymnal] = [];
+    byHymnal[h.hymnal].push(h);
+  }
+
+  const hymnalOrder = ["CTP", "HARPA", "HCC", "SH", "NC"];
+  for (const hymnal of hymnalOrder) {
+    const hymns = byHymnal[hymnal];
+    if (!hymns || hymns.length === 0) continue;
+
+    const group = document.createElement("div");
+    group.className = "busca-grupo";
+
+    const header = document.createElement("div");
+    header.className = "busca-grupo-header";
+    header.textContent = `${hymnal} (${hymns.length})`;
+    group.appendChild(header);
+
+    for (const h of hymns) {
+      group.appendChild(makeCard(h));
+    }
+
+    container.appendChild(group);
   }
 
   if (results.length > 5 && !searchShowAll) {
@@ -237,6 +305,8 @@ function getSelectedHymnals() {
 
 function suggestHymns() {
   const tema = document.getElementById("tema").value;
+  if (!tema) return;
+
   const resultados = document.getElementById("resultados");
   const selectedHymnals = getSelectedHymnals();
 
@@ -609,16 +679,23 @@ function handleSearch() {
   const btnSugerir = document.getElementById("btn-sugerir");
   const resultadosBusca = document.getElementById("resultados-busca");
   const info = document.getElementById("busca-info");
+  const resultados = document.getElementById("resultados");
 
   searchShowAll = false;
 
   if (query.length === 0) {
-    btnSugerir.style.display = "";
     resultadosBusca.style.display = "none";
+    resultadosBusca.innerHTML = "";
     info.style.display = "none";
+    resultados.innerHTML = "";
+    updateSugerirButton();
     return;
   }
-  btnSugerir.style.display = "none";
+
+  btnSugerir.disabled = true;
+  btnSugerir.style.opacity = "0.5";
+  btnSugerir.style.cursor = "not-allowed";
+
   const results = searchHymns(query);
   renderSearchResults(results);
 }
