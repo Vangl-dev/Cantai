@@ -830,3 +830,82 @@ def build(
     console.print("  Web sincronizada")
     console.print("  Catálogo único aplicado")
     console.print("═" * 50)
+
+
+@app.command()
+def preview(
+    port: int = typer.Option(8000, "--port", "-p", help="Porta do servidor"),
+) -> None:
+    """Preview local: exporta JSON e inicia servidor HTTP."""
+    import http.server
+    import threading
+
+    create_database()
+
+    console.print()
+    console.print("═" * 50)
+    console.print("[bold]Cantai Preview[/bold]")
+    console.print("═" * 50)
+
+    # 1. Exportar JSON do banco existente
+    console.print()
+    console.print("[bold]1/3[/bold] Exportando JSON...")
+    all_hymns = load_hymns()
+    if not all_hymns:
+        console.print("  [yellow]Banco vazio. Execute 'cantai build' primeiro.[/yellow]")
+        raise typer.Exit(code=1)
+    export_json(all_hymns, JSON_OUTPUT)
+    console.print(f"  [green]{len(all_hymns)} hinos exportados[/green]")
+
+    # 2. Sincronizar web
+    console.print("[bold]2/3[/bold] Sincronizando web...")
+    shutil.copy2(JSON_OUTPUT, WEB_OUTPUT)
+    console.print(f"  [green]web/cantai.json atualizado[/green]")
+
+    # 3. Servidor HTTP
+    console.print("[bold]3/3[/bold] Iniciando servidor...")
+
+    web_dir = str(WEB_OUTPUT.parent)
+
+    class QuietHandler(http.server.SimpleHTTPRequestHandler):
+        def __init__(self, *args, **kwargs):
+            super().__init__(*args, directory=web_dir, **kwargs)
+
+        def log_message(self, format, *args):
+            pass
+
+    server = http.server.HTTPServer(("localhost", port), QuietHandler)
+
+    def start_server():
+        server.serve_forever()
+
+    thread = threading.Thread(target=start_server, daemon=True)
+    thread.start()
+
+    url = f"http://localhost:{port}"
+    console.print()
+    console.print("═" * 50)
+    console.print("[bold green]Cantai Preview pronto![/bold green]")
+    console.print("─" * 50)
+    console.print(f"  Banco atualizado")
+    console.print(f"  JSON atualizado")
+    console.print(f"  Servidor iniciado")
+    console.print()
+    console.print(f"  [bold]{url}[/bold]")
+    console.print()
+    console.print("  Pressione Ctrl+C para parar.")
+    console.print("═" * 50)
+    console.print()
+
+    try:
+        import webbrowser
+        webbrowser.open(url)
+    except Exception:
+        pass
+
+    try:
+        thread.join()
+    except KeyboardInterrupt:
+        console.print()
+        console.print("[yellow]Servidor encerrado.[/yellow]")
+        server.shutdown()
