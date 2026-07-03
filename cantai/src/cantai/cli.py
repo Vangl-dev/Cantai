@@ -31,8 +31,24 @@ PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent
 DATA_INPUT = PROJECT_ROOT / "data" / "input"
 JSON_OUTPUT = PROJECT_ROOT / "data" / "output" / "cantai.json"
 WEB_OUTPUT = PROJECT_ROOT / "web" / "cantai.json"
+CONFIG_FILE = PROJECT_ROOT / "config.toml"
 
 console = Console()
+
+
+def _load_config() -> dict:
+    """Carrega configuração do arquivo config.toml."""
+    config = {"ctp_source": None, "min_ctp_hymns": 450}
+    if CONFIG_FILE.exists():
+        try:
+            import tomllib
+            with open(CONFIG_FILE, "rb") as f:
+                data = tomllib.load(f)
+            config["ctp_source"] = data.get("paths", {}).get("ctp_source")
+            config["min_ctp_hymns"] = data.get("validation", {}).get("min_ctp_hymns", 450)
+        except Exception:
+            pass
+    return config
 
 
 def _imprimir_relatorio(report):
@@ -815,10 +831,11 @@ def build(
 ) -> None:
     """Build completo: importa todos os hinários e exporta JSON."""
     create_database()
+    config = _load_config()
 
     console.print()
     console.print("═" * 50)
-    console.print("[bold]Cantai Builder — Build V1.6[/bold]")
+    console.print("[bold]Cantai Builder — Build V1.7.1[/bold]")
     console.print("═" * 50)
 
     counts: dict[str, int] = {}
@@ -982,7 +999,8 @@ def build(
     # Check DB
     from sqlmodel import Session as AuditSession, select as audit_select
     from cantai.models import HymnModel as AuditHymnModel
-    with AuditSession(engine) as session:
+    from cantai.database import engine as audit_engine
+    with AuditSession(audit_engine) as session:
         db_models = session.exec(
             audit_select(AuditHymnModel).where(AuditHymnModel.hymnal == "CTP")
         ).all()

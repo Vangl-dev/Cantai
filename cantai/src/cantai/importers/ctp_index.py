@@ -11,11 +11,14 @@ def _normalize_number(num_str: str) -> str:
     """Normaliza número do hino para comparação.
 
     Remove parênteses, sufixos e leading zeros.
-    Ex: '39(1)' -> '39', '069' -> '69', '30A' -> '30A'
+    Converte letras para minúsculas para comparação.
+    Ex: '39(1)' -> '39', '069' -> '69', '30A' -> '30a'
     """
     num_str = num_str.strip()
     num_str = re.sub(r"\(.*\)", "", num_str)
     num_str = num_str.strip()
+    # Convert letters to lowercase for comparison
+    num_str = num_str.lower()
     # Remove leading zeros but keep the string for non-numeric suffixes
     if num_str.isdigit():
         num_str = str(int(num_str))
@@ -25,7 +28,8 @@ def _normalize_number(num_str: str) -> str:
 def _denormalize_number(num_str: str, existing_numbers: set[str]) -> str:
     """Encontra o número real no banco a partir do número normalizado.
 
-    O CTP pode ter números com leading zeros ('069') ou sem ('69').
+    O CTP pode ter números com leading zeros ('069') ou sem ('69'),
+    ou com letras maiúsculas ('30A') vs minúsculas ('030.a').
     Esta função encontra o formato correto.
     """
     # Try exact match first
@@ -39,6 +43,12 @@ def _denormalize_number(num_str: str, existing_numbers: set[str]) -> str:
     stripped = num_str.lstrip("0") or "0"
     if stripped in existing_numbers:
         return stripped
+    # Try matching by removing dots, leading zeros, and comparing lowercase
+    num_normalized = num_str.replace(".", "").lower()
+    for existing in existing_numbers:
+        existing_normalized = existing.replace(".", "").lstrip("0").lower()
+        if existing_normalized == num_normalized:
+            return existing
     # Return original
     return num_str
 

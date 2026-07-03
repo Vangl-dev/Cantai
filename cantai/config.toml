@@ -1,0 +1,11 @@
+# Cantai - Configuração
+# Este arquivo define caminhos e configurações centrais.
+
+[paths]
+# Caminho para a pasta original do CTP (PPT/PPTX)
+# IMPORTANTE: Nunca aponte para data/temp/
+ctp_source = "/home/vanessa/RCLONE-ONEDRIVE/LeXia/Cantai todos os povos"
+
+[validation]
+# Número mínimo de hinos CTP esperados
+min_ctp_hymns = 450

@@ -14,16 +14,52 @@ _DATA_TEMP_PPTX = Path(__file__).resolve().parent.parent.parent.parent / "data" 
 _DATA_TEMP = _DATA_TEMP_PPTX.parent
 _FILTROS = {"IPIVILANOVAVOTORANTIM"}
 _RE_SLIDE_NUM = re.compile(r"^\d+/\d+$")
+_MIN_HYMN_COUNT = 450
 
 
 def _validar_pasta_origem(path: Path) -> None:
-    """Valida se a pasta informada não é uma pasta temporária do Builder."""
+    """Valida se a pasta informada é válida para importação.
+
+    Verifica:
+    - Não é pasta temporária
+    - Não contém 'temp', 'tmp', 'cache' no caminho
+    - Contém arquivos PPT/PPTX suficientes
+    """
     resolved = path.resolve()
     temp_resolved = _DATA_TEMP.resolve()
+
+    # Check for temp directories
+    path_lower = str(resolved).lower()
+    forbidden = ["data/temp", "/temp/", "/tmp/", "/cache/", "data\\temp"]
+    for f in forbidden:
+        if f in path_lower:
+            raise ValueError(
+                f"ERRO: Pasta temporária detectada ('{f}'). "
+                "Nunca use data/temp como origem. "
+                "Informe a pasta ORIGINAL que contém os arquivos PPT/PPTX."
+            )
+
     if resolved == temp_resolved or str(resolved).startswith(str(temp_resolved) + "/"):
         raise ValueError(
-            "A pasta informada é uma pasta temporária do Builder. "
+            "ERRO: Pasta temporária do Builder detectada. "
             "Informe a pasta ORIGINAL que contém os arquivos PPT/PPTX."
+        )
+
+    # Check file count
+    ppt_count = len(list(path.glob("*.ppt")))
+    pptx_count = len(list(path.rglob("*.pptx")))
+    total = ppt_count + pptx_count
+
+    if total == 0:
+        raise ValueError(
+            f"ERRO: Pasta '{path}' não contém arquivos PPT/PPTX."
+        )
+
+    if total < _MIN_HYMN_COUNT:
+        raise ValueError(
+            f"ERRO: Pasta contém apenas {total} arquivos PPT/PPTX. "
+            f"Mínimo esperado: {_MIN_HYMN_COUNT}. "
+            "Verifique se está apontando para a pasta CORRETA do CTP."
         )
 
 
