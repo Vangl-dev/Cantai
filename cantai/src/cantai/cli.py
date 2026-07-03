@@ -1,5 +1,6 @@
 """Interface de linha de comando do Cantai Builder."""
 
+import json
 import re
 import shutil
 from pathlib import Path
@@ -660,6 +661,153 @@ def validar_topicos() -> None:
 
 
 @app.command()
+def auditoria_topicos() -> None:
+    """Auditoria de integridade: Índice CTP × Banco × JSON."""
+    import json
+
+    from sqlmodel import Session, select
+
+    from cantai.database import engine, load_hymns
+    from cantai.models import HymnModel
+
+    create_database()
+
+    console.print()
+    console.print("═" * 70)
+    console.print("[bold]Auditoria de Temas — Índice × Banco × JSON[/bold]")
+    console.print("═" * 70)
+
+    # 1. Load CTP index
+    from cantai.importers.ctp_index_data import CTP_INDEX
+    from cantai.importers.ctp_index import _normalize_number
+
+    # Build index: normalized_number -> list of topics
+    index_topics: dict[str, list[str]] = {}
+    for cat_name, numbers in CTP_INDEX.items():
+        for num in numbers:
+            normalized = _normalize_number(num)
+            if not normalized:
+                continue
+            if normalized not in index_topics:
+                index_topics[normalized] = []
+            if cat_name not in index_topics[normalized]:
+                index_topics[normalized].append(cat_name)
+
+    # 2. Load database
+    with Session(engine) as session:
+        db_models = session.exec(
+            select(HymnModel).where(HymnModel.hymnal == "CTP")
+        ).all()
+
+    # Build DB lookup: normalized_number -> topics
+    db_topics: dict[str, list[str]] = {}
+    db_numbers: dict[str, str] = {}  # normalized -> actual
+    for m in db_models:
+        # Normalize the DB number
+        num = m.number
+        if num.isdigit():
+            normalized = str(int(num))
+        else:
+            normalized = num
+        topics = json.loads(m.topics) if m.topics else []
+        db_topics[normalized] = topics
+        db_numbers[normalized] = num
+
+    # 3. Load JSON
+    all_hymns = load_hymns()
+    json_topics: dict[str, list[str]] = {}
+    for h in all_hymns:
+        if h.hymnal == "CTP":
+            num = h.number
+            if num.isdigit():
+                normalized = str(int(num))
+            else:
+                normalized = num
+            json_topics[normalized] = h.topics
+
+    # 4. Compare
+    console.print()
+    console.print("[bold]Comparação por tema:[/bold]")
+    console.print()
+
+    total_index = 0
+    total_db = 0
+    total_json = 0
+    divergencias = 0
+    hinos_divergentes: list[str] = []
+
+    for cat_name in sorted(CTP_INDEX.keys()):
+        index_nums = set()
+        for num in CTP_INDEX[cat_name]:
+            normalized = _normalize_number(num)
+            if normalized:
+                index_nums.add(normalized)
+
+        db_nums = set()
+        for norm, topics in db_topics.items():
+            if cat_name in topics:
+                db_nums.add(norm)
+
+        json_nums = set()
+        for norm, topics in json_topics.items():
+            if cat_name in topics:
+                json_nums.add(norm)
+
+        total_index += len(index_nums)
+        total_db += len(db_nums)
+        total_json += len(json_nums)
+
+        # Check for missing
+        missing_db = index_nums - db_nums
+        missing_json = index_nums - json_nums
+
+        if missing_db or missing_json:
+            divergencias += 1
+            console.print(f"[red]✗ {cat_name}[/red]")
+            console.print(f"  Índice: {len(index_nums)} hinos")
+            console.print(f"  Banco:  {len(db_nums)} hinos")
+            console.print(f"  JSON:   {len(json_nums)} hinos")
+
+            if missing_db:
+                display_nums = [db_numbers.get(n, n) for n in sorted(missing_db)]
+                console.print(f"  [red]Faltando no banco: {', '.join(display_nums)}[/red]")
+                for n in missing_db:
+                    hinos_divergentes.append(f"CTP {db_numbers.get(n, n)} - {cat_name} (falta no banco)")
+
+            if missing_json and not missing_db:
+                display_nums = sorted(missing_json)
+                console.print(f"  [yellow]Faltando no JSON: {', '.join(display_nums)}[/yellow]")
+                for n in missing_json:
+                    hinos_divergentes.append(f"CTP {db_numbers.get(n, n)} - {cat_name} (falta no JSON)")
+        else:
+            console.print(f"[green]✓ {cat_name}[/green] ({len(index_nums)} hinos)")
+
+    # 5. Summary
+    console.print()
+    console.print("═" * 70)
+    console.print("[bold]Resumo da Auditoria[/bold]")
+    console.print("─" * 70)
+    console.print(f"  Temas no índice:           {len(CTP_INDEX)}")
+    console.print(f"  Total referências (índice): {total_index}")
+    console.print(f"  Total referências (banco):  {total_db}")
+    console.print(f"  Total referências (JSON):   {total_json}")
+    console.print("─" * 70)
+
+    if divergencias == 0:
+        console.print()
+        console.print("[green]✓ Índice, Banco e JSON 100% sincronizados![/green]")
+    else:
+        console.print()
+        console.print(f"[red]✗ {divergencias} tema(s) com divergência(s)[/red]")
+        console.print()
+        console.print("[bold]Hinos divergentes:[/bold]")
+        for h in hinos_divergentes:
+            console.print(f"  {h}")
+
+    console.print("═" * 70)
+
+
+@app.command()
 def build(
     ctp_dir: Path = typer.Option(
         None, "--ctp-dir", help="Pasta original do CTP (PPT/PPTX)"
@@ -813,6 +961,67 @@ def build(
             console.print(f"    {issue}")
         if val_report["issues_count"] > 5:
             console.print(f"    ... e mais {val_report['issues_count'] - 5}")
+
+    # 15. Auditoria de integridade CTP
+    console.print()
+    console.print("[bold]Auditoria de integridade CTP...[/bold]")
+    from cantai.importers.ctp_index_data import CTP_INDEX
+    from cantai.importers.ctp_index import _normalize_number
+
+    index_topics_map: dict[str, list[str]] = {}
+    for cat_name, numbers in CTP_INDEX.items():
+        for num in numbers:
+            normalized = _normalize_number(num)
+            if not normalized:
+                continue
+            if normalized not in index_topics_map:
+                index_topics_map[normalized] = []
+            if cat_name not in index_topics_map[normalized]:
+                index_topics_map[normalized].append(cat_name)
+
+    # Check DB
+    from sqlmodel import Session as AuditSession, select as audit_select
+    from cantai.models import HymnModel as AuditHymnModel
+    with AuditSession(engine) as session:
+        db_models = session.exec(
+            audit_select(AuditHymnModel).where(AuditHymnModel.hymnal == "CTP")
+        ).all()
+
+    db_topics_map: dict[str, list[str]] = {}
+    for m in db_models:
+        num = m.number
+        if num.isdigit():
+            normalized = str(int(num))
+        else:
+            normalized = num
+        topics = json.loads(m.topics) if m.topics else []
+        db_topics_map[normalized] = topics
+
+    audit_divergencias = 0
+    for cat_name in sorted(CTP_INDEX.keys()):
+        index_nums = set()
+        for num in CTP_INDEX[cat_name]:
+            normalized = _normalize_number(num)
+            if normalized:
+                index_nums.add(normalized)
+
+        db_nums = set()
+        for norm, topics in db_topics_map.items():
+            if cat_name in topics:
+                db_nums.add(norm)
+
+        missing = index_nums - db_nums
+        if missing:
+            audit_divergencias += 1
+            console.print(f"  [red]✗ {cat_name}: faltando {len(missing)} hinos no banco[/red]")
+
+    if audit_divergencias == 0:
+        console.print("  [green]✓ Índice CTP 100% sincronizado com o banco[/green]")
+    else:
+        console.print()
+        console.print(f"[red]✗ AUDITORIA FALHOU: {audit_divergencias} tema(s) com divergência(s)[/red]")
+        console.print("[red]Execute 'cantai auditoria-topicos' para detalhes.[/red]")
+        raise typer.Exit(code=1)
 
     # Resumo
     total = sum(counts.values())

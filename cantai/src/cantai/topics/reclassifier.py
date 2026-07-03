@@ -2,7 +2,10 @@
 
 Carrega todos os hinos do banco, converte temas originais para canônicos,
 e classifica por letra os hinos que não possuem temas.
-Garante que nenhum hino fique sem tags.
+
+REGRA FUNDAMENTAL:
+- Para CTP: NUNCA remove, substitui ou recalcula temas oficiais do índice.
+- Para outros hinários: usa canonical_topics.yaml para resolver sinônimos.
 """
 
 import json
@@ -18,6 +21,9 @@ from cantai.topics.classifier import classify_by_lyrics
 def reclassify_all() -> dict:
     """Reclassifica todos os hinos do banco para o catálogo canônico.
 
+    Para CTP: preserva temas oficiais do índice, apenas resolve sinônimos.
+    Para outros: resolve sinônimos e classifica por letra se necessário.
+
     Retorna dict com estatísticas da reclassificação.
     """
     stats = {
@@ -28,6 +34,7 @@ def reclassify_all() -> dict:
         "ja_canonicos": 0,
         "sem_temas_antes": 0,
         "sem_temas_depois": 0,
+        "ctp_preservados": 0,
         "por_hinario": {},
     }
 
@@ -42,12 +49,28 @@ def reclassify_all() -> dict:
                     "total": 0,
                     "reclassificados": 0,
                     "classificados_por_letra": 0,
+                    "ctp_preservados": 0,
                 }
             stats["por_hinario"][hymnal]["total"] += 1
 
             original_topics = json.loads(model.topics) if model.topics else []
 
-            if original_topics:
+            if hymnal == "CTP" and original_topics:
+                # CTP: NUNCA remover temas oficiais
+                # Apenas resolver sinônimos para forma canônica
+                resolved = resolve_topics(original_topics)
+                # Garantir que nenhum tema foi removido
+                if set(resolved) >= set(original_topics) or set(resolved) == set(original_topics):
+                    stats["ctp_preservados"] += 1
+                    stats["por_hinario"][hymnal]["ctp_preservados"] += 1
+                if set(resolved) != set(original_topics):
+                    stats["reclassificados"] += 1
+                    stats["por_hinario"][hymnal]["reclassificados"] += 1
+                else:
+                    stats["ja_canonicos"] += 1
+                model.topics = json.dumps(resolved, ensure_ascii=False)
+            elif original_topics:
+                # Outros hinários: resolver sinônimos
                 stats["com_temas_originais"] += 1
                 resolved = resolve_topics(original_topics)
                 if set(resolved) != set(original_topics):
@@ -57,6 +80,7 @@ def reclassify_all() -> dict:
                     stats["ja_canonicos"] += 1
                 model.topics = json.dumps(resolved, ensure_ascii=False)
             else:
+                # Sem temas: classificar por letra
                 stats["sem_temas_antes"] += 1
                 inferred = classify_by_lyrics(model.title, model.first_line, model.lyrics)
                 if inferred:
