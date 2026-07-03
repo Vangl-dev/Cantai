@@ -44,8 +44,8 @@
           <span>Harpa Crista</span>
         </label>
         <label class="checkbox-label">
-          <input type="checkbox" id="cantor" checked>
-          <span>Cantor Cristao</span>
+          <input type="checkbox" id="hcc" checked>
+          <span>HCC</span>
         </label>
         <label class="checkbox-label">
           <input type="checkbox" id="sh" checked>
@@ -80,9 +80,14 @@
       <div id="culto-lista" class="culto-lista"></div>
       <div class="culto-botoes">
         <button class="btn-copiar" id="btn-copiar" onclick="copyProgramacao()">
-          Copiar programacao
+          &#128203; Copiar programacao
         </button>
-        <button class="btn-novas" onclick="suggestHymns()">
+        <button class="btn-agendar" id="btn-agendar" onclick="openAgendarModal()">
+          &#128197; Agendar culto
+        </button>
+      </div>
+      <div class="culto-botoes" style="margin-top:0.5rem">
+        <button class="btn-novas" onclick="suggestHymns()" style="margin-top:0">
           Nova sugestao
         </button>
       </div>
@@ -91,10 +96,10 @@
     <section class="card card-dados">
       <h2>Dados</h2>
       <div class="dados-botoes">
-        <button class="btn-dado" onclick="openHistorico()">Ultimos cultos</button>
-        <button class="btn-dado" onclick="exportHistorico()">Exportar historico</button>
-        <button class="btn-dado" onclick="importHistorico()">Importar historico</button>
-        <button class="btn-dado btn-dado-perigo" onclick="limparHistorico()">Limpar este culto</button>
+        <button class="btn-dado" onclick="renderAgenda()">&#128197; Agenda de Cultos</button>
+        <button class="btn-dado" onclick="exportAgenda()">&#128228; Exportar agenda</button>
+        <button class="btn-dado" onclick="importAgenda()">&#128229; Importar agenda</button>
+        <button class="btn-dado btn-dado-perigo" onclick="limparCulto()">&#128465; Limpar este culto</button>
       </div>
     </section>
   </main>
@@ -127,7 +132,7 @@
       <h2>Cantai</h2>
       <p class="sobre-descricao">Planejamento de Hinos para cultos e eventos da igreja.</p>
       <div class="sobre-info">
-        <p><strong>Versao:</strong> <span id="sobre-versao">1.2</span></p>
+        <p><strong>Versao:</strong> <span id="sobre-versao">1.6</span></p>
         <p><strong>Total de hinos:</strong> <span id="sobre-count">0</span></p>
         <p><strong>Licenca:</strong> MIT</p>
         <p><strong>GitHub:</strong> <a href="https://github.com/Vangl-dev/Cantai" target="_blank">github.com/Vangl-dev/Cantai</a></p>
@@ -135,16 +140,43 @@
     </div>
   </div>
 
-  <div id="modal-historico" class="modal" onclick="closeModal(event, 'modal-historico')">
-    <div class="modal-content modal-historico-content">
+  <div id="modal-agendar" class="modal" onclick="closeModal(event, 'modal-agendar')">
+    <div class="modal-content">
       <div class="modal-header">
-        <span class="modal-hinario">HISTORICO</span>
-        <button class="modal-close" onclick="closeModalById('modal-historico')">X</button>
+        <span class="modal-hinario">AGENDAR CULTO</span>
+        <button class="modal-close" onclick="closeModalById('modal-agendar')">X</button>
       </div>
-      <div id="historico-lista" class="historico-lista"></div>
+      <div class="agendar-form">
+        <label class="agendar-label">
+          Nome do culto
+          <input type="text" id="schedule-name" class="agendar-input" placeholder="Ex: Culto da Manha">
+        </label>
+        <label class="agendar-label">
+          Data (dd/mm/aaaa)
+          <input type="text" id="schedule-date" class="agendar-input" placeholder="dd/mm/aaaa">
+        </label>
+        <label class="agendar-label">
+          Observacoes (opcional)
+          <input type="text" id="schedule-notes" class="agendar-input" placeholder="Ex: Tema especial">
+        </label>
+      </div>
       <div class="modal-footer">
-        <button class="btn-modal-close" onclick="limparHistoricoCompleto()">Limpar tudo</button>
-        <button class="btn-modal-close" onclick="closeModalById('modal-historico')">Fechar</button>
+        <button class="btn-modal-close" onclick="closeModalById('modal-agendar')">Cancelar</button>
+        <button class="btn-modal-escolher" onclick="saveSchedule()">Salvar</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="modal-agenda" class="modal" onclick="closeModal(event, 'modal-agenda')">
+    <div class="modal-content modal-agenda-content">
+      <div class="modal-header">
+        <span class="modal-hinario">AGENDA DE CULTOS</span>
+        <button class="modal-close" onclick="closeModalById('modal-agenda')">X</button>
+      </div>
+      <div id="agenda-lista" class="agenda-lista"></div>
+      <div class="modal-footer">
+        <button class="btn-modal-close" onclick="limparAgenda()">Limpar tudo</button>
+        <button class="btn-modal-close" onclick="closeModalById('modal-agenda')">Fechar</button>
       </div>
     </div>
   </div>

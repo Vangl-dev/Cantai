@@ -12,6 +12,7 @@ from cantai.exporters.json import export_json
 from cantai.importers.cantor_cristao import import_cantor_cristao
 from cantai.importers.cantor_cristao_index import import_cc_index
 from cantai.importers.ctp import import_ctp
+from cantai.importers.hcc import import_hcc
 from cantai.importers.ctp_index import import_ctp_index
 from cantai.importers.harpa import import_harpa
 from cantai.importers.harpa_index import import_harpa_index
@@ -405,6 +406,34 @@ def importar_indice_cc() -> None:
 
 
 @app.command()
+def importar_hcc(
+    pdf: Path = typer.Argument(..., help="PDF do HCC"),
+) -> None:
+    """Importar hinário HCC de PDF."""
+    if not pdf.is_file():
+        console.print(f"[red]Erro:[/red] '{pdf}' não é um arquivo válido.")
+        raise typer.Exit(code=1)
+
+    create_database()
+
+    hinos, report = import_hcc(pdf)
+    novos, atualizados = save_hymns(hinos)
+    total = count_hymns()
+
+    _imprimir_relatorio(report)
+
+    console.print()
+    console.print("─" * 50)
+    console.print("[bold]Relatório do HCC[/bold]")
+    console.print("─" * 50)
+    console.print(f"Hinos importados:  {report.hinos_criados}")
+    console.print(f"Novos:             {novos}")
+    console.print(f"Atualizados:       {atualizados}")
+    console.print(f"Total no banco:    {total}")
+    console.print("─" * 50)
+
+
+@app.command()
 def importar_sh(
     pdf: Path = typer.Argument(..., help="PDF de Salmos e Hinos"),
 ) -> None:
@@ -641,7 +670,7 @@ def build(
 
     console.print()
     console.print("═" * 50)
-    console.print("[bold]Cantai Builder — Build V1.3[/bold]")
+    console.print("[bold]Cantai Builder — Build V1.6[/bold]")
     console.print("═" * 50)
 
     counts: dict[str, int] = {}
@@ -649,7 +678,7 @@ def build(
     # 1. Importar CTP
     if ctp_dir and ctp_dir.is_dir():
         console.print()
-        console.print("[bold]1/12[/bold] Importando CTP...")
+        console.print("[bold]1/14[/bold] Importando CTP...")
         try:
             hinos, report = import_ctp(ctp_dir)
             save_hymns(hinos)
@@ -660,10 +689,10 @@ def build(
             counts["CTP"] = 0
     else:
         console.print()
-        console.print("[bold]1/12[/bold] CTP ignorado (sem --ctp-dir)")
+        console.print("[bold]1/14[/bold] CTP ignorado (sem --ctp-dir)")
 
     # 2. Importar índice CTP
-    console.print("[bold]2/12[/bold] Importando índice CTP...")
+    console.print("[bold]2/14[/bold] Importando índice CTP...")
     try:
         import_ctp_index()
         console.print("  Índice CTP: OK")
@@ -672,7 +701,7 @@ def build(
 
     # 3. Importar Harpa
     harpa_pdf = DATA_INPUT / "HARPA CRISTÃ.pdf"
-    console.print("[bold]3/12[/bold] Importando Harpa Cristã...")
+    console.print("[bold]3/14[/bold] Importando Harpa Cristã...")
     if harpa_pdf.is_file():
         hinos, report = import_harpa(harpa_pdf)
         save_hymns(hinos)
@@ -683,7 +712,7 @@ def build(
         counts["HARPA"] = 0
 
     # 4. Importar índice Harpa
-    console.print("[bold]4/12[/bold] Importando índice Harpa...")
+    console.print("[bold]4/14[/bold] Importando índice Harpa...")
     try:
         import_harpa_index()
         console.print("  Índice Harpa: OK")
@@ -692,7 +721,7 @@ def build(
 
     # 5. Importar Cantor Cristão
     cc_pdf = DATA_INPUT / "Cantor Cristão em formato pdf.pdf"
-    console.print("[bold]5/12[/bold] Importando Cantor Cristão...")
+    console.print("[bold]5/14[/bold] Importando Cantor Cristão...")
     if cc_pdf.is_file():
         hinos, report = import_cantor_cristao(cc_pdf)
         save_hymns(hinos)
@@ -703,18 +732,30 @@ def build(
         counts["CC"] = 0
 
     # 6. Importar índice CC
-    console.print("[bold]6/12[/bold] Importando índice CC...")
+    console.print("[bold]6/14[/bold] Importando índice CC...")
     try:
         import_cc_index()
         console.print("  Índice CC: OK")
     except Exception as e:
         console.print(f"  [yellow]Índice CC: {e}[/yellow]")
 
-    # 7. Importar Salmos e Hinos (novo PDF completo)
+    # 7. Importar HCC
+    hcc_pdf = DATA_INPUT / "hcc-completo_compress.pdf"
+    console.print("[bold]7/14[/bold] Importando HCC...")
+    if hcc_pdf.is_file():
+        hinos, report = import_hcc(hcc_pdf)
+        save_hymns(hinos)
+        counts["HCC"] = report.hinos_criados
+        console.print(f"  HCC: {report.hinos_criados} hinos")
+    else:
+        console.print("  [yellow]HCC: PDF não encontrado[/yellow]")
+        counts["HCC"] = 0
+
+    # 8. Importar Salmos e Hinos (novo PDF completo)
     sh_pdf = DATA_INPUT / "SALMOS-HINOS completo.pdf"
     if not sh_pdf.is_file():
         sh_pdf = DATA_INPUT / "Coletania de Salmos & Hinos.pdf"
-    console.print("[bold]7/12[/bold] Importando Salmos e Hinos...")
+    console.print("[bold]8/14[/bold] Importando Salmos e Hinos...")
     if sh_pdf.is_file():
         hinos, report = import_salmos_hinos(sh_pdf)
         save_hymns(hinos)
@@ -724,9 +765,9 @@ def build(
         console.print("  [yellow]SH: PDF não encontrado[/yellow]")
         counts["SH"] = 0
 
-    # 8. Importar Novo Cântico
+    # 9. Importar Novo Cântico
     nc_pdf = DATA_INPUT / "novo_cantico.pdf"
-    console.print("[bold]8/12[/bold] Importando Novo Cântico...")
+    console.print("[bold]9/14[/bold] Importando Novo Cântico...")
     if nc_pdf.is_file():
         hinos, report = import_novo_cantico(nc_pdf)
         save_hymns(hinos)
@@ -736,32 +777,32 @@ def build(
         console.print("  [yellow]NC: PDF não encontrado[/yellow]")
         counts["NC"] = 0
 
-    # 9. Reclassificar para catálogo único
-    console.print("[bold]9/12[/bold] Reclassificando para catálogo único...")
+    # 10. Reclassificar para catálogo único
+    console.print("[bold]10/14[/bold] Reclassificando para catálogo único...")
     from cantai.topics.reclassifier import reclassify_all
     reclassify_stats = reclassify_all()
     console.print(f"  Reclassificados: {reclassify_stats['reclassificados']}")
     console.print(f"  Classificados por letra: {reclassify_stats['classificados_por_letra']}")
     console.print(f"  Sem temas depois: {reclassify_stats['sem_temas_depois']}")
 
-    # 10. Exportar JSON
-    console.print("[bold]10/12[/bold] Exportando JSON...")
+    # 11. Exportar JSON
+    console.print("[bold]11/14[/bold] Exportando JSON...")
     all_hymns = load_hymns()
     export_json(all_hymns, JSON_OUTPUT)
     console.print(f"  {JSON_OUTPUT.relative_to(PROJECT_ROOT)}: {len(all_hymns)} hinos")
 
-    # 11. Sincronizar web
-    console.print("[bold]11/12[/bold] Sincronizando web...")
+    # 12. Sincronizar web
+    console.print("[bold]12/14[/bold] Sincronizando web...")
     shutil.copy2(JSON_OUTPUT, WEB_OUTPUT)
     console.print(f"  {WEB_OUTPUT.relative_to(PROJECT_ROOT)}: copiado")
 
-    # 12. Relatório de qualidade
-    console.print("[bold]12/13[/bold] Relatório de qualidade...")
+    # 13. Relatório de qualidade
+    console.print("[bold]13/14[/bold] Relatório de qualidade...")
     sem_topics_final = sum(1 for h in all_hymns if not h.topics)
     console.print(f"  Hinos sem topics: {sem_topics_final}")
 
-    # 13. Validar temas
-    console.print("[bold]13/13[/bold] Validando catálogo de temas...")
+    # 14. Validar temas
+    console.print("[bold]14/14[/bold] Validando catálogo de temas...")
     from cantai.topics.validator import validate_all
     val_report = validate_all()
     if val_report["valid"]:
@@ -779,7 +820,7 @@ def build(
     console.print("═" * 50)
     console.print("[bold]Builder concluído[/bold]")
     console.print("─" * 50)
-    for hymnal in ["CTP", "HARPA", "CC", "SH", "NC"]:
+    for hymnal in ["CTP", "HARPA", "CC", "HCC", "SH", "NC"]:
         console.print(f"  {hymnal:15s} {counts.get(hymnal, 0):4d}")
     console.print("─" * 50)
     console.print(f"  {'TOTAL':15s} {total:4d}")

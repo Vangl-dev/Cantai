@@ -1,7 +1,8 @@
 let database = { version: null, hymns: [] };
 let cultoHymns = JSON.parse(localStorage.getItem("cultoHymns") || "[]");
-let historico = JSON.parse(localStorage.getItem("cantaiHistorico") || "[]");
+let agenda = JSON.parse(localStorage.getItem("cantaiAgenda") || "[]");
 let currentModalHymn = null;
+let editingScheduleId = null;
 
 const CANONICAL_TOPICS = [
   "Acao de Gracas","Adoracao","Advento","Afirmacao de Fe","Aniversario",
@@ -107,6 +108,14 @@ for (const [canon, variants] of Object.entries(SYNONYMS)) {
   for (const v of variants) {
     _synonymToCanonical[normalize(v)] = canon;
   }
+}
+
+function generateId() {
+  return Date.now().toString(36) + Math.random().toString(36).slice(2, 7);
+}
+
+function saveAgenda() {
+  localStorage.setItem("cantaiAgenda", JSON.stringify(agenda));
 }
 
 async function loadDatabase() {
@@ -218,7 +227,7 @@ function renderSearchResults(results) {
 }
 
 function getSelectedHymnals() {
-  const map = { hctp: "CTP", harpa: "HARPA", cantor: "CC", sh: "SH", nc: "NC" };
+  const map = { hctp: "CTP", harpa: "HARPA", hcc: "HCC", sh: "SH", nc: "NC" };
   const selected = [];
   for (const [id, name] of Object.entries(map)) {
     if (document.getElementById(id).checked) selected.push(name);
@@ -262,8 +271,8 @@ function suggestHymns() {
   }
 
   const picks = [];
-  const limits = { CTP: 3, HARPA: 1, CC: 1, SH: 1, NC: 1 };
-  for (const hymnal of ["CTP", "HARPA", "CC", "SH", "NC"]) {
+  const limits = { CTP: 3, HARPA: 1, HCC: 1, SH: 1, NC: 1 };
+  for (const hymnal of ["CTP", "HARPA", "HCC", "SH", "NC"]) {
     if (!selectedHymnals.includes(hymnal)) continue;
     const limit = limits[hymnal] || 1;
     const pool = byHymnal[hymnal] || [];
@@ -393,21 +402,132 @@ function copyProgramacao() {
     btn.textContent = "Copiado!";
     setTimeout(() => (btn.textContent = original), 2000);
   });
-
-  const entry = {
-    date: new Date().toISOString(),
-    hymns: cultoHymns.map(h => ({ hymnal: h.hymnal, number: h.number, title: h.title }))
-  };
-  historico.unshift(entry);
-  if (historico.length > 50) historico = historico.slice(0, 50);
-  localStorage.setItem("cantaiHistorico", JSON.stringify(historico));
 }
 
-function exportHistorico() {
-  if (cultoHymns.length === 0) return;
+function openAgendarModal(scheduleId) {
+  editingScheduleId = scheduleId || null;
+  const nameInput = document.getElementById("schedule-name");
+  const dateInput = document.getElementById("schedule-date");
+  const notesInput = document.getElementById("schedule-notes");
+
+  if (editingScheduleId) {
+    const entry = agenda.find(s => s.id === editingScheduleId);
+    if (entry) {
+      nameInput.value = entry.name;
+      dateInput.value = entry.date;
+      notesInput.value = entry.notes || "";
+    }
+  } else {
+    nameInput.value = "";
+    dateInput.value = new Date().toISOString().slice(0, 10).split("-").reverse().join("/");
+    notesInput.value = "";
+  }
+
+  document.getElementById("modal-agendar").classList.add("active");
+}
+
+function saveSchedule() {
+  const name = document.getElementById("schedule-name").value.trim();
+  const dateRaw = document.getElementById("schedule-date").value.trim();
+  const notes = document.getElementById("schedule-notes").value.trim();
+
+  if (!dateRaw) {
+    alert("Preencha a data.");
+    return;
+  }
+
+  let dateISO;
+  const parts = dateRaw.split("/");
+  if (parts.length === 3) {
+    dateISO = `${parts[2]}-${parts[1].padStart(2, "0")}-${parts[0].padStart(2, "0")}`;
+  } else {
+    dateISO = dateRaw;
+  }
+
+  if (editingScheduleId) {
+    const entry = agenda.find(s => s.id === editingScheduleId);
+    if (entry) {
+      entry.name = name || "Culto";
+      entry.date = dateISO;
+      entry.notes = notes;
+      entry.hymns = cultoHymns.map(h => ({ hymnal: h.hymnal, number: h.number, title: h.title }));
+    }
+  } else {
+    agenda.push({
+      id: generateId(),
+      name: name || "Culto",
+      date: dateISO,
+      notes: notes,
+      hymns: cultoHymns.map(h => ({ hymnal: h.hymnal, number: h.number, title: h.title })),
+      createdAt: new Date().toISOString(),
+    });
+  }
+
+  saveAgenda();
+  closeModalById("modal-agendar");
+  editingScheduleId = null;
+}
+
+function renderAgenda() {
+  const container = document.getElementById("agenda-lista");
+  container.innerHTML = "";
+
+  if (agenda.length === 0) {
+    container.innerHTML = "<p style='text-align:center;color:var(--text-secondary)'>Nenhum culto agendado.</p>";
+    document.getElementById("modal-agenda").classList.add("active");
+    return;
+  }
+
+  const sorted = [...agenda].sort((a, b) => new Date(b.date) - new Date(a.date));
+
+  for (const entry of sorted) {
+    const dateObj = new Date(entry.date + "T00:00:00");
+    const dateStr = dateObj.toLocaleDateString("pt-BR", { day: "2-digit", month: "2-digit", year: "numeric" });
+
+    const item = document.createElement("div");
+    item.className = "agenda-item";
+    item.innerHTML = `
+      <div class="agenda-item-data">${dateStr}</div>
+      <div class="agenda-item-nome">${entry.name}</div>
+      ${entry.notes ? `<div class="agenda-item-notas">${entry.notes}</div>` : ""}
+      <div class="agenda-item-hinos">
+        ${entry.hymns.map(h => `<span class="agenda-hino">${h.hymnal} ${h.number}</span>`).join(" ")}
+      </div>
+      <div class="agenda-item-botoes">
+        <button class="agenda-btn" onclick="copiarAgendaEntry('${entry.id}')" title="Copiar">&#128203; Copiar</button>
+        <button class="agenda-btn" onclick="openAgendarModal('${entry.id}')" title="Editar">&#9998; Editar</button>
+        <button class="agenda-btn agenda-btn-perigo" onclick="excluirAgenda('${entry.id}')" title="Excluir">&#128465; Excluir</button>
+      </div>
+    `;
+    container.appendChild(item);
+  }
+
+  document.getElementById("modal-agenda").classList.add("active");
+}
+
+function copiarAgendaEntry(id) {
+  const entry = agenda.find(s => s.id === id);
+  if (!entry) return;
+  const lines = [entry.name, ""];
+  for (const h of entry.hymns) {
+    lines.push(`${h.hymnal} ${h.number} - ${h.title}`);
+  }
+  navigator.clipboard.writeText(lines.join("\n")).then(() => {
+    alert("Copiado!");
+  });
+}
+
+function excluirAgenda(id) {
+  if (!confirm("Excluir este culto da agenda?")) return;
+  agenda = agenda.filter(s => s.id !== id);
+  saveAgenda();
+  renderAgenda();
+}
+
+function exportAgenda() {
   const data = {
     exported_at: new Date().toISOString(),
-    hymns: cultoHymns,
+    schedule: agenda,
   };
   const blob = new Blob([JSON.stringify(data, null, 2)], {
     type: "application/json",
@@ -415,12 +535,12 @@ function exportHistorico() {
   const url = URL.createObjectURL(blob);
   const a = document.createElement("a");
   a.href = url;
-  a.download = `cantai-culto-${new Date().toISOString().slice(0, 10)}.json`;
+  a.download = `cantai-agenda-${new Date().toISOString().slice(0, 10)}.json`;
   a.click();
   URL.revokeObjectURL(url);
 }
 
-function importHistorico() {
+function importAgenda() {
   const input = document.createElement("input");
   input.type = "file";
   input.accept = ".json";
@@ -431,10 +551,17 @@ function importHistorico() {
     reader.onload = (ev) => {
       try {
         const data = JSON.parse(ev.target.result);
-        if (data.hymns && Array.isArray(data.hymns)) {
+        if (data.schedule && Array.isArray(data.schedule)) {
+          agenda = data.schedule;
+          saveAgenda();
+          alert(`Agenda importada: ${agenda.length} culto(s).`);
+        } else if (data.hymns && Array.isArray(data.hymns)) {
           cultoHymns = data.hymns;
           localStorage.setItem("cultoHymns", JSON.stringify(cultoHymns));
           renderCulto();
+          alert("Hinos importados para o culto atual.");
+        } else {
+          alert("Formato de arquivo invalido.");
         }
       } catch {
         alert("Arquivo invalido.");
@@ -445,12 +572,35 @@ function importHistorico() {
   input.click();
 }
 
-function limparHistorico() {
+function limparAgenda() {
+  if (agenda.length === 0) return;
+  if (!confirm("Limpar toda a agenda de cultos?")) return;
+  agenda = [];
+  saveAgenda();
+  renderAgenda();
+}
+
+function limparCulto() {
   if (cultoHymns.length === 0) return;
   if (!confirm("Limpar todos os hinos deste culto?")) return;
   cultoHymns = [];
   localStorage.setItem("cultoHymns", JSON.stringify(cultoHymns));
   renderCulto();
+}
+
+function getRecentHymnKeys(days) {
+  const cutoff = new Date();
+  cutoff.setDate(cutoff.getDate() - days);
+  const keys = new Set();
+  for (const entry of agenda) {
+    const entryDate = new Date(entry.date + "T00:00:00");
+    if (entryDate >= cutoff) {
+      for (const h of entry.hymns) {
+        keys.add(`${h.hymnal}:${h.number}`);
+      }
+    }
+  }
+  return keys;
 }
 
 function handleSearch() {
@@ -471,87 +621,6 @@ function handleSearch() {
   btnSugerir.style.display = "none";
   const results = searchHymns(query);
   renderSearchResults(results);
-}
-
-function formatDate(isoStr) {
-  const d = new Date(isoStr);
-  const now = new Date();
-  const diffMs = now - d;
-  const diffDays = Math.floor(diffMs / 86400000);
-
-  if (diffDays === 0) return "Hoje";
-  if (diffDays === 1) return "Ontem";
-  if (diffDays < 7) return "Semana passada";
-  if (diffDays < 30) return "Este mes";
-  return d.toLocaleDateString("pt-BR", { day: "2-digit", month: "short", year: "numeric" });
-}
-
-function openHistorico() {
-  const container = document.getElementById("historico-lista");
-  container.innerHTML = "";
-
-  if (historico.length === 0) {
-    container.innerHTML = "<p style='text-align:center;color:var(--text-secondary)'>Nenhum culto registrado.</p>";
-    document.getElementById("modal-historico").classList.add("active");
-    return;
-  }
-
-  let lastGroup = "";
-  for (let i = 0; i < historico.length; i++) {
-    const entry = historico[i];
-    const group = formatDate(entry.date);
-
-    if (group !== lastGroup) {
-      const sep = document.createElement("div");
-      sep.className = "historico-sep";
-      if (lastGroup !== "") {
-        const line = document.createElement("div");
-        line.className = "historico-linha";
-        container.appendChild(line);
-      }
-      sep.textContent = group;
-      container.appendChild(sep);
-      lastGroup = group;
-    }
-
-    const item = document.createElement("div");
-    item.className = "historico-item";
-    item.innerHTML = `
-      <div class="historico-item-hinos">
-        ${entry.hymns.map(h => `<span class="historico-hino">${h.hymnal} ${h.number}</span>`).join(" ")}
-      </div>
-      <div class="historico-item-botoes">
-        <button class="historico-btn" onclick="copiarHistorico(${i})" title="Copiar">Copiar</button>
-        <button class="historico-btn historico-btn-perigo" onclick="removerHistorico(${i})" title="Remover">X</button>
-      </div>
-    `;
-    container.appendChild(item);
-  }
-
-  document.getElementById("modal-historico").classList.add("active");
-}
-
-function copiarHistorico(index) {
-  const entry = historico[index];
-  const lines = entry.hymns.map(h => `${h.hymnal} ${h.number} - ${h.title}`);
-  navigator.clipboard.writeText(lines.join("\n")).then(() => {
-    alert("Copiado!");
-  });
-}
-
-function removerHistorico(index) {
-  if (!confirm("Remover este culto do historico?")) return;
-  historico.splice(index, 1);
-  localStorage.setItem("cantaiHistorico", JSON.stringify(historico));
-  openHistorico();
-}
-
-function limparHistoricoCompleto() {
-  if (historico.length === 0) return;
-  if (!confirm("Limpar todo o historico de cultos?")) return;
-  historico = [];
-  localStorage.setItem("cantaiHistorico", JSON.stringify(historico));
-  openHistorico();
 }
 
 document.addEventListener("DOMContentLoaded", () => {
