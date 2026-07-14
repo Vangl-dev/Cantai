@@ -1,0 +1,21 @@
+# Cantai2 Configuration
+
+[app]
+name = "Cantai2"
+version = "0.0.1"
+debug = true
+
+[database]
+url = "sqlite:///data/cantai.db"
+
+[import]
+input_dir = "data/input"
+output_dir = "data/output"
+
+[search]
+min_score = 0.5
+max_results = 50
+
+[web]
+host = "0.0.0.0"
+port = 8000

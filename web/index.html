@@ -1,0 +1,1914 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cantai2 - Selecionador de Hinos</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+    <style>
+        :root {
+            --bg: #1c1c1e;
+            --surface: #2c2c2e;
+            --text: #f5f5f7;
+            --text-secondary: #98989d;
+            --border: #3a3a3c;
+            --primary: #0a84ff;
+            --primary-hover: #409cff;
+            --success: #30d158;
+            --shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
+            --radius: 16px;
+            --radius-sm: 10px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .container {
+            max-width: 600px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 0 1rem 3rem;
+            flex: 1;
+        }
+
+        .logo-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 3rem 1rem 2rem;
+        }
+
+        .logo-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .logo-section img {
+            max-width: 120px;
+            height: auto;
+        }
+
+        .logo-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            color: var(--text);
+        }
+
+        .logo-subtitle {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            margin-top: 0.25rem;
+        }
+
+        .section-box {
+            background: var(--surface);
+            border-radius: var(--radius);
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            box-shadow: var(--shadow);
+        }
+
+        .section-title {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            font-size: 1rem;
+            border: 1px solid var(--border);
+            border-radius: var(--radius-sm);
+            background: var(--surface);
+            color: var(--text);
+            outline: none;
+            transition: border-color 0.2s;
+        }
+
+        .search-input:focus {
+            border-color: var(--primary);
+        }
+
+        .search-input::placeholder {
+            color: var(--text-secondary);
+        }
+
+        .filter-select {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            font-size: 1rem;
+            border: 1px solid var(--border);
+            border-radius: var(--radius-sm);
+            background: var(--surface);
+            color: var(--text);
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%2398989d' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 1rem center;
+            cursor: pointer;
+        }
+
+        .filter-select:focus {
+            border-color: var(--primary);
+        }
+
+        .hymnal-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .hymnal-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .hymnal-item.disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        .hymnal-item input[type="checkbox"] {
+            width: 1.25rem;
+            height: 1.25rem;
+            accent-color: var(--primary);
+            cursor: pointer;
+        }
+
+        .hymnal-item.disabled input[type="checkbox"] {
+            cursor: not-allowed;
+        }
+
+        .hymnal-label {
+            flex: 1;
+            color: var(--text);
+        }
+
+        .hymnal-badge {
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+            background: var(--bg);
+            padding: 0.2rem 0.5rem;
+            border-radius: 6px;
+        }
+
+        .suggestions-header {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .hymn-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .hymn-card {
+            background: var(--surface);
+            border-radius: var(--radius);
+            padding: 1.25rem;
+            box-shadow: var(--shadow);
+        }
+
+        .card-header {
+            display: flex;
+            align-items: baseline;
+            gap: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .card-source {
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            background: var(--bg);
+            padding: 0.2rem 0.5rem;
+            border-radius: 6px;
+        }
+
+        .card-number {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+
+        .card-info {
+            flex: 1;
+        }
+
+        .card-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+            color: var(--text);
+        }
+
+        .card-first-line {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            font-style: italic;
+            margin-bottom: 0.75rem;
+        }
+
+        .card-metric {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            margin-bottom: 0.5rem;
+        }
+
+        .card-ctp-equivalent {
+            font-size: 0.8rem;
+            color: var(--success);
+            margin-bottom: 0.5rem;
+        }
+
+        .card-actions {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .btn {
+            flex: 1;
+            padding: 0.6rem;
+            font-size: 0.95rem;
+            font-weight: 500;
+            border-radius: var(--radius-sm);
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .btn-view {
+            color: var(--text-secondary);
+            background: transparent;
+            border: 1.5px solid var(--border);
+        }
+
+        .btn-view:hover {
+            border-color: var(--text-secondary);
+            color: var(--text);
+        }
+
+        .btn-choose {
+            color: var(--primary);
+            background: transparent;
+            border: 1.5px solid var(--primary);
+        }
+
+        .btn-choose:hover {
+            background: var(--primary);
+            color: #ffffff;
+        }
+
+        .btn-more {
+            width: 100%;
+            padding: 0.75rem;
+            font-size: 1rem;
+            font-weight: 500;
+            color: var(--text-secondary);
+            background: transparent;
+            border: 1.5px solid var(--border);
+            border-radius: var(--radius-sm);
+            cursor: pointer;
+            transition: all 0.2s;
+            margin-top: 1rem;
+        }
+
+        .btn-more:hover {
+            border-color: var(--text-secondary);
+            color: var(--text);
+        }
+
+        .hymn-detail {
+            display: none;
+            background: var(--surface);
+            border-radius: var(--radius);
+            padding: 1.5rem;
+            box-shadow: var(--shadow);
+        }
+
+        .hymn-detail.active {
+            display: block;
+        }
+
+        .hymn-detail-header {
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .hymn-detail-number {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+
+        .hymn-detail-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--text);
+            margin-top: 0.25rem;
+        }
+
+        .hymn-detail-first-line {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            font-style: italic;
+            margin-top: 0.5rem;
+        }
+
+        .hymn-detail-lyrics {
+            white-space: pre-wrap;
+            line-height: 1.7;
+            font-size: 0.95rem;
+            color: var(--text);
+            margin-bottom: 1.5rem;
+            padding: 1rem;
+            background: var(--bg);
+            border-radius: var(--radius-sm);
+        }
+
+        .detail-section {
+            margin-bottom: 1rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .detail-section:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .detail-section-title {
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            margin-bottom: 0.5rem;
+        }
+
+        .detail-topics {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .detail-topic {
+            font-size: 0.8rem;
+            font-weight: 500;
+            color: var(--primary);
+            background: var(--bg);
+            padding: 0.25rem 0.6rem;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .detail-topic:hover {
+            background: var(--primary);
+            color: #ffffff;
+        }
+
+        .detail-metric {
+            font-size: 0.95rem;
+            color: var(--primary);
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .detail-metric:hover {
+            text-decoration: underline;
+        }
+
+        .detail-melody {
+            font-size: 0.95rem;
+            color: var(--primary);
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .detail-melody:hover {
+            text-decoration: underline;
+        }
+
+        .equivalents-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            margin-top: 0.75rem;
+        }
+
+        .equivalent-card {
+            background: var(--bg);
+            border-radius: var(--radius-sm);
+            padding: 0.75rem;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .equivalent-card:hover {
+            background: #3a3a3a;
+        }
+
+        .equivalent-card-header {
+            display: flex;
+            align-items: baseline;
+            gap: 0.5rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .equivalent-card-source {
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+        }
+
+        .equivalent-card-number {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+        }
+
+        .equivalent-card-title {
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: var(--text);
+        }
+
+        .equivalent-card-ctp {
+            border-left: 3px solid var(--success);
+        }
+
+        .equivalent-card-badge {
+            font-size: 0.7rem;
+            color: var(--success);
+            margin-left: auto;
+        }
+
+        .related-section {
+            background: var(--bg);
+            border-radius: var(--radius-sm);
+            padding: 1rem;
+            margin-top: 1rem;
+        }
+
+        .related-header {
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            margin-bottom: 0.75rem;
+        }
+
+        .related-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .related-card {
+            background: var(--surface);
+            border-radius: var(--radius-sm);
+            padding: 0.75rem;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .related-card:hover {
+            background: #3a3a3a;
+        }
+
+        .related-card-header {
+            display: flex;
+            align-items: baseline;
+            gap: 0.5rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .related-card-number {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+        }
+
+        .related-card-title {
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: var(--text);
+        }
+
+        .related-card-first-line {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            font-style: italic;
+        }
+
+        .detail-actions {
+            display: flex;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .back-button {
+            flex: 1;
+            padding: 0.6rem;
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: var(--text-secondary);
+            background: transparent;
+            border: 1.5px solid var(--border);
+            border-radius: var(--radius-sm);
+            cursor: pointer;
+            transition: all 0.2s;
+            text-decoration: none;
+            text-align: center;
+        }
+
+        .back-button:hover {
+            border-color: var(--text-secondary);
+            color: var(--text);
+        }
+
+        .back-button:disabled {
+            opacity: 0.4;
+            cursor: not-allowed;
+        }
+
+        .back-button:disabled:hover {
+            border-color: var(--border);
+            color: var(--text-secondary);
+        }
+
+        .btn-back-search {
+            flex: 1;
+            padding: 0.6rem;
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: var(--text-secondary);
+            background: transparent;
+            border: 1.5px solid var(--border);
+            border-radius: var(--radius-sm);
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .btn-back-search:hover {
+            border-color: var(--text-secondary);
+            color: var(--text);
+        }
+
+        .loading {
+            text-align: center;
+            padding: 40px;
+            color: var(--text-secondary);
+        }
+
+        .no-results {
+            text-align: center;
+            padding: 40px;
+            color: var(--text-secondary);
+        }
+
+        .selection-toast {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: var(--primary);
+            color: white;
+            padding: 12px 20px;
+            border-radius: var(--radius-sm);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            display: none;
+            z-index: 1000;
+        }
+
+        .selection-toast.show {
+            display: block;
+            animation: fadeIn 0.3s;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .agenda-section {
+            background: var(--surface);
+            border-radius: var(--radius);
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            box-shadow: var(--shadow);
+            border: 2px solid var(--primary);
+        }
+
+        .agenda-empty {
+            text-align: center;
+            color: var(--text-secondary);
+            padding: 1rem;
+            font-size: 0.9rem;
+        }
+
+        .agenda-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .agenda-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem;
+            background: var(--bg);
+            border-radius: var(--radius-sm);
+        }
+
+        .agenda-item-info {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .agenda-item-id {
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--primary);
+        }
+
+        .agenda-item-title {
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: var(--text);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .agenda-item-actions {
+            display: flex;
+            gap: 0.25rem;
+            flex-shrink: 0;
+        }
+
+        .agenda-btn {
+            background: none;
+            border: none;
+            font-size: 1rem;
+            cursor: pointer;
+            padding: 0.25rem;
+            color: var(--text-secondary);
+            transition: color 0.2s;
+        }
+
+        .agenda-btn:hover {
+            color: var(--text);
+        }
+
+        .agenda-btn-danger:hover {
+            color: #ff3b30;
+        }
+
+        .agenda-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .agenda-btn-action {
+            width: 100%;
+            padding: 0.75rem;
+            font-size: 1rem;
+            font-weight: 500;
+            color: var(--text-secondary);
+            background: transparent;
+            border: 1.5px solid var(--border);
+            border-radius: var(--radius-sm);
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .agenda-btn-action:hover {
+            border-color: var(--text-secondary);
+            color: var(--text);
+        }
+
+        .agenda-btn-primary {
+            color: var(--primary);
+            border-color: var(--primary);
+        }
+
+        .agenda-btn-primary:hover {
+            background: var(--primary);
+            color: #ffffff;
+        }
+
+        .saved-section {
+            background: var(--surface);
+            border-radius: var(--radius);
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            box-shadow: var(--shadow);
+        }
+
+        .saved-empty {
+            text-align: center;
+            color: var(--text-secondary);
+            padding: 1rem;
+            font-size: 0.9rem;
+        }
+
+        .saved-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .saved-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem;
+            background: var(--bg);
+            border-radius: var(--radius-sm);
+        }
+
+        .saved-item-name {
+            flex: 1;
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: var(--text);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .saved-item-count {
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+        }
+
+        .saved-item-actions {
+            display: flex;
+            gap: 0.25rem;
+            flex-shrink: 0;
+        }
+
+        .saved-btn {
+            background: none;
+            border: none;
+            font-size: 0.85rem;
+            cursor: pointer;
+            padding: 0.35rem 0.6rem;
+            border-radius: 4px;
+            transition: all 0.2s;
+        }
+
+        .saved-btn-open {
+            color: var(--primary);
+            background: transparent;
+            border: 1px solid var(--primary);
+        }
+
+        .saved-btn-open:hover {
+            background: var(--primary);
+            color: #ffffff;
+        }
+
+        .saved-btn-delete {
+            color: var(--text-secondary);
+            background: transparent;
+            border: 1px solid var(--border);
+        }
+
+        .saved-btn-delete:hover {
+            color: #ff3b30;
+            border-color: #ff3b30;
+        }
+
+        .about-section {
+            text-align: center;
+            padding: 1rem;
+        }
+
+        .about-btn {
+            color: var(--text-secondary);
+            background: transparent;
+            border: none;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: color 0.2s;
+        }
+
+        .about-btn:hover {
+            color: var(--text);
+        }
+
+        .modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 2000;
+        }
+
+        .modal-content {
+            background: var(--surface);
+            border-radius: var(--radius);
+            width: 90%;
+            max-width: 400px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 1.5rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .modal-header h3 {
+            margin: 0;
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        .modal-close {
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--text-secondary);
+            cursor: pointer;
+            padding: 0;
+            line-height: 1;
+        }
+
+        .modal-close:hover {
+            color: var(--text);
+        }
+
+        .modal-body {
+            padding: 1.5rem;
+        }
+
+        .about-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 0.25rem;
+        }
+
+        .about-subtitle {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            text-align: center;
+            margin-bottom: 0.5rem;
+        }
+
+        .about-version {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .about-database {
+            background: var(--bg);
+            border-radius: var(--radius-sm);
+            padding: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .about-db-title {
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            margin-bottom: 0.75rem;
+        }
+
+        .about-db-row {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .about-db-total {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.9rem;
+            font-weight: 600;
+            padding-top: 0.5rem;
+            border-top: 1px solid var(--border);
+            margin-top: 0.5rem;
+        }
+
+        .about-features {
+            margin-bottom: 1rem;
+        }
+
+        .about-features-title {
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            margin-bottom: 0.5rem;
+        }
+
+        .about-feature {
+            font-size: 0.9rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .about-links {
+            text-align: center;
+        }
+
+        .about-link {
+            color: var(--primary);
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        .about-link:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 480px) {
+            .logo-title {
+                font-size: 2rem;
+            }
+
+            .logo-header {
+                gap: 0.75rem;
+            }
+
+            .logo-section img {
+                max-width: 80px;
+            }
+
+            .container {
+                padding: 0 0.75rem 2rem;
+            }
+
+            .section-box {
+                padding: 1.25rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo-section">
+            <div class="logo-header">
+                <img src="logo.png" alt="Cantai">
+                <div class="logo-title">Cantai</div>
+            </div>
+            <div class="logo-subtitle">Selecionador de Hinos</div>
+        </div>
+
+        <div class="section-box">
+            <div class="section-title">Buscar</div>
+            <input type="text" id="search-input" class="search-input" 
+                   placeholder="Buscar por número, título ou palavra na letra...">
+        </div>
+
+        <div class="section-box">
+            <div class="section-title">Tema</div>
+            <select id="theme-select" class="filter-select">
+                <option value="">Todos os temas</option>
+            </select>
+        </div>
+
+        <div class="section-box">
+            <div class="section-title">Hinários</div>
+            <div class="hymnal-list">
+                <label class="hymnal-item">
+                    <input type="checkbox" id="check-ctp" value="CTP" checked>
+                    <span class="hymnal-label">Cantai Todos os Povos</span>
+                </label>
+                <label class="hymnal-item disabled">
+                    <input type="checkbox" id="check-harpa" disabled>
+                    <span class="hymnal-label">Harpa Cristã</span>
+                    <span class="hymnal-badge">Em breve</span>
+                </label>
+                <label class="hymnal-item">
+                    <input type="checkbox" id="check-hcc" value="HCC">
+                    <span class="hymnal-label">HCC</span>
+                </label>
+                <label class="hymnal-item">
+                    <input type="checkbox" id="check-sh" value="SH">
+                    <span class="hymnal-label">Salmos e Hinos</span>
+                </label>
+                <label class="hymnal-item disabled">
+                    <input type="checkbox" id="check-novo" disabled>
+                    <span class="hymnal-label">Novo Cântico</span>
+                    <span class="hymnal-badge">Em breve</span>
+                </label>
+            </div>
+        </div>
+
+        <div id="results-section" class="section-box" style="display: none;">
+            <div id="suggestions-header" class="suggestions-header"></div>
+            <div id="hymn-grid" class="hymn-grid"></div>
+            <button id="btn-more" class="btn-more" onclick="loadMoreSuggestions()">Mais sugestões</button>
+        </div>
+
+        <div id="agenda-section" class="agenda-section">
+            <div class="section-title">Agenda do Culto</div>
+            <div id="agenda-list" class="agenda-list">
+                <div class="agenda-empty">Nenhum hino adicionado</div>
+            </div>
+            <div class="agenda-buttons">
+                <button class="agenda-btn-action agenda-btn-primary" onclick="saveList()">💾 Salvar Lista</button>
+                <button class="agenda-btn-action" onclick="copyProgramacao()">📋 Copiar programação</button>
+                <button class="agenda-btn-action" onclick="clearAgenda()">🗑️ Limpar agenda</button>
+            </div>
+        </div>
+
+        <div id="saved-section" class="saved-section">
+            <div class="section-title">Listas Salvas</div>
+            <div id="saved-list" class="saved-list">
+                <div class="saved-empty">Nenhuma lista salva</div>
+            </div>
+        </div>
+
+        <div class="about-section">
+            <button class="about-btn" onclick="openAbout()">Sobre</button>
+        </div>
+
+        <div id="hymn-detail" class="hymn-detail">
+            <div class="hymn-detail-header">
+                <div class="hymn-detail-number" id="detail-number"></div>
+                <div class="hymn-detail-title" id="detail-title"></div>
+                <div class="hymn-detail-first-line" id="detail-first-line"></div>
+            </div>
+            <div class="hymn-detail-lyrics" id="detail-lyrics"></div>
+            <div id="detail-topics-section" class="detail-section" style="display: none;">
+                <div class="detail-section-title">Tema(s)</div>
+                <div class="detail-topics" id="detail-topics"></div>
+            </div>
+            <div id="detail-metric-section" class="detail-section" style="display: none;">
+                <div class="detail-section-title">Métrica</div>
+                <div class="detail-metric" id="detail-metric"></div>
+            </div>
+            <div id="detail-melody-section" class="detail-section" style="display: none;">
+                <div class="detail-section-title">Melodia</div>
+                <div class="detail-melody" id="detail-melody"></div>
+            </div>
+            <div id="equivalents-section" style="display: none;">
+                <div class="detail-section-title">Também disponível em</div>
+                <div class="equivalents-grid" id="equivalents-grid"></div>
+            </div>
+            <div id="related-section" style="display: none;">
+                <div class="related-header" id="related-header"></div>
+                <div class="related-grid" id="related-grid"></div>
+                <button id="btn-more-related" class="btn-more" onclick="loadMoreRelated()" style="display: none;">Mais sugestões</button>
+            </div>
+            <div class="detail-actions">
+                <button id="btn-back-hymn" class="back-button" onclick="goBack()" disabled>← Voltar</button>
+                <button class="btn-back-search" onclick="showGrid()">← Voltar à Lista</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="selection-toast" class="selection-toast">
+        Hino selecionado para a Agenda!
+    </div>
+
+    <div id="about-modal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Sobre o Cantai</h3>
+                <button class="modal-close" onclick="closeAbout()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="about-title">Cantai</div>
+                <div class="about-subtitle">Selecionador de Hinos</div>
+                <div class="about-version">Versão: v0.4.0</div>
+                
+                <div class="about-database">
+                    <div class="about-db-title">Base de Dados</div>
+                    <div class="about-db-row">
+                        <span>CTP</span>
+                        <span id="about-ctp-count">...</span>
+                    </div>
+                    <div class="about-db-row">
+                        <span>HCC</span>
+                        <span id="about-hcc-count">...</span>
+                    </div>
+                    <div class="about-db-row">
+                        <span>Salmos e Hinos</span>
+                        <span id="about-sh-count">...</span>
+                    </div>
+                    <div class="about-db-total">
+                        <span>Total</span>
+                        <span id="about-total-count">...</span>
+                    </div>
+                </div>
+
+                <div class="about-features">
+                    <div class="about-features-title">Recursos</div>
+                    <div class="about-feature">✓ Motor de Sugestões</div>
+                    <div class="about-feature">✓ Agenda</div>
+                    <div class="about-feature">✓ Listas Salvas</div>
+                    <div class="about-feature">✓ Equivalências entre Hinários</div>
+                    <div class="about-feature">✓ Métricas</div>
+                    <div class="about-feature">✓ Melodias</div>
+                </div>
+
+                <div class="about-links">
+                    <a href="https://github.com/anthropics/cantai2" target="_blank" class="about-link">GitHub</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let allHymns = [];
+        let ctpHymns = [];
+        let hccHymns = [];
+        let shHymns = [];
+        let filteredHymns = [];
+        let currentSuggestions = [];
+        let allThemes = [];
+        let selectedTheme = '';
+        let relatedHymns = [];
+        let currentRelatedSuggestions = [];
+        let currentRelationType = '';
+        let currentRelationValue = '';
+        let navigationHistory = [];
+        let currentHymnNumber = null;
+        let agenda = JSON.parse(localStorage.getItem('cantaiAgenda') || '[]');
+        let savedLists = JSON.parse(localStorage.getItem('cantaiSavedLists') || '[]');
+        let hymnEquivalences = {};
+        let hymnReverseEquivalences = {};
+        let canonicalTopics = {};
+
+        function normalizeText(text) {
+            return text
+                .normalize('NFD')
+                .replace(/[\u0300-\u036f]/g, '')
+                .toLowerCase()
+                .replace(/\s+/g, ' ')
+                .trim();
+        }
+
+        function getHymnalSource(hymn) {
+            return hymn.source || hymn.hymnal || 'CTP';
+        }
+
+        function getSelectedHymnals() {
+            const selected = [];
+            if (document.getElementById('check-ctp').checked) selected.push('CTP');
+            if (document.getElementById('check-hcc').checked) selected.push('HCC');
+            if (document.getElementById('check-sh') && document.getElementById('check-sh').checked) selected.push('SH');
+            return selected;
+        }
+
+        function saveHymnalSelection() {
+            const selected = getSelectedHymnals();
+            localStorage.setItem('cantaiHymnals', JSON.stringify(selected));
+        }
+
+        function loadHymnalSelection() {
+            const saved = localStorage.getItem('cantaiHymnals');
+            if (saved) {
+                try {
+                    const selected = JSON.parse(saved);
+                    document.getElementById('check-ctp').checked = selected.includes('CTP');
+                    document.getElementById('check-hcc').checked = selected.includes('HCC');
+                    if (document.getElementById('check-sh')) {
+                        document.getElementById('check-sh').checked = selected.includes('SH');
+                    }
+                } catch (e) {
+                    console.error('Erro ao carregar seleção de hinários:', e);
+                }
+            }
+        }
+
+        function searchHymns(query, theme) {
+            const selectedHymnals = getSelectedHymnals();
+            let results = allHymns.filter(hymn => selectedHymnals.includes(getHymnalSource(hymn)));
+
+            if (theme) {
+                // Get equivalent themes from canonical topics
+                const canonicalData = canonicalTopics[theme];
+                let equivalentThemes = [];
+                
+                if (canonicalData) {
+                    // Collect all equivalent themes from the canonical mapping
+                    if (canonicalData.ctp) equivalentThemes.push(...canonicalData.ctp);
+                    if (canonicalData.hcc) equivalentThemes.push(...canonicalData.hcc);
+                    // For SH, use the canonical theme name directly
+                    equivalentThemes.push(theme);
+                } else {
+                    // Fallback: use the theme directly
+                    equivalentThemes = [theme];
+                }
+                
+                // Remove duplicates
+                equivalentThemes = [...new Set(equivalentThemes)];
+                
+                results = results.filter(hymn => {
+                    const source = getHymnalSource(hymn);
+                    let topics = hymn.topics || hymn.topics_hcc || hymn.topics_sh || [];
+                    
+                    // Check if any of the hymn's topics match any equivalent theme
+                    return topics.some(t => equivalentThemes.includes(t));
+                });
+            }
+
+            if (query.trim()) {
+                const normalizedQuery = normalizeText(query);
+                results = results.filter(hymn => {
+                    const numberStr = hymn.number.toString();
+                    const normalizedTitle = normalizeText(hymn.title);
+                    const normalizedFirstLine = normalizeText(hymn.first_line);
+                    const normalizedLyrics = normalizeText(hymn.lyrics);
+
+                    return numberStr.includes(normalizedQuery) ||
+                           normalizedTitle.includes(normalizedQuery) ||
+                           normalizedFirstLine.includes(normalizedQuery) ||
+                           normalizedLyrics.includes(normalizedQuery);
+                });
+            }
+
+            return results;
+        }
+
+        function extractThemes(hymns) {
+            const themesSet = new Set();
+            hymns.forEach(hymn => {
+                const topics = hymn.topics || hymn.topics_hcc || [];
+                topics.forEach(topic => themesSet.add(topic));
+            });
+            return Array.from(themesSet).sort();
+        }
+
+        function populateThemeSelect(themes) {
+            const select = document.getElementById('theme-select');
+            themes.forEach(theme => {
+                const option = document.createElement('option');
+                option.value = theme;
+                option.textContent = theme;
+                select.appendChild(option);
+            });
+        }
+
+        function shuffleArray(array) {
+            const shuffled = [...array];
+            for (let i = shuffled.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+            }
+            return shuffled;
+        }
+
+        function generateSuggestions() {
+            const selectedHymnals = getSelectedHymnals();
+            const ctpResults = filteredHymns.filter(h => getHymnalSource(h) === 'CTP');
+            const hccResults = filteredHymns.filter(h => getHymnalSource(h) === 'HCC');
+            const shResults = filteredHymns.filter(h => getHymnalSource(h) === 'SH');
+            
+            // Build set of equivalent hymn IDs to avoid duplicates
+            const equivalentIds = new Set();
+            for (const [key, value] of Object.entries(hymnEquivalences)) {
+                if (value.equivalents) {
+                    for (const eq of value.equivalents) {
+                        equivalentIds.add(eq.id);
+                    }
+                }
+            }
+            
+            // Filter out equivalent hymns (prefer CTP)
+            const filteredHcc = hccResults.filter(h => !equivalentIds.has(`HCC-${h.number}`));
+            const filteredSh = shResults.filter(h => !equivalentIds.has(`SH-${h.number}`));
+            
+            let suggestions = [];
+            
+            // Single hymnal selected
+            if (selectedHymnals.length === 1) {
+                if (selectedHymnals.includes('CTP')) {
+                    suggestions = shuffleArray(ctpResults).slice(0, 3);
+                } else if (selectedHymnals.includes('HCC')) {
+                    suggestions = shuffleArray(hccResults).slice(0, 3);
+                } else if (selectedHymnals.includes('SH')) {
+                    suggestions = shuffleArray(shResults).slice(0, 3);
+                }
+            }
+            // Multiple hymnals selected - prioritize CTP
+            else if (selectedHymnals.includes('CTP')) {
+                const ctpSuggestions = shuffleArray(ctpResults).slice(0, 3);
+                let additionalSuggestions = [];
+                
+                if (selectedHymnals.includes('HCC')) {
+                    const hccSuggestions = shuffleArray(filteredHcc).slice(0, 1);
+                    additionalSuggestions.push(...hccSuggestions);
+                }
+                if (selectedHymnals.includes('SH')) {
+                    const shSuggestions = shuffleArray(filteredSh).slice(0, 1);
+                    additionalSuggestions.push(...shSuggestions);
+                }
+                
+                suggestions = [...ctpSuggestions, ...additionalSuggestions];
+            }
+            // No CTP selected
+            else {
+                if (selectedHymnals.includes('HCC') && selectedHymnals.includes('SH')) {
+                    const hccSuggestions = shuffleArray(hccResults).slice(0, 3);
+                    const shSuggestions = shuffleArray(filteredSh).slice(0, 1);
+                    suggestions = [...hccSuggestions, ...shSuggestions];
+                } else if (selectedHymnals.includes('HCC')) {
+                    suggestions = shuffleArray(hccResults).slice(0, 3);
+                } else if (selectedHymnals.includes('SH')) {
+                    suggestions = shuffleArray(shResults).slice(0, 3);
+                }
+            }
+            
+            currentSuggestions = suggestions;
+            return currentSuggestions;
+        }
+
+        async function loadHymns() {
+            try {
+                const [ctpResponse, hccResponse, shResponse, equivResponse, rctResponse] = await Promise.all([
+                    fetch('../data/output/cantai.json'),
+                    fetch('../data/output/hcc.json'),
+                    fetch('../data/output/sh.json'),
+                    fetch('../data/hymn_equivalences.json'),
+                    fetch('../data/canonical_topics.json')
+                ]);
+                
+                const ctpData = await ctpResponse.json();
+                const hccData = await hccResponse.json();
+                const shData = await shResponse.json();
+                hymnEquivalences = await equivResponse.json();
+                canonicalTopics = await rctResponse.json();
+                
+                // Build reverse index: SH-xxx/HCC-xxx -> CTP entry
+                hymnReverseEquivalences = {};
+                for (const [ctpKey, entry] of Object.entries(hymnEquivalences)) {
+                    if (entry.equivalents) {
+                        for (const eq of entry.equivalents) {
+                            hymnReverseEquivalences[eq.id] = entry;
+                        }
+                    }
+                }
+                
+                ctpHymns = ctpData.hymns;
+                hccHymns = hccData.hymns;
+                shHymns = shData.hymns.map(h => ({...h, source: 'SH'}));
+                
+                allHymns = [...ctpHymns, ...hccHymns, ...shHymns];
+                allThemes = extractThemes(allHymns);
+                
+                // Load saved hymnal selection
+                loadHymnalSelection();
+                
+                populateThemeSelect(Object.keys(canonicalTopics));
+                renderAgenda();
+                renderSavedLists();
+            } catch (error) {
+                console.error('Erro ao carregar hinos:', error);
+            }
+        }
+
+        function saveAgenda() {
+            localStorage.setItem('cantaiAgenda', JSON.stringify(agenda));
+        }
+
+        function addToAgenda(number, source, title) {
+            const id = `${source || 'CTP'}-${number}`;
+            const exists = agenda.some(h => h.id === id);
+            if (!exists) {
+                agenda.push({ id, source: source || 'CTP', number, title });
+                saveAgenda();
+                renderAgenda();
+            }
+        }
+
+        function removeFromAgenda(index) {
+            agenda.splice(index, 1);
+            saveAgenda();
+            renderAgenda();
+        }
+
+        function moveUp(index) {
+            if (index === 0) return;
+            [agenda[index - 1], agenda[index]] = [agenda[index], agenda[index - 1]];
+            saveAgenda();
+            renderAgenda();
+        }
+
+        function moveDown(index) {
+            if (index === agenda.length - 1) return;
+            [agenda[index], agenda[index + 1]] = [agenda[index + 1], agenda[index]];
+            saveAgenda();
+            renderAgenda();
+        }
+
+        function renderAgenda() {
+            const list = document.getElementById('agenda-list');
+            
+            if (agenda.length === 0) {
+                list.innerHTML = '<div class="agenda-empty">Nenhum hino adicionado</div>';
+                return;
+            }
+
+            list.innerHTML = agenda.map((h, i) => `
+                <div class="agenda-item">
+                    <div class="agenda-item-info">
+                        <div class="agenda-item-id">${h.id}</div>
+                        <div class="agenda-item-title">${h.title}</div>
+                    </div>
+                    <div class="agenda-item-actions">
+                        <button class="agenda-btn" onclick="moveUp(${i})" title="Mover para cima">↑</button>
+                        <button class="agenda-btn" onclick="moveDown(${i})" title="Mover para baixo">↓</button>
+                        <button class="agenda-btn agenda-btn-danger" onclick="removeFromAgenda(${i})" title="Remover">✕</button>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function copyProgramacao() {
+            if (agenda.length === 0) return;
+            const lines = agenda.map(h => `${h.id}\n${h.title}`);
+            const text = lines.join('\n\n');
+            navigator.clipboard.writeText(text).then(() => {
+                const toast = document.getElementById('selection-toast');
+                toast.textContent = 'Programação copiada!';
+                toast.classList.add('show');
+                setTimeout(() => toast.classList.remove('show'), 3000);
+            });
+        }
+
+        function clearAgenda() {
+            if (agenda.length === 0) return;
+            if (!confirm('Limpar toda a agenda?')) return;
+            agenda = [];
+            saveAgenda();
+            renderAgenda();
+        }
+
+        function saveSavedLists() {
+            localStorage.setItem('cantaiSavedLists', JSON.stringify(savedLists));
+        }
+
+        function saveList() {
+            if (agenda.length === 0) {
+                const toast = document.getElementById('selection-toast');
+                toast.textContent = 'Adicione hinos antes de salvar!';
+                toast.classList.add('show');
+                setTimeout(() => toast.classList.remove('show'), 3000);
+                return;
+            }
+
+            const name = prompt('Nome da lista:', '');
+            if (!name || !name.trim()) return;
+
+            savedLists.push({
+                name: name.trim(),
+                hymns: [...agenda],
+                createdAt: new Date().toISOString()
+            });
+
+            saveSavedLists();
+            renderSavedLists();
+
+            const toast = document.getElementById('selection-toast');
+            toast.textContent = `Lista "${name.trim()}" salva!`;
+            toast.classList.add('show');
+            setTimeout(() => toast.classList.remove('show'), 3000);
+        }
+
+        function openList(index) {
+            if (agenda.length > 0) {
+                if (!confirm('Substituir a Agenda atual?')) return;
+            }
+
+            agenda = [...savedLists[index].hymns];
+            saveAgenda();
+            renderAgenda();
+
+            const toast = document.getElementById('selection-toast');
+            toast.textContent = `Lista "${savedLists[index].name}" aberta!`;
+            toast.classList.add('show');
+            setTimeout(() => toast.classList.remove('show'), 3000);
+        }
+
+        function deleteList(index) {
+            const name = savedLists[index].name;
+            if (!confirm(`Excluir a lista "${name}"?`)) return;
+
+            savedLists.splice(index, 1);
+            saveSavedLists();
+            renderSavedLists();
+        }
+
+        function renderSavedLists() {
+            const list = document.getElementById('saved-list');
+
+            if (savedLists.length === 0) {
+                list.innerHTML = '<div class="saved-empty">Nenhuma lista salva</div>';
+                return;
+            }
+
+            list.innerHTML = savedLists.map((l, i) => `
+                <div class="saved-item">
+                    <div class="saved-item-name">${l.name}</div>
+                    <div class="saved-item-count">${l.hymns.length} hino(s)</div>
+                    <div class="saved-item-actions">
+                        <button class="saved-btn saved-btn-open" onclick="openList(${i})">Abrir</button>
+                        <button class="saved-btn saved-btn-delete" onclick="deleteList(${i})">Excluir</button>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function shouldShowResults() {
+            const query = document.getElementById('search-input').value.trim();
+            return query.length > 0 || selectedTheme.length > 0;
+        }
+
+        function renderGrid() {
+            const resultsSection = document.getElementById('results-section');
+            const grid = document.getElementById('hymn-grid');
+            const headerEl = document.getElementById('suggestions-header');
+            const btnMore = document.getElementById('btn-more');
+            
+            if (!shouldShowResults()) {
+                resultsSection.style.display = 'none';
+                return;
+            }
+
+            resultsSection.style.display = 'block';
+            
+            if (filteredHymns.length === 0) {
+                grid.innerHTML = '<div class="no-results">Nenhum hino encontrado.</div>';
+                headerEl.textContent = '';
+                btnMore.style.display = 'none';
+                return;
+            }
+
+            if (currentSuggestions.length === 0) {
+                generateSuggestions();
+            }
+
+            headerEl.textContent = `Sugestões`;
+
+            grid.innerHTML = currentSuggestions.map(h => {
+                const source = getHymnalSource(h);
+                let ctpEquivalent = null;
+                
+                // Check for CTP equivalent if not already CTP
+                if (source !== 'CTP') {
+                    const hymnId = `${source}-${h.number}`;
+                    const equiv = hymnReverseEquivalences[hymnId];
+                    if (equiv && equiv.equivalents) {
+                        ctpEquivalent = equiv.equivalents.find(eq => eq.hymnal === 'CTP');
+                    }
+                }
+                
+                return `
+                    <div class="hymn-card">
+                        <div class="card-header">
+                            <span class="card-source">${source}</span>
+                            <span class="card-number">nº ${h.number}</span>
+                            <div class="card-info">
+                                <div class="card-title">${h.title}</div>
+                            </div>
+                        </div>
+                        <div class="card-first-line">${h.first_line}</div>
+                        ${ctpEquivalent ? `<div class="card-ctp-equivalent">⭐ Também no CTP: ${ctpEquivalent.id}</div>` : ''}
+                        ${h.metric ? `<div class="card-metric">${h.metric}</div>` : ''}
+                        <div class="card-actions">
+                            <button class="btn btn-view" onclick="showHymn(${h.number}, true, '${source}')">Ver letra</button>
+                            <button class="btn btn-choose" onclick="chooseHymn(${h.number}, '${h.title.replace(/'/g, "\\'")}', '${source}')">Escolher</button>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+
+            btnMore.style.display = filteredHymns.length > currentSuggestions.length ? 'block' : 'none';
+        }
+
+        function loadMoreSuggestions() {
+            generateSuggestions();
+            renderGrid();
+        }
+
+        function findRelatedHymns(type, value, currentNumber, source) {
+            return allHymns.filter(h => {
+                if (h.number === currentNumber && getHymnalSource(h) === source) return false;
+                if (type === 'topic') {
+                    const topics = h.topics || h.topics_hcc || [];
+                    return topics.includes(value);
+                }
+                if (type === 'metric') return h.metric === value;
+                if (type === 'melody') return h.melody === value;
+                return false;
+            });
+        }
+
+        function generateRelatedSuggestions() {
+            const maxSuggestions = 3;
+            const shuffled = shuffleArray(relatedHymns);
+            currentRelatedSuggestions = shuffled.slice(0, Math.min(maxSuggestions, shuffled.length));
+            return currentRelatedSuggestions;
+        }
+
+        function showRelated(type, value, currentNumber, source) {
+            relatedHymns = findRelatedHymns(type, value, currentNumber, source);
+            currentRelationType = type;
+            currentRelationValue = value;
+            
+            const relatedSection = document.getElementById('related-section');
+            const relatedHeader = document.getElementById('related-header');
+            const relatedGrid = document.getElementById('related-grid');
+            const btnMoreRelated = document.getElementById('btn-more-related');
+            
+            if (relatedHymns.length === 0) {
+                relatedSection.style.display = 'none';
+                return;
+            }
+            
+            relatedSection.style.display = 'block';
+            
+            const typeLabels = {
+                topic: 'Tema',
+                metric: 'Métrica',
+                melody: 'Melodia'
+            };
+            
+            relatedHeader.textContent = `Hinos relacionados por ${typeLabels[type]}`;
+            
+            generateRelatedSuggestions();
+            renderRelatedGrid();
+            
+            btnMoreRelated.style.display = relatedHymns.length > currentRelatedSuggestions.length ? 'block' : 'none';
+        }
+
+        function renderRelatedGrid() {
+            const relatedGrid = document.getElementById('related-grid');
+            
+            relatedGrid.innerHTML = currentRelatedSuggestions.map(h => `
+                <div class="related-card" onclick="navigateToHymn(${h.number}, '${getHymnalSource(h)}')">
+                    <div class="related-card-header">
+                        <span class="related-card-number">${getHymnalSource(h)}-${h.number}</span>
+                        <span class="related-card-title">${h.title}</span>
+                    </div>
+                    <div class="related-card-first-line">${h.first_line}</div>
+                </div>
+            `).join('');
+        }
+
+        function navigateToHymn(number, source) {
+            if (currentHymnNumber !== null) {
+                navigationHistory.push({ number: currentHymnNumber, source: getSelectedHymnals()[0] || 'CTP' });
+            }
+            showHymn(number, true, source);
+            updateBackButton();
+        }
+
+        function navigateToEquivalent(number, source) {
+            if (currentHymnNumber !== null) {
+                navigationHistory.push({ number: currentHymnNumber, source: getSelectedHymnals()[0] || 'CTP' });
+            }
+            showHymn(number, true, source);
+            updateBackButton();
+        }
+
+        function goBack() {
+            if (navigationHistory.length > 0) {
+                const prev = navigationHistory.pop();
+                showHymn(prev.number, false, prev.source);
+                updateBackButton();
+            }
+        }
+
+        function updateBackButton() {
+            const btnBack = document.getElementById('btn-back-hymn');
+            btnBack.disabled = navigationHistory.length === 0;
+        }
+
+        function loadMoreRelated() {
+            generateRelatedSuggestions();
+            renderRelatedGrid();
+            
+            const btnMoreRelated = document.getElementById('btn-more-related');
+            btnMoreRelated.style.display = relatedHymns.length > currentRelatedSuggestions.length ? 'block' : 'none';
+        }
+
+        function showHymn(number, addToHistory = true, source = null) {
+            if (!source) {
+                source = getSelectedHymnals().length > 0 ? getSelectedHymnals()[0] : 'CTP';
+            }
+            const hymn = allHymns.find(h => h.number === number && getHymnalSource(h) === source);
+            if (!hymn) return;
+
+            if (addToHistory && currentHymnNumber !== null) {
+                navigationHistory.push({ number: currentHymnNumber, source: getSelectedHymnals()[0] || 'CTP' });
+            }
+            currentHymnNumber = number;
+            updateBackButton();
+
+            document.getElementById('detail-number').textContent = `${getHymnalSource(hymn)}-${hymn.number}`;
+            document.getElementById('detail-title').textContent = hymn.title;
+            document.getElementById('detail-first-line').textContent = hymn.first_line;
+            document.getElementById('detail-lyrics').textContent = hymn.lyrics;
+
+            // Topics
+            const topicsSection = document.getElementById('detail-topics-section');
+            const topicsEl = document.getElementById('detail-topics');
+            const topics = hymn.topics || hymn.topics_hcc || [];
+            if (topics.length > 0) {
+                topicsSection.style.display = 'block';
+                topicsEl.innerHTML = topics.map(t => 
+                    `<span class="detail-topic" onclick="showRelated('topic', '${t.replace(/'/g, "\\'")}', ${hymn.number}, '${getHymnalSource(hymn)}')">${t}</span>`
+                ).join('');
+            } else {
+                topicsSection.style.display = 'none';
+            }
+
+            // Metric
+            const metricSection = document.getElementById('detail-metric-section');
+            const metricEl = document.getElementById('detail-metric');
+            if (hymn.metric) {
+                metricSection.style.display = 'block';
+                metricEl.textContent = hymn.metric;
+                metricEl.onclick = () => showRelated('metric', hymn.metric, hymn.number, getHymnalSource(hymn));
+            } else {
+                metricSection.style.display = 'none';
+            }
+
+            // Melody
+            const melodySection = document.getElementById('detail-melody-section');
+            const melodyEl = document.getElementById('detail-melody');
+            if (hymn.melody) {
+                melodySection.style.display = 'block';
+                melodyEl.textContent = hymn.melody;
+                melodyEl.onclick = () => showRelated('melody', hymn.melody, hymn.number, getHymnalSource(hymn));
+            } else {
+                melodySection.style.display = 'none';
+            }
+
+            // Equivalents
+            const equivalentsSection = document.getElementById('equivalents-section');
+            const equivalentsGrid = document.getElementById('equivalents-grid');
+            const hymnId = `${getHymnalSource(hymn)}-${hymn.number}`;
+            const hymnSource = getHymnalSource(hymn);
+            let equivalents = [];
+            if (hymnSource === 'CTP') {
+                equivalents = hymnEquivalences[hymnId]?.equivalents || [];
+            } else {
+                const reverseEntry = hymnReverseEquivalences[hymnId];
+                if (reverseEntry && reverseEntry.equivalents) {
+                    equivalents = reverseEntry.equivalents.filter(eq => eq.hymnal === 'CTP');
+                    if (equivalents.length === 0) {
+                        equivalents = reverseEntry.equivalents;
+                    }
+                }
+            }
+            
+            if (equivalents.length > 0) {
+                equivalentsSection.style.display = 'block';
+                equivalentsGrid.innerHTML = equivalents.map(eq => {
+                    const source = eq.hymnal;
+                    const num = eq.id.replace(source + '-', '');
+                    const isCtp = source === 'CTP';
+                    return `
+                        <div class="equivalent-card ${isCtp ? 'equivalent-card-ctp' : ''}" onclick="navigateToEquivalent(${num}, '${source}')">
+                            <div class="equivalent-card-header">
+                                <span class="equivalent-card-source">${source}</span>
+                                <span class="equivalent-card-number">nº ${num}</span>
+                                ${isCtp ? '<span class="equivalent-card-badge">⭐ Hinário oficial</span>' : ''}
+                            </div>
+                            <div class="equivalent-card-title">${eq.title}</div>
+                        </div>
+                    `;
+                }).join('');
+            } else {
+                equivalentsSection.style.display = 'none';
+            }
+
+            // Hide related section initially
+            document.getElementById('related-section').style.display = 'none';
+
+            document.querySelector('.container').querySelectorAll('.section-box').forEach(el => {
+                el.style.display = 'none';
+            });
+            document.querySelector('.logo-section').style.display = 'none';
+            document.getElementById('hymn-detail').classList.add('active');
+        }
+
+        function showGrid() {
+            document.querySelector('.container').querySelectorAll('.section-box').forEach(el => {
+                el.style.display = '';
+            });
+            document.querySelector('.logo-section').style.display = '';
+            document.getElementById('hymn-detail').classList.remove('active');
+            navigationHistory = [];
+            currentHymnNumber = null;
+            updateBackButton();
+            renderGrid();
+        }
+
+        function chooseHymn(number, title, source) {
+            addToAgenda(number, source, title);
+            
+            const toast = document.getElementById('selection-toast');
+            toast.textContent = `${source}-${number} adicionado à Agenda!`;
+            toast.classList.add('show');
+            
+            setTimeout(() => {
+                toast.classList.remove('show');
+            }, 3000);
+        }
+
+        function updateFilters() {
+            const query = document.getElementById('search-input').value;
+            filteredHymns = searchHymns(query, selectedTheme);
+            currentSuggestions = [];
+            renderGrid();
+        }
+
+        document.getElementById('search-input').addEventListener('input', updateFilters);
+
+        document.getElementById('theme-select').addEventListener('change', function(e) {
+            selectedTheme = e.target.value;
+            updateFilters();
+        });
+
+        document.getElementById('check-ctp').addEventListener('change', function() {
+            saveHymnalSelection();
+            updateFilters();
+        });
+        document.getElementById('check-hcc').addEventListener('change', function() {
+            saveHymnalSelection();
+            updateFilters();
+        });
+        if (document.getElementById('check-sh')) {
+            document.getElementById('check-sh').addEventListener('change', function() {
+                saveHymnalSelection();
+                updateFilters();
+            });
+        }
+
+        function openAbout() {
+            document.getElementById('about-modal').style.display = 'flex';
+            updateAboutCounts();
+        }
+
+        function closeAbout() {
+            document.getElementById('about-modal').style.display = 'none';
+        }
+
+        function updateAboutCounts() {
+            document.getElementById('about-ctp-count').textContent = ctpHymns.length + ' hinos';
+            document.getElementById('about-hcc-count').textContent = hccHymns.length + ' hinos';
+            document.getElementById('about-sh-count').textContent = shHymns.length + ' hinos';
+            document.getElementById('about-total-count').textContent = allHymns.length + ' hinos';
+        }
+
+        loadHymns();
+    </script>
+</body>
+</html>
