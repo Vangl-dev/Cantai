@@ -1,0 +1,243 @@
+{
+  "Adoração": {
+    "ctp": [
+      "Adoração",
+      "Convite à Adoração"
+    ],
+    "hcc": [
+      "ADORAÇÃO E LOUVOR"
+    ],
+    "notes": "Tema central de adoração"
+  },
+  "Palavra de Deus": {
+    "ctp": [
+      "Palavra de Deus",
+      "Proclamação da Palavra",
+      "Leitura da Palavra (Após a)"
+    ],
+    "hcc": [
+      "A PALAVRA DE DEUS"
+    ],
+    "notes": "Proclamação e estudo da Palavra"
+  },
+  "Aniversário": {
+    "ctp": [
+      "Aniversário"
+    ],
+    "hcc": [
+      "ANIVERSÁRIO"
+    ],
+    "notes": "Celebração de aniversário"
+  },
+  "Ano Novo": {
+    "ctp": [
+      "Ano Novo"
+    ],
+    "hcc": [
+      "ANO NOVO"
+    ],
+    "notes": "Celebração do Ano Novo"
+  },
+  "Ascensão": {
+    "ctp": [
+      "Ascensão do Senhor"
+    ],
+    "hcc": [
+      "ASCENSÃO"
+    ],
+    "notes": "Ascensão de Cristo"
+  },
+  "Comunhão": {
+    "ctp": [
+      "Comunhão"
+    ],
+    "hcc": [
+      "COMUNHÃO COM DEUS"
+    ],
+    "notes": "Comunhão com Deus e entre irmãos"
+  },
+  "Consagração": {
+    "ctp": [
+      "Consagração"
+    ],
+    "hcc": [
+      "CONSAGRAÇÃO"
+    ],
+    "notes": "Consagração e entrega a Deus"
+  },
+  "Trindade": {
+    "ctp": [
+      "Trindade"
+    ],
+    "hcc": [
+      "DEUS TRIÚNO"
+    ],
+    "notes": "Doutrina da Trindade"
+  },
+  "Confiança": {
+    "ctp": [
+      "Confiança"
+    ],
+    "hcc": [
+      "FÉ E CONFIANÇA"
+    ],
+    "notes": "Fé e confiança em Deus"
+  },
+  "Igreja": {
+    "ctp": [
+      "Igreja"
+    ],
+    "hcc": [
+      "IGREJA, BATISMO"
+    ],
+    "notes": "A Igreja de Cristo"
+  },
+  "Batismo": {
+    "ctp": [
+      "Batismo",
+      "Batismo Infantil",
+      "Batismo do Senhor"
+    ],
+    "hcc": [
+      "IGREJA, BATISMO"
+    ],
+    "notes": "Sacramento do batismo"
+  },
+  "Intercessão": {
+    "ctp": [
+      "Intercessão",
+      "Orações de Intercessão"
+    ],
+    "hcc": [
+      "INTERCESSÃO"
+    ],
+    "notes": "Oração de intercessão"
+  },
+  "Oração": {
+    "ctp": [
+      "Súplica",
+      "Oração de Confissão",
+      "Oração de Gratidão (Após",
+      "Oração por Iluminação",
+      "Pai Nosso"
+    ],
+    "hcc": [
+      "ORAÇÃO E SÚPLICA"
+    ],
+    "notes": "Oração em suas diversas formas"
+  },
+  "Pátria": {
+    "ctp": [
+      "Pátria"
+    ],
+    "hcc": [
+      "PATRIA"
+    ],
+    "notes": "Amor à pátria"
+  },
+  "Perdão": {
+    "ctp": [
+      "Confissão",
+      "Declaração de Perdão"
+    ],
+    "hcc": [
+      "PERDÃO"
+    ],
+    "notes": "Confissão e perdão dos pecados"
+  },
+  "Segunda Vinda": {
+    "ctp": [
+      "Segunda Vinda"
+    ],
+    "hcc": [
+      "SEGUNDA VINDA"
+    ],
+    "notes": "Retorno de Cristo"
+  },
+  "Testemunho": {
+    "ctp": [
+      "Testemunho"
+    ],
+    "hcc": [
+      "TESTEMUNHO"
+    ],
+    "notes": "Testemunho de fé"
+  },
+  "Morte e Funerais": {
+    "ctp": [
+      "Funeral"
+    ],
+    "hcc": [
+      "MORTE"
+    ],
+    "notes": "Morte e esperança eterna"
+  },
+  "Louvor": {
+    "ctp": [
+      "Louvor",
+      "Jubilação"
+    ],
+    "hcc": [
+      "E LOUVOR",
+      "ALEGRIA CRISTÃ"
+    ],
+    "notes": "Louvor e adoração alegre"
+  },
+  "Missões": {
+    "ctp": [
+      "Missão",
+      "Missões",
+      "Envio",
+      "Envio (Após o)"
+    ],
+    "hcc": [
+      "APELO",
+      "SERVIÇO CRISTÃO"
+    ],
+    "notes": "Missões e evangelismo"
+  },
+  "Espírito Santo": {
+    "ctp": [
+      "Espírito Santo",
+      "Pentecostes"
+    ],
+    "hcc": [],
+    "notes": "Somente CTP possui este tema"
+  },
+  "Natal": {
+    "ctp": [
+      "Natal",
+      "Ciclo do Natal",
+      "Epifania"
+    ],
+    "hcc": [],
+    "notes": "Somente CTP possui este tema"
+  },
+  "Páscoa": {
+    "ctp": [
+      "Páscoa",
+      "Ressurreição",
+      "Tempo Pascal"
+    ],
+    "hcc": [],
+    "notes": "Somente CTP possui este tema"
+  },
+  "Paixão de Cristo": {
+    "ctp": [
+      "Paixão de Cristo",
+      "Quaresma",
+      "Semana da Paixão",
+      "Domingo de Ramos"
+    ],
+    "hcc": [],
+    "notes": "Somente CTP possui este tema"
+  },
+  "Evangelho": {
+    "ctp": [
+      "Evangelho",
+      "Leitura do Evangelho"
+    ],
+    "hcc": [],
+    "notes": "Somente CTP possui este tema"
+  }
+}

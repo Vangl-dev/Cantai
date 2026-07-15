@@ -1,0 +1,1835 @@
+{
+  "CTP-13": {
+    "ctp": {
+      "number": 13,
+      "title": "DEUS DOS ANTIGOS",
+      "first_line": "1- Deus dos antigos, cuja forte mão"
+    },
+    "equivalents": [
+      {
+        "hymnal": "SH",
+        "id": "SH-64",
+        "title": "Deus dos Antigos",
+        "confidence": "confirmed",
+        "source": "primeira linha idêntica"
+      },
+      {
+        "hymnal": "HCC",
+        "id": "HCC-34",
+        "title": "DEUS DOS ANTIGOS",
+        "confidence": "probable",
+        "source": "mesma melodia: NATIONAL HYMN"
+      }
+    ]
+  },
+  "CTP-28": {
+    "ctp": {
+      "number": 28,
+      "title": "VINDE  ADORAR",
+      "first_line": "1- Oh! Vinde adorar ao Deus criador,"
+    },
+    "equivalents": [
+      {
+        "hymnal": "SH",
+        "id": "SH-238",
+        "title": "Vinde Adorar",
+        "confidence": "confirmed",
+        "source": "primeira linha idêntica"
+      }
+    ]
+  },
+  "CTP-29": {
+    "ctp": {
+      "number": 29,
+      "title": "Ó REI SUBLIME",
+      "first_line": "1- Ó rei sublime em majestade e glória"
+    },
+    "equivalents": [
+      {
+        "hymnal": "SH",
+        "id": "SH-246",
+        "title": "O Rei Sublime",
+        "confidence": "confirmed",
+        "source": "primeira linha idêntica"
+      }
+    ]
+  },
+  "CTP-33": {
+    "ctp": {
+      "number": 33,
+      "title": "VEM TU, ETERNO DEUS",
+      "first_line": "1- Vem tu, eterno Deus,"
+    },
+    "equivalents": [
+      {
+        "hymnal": "SH",
+        "id": "SH-33",
+        "title": "Invocação e Louvor",
+        "confidence": "confirmed",
+        "source": "primeira linha idêntica"
+      },
+      {
+        "hymnal": "HCC",
+        "id": "HCC-6",
+        "title": "ONIPOTENTE REI",
+        "confidence": "probable",
+        "source": "mesma melodia: ITALIAN HYMN"
+      }
+    ]
+  },
+  "CTP-34": {
+    "ctp": {
+      "number": 34,
+      "title": "SANTO! SANTO! SANTO!",
+      "first_line": "1- Santo! Santo! Santo! Deus onipotente!"
+    },
+    "equivalents": [
+      {
+        "hymnal": "SH",
+        "id": "SH-247",
+        "title": "Santo! Santo! Santo!",
+        "confidence": "confirmed",
+        "source": "primeira linha idêntica"
+      },
+      {
+        "hymnal": "HCC",
+        "id": "HCC-2",
+        "title": "SANTO, SANTO, SANTO!",
+        "confidence": "confirmed",
+        "source": "título + primeira linha idênticos"
+      }
+    ]
+  },
+  "CTP-46": {
+    "ctp": {
+      "number": 46,
+      "title": "SENHOR, EU PRECISO DE TI",
+      "first_line": "1- Eu creio, Senhor, na divina promessa,"
+    },
+    "equivalents": [
+      {
+        "hymnal": "SH",
+        "id": "SH-168",
+        "title": "Senhor, eu Preciso de Ti",
+        "confidence": "confirmed",
+        "source": "primeira linha idêntica"
+      },
+      {
+        "hymnal": "HCC",
+        "id": "HCC-283",
+        "title": "EU CREIO, SENHOR, NA DIVINA PROMESSA",
+        "confidence": "probable",
+        "source": "mesma melodia: TELFORD"
+      }
+    ]
+  },
+  "CTP-52": {
+    "ctp": {
+      "number": 52,
+      "title": "O GRANDE AMOR DE DEUS",
+      "first_line": "1- A Deus demos glória, pois seu grande amor"
+    },
+    "equivalents": [
+      {
+        "hymnal": "SH",
+        "id": "SH-233",
+        "title": "O Grande Amor de Deus",
+        "confidence": "confirmed",
+        "source": "primeira linha idêntica"
+      },
+      {
+        "hymnal": "HCC",
+        "id": "HCC-228",
+        "title": "A DEUS DEMOS GLÓRIA",
+        "confidence": "probable",
+        "source": "mesma melodia: TO GOD BE THE GLORY"
+      }
+    ]
+  },
+  "CTP-58": {
+    "ctp": {
+      "number": 58,
+      "title": "HOSANAS",
+      "first_line": "1- Bendito o Rei que vem em nome do Senhor!"
+    },
+    "equivalents": [
+      {
+        "hymnal": "SH",
+        "id": "SH-103",
+        "title": "Hosanas",
+        "confidence": "confirmed",
+        "source": "primeira linha idêntica"
+      }
+    ]
+  },
+  "CTP-59": {
+    "ctp": {
+      "number": 59,
+      "title": "ALELUIA AO DEUS TRIÚNO",
+      "first_line": "1- A ti, ó Deus, altíssimo Senhor,"
+    },
+    "equivalents": [
+      {
+        "hymnal": "SH",
+        "id": "SH-32",
+        "title": "Aleluia ao Deus Triúno",
+        "confidence": "confirmed",
+        "source": "primeira linha idêntica"
+      }
+    ]
+  },
+  "CTP-80": {
+    "ctp": {
+      "number": 80,
+      "title": "MIL VEZES MIL LOUVORES",
+      "first_line": "1- Mil vezes mil louvores rendamos a Jesus"
+    },
+    "equivalents": [
+      {
+        "hymnal": "SH",
+        "id": "SH-244",
+        "title": "Mil Vezes Mil Louvores",
+        "confidence": "confirmed",
+        "source": "primeira linha idêntica"
+      }
+    ]
+  },
+  "CTP-81": {
+    "ctp": {
+      "number": 81,
+      "title": "A DEUS LOUVAI!",
+      "first_line": "1- Milhares de milhares ouço"
+    },
+    "equivalents": [
+      {
+        "hymnal": "SH",
+        "id": "SH-256",
+        "title": "A Deus Louvai!",
+        "confidence": "confirmed",
+        "source": "primeira linha idêntica"
+      }
+    ]
+  },
+  "CTP-82": {
+    "ctp": {
+      "number": 82,
+      "title": "GLÓRIA AO SALVADOR",
+      "first_line": "1- Na cruz buscando o meu redentor,"
+    },
+    "equivalents": [
+      {
+        "hymnal": "SH",
+        "id": "SH-396",
+        "title": "Glória ao Salvador",
+        "confidence": "confirmed",
+        "source": "primeira linha idêntica"
+      }
+    ]
+  },
+  "CTP-86": {
+    "ctp": {
+      "number": 86,
+      "title": "EXULTAÇÃO E LOUVOR",
+      "first_line": "1- Conosco vinde agora dar louvores a Jesus,"
+    },
+    "equivalents": [
+      {
+        "hymnal": "SH",
+        "id": "SH-234",
+        "title": "Exultação e Louvor",
+        "confidence": "confirmed",
+        "source": "primeira linha idêntica"
+      }
+    ]
+  },
+  "CTP-89": {
+    "ctp": {
+      "number": 89,
+      "title": "PROMESSA BENDITA",
+      "first_line": "1- Peregrinando por sobre os montes,"
+    },
+    "equivalents": [
+      {
+        "hymnal": "SH",
+        "id": "SH-389",
+        "title": "Promessa Bendita",
+        "confidence": "confirmed",
+        "source": "primeira linha idêntica"
+      }
+    ]
+  },
+  "CTP-91": {
+    "ctp": {
+      "number": 91,
+      "title": "COROAI!",
+      "first_line": "1- Saudai o nome de Jesus!"
+    },
+    "equivalents": [
+      {
+        "hymnal": "SH",
+        "id": "SH-231",
+        "title": "Coroai! i",
+        "confidence": "confirmed",
+        "source": "primeira linha idêntica"
+      },
+      {
+        "hymnal": "HCC",
+        "id": "HCC-56",
+        "title": "SAUDAI O NOME DE JESUS",
+        "confidence": "probable",
+        "source": "mesma melodia: DIADEM"
+      }
+    ]
+  },
+  "CTP-94": {
+    "ctp": {
+      "number": 94,
+      "title": "GRANDIOSO ÉS TU",
+      "first_line": "1- Senhor meu Deus, quando eu, maravilhado,"
+    },
+    "equivalents": [
+      {
+        "hymnal": "SH",
+        "id": "SH-65",
+        "title": "Grandioso és Tu",
+        "confidence": "confirmed",
+        "source": "primeira linha idêntica"
+      }
+    ]
+  },
+  "CTP-100": {
+    "ctp": {
+      "number": 100,
+      "title": "INVOCAÇÃO PARA A LEITURA BÍBLICA",
+      "first_line": "1- Enquanto, ó salvador, teu livro ler,"
+    },
+    "equivalents": [
+      {
+        "hymnal": "SH",
+        "id": "SH-260",
+        "title": "Invocação para a Leitura Bíblica",
+        "confidence": "confirmed",
+        "source": "primeira linha idêntica"
+      },
+      {
+        "hymnal": "HCC",
+        "id": "HCC-216",
+        "title": "EU QUERO O PÃO DO CÉU",
+        "confidence": "probable",
+        "source": "mesma melodia: BREAD OF LIFE"
+      }
+    ]
+  },
+  "CTP-108": {
+    "ctp": {
+      "number": 108,
+      "title": "MENSAGEM DO SENHOR",
+      "first_line": "1- Eis mensagem do Senhor, aleluia!"
+    },
+    "equivalents": [
+      {
+        "hymnal": "SH",
+        "id": "SH-287",
+        "title": "Mensagem do Senhor",
+        "confidence": "confirmed",
+        "source": "primeira linha idêntica"
+      }
+    ]
+  },
+  "CTP-117": {
+    "ctp": {
+      "number": 117,
+      "title": "AMOR SUBLIME",
+      "first_line": "1- Amor, que por amor desceste!"
+    },
+    "equivalents": [
+      {
+        "hymnal": "SH",
+        "id": "SH-134",
+        "title": "Amor Sublime",
+        "confidence": "confirmed",
+        "source": "primeira linha idêntica"
+      }
+    ]
+  },
+  "CTP-118": {
+    "ctp": {
+      "number": 118,
+      "title": "AMOR PERENE",
+      "first_line": "1- Amaste a mim, Senhor, ainda, cintilante,"
+    },
+    "equivalents": [
+      {
+        "hymnal": "SH",
+        "id": "SH-44",
+        "title": "Amor Perene",
+        "confidence": "confirmed",
+        "source": "primeira linha idêntica"
+      }
+    ]
+  },
+  "CTP-140": {
+    "ctp": {
+      "number": 140,
+      "title": "PROMESSA DE DEUS",
+      "first_line": "1- Deus tem prometido entre os homens salvar"
+    },
+    "equivalents": [
+      {
+        "hymnal": "SH",
+        "id": "SH-50",
+        "title": "Promessa de Deus",
+        "confidence": "confirmed",
+        "source": "primeira linha idêntica"
+      }
+    ]
+  },
+  "CTP-143": {
+    "ctp": {
+      "number": 143,
+      "title": "REDENÇÃO PELA CRUZ",
+      "first_line": "1- Oh! Bem cego eu andei e perdido vaguei"
+    },
+    "equivalents": [
+      {
+        "hymnal": "SH",
+        "id": "SH-317",
+        "title": "Redenção pela Cruz",
+        "confidence": "confirmed",
+        "source": "primeira linha idêntica"
+      }
+    ]
+  },
+  "CTP-144": {
+    "ctp": {
+      "number": 144,
+      "title": "ATENDE À MINHA VOZ",
+      "first_line": "1- À minha voz, ó Deus, atende,"
+    },
+    "equivalents": [
+      {
+        "hymnal": "SH",
+        "id": "SH-4",
+        "title": "Atende à Minha Voz i",
+        "confidence": "confirmed",
+        "source": "primeira linha idêntica"
+      },
+      {
+        "hymnal": "HCC",
+        "id": "HCC-387",
+        "title": "O MEU CLAMOR, Ó DEUS, ATENDE",
+        "confidence": "probable",
+        "source": "mesma melodia: RICHIER"
+      }
+    ]
+  },
+  "CTP-145": {
+    "ctp": {
+      "number": 145,
+      "title": "DIREÇÃO DIVINA",
+      "first_line": "1- As tuas mãos dirigem meu destino."
+    },
+    "equivalents": [
+      {
+        "hymnal": "SH",
+        "id": "SH-358",
+        "title": "Direção Divina",
+        "confidence": "confirmed",
+        "source": "primeira linha idêntica"
+      }
+    ]
+  },
+  "CTP-148": {
+    "ctp": {
+      "number": 148,
+      "title": "VIGIAR E ORAR",
+      "first_line": "1- Bem de manhã, embora o céu sereno"
+    },
+    "equivalents": [
+      {
+        "hymnal": "SH",
+        "id": "SH-486",
+        "title": "Vigiar e Orar",
+        "confidence": "confirmed",
+        "source": "primeira linha idêntica"
+      },
+      {
+        "hymnal": "HCC",
+        "id": "HCC-386",
+        "title": "BEM DE MANHÃ",
+        "confidence": "probable",
+        "source": "mesma melodia: VEILLE TOUJOURS"
+      }
+    ]
+  },
+  "CTP-154": {
+    "ctp": {
+      "number": 154,
+      "title": "AMPARO DIVINO",
+      "first_line": "1- Com tua mão segura bem a minha,"
+    },
+    "equivalents": [
+      {
+        "hymnal": "SH",
+        "id": "SH-577",
+        "title": "Amparo Divino",
+        "confidence": "confirmed",
+        "source": "primeira linha idêntica"
+      },
+      {
+        "hymnal": "HCC",
+        "id": "HCC-377",
+        "title": "COM TUA MÃO SEGURA BEM A MINHA",
+        "confidence": "probable",
+        "source": "mesma melodia: HOLD THOU MY HAND"
+      }
+    ]
+  },
+  "CTP-155": {
+    "ctp": {
+      "number": 155,
+      "title": "COMIGO HABITA",
+      "first_line": "1- Comigo habita, ó Deus! A noite vem,"
+    },
+    "equivalents": [
+      {
+        "hymnal": "SH",
+        "id": "SH-361",
+        "title": "A Companhia de Deus",
+        "confidence": "confirmed",
+        "source": "primeira linha idêntica"
+      }
+    ]
+  },
+  "CTP-167": {
+    "ctp": {
+      "number": 167,
+      "title": "ACORDAI!",
+      "first_line": "1- Eis marchamos para aquele bom país"
+    },
+    "equivalents": [
+      {
+        "hymnal": "SH",
+        "id": "SH-475",
+        "title": "Acordai!",
+        "confidence": "confirmed",
+        "source": "primeira linha idêntica"
+      }
+    ]
+  },
+  "CTP-172": {
+    "ctp": {
+      "number": 172,
+      "title": "INVOCAÇÃO",
+      "first_line": "1- Eterno Pai, teu povo congregado,"
+    },
+    "equivalents": [
+      {
+        "hymnal": "SH",
+        "id": "SH-29",
+        "title": "Invocação i",
+        "confidence": "confirmed",
+        "source": "primeira linha idêntica"
+      }
+    ]
+  },
+  "CTP-181": {
+    "ctp": {
+      "number": 181,
+      "title": "IDEAL DO CRENTE",
+      "first_line": "1- Mais pureza dá-me, mais horror ao mal,"
+    },
+    "equivalents": [
+      {
+        "hymnal": "SH",
+        "id": "SH-516",
+        "title": "Ideal do Crente",
+        "confidence": "confirmed",
+        "source": "primeira linha idêntica"
+      }
+    ]
+  },
+  "CTP-184": {
+    "ctp": {
+      "number": 184,
+      "title": "RICA PROMESSA",
+      "first_line": "1- “Não temas! Contigo sempre eu estarei.”"
+    },
+    "equivalents": [
+      {
+        "hymnal": "SH",
+        "id": "SH-176",
+        "title": "Rica Promessa",
+        "confidence": "confirmed",
+        "source": "primeira linha idêntica"
+      }
+    ]
+  },
+  "CTP-191": {
+    "ctp": {
+      "number": 191,
+      "title": "SEGURANÇA DO CRENTE",
+      "first_line": "1- Oh! Quão preciosa e rica promessa"
+    },
+    "equivalents": [
+      {
+        "hymnal": "SH",
+        "id": "SH-423",
+        "title": "Segurança do Crente",
+        "confidence": "confirmed",
+        "source": "primeira linha idêntica"
+      }
+    ]
+  },
+  "CTP-198": {
+    "ctp": {
+      "number": 198,
+      "title": "SEGURANÇA BENDITA",
+      "first_line": "1- Que segurança! Sou de Jesus!"
+    },
+    "equivalents": [
+      {
+        "hymnal": "SH",
+        "id": "SH-409",
+        "title": "Segurança Bendita",
+        "confidence": "confirmed",
+        "source": "primeira linha idêntica"
+      }
+    ]
+  },
+  "CTP-199": {
+    "ctp": {
+      "number": 199,
+      "title": "A VITÓRIA FINAL",
+      "first_line": "1- Quando lá dos céus descendo, para os seus Jesus voltar"
+    },
+    "equivalents": [
+      {
+        "hymnal": "SH",
+        "id": "SH-125",
+        "title": "A Vitória Final",
+        "confidence": "confirmed",
+        "source": "primeira linha idêntica"
+      }
+    ]
+  },
+  "CTP-236": {
+    "ctp": {
+      "number": 236,
+      "title": "UNIDO COM CRISTO",
+      "first_line": "1- Com Cristo unido na morte da cruz,"
+    },
+    "equivalents": [
+      {
+        "hymnal": "SH",
+        "id": "SH-368",
+        "title": "Unido com Cristo",
+        "confidence": "confirmed",
+        "source": "primeira linha idêntica"
+      }
+    ]
+  },
+  "CTP-241": {
+    "ctp": {
+      "number": 241,
+      "title": "VASO DE BÊNÇÃO",
+      "first_line": "1- Quero ser um vaso de bênção,"
+    },
+    "equivalents": [
+      {
+        "hymnal": "SH",
+        "id": "SH-341",
+        "title": "Vaso de Bênção",
+        "confidence": "confirmed",
+        "source": "primeira linha idêntica"
+      }
+    ]
+  },
+  "CTP-267": {
+    "ctp": {
+      "number": 267,
+      "title": "CONVITE AOS MENINOS",
+      "first_line": "1- Vinde, meninos! Vinde a Jesus!"
+    },
+    "equivalents": [
+      {
+        "hymnal": "SH",
+        "id": "SH-609",
+        "title": "Convite aos Meninos",
+        "confidence": "confirmed",
+        "source": "primeira linha idêntica"
+      }
+    ]
+  },
+  "CTP-278": {
+    "ctp": {
+      "number": 278,
+      "title": "IGREJA, ALERTA!",
+      "first_line": "1- É tempo! É tempo! O mestre está chamando já!"
+    },
+    "equivalents": [
+      {
+        "hymnal": "SH",
+        "id": "SH-455",
+        "title": "Igreja, Alerta!",
+        "confidence": "confirmed",
+        "source": "primeira linha idêntica"
+      }
+    ]
+  },
+  "CTP-280": {
+    "ctp": {
+      "number": 280,
+      "title": "QUEM IRÁ?",
+      "first_line": "1- Eis os milhões que em trevas tão medonhas"
+    },
+    "equivalents": [
+      {
+        "hymnal": "SH",
+        "id": "SH-456",
+        "title": "Quem Irá?",
+        "confidence": "confirmed",
+        "source": "primeira linha idêntica"
+      }
+    ]
+  },
+  "CTP-284": {
+    "ctp": {
+      "number": 284,
+      "title": "DEIXA O SOL EM TI NASCER",
+      "first_line": "1- Medo tens que o inimigo vá vencer?"
+    },
+    "equivalents": [
+      {
+        "hymnal": "SH",
+        "id": "SH-302",
+        "title": "Deixa o Sol em Ti Nascer",
+        "confidence": "confirmed",
+        "source": "primeira linha idêntica"
+      }
+    ]
+  },
+  "CTP-292": {
+    "ctp": {
+      "number": 292,
+      "title": "OBEDIÊNCIA",
+      "first_line": "1- Nem sempre será para onde eu quiser"
+    },
+    "equivalents": [
+      {
+        "hymnal": "SH",
+        "id": "SH-445",
+        "title": "Obediência",
+        "confidence": "confirmed",
+        "source": "primeira linha idêntica"
+      }
+    ]
+  },
+  "CTP-298": {
+    "ctp": {
+      "number": 298,
+      "title": "QUEM DE CRISTO AO LADO?",
+      "first_line": "1- Quem está do lado do bom salvador,"
+    },
+    "equivalents": [
+      {
+        "hymnal": "SH",
+        "id": "SH-441",
+        "title": "Quem de Cristo ao Lado?",
+        "confidence": "confirmed",
+        "source": "primeira linha idêntica"
+      }
+    ]
+  },
+  "CTP-305": {
+    "ctp": {
+      "number": 305,
+      "title": "MANSO E SUAVE",
+      "first_line": "1- Manso e suave eis Jesus nos chamando."
+    },
+    "equivalents": [
+      {
+        "hymnal": "SH",
+        "id": "SH-282",
+        "title": "Manso e Suave",
+        "confidence": "confirmed",
+        "source": "primeira linha idêntica"
+      }
+    ]
+  },
+  "CTP-306": {
+    "ctp": {
+      "number": 306,
+      "title": "A MENSAGEM REAL",
+      "first_line": "1- Sou forasteiro aqui; em terra estranha estou;"
+    },
+    "equivalents": [
+      {
+        "hymnal": "SH",
+        "id": "SH-303",
+        "title": "A Mensagem Real",
+        "confidence": "confirmed",
+        "source": "primeira linha idêntica"
+      }
+    ]
+  },
+  "CTP-309": {
+    "ctp": {
+      "number": 309,
+      "title": "SERVIÇO DO CRENTE",
+      "first_line": "1- Vamos nós trabalhar, somos servos de Deus,"
+    },
+    "equivalents": [
+      {
+        "hymnal": "SH",
+        "id": "SH-440",
+        "title": "Serviço do Crente",
+        "confidence": "confirmed",
+        "source": "primeira linha idêntica"
+      }
+    ]
+  },
+  "CTP-314": {
+    "ctp": {
+      "number": 314,
+      "title": "GLÓRIA, GLÓRIA, ALELUIA!",
+      "first_line": "1- Quando à alma sequiosa chega a voz do salvador,"
+    },
+    "equivalents": [
+      {
+        "hymnal": "SH",
+        "id": "SH-377",
+        "title": "Glória, Glória, Aleluia!",
+        "confidence": "confirmed",
+        "source": "primeira linha idêntica"
+      },
+      {
+        "hymnal": "HCC",
+        "id": "HCC-153",
+        "title": "JÁ REFULGE A GLÓRIA ETERNA DE JESUS",
+        "confidence": "probable",
+        "source": "mesma melodia: BATTLE HYMN"
+      }
+    ]
+  },
+  "CTP-335": {
+    "ctp": {
+      "number": 335,
+      "title": "O PRIMEIRO NATAL",
+      "first_line": "1- Ah! Um anjo proclamou o primeiro Natal"
+    },
+    "equivalents": [
+      {
+        "hymnal": "SH",
+        "id": "SH-89",
+        "title": "O Primeiro Natal",
+        "confidence": "confirmed",
+        "source": "primeira linha idêntica"
+      }
+    ]
+  },
+  "CTP-342": {
+    "ctp": {
+      "number": 342,
+      "title": "NA MANJEDOURA",
+      "first_line": "1- Num berço de palhas dormia Jesus,"
+    },
+    "equivalents": [
+      {
+        "hymnal": "SH",
+        "id": "SH-92",
+        "title": "Na Manjedoura",
+        "confidence": "confirmed",
+        "source": "primeira linha idêntica"
+      },
+      {
+        "hymnal": "HCC",
+        "id": "HCC-99",
+        "title": "NUM BERÇO DE PALHAS",
+        "confidence": "probable",
+        "source": "mesma melodia: MUELLER"
+      }
+    ]
+  },
+  "CTP-343": {
+    "ctp": {
+      "number": 343,
+      "title": "VINDE, FIÉIS",
+      "first_line": "1- Oh! Vinde, fiéis, triunfantes, alegres,"
+    },
+    "equivalents": [
+      {
+        "hymnal": "SH",
+        "id": "SH-73",
+        "title": "Vinde, Fiéis",
+        "confidence": "confirmed",
+        "source": "primeira linha idêntica"
+      }
+    ]
+  },
+  "CTP-349": {
+    "ctp": {
+      "number": 349,
+      "title": "UM ANJO FORMOSO",
+      "first_line": "1- Um anjo formoso desceu das alturas,"
+    },
+    "equivalents": [
+      {
+        "hymnal": "SH",
+        "id": "SH-91",
+        "title": "O Anjo da Paz",
+        "confidence": "confirmed",
+        "source": "primeira linha idêntica"
+      }
+    ]
+  },
+  "CTP-367": {
+    "ctp": {
+      "number": 367,
+      "title": "PAIXÃO DE CRISTO",
+      "first_line": "1- Ó vós, que passais pela cruz do Calvário."
+    },
+    "equivalents": [
+      {
+        "hymnal": "SH",
+        "id": "SH-111",
+        "title": "Paixão de Cristo i",
+        "confidence": "confirmed",
+        "source": "primeira linha idêntica"
+      }
+    ]
+  },
+  "CTP-390": {
+    "ctp": {
+      "number": 390,
+      "title": "DOCE AMOR",
+      "first_line": "1- Quão felizes nos correm os dias,"
+    },
+    "equivalents": [
+      {
+        "hymnal": "SH",
+        "id": "SH-624",
+        "title": "Doce Amor",
+        "confidence": "confirmed",
+        "source": "primeira linha idêntica"
+      }
+    ]
+  },
+  "CTP-392": {
+    "ctp": {
+      "number": 392,
+      "title": "PERFEITO AMOR",
+      "first_line": "1- Perfeito amor, que a todo amor transcendes,"
+    },
+    "equivalents": [
+      {
+        "hymnal": "SH",
+        "id": "SH-554",
+        "title": "Perfeito Amor",
+        "confidence": "confirmed",
+        "source": "primeira linha idêntica"
+      }
+    ]
+  },
+  "CTP-400": {
+    "ctp": {
+      "number": 400,
+      "title": "VOU À PÁTRIA",
+      "first_line": "1- Vou à pátria, eu, peregrino,"
+    },
+    "equivalents": [
+      {
+        "hymnal": "SH",
+        "id": "SH-589",
+        "title": "Vou à Pátria",
+        "confidence": "confirmed",
+        "source": "primeira linha idêntica"
+      }
+    ]
+  },
+  "CTP-402": {
+    "ctp": {
+      "number": 402,
+      "title": "JUNTO AO TRONO DE DEUS",
+      "first_line": "1- Junto ao trono de Deus preparado"
+    },
+    "equivalents": [
+      {
+        "hymnal": "SH",
+        "id": "SH-570",
+        "title": "Junto ao Trono de Deus",
+        "confidence": "confirmed",
+        "source": "primeira linha idêntica"
+      }
+    ]
+  },
+  "CTP-2": {
+    "ctp": {
+      "number": 2,
+      "title": "CULTO À TRINDADE"
+    },
+    "equivalents": [
+      {
+        "hymnal": "HCC",
+        "id": "HCC-222",
+        "title": "DEUS ESTÁ PRESENTE",
+        "confidence": "probable",
+        "source": "mesma melodia: ARNSBERG"
+      }
+    ]
+  },
+  "CTP-5": {
+    "ctp": {
+      "number": 5,
+      "title": "AO DEUS DA CRIAÇÃO LOUVAI"
+    },
+    "equivalents": [
+      {
+        "hymnal": "HCC",
+        "id": "HCC-50",
+        "title": "LOUVAI AO DEUS DA CRIAÇÃO",
+        "confidence": "probable",
+        "source": "mesma melodia: MIT FREUDEN ZART"
+      }
+    ]
+  },
+  "CTP-12": {
+    "ctp": {
+      "number": 12,
+      "title": "CRISTO JESUS HÁ DE REINAR"
+    },
+    "equivalents": [
+      {
+        "hymnal": "HCC",
+        "id": "HCC-197",
+        "title": "CRISTO JESUS COM PODER REINARÁ",
+        "confidence": "probable",
+        "source": "mesma melodia: DUKE STREET"
+      }
+    ]
+  },
+  "CTP-23": {
+    "ctp": {
+      "number": 23,
+      "title": "MIL LÍNGUAS EU QUISERA TER"
+    },
+    "equivalents": [
+      {
+        "hymnal": "HCC",
+        "id": "HCC-72",
+        "title": "MIL LÍNGUAS EU QUISERA TER",
+        "confidence": "probable",
+        "source": "mesma melodia: AZMON"
+      }
+    ]
+  },
+  "CTP-36": {
+    "ctp": {
+      "number": 36,
+      "title": "DEUS ETERNO, TE ADORAMOS"
+    },
+    "equivalents": [
+      {
+        "hymnal": "HCC",
+        "id": "HCC-60",
+        "title": "ALELUIA! ALELUIA! GRATOS HINOS ENTOAI",
+        "confidence": "probable",
+        "source": "mesma melodia: HYMN TO JOY"
+      }
+    ]
+  },
+  "CTP-44": {
+    "ctp": {
+      "number": 44,
+      "title": "PERDÃO, SENHOR"
+    },
+    "equivalents": [
+      {
+        "hymnal": "HCC",
+        "id": "HCC-280",
+        "title": "SE SOFRIMENTO EU CAUSEI, SENHOR",
+        "confidence": "probable",
+        "source": "mesma melodia: CAMACUÁ"
+      }
+    ]
+  },
+  "CTP-47": {
+    "ctp": {
+      "number": 47,
+      "title": "DESCANSO ETERNO"
+    },
+    "equivalents": [
+      {
+        "hymnal": "HCC",
+        "id": "HCC-336",
+        "title": "MEU CORAÇÃO DESCANSA EM DEUS",
+        "confidence": "probable",
+        "source": "mesma melodia: LANDAS"
+      }
+    ]
+  },
+  "CTP-56": {
+    "ctp": {
+      "number": 56,
+      "title": "AO DEUS DE ABRAÃO LOUVAI"
+    },
+    "equivalents": [
+      {
+        "hymnal": "HCC",
+        "id": "HCC-14",
+        "title": "AO DEUS DE ABRAÃO LOUVAI",
+        "confidence": "probable",
+        "source": "mesma melodia: LEONI"
+      }
+    ]
+  },
+  "CTP-63": {
+    "ctp": {
+      "number": 63,
+      "title": "TU ÉS FIEL, SENHOR"
+    },
+    "equivalents": [
+      {
+        "hymnal": "HCC",
+        "id": "HCC-25",
+        "title": "TU ÉS FIEL, SENHOR",
+        "confidence": "probable",
+        "source": "mesma melodia: FAITHFULNESS"
+      }
+    ]
+  },
+  "CTP-66": {
+    "ctp": {
+      "number": 66,
+      "title": "SEJA LOUVADO"
+    },
+    "equivalents": [
+      {
+        "hymnal": "HCC",
+        "id": "HCC-46",
+        "title": "PELA GRAÇA E O PRIMOR",
+        "confidence": "probable",
+        "source": "mesma melodia: DIX"
+      }
+    ]
+  },
+  "CTP-84": {
+    "ctp": {
+      "number": 84,
+      "title": "NA LUZ DA MADRUGADA"
+    },
+    "equivalents": [
+      {
+        "hymnal": "HCC",
+        "id": "HCC-310",
+        "title": "QUEM SALVA É SÓ JESUS",
+        "confidence": "probable",
+        "source": "mesma melodia: LAUDES DOMINI"
+      }
+    ]
+  },
+  "CTP-98": {
+    "ctp": {
+      "number": 98,
+      "title": "ALVO MAIS QUE A NEVE"
+    },
+    "equivalents": [
+      {
+        "hymnal": "HCC",
+        "id": "HCC-286",
+        "title": "ALVOS MAIS QUE A NEVE",
+        "confidence": "probable",
+        "source": "mesma melodia: BLESSED BE THE FOUNTAIN"
+      }
+    ]
+  },
+  "CTP-101": {
+    "ctp": {
+      "number": 101,
+      "title": "A PALAVRA DA VIDA"
+    },
+    "equivalents": [
+      {
+        "hymnal": "HCC",
+        "id": "HCC-42",
+        "title": "GUIA, Ó DEUS, A MINHA VIDA",
+        "confidence": "probable",
+        "source": "mesma melodia: CWM RHONDDA"
+      }
+    ]
+  },
+  "CTP-103": {
+    "ctp": {
+      "number": 103,
+      "title": "AS NOVAS DO EVANGELHO"
+    },
+    "equivalents": [
+      {
+        "hymnal": "HCC",
+        "id": "HCC-299",
+        "title": "AS NOVAS DO EVANGELHO",
+        "confidence": "probable",
+        "source": "mesma melodia: THE GOSPEL BELLS"
+      }
+    ]
+  },
+  "CTP-107": {
+    "ctp": {
+      "number": 107,
+      "title": "CRER E OBSERVAR"
+    },
+    "equivalents": [
+      {
+        "hymnal": "HCC",
+        "id": "HCC-465",
+        "title": "CRER E OBSERVAR",
+        "confidence": "probable",
+        "source": "mesma melodia: TRUST AND OBEY"
+      },
+      {
+        "hymnal": "SH",
+        "id": "SH-439",
+        "title": "Crer e Observar",
+        "confidence": "confirmed",
+        "source": "título + primeira linha idênticos"
+      }
+    ]
+  },
+  "CTP-112": {
+    "ctp": {
+      "number": 112,
+      "title": "PRECIOSA GRAÇA DE JESUS"
+    },
+    "equivalents": [
+      {
+        "hymnal": "HCC",
+        "id": "HCC-314",
+        "title": "PRECIOSA A GRAÇA DE JESUS",
+        "confidence": "probable",
+        "source": "mesma melodia: AMAZING GRACE"
+      }
+    ]
+  },
+  "CTP-116": {
+    "ctp": {
+      "number": 116,
+      "title": "DIA FELIZ"
+    },
+    "equivalents": [
+      {
+        "hymnal": "HCC",
+        "id": "HCC-297",
+        "title": "FELIZ O DIA",
+        "confidence": "probable",
+        "source": "mesma melodia: HAPPY DAY"
+      }
+    ]
+  },
+  "CTP-126": {
+    "ctp": {
+      "number": 126,
+      "title": "A EXCELÊNCIA DO AMOR"
+    },
+    "equivalents": [
+      {
+        "hymnal": "HCC",
+        "id": "HCC-569",
+        "title": "QUAL O ADORNO DESTA VIDA",
+        "confidence": "probable",
+        "source": "mesma melodia: BETTER WORLD"
+      }
+    ]
+  },
+  "CTP-137": {
+    "ctp": {
+      "number": 137,
+      "title": "MINHA ESPERANÇA FIRME ESTÁ"
+    },
+    "equivalents": [
+      {
+        "hymnal": "HCC",
+        "id": "HCC-348",
+        "title": "A MINHA FÉ E O MEU AMOR",
+        "confidence": "probable",
+        "source": "mesma melodia: SOLID ROCK"
+      }
+    ]
+  },
+  "CTP-142": {
+    "ctp": {
+      "number": 142,
+      "title": "CONFIANÇA"
+    },
+    "equivalents": [
+      {
+        "hymnal": "HCC",
+        "id": "HCC-447",
+        "title": "MAS EU SEI EM QUEM TENHO CRIDO",
+        "confidence": "probable",
+        "source": "mesma melodia: EL NATHAN"
+      }
+    ]
+  },
+  "CTP-147": {
+    "ctp": {
+      "number": 147,
+      "title": "HORA BENDITA"
+    },
+    "equivalents": [
+      {
+        "hymnal": "HCC",
+        "id": "HCC-378",
+        "title": "BENDITA A HORA DE ORAÇÃO",
+        "confidence": "probable",
+        "source": "mesma melodia: SWEET HOUR"
+      }
+    ]
+  },
+  "CTP-151": {
+    "ctp": {
+      "number": 151,
+      "title": "FORTALECE A TUA IGREJA"
+    },
+    "equivalents": [
+      {
+        "hymnal": "HCC",
+        "id": "HCC-388",
+        "title": "SANTIFICA TUA IGREJA",
+        "confidence": "probable",
+        "source": "mesma melodia: EBENEZER"
+      }
+    ]
+  },
+  "CTP-381": {
+    "ctp": {
+      "number": 381,
+      "title": "DESCE EM MEU CORAÇÃO"
+    },
+    "equivalents": [
+      {
+        "hymnal": "HCC",
+        "id": "HCC-8",
+        "title": "A TI, Ó DEUS, FIEL E BOM SENHOR",
+        "confidence": "probable",
+        "source": "mesma melodia: EVENTIDE"
+      }
+    ]
+  },
+  "CTP-163": {
+    "ctp": {
+      "number": 163,
+      "title": "DEUS VOS GUARDE"
+    },
+    "equivalents": [
+      {
+        "hymnal": "HCC",
+        "id": "HCC-37",
+        "title": "DEUS VOS GUARDE PELO SEU PODER",
+        "confidence": "probable",
+        "source": "mesma melodia: GOD BE WITH YOU"
+      }
+    ]
+  },
+  "CTP-175": {
+    "ctp": {
+      "number": 175,
+      "title": "ORAÇÃO NOTURNA"
+    },
+    "equivalents": [
+      {
+        "hymnal": "HCC",
+        "id": "HCC-270",
+        "title": "FINDA-SE ESTE CULTO",
+        "confidence": "probable",
+        "source": "mesma melodia: LYNDHURST"
+      }
+    ]
+  },
+  "CTP-176": {
+    "ctp": {
+      "number": 176,
+      "title": "UNIÃO FRATERNAL"
+    },
+    "equivalents": [
+      {
+        "hymnal": "HCC",
+        "id": "HCC-563",
+        "title": "BENDITOS LAÇOS SÃO",
+        "confidence": "probable",
+        "source": "mesma melodia: DENNIS"
+      }
+    ]
+  },
+  "CTP-180": {
+    "ctp": {
+      "number": 180,
+      "title": "MAIS PERTO QUERO ESTAR"
+    },
+    "equivalents": [
+      {
+        "hymnal": "HCC",
+        "id": "HCC-399",
+        "title": "MAIS PERTO QUERO ESTAR",
+        "confidence": "probable",
+        "source": "mesma melodia: BETHANY"
+      },
+      {
+        "hymnal": "SH",
+        "id": "SH-360",
+        "title": "Mais Perto Quero Estar",
+        "confidence": "confirmed",
+        "source": "título + primeira linha idênticos"
+      }
+    ]
+  },
+  "CTP-188": {
+    "ctp": {
+      "number": 188,
+      "title": "O MEU PASTOR É O BOM JESUS"
+    },
+    "equivalents": [
+      {
+        "hymnal": "HCC",
+        "id": "HCC-187",
+        "title": "O MEU PASTOR É O BOM JESUS",
+        "confidence": "probable",
+        "source": "mesma melodia: CRIMOND"
+      }
+    ]
+  },
+  "CTP-190": {
+    "ctp": {
+      "number": 190,
+      "title": "DIA A DIA"
+    },
+    "equivalents": [
+      {
+        "hymnal": "HCC",
+        "id": "HCC-182",
+        "title": "DIA A DIA",
+        "confidence": "probable",
+        "source": "mesma melodia: BLOTT EN DAG"
+      }
+    ]
+  },
+  "CTP-208": {
+    "ctp": {
+      "number": 208,
+      "title": "SOU FELIZ COM JESUS"
+    },
+    "equivalents": [
+      {
+        "hymnal": "HCC",
+        "id": "HCC-329",
+        "title": "SOU FELIZ COM JESUS",
+        "confidence": "probable",
+        "source": "mesma melodia: VILLE DE HAVRE"
+      }
+    ]
+  },
+  "CTP-232": {
+    "ctp": {
+      "number": 232,
+      "title": "EM TUDO AS TUAS MÃOS"
+    },
+    "equivalents": [
+      {
+        "hymnal": "HCC",
+        "id": "HCC-524",
+        "title": "FIEL, ETERNO E SANTO AMOR",
+        "confidence": "probable",
+        "source": "mesma melodia: MANOAH"
+      }
+    ]
+  },
+  "CTP-237": {
+    "ctp": {
+      "number": 237,
+      "title": "TAL QUAL ESTOU"
+    },
+    "equivalents": [
+      {
+        "hymnal": "HCC",
+        "id": "HCC-300",
+        "title": "TAL QUAL ESTOU",
+        "confidence": "probable",
+        "source": "mesma melodia: WOODWORTH"
+      },
+      {
+        "hymnal": "SH",
+        "id": "SH-321",
+        "title": "Tal Qual Estou",
+        "confidence": "confirmed",
+        "source": "título + primeira linha idênticos"
+      }
+    ]
+  },
+  "CTP-246": {
+    "ctp": {
+      "number": 246,
+      "title": "DEDICAÇÃO PESSOAL"
+    },
+    "equivalents": [
+      {
+        "hymnal": "HCC",
+        "id": "HCC-217",
+        "title": "É A BÍBLIA NOSSA LUZ",
+        "confidence": "probable",
+        "source": "mesma melodia: ALETTA"
+      }
+    ]
+  },
+  "CTP-247": {
+    "ctp": {
+      "number": 247,
+      "title": "CONSAGRAÇÃO"
+    },
+    "equivalents": [
+      {
+        "hymnal": "HCC",
+        "id": "HCC-429",
+        "title": "A TI SEJA CONSAGRADA MINHA VIDA",
+        "confidence": "probable",
+        "source": "mesma melodia: MOZART"
+      }
+    ]
+  },
+  "CTP-263": {
+    "ctp": {
+      "number": 263,
+      "title": "NA CEIA DO SENHOR"
+    },
+    "equivalents": [
+      {
+        "hymnal": "HCC",
+        "id": "HCC-400",
+        "title": "QUÃO PRECIOSAS SÃO AS HORAS",
+        "confidence": "probable",
+        "source": "mesma melodia: COMUNHÃO"
+      }
+    ]
+  },
+  "CTP-256": {
+    "ctp": {
+      "number": 256,
+      "title": "PARTILHAR O PÃO"
+    },
+    "equivalents": [
+      {
+        "hymnal": "HCC",
+        "id": "HCC-519",
+        "title": "REUNIDOS JUNTO À MESA",
+        "confidence": "probable",
+        "source": "mesma melodia: A CEIA DO SENHOR"
+      }
+    ]
+  },
+  "CTP-260": {
+    "ctp": {
+      "number": 260,
+      "title": "UM SÓ REBANHO"
+    },
+    "equivalents": [
+      {
+        "hymnal": "HCC",
+        "id": "HCC-574",
+        "title": "UM SÓ REBANHO",
+        "confidence": "probable",
+        "source": "mesma melodia: MORRIS"
+      }
+    ]
+  },
+  "CTP-261": {
+    "ctp": {
+      "number": 261,
+      "title": "NOSSO PAI QUE ESTÁS NOS CÉUS"
+    },
+    "equivalents": [
+      {
+        "hymnal": "HCC",
+        "id": "HCC-384",
+        "title": "NOSSO PAI QUE ESTÁS NO CÉU",
+        "confidence": "probable",
+        "source": "mesma melodia: PAI NOSSO SERTANEJO"
+      }
+    ]
+  },
+  "CTP-268": {
+    "ctp": {
+      "number": 268,
+      "title": "NOS BRAÇOS DE MARIA"
+    },
+    "equivalents": [
+      {
+        "hymnal": "HCC",
+        "id": "HCC-200",
+        "title": "CRISTO É TUDO PARA MIM",
+        "confidence": "probable",
+        "source": "mesma melodia: ELIZABETH"
+      }
+    ]
+  },
+  "CTP-281": {
+    "ctp": {
+      "number": 281,
+      "title": "JESUS TU REUNISTE OS TEUS AMIGOS"
+    },
+    "equivalents": [
+      {
+        "hymnal": "HCC",
+        "id": "HCC-562",
+        "title": "JESUS, TU REUNISTE OS TEUS AMIGOS",
+        "confidence": "probable",
+        "source": "mesma melodia: LAVAPÉS"
+      }
+    ]
+  },
+  "CTP-282": {
+    "ctp": {
+      "number": 282,
+      "title": "AVANTE, Ó CRENTES!"
+    },
+    "equivalents": [
+      {
+        "hymnal": "HCC",
+        "id": "HCC-566",
+        "title": "JESUS, PASTOR AMADO",
+        "confidence": "probable",
+        "source": "mesma melodia: WEBB"
+      }
+    ]
+  },
+  "CTP-283": {
+    "ctp": {
+      "number": 283,
+      "title": "NOME PRECIOSO"
+    },
+    "equivalents": [
+      {
+        "hymnal": "HCC",
+        "id": "HCC-174",
+        "title": "NOME BOM, DOCE À FÉ",
+        "confidence": "probable",
+        "source": "mesma melodia: PRECIOUS NAME"
+      }
+    ]
+  },
+  "CTP-293": {
+    "ctp": {
+      "number": 293,
+      "title": "NESTA GRANDE CIDADE VIVEMOS"
+    },
+    "equivalents": [
+      {
+        "hymnal": "HCC",
+        "id": "HCC-553",
+        "title": "NESTA GRANDE CIDADE VIVEMOS",
+        "confidence": "probable",
+        "source": "mesma melodia: MEGALÓPOLIS"
+      }
+    ]
+  },
+  "CTP-297": {
+    "ctp": {
+      "number": 297,
+      "title": "QUE ESTOU FAZENDO?"
+    },
+    "equivalents": [
+      {
+        "hymnal": "HCC",
+        "id": "HCC-552",
+        "title": "QUE ESTOU FAZENDO SE SOU CRISTÃO",
+        "confidence": "probable",
+        "source": "mesma melodia: CONSCIÊNCIA"
+      }
+    ]
+  },
+  "CTP-337": {
+    "ctp": {
+      "number": 337,
+      "title": "NOITE DE PAZ"
+    },
+    "equivalents": [
+      {
+        "hymnal": "HCC",
+        "id": "HCC-91",
+        "title": "NOITE DE PAZ! NOITE DE AMOR!",
+        "confidence": "probable",
+        "source": "mesma melodia: STILLE NACHT"
+      }
+    ]
+  },
+  "CTP-345": {
+    "ctp": {
+      "number": 345,
+      "title": "JESUS NASCEU!"
+    },
+    "equivalents": [
+      {
+        "hymnal": "HCC",
+        "id": "HCC-106",
+        "title": "CANTAI QUE O SALVADOR CHEGOU!",
+        "confidence": "probable",
+        "source": "mesma melodia: ANTIOCH"
+      }
+    ]
+  },
+  "CTP-351": {
+    "ctp": {
+      "number": 351,
+      "title": "EIS DOS ANJOS A HARMONIA"
+    },
+    "equivalents": [
+      {
+        "hymnal": "HCC",
+        "id": "HCC-96",
+        "title": "CANTAM ANJOS HARMONIAS",
+        "confidence": "probable",
+        "source": "mesma melodia: MENDELSSOHN"
+      }
+    ]
+  },
+  "CTP-359": {
+    "ctp": {
+      "number": 359,
+      "title": "ÀS ÁGUAS DO JORDÃO"
+    },
+    "equivalents": [
+      {
+        "hymnal": "HCC",
+        "id": "HCC-510",
+        "title": "ÀS ÁGUAS DO JORDÃO",
+        "confidence": "probable",
+        "source": "mesma melodia: BELÉM"
+      }
+    ]
+  },
+  "CTP-360": {
+    "ctp": {
+      "number": 360,
+      "title": "VISÃO DE GLÓRIA SINGULAR"
+    },
+    "equivalents": [
+      {
+        "hymnal": "HCC",
+        "id": "HCC-1",
+        "title": "OH, VINDE ADORAR!",
+        "confidence": "probable",
+        "source": "mesma melodia: WAREHAM"
+      }
+    ]
+  },
+  "CTP-364": {
+    "ctp": {
+      "number": 364,
+      "title": "CONTEMPLAÇÃO DA CRUZ"
+    },
+    "equivalents": [
+      {
+        "hymnal": "HCC",
+        "id": "HCC-127",
+        "title": "AO CONTEMPLAR A RUDE CRUZ",
+        "confidence": "probable",
+        "source": "mesma melodia: HAMBURG"
+      }
+    ]
+  },
+  "CTP-366": {
+    "ctp": {
+      "number": 366,
+      "title": "AO PÉ DA CRUZ"
+    },
+    "equivalents": [
+      {
+        "hymnal": "HCC",
+        "id": "HCC-395",
+        "title": "QUERO ESTAR AO PÉ DA CRUZ",
+        "confidence": "probable",
+        "source": "mesma melodia: NEAR THE CROSS"
+      }
+    ]
+  },
+  "CTP-368": {
+    "ctp": {
+      "number": 368,
+      "title": "RUDE CRUZ"
+    },
+    "equivalents": [
+      {
+        "hymnal": "HCC",
+        "id": "HCC-132",
+        "title": "RUDE CRUZ",
+        "confidence": "probable",
+        "source": "mesma melodia: OLD RUGGED CROSS"
+      }
+    ]
+  },
+  "CTP-373": {
+    "ctp": {
+      "number": 373,
+      "title": "CRISTO RESSUSCITOU!"
+    },
+    "equivalents": [
+      {
+        "hymnal": "HCC",
+        "id": "HCC-135",
+        "title": "CRISTO JÁ RESSUSCITOU",
+        "confidence": "probable",
+        "source": "mesma melodia: EASTER HYMN"
+      }
+    ]
+  },
+  "CTP-375": {
+    "ctp": {
+      "number": 375,
+      "title": "RESSURGIU!"
+    },
+    "equivalents": [
+      {
+        "hymnal": "HCC",
+        "id": "HCC-140",
+        "title": "DA SEPULTURA SAIU",
+        "confidence": "probable",
+        "source": "mesma melodia: CHRIST AROSE"
+      }
+    ]
+  },
+  "CTP-409": {
+    "ctp": {
+      "number": 409,
+      "title": "CASTELO FORTE"
+    },
+    "equivalents": [
+      {
+        "hymnal": "HCC",
+        "id": "HCC-406",
+        "title": "CASTELO FORTE É NOSSO DEUS",
+        "confidence": "probable",
+        "source": "mesma melodia: EIN' FESTE BURG"
+      },
+      {
+        "hymnal": "SH",
+        "id": "SH-640",
+        "title": "Castelo Forte",
+        "confidence": "confirmed",
+        "source": "título + primeira linha idênticos"
+      }
+    ]
+  },
+  "CTP-182": {
+    "ctp": {
+      "number": 182,
+      "title": "SOSSEGAI !",
+      "first_line": "1- Mestre! O mar se revolta e as ondas nos dão pavor!"
+    },
+    "equivalents": [
+      {
+        "hymnal": "SH",
+        "id": "SH-102",
+        "title": "Sossegai!",
+        "confidence": "confirmed",
+        "source": "título + primeira linha idênticos"
+      }
+    ]
+  }
+}
