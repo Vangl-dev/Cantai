@@ -1447,25 +1447,62 @@
 
         function renderAgenda() {
             const list = document.getElementById('agenda-list');
-            
+            list.textContent = '';
+
             if (agenda.length === 0) {
-                list.innerHTML = '<div class="agenda-empty">Nenhum hino adicionado</div>';
+                const empty = document.createElement('div');
+                empty.className = 'agenda-empty';
+                empty.textContent = 'Nenhum hino adicionado';
+                list.appendChild(empty);
                 return;
             }
 
-            list.innerHTML = agenda.map((h, i) => `
-                <div class="agenda-item">
-                    <div class="agenda-item-info">
-                        <div class="agenda-item-id">${h.id}</div>
-                        <div class="agenda-item-title">${h.title}</div>
-                    </div>
-                    <div class="agenda-item-actions">
-                        <button class="agenda-btn" onclick="moveUp(${i})" title="Mover para cima">↑</button>
-                        <button class="agenda-btn" onclick="moveDown(${i})" title="Mover para baixo">↓</button>
-                        <button class="agenda-btn agenda-btn-danger" onclick="removeFromAgenda(${i})" title="Remover">✕</button>
-                    </div>
-                </div>
-            `).join('');
+            agenda.forEach((h, i) => {
+                const item = document.createElement('div');
+                item.className = 'agenda-item';
+
+                const info = document.createElement('div');
+                info.className = 'agenda-item-info';
+
+                const idEl = document.createElement('div');
+                idEl.className = 'agenda-item-id';
+                idEl.textContent = h.id;
+
+                const titleEl = document.createElement('div');
+                titleEl.className = 'agenda-item-title';
+                titleEl.textContent = h.title;
+
+                info.appendChild(idEl);
+                info.appendChild(titleEl);
+
+                const actions = document.createElement('div');
+                actions.className = 'agenda-item-actions';
+
+                const upBtn = document.createElement('button');
+                upBtn.className = 'agenda-btn';
+                upBtn.textContent = '↑';
+                upBtn.title = 'Mover para cima';
+                upBtn.addEventListener('click', () => moveUp(i));
+
+                const downBtn = document.createElement('button');
+                downBtn.className = 'agenda-btn';
+                downBtn.textContent = '↓';
+                downBtn.title = 'Mover para baixo';
+                downBtn.addEventListener('click', () => moveDown(i));
+
+                const removeBtn = document.createElement('button');
+                removeBtn.className = 'agenda-btn agenda-btn-danger';
+                removeBtn.textContent = '✕';
+                removeBtn.title = 'Remover';
+                removeBtn.addEventListener('click', () => removeFromAgenda(i));
+
+                actions.appendChild(upBtn);
+                actions.appendChild(downBtn);
+                actions.appendChild(removeBtn);
+                item.appendChild(info);
+                item.appendChild(actions);
+                list.appendChild(item);
+            });
         }
 
         function copyProgramacao() {
@@ -1545,22 +1582,48 @@
 
         function renderSavedLists() {
             const list = document.getElementById('saved-list');
+            list.textContent = '';
 
             if (savedLists.length === 0) {
-                list.innerHTML = '<div class="saved-empty">Nenhuma lista salva</div>';
+                const empty = document.createElement('div');
+                empty.className = 'saved-empty';
+                empty.textContent = 'Nenhuma lista salva';
+                list.appendChild(empty);
                 return;
             }
 
-            list.innerHTML = savedLists.map((l, i) => `
-                <div class="saved-item">
-                    <div class="saved-item-name">${l.name}</div>
-                    <div class="saved-item-count">${l.hymns.length} hino(s)</div>
-                    <div class="saved-item-actions">
-                        <button class="saved-btn saved-btn-open" onclick="openList(${i})">Abrir</button>
-                        <button class="saved-btn saved-btn-delete" onclick="deleteList(${i})">Excluir</button>
-                    </div>
-                </div>
-            `).join('');
+            savedLists.forEach((l, i) => {
+                const item = document.createElement('div');
+                item.className = 'saved-item';
+
+                const nameEl = document.createElement('div');
+                nameEl.className = 'saved-item-name';
+                nameEl.textContent = l.name;
+
+                const countEl = document.createElement('div');
+                countEl.className = 'saved-item-count';
+                countEl.textContent = l.hymns.length + ' hino(s)';
+
+                const actionsEl = document.createElement('div');
+                actionsEl.className = 'saved-item-actions';
+
+                const openBtn = document.createElement('button');
+                openBtn.className = 'saved-btn saved-btn-open';
+                openBtn.textContent = 'Abrir';
+                openBtn.addEventListener('click', () => openList(i));
+
+                const deleteBtn = document.createElement('button');
+                deleteBtn.className = 'saved-btn saved-btn-delete';
+                deleteBtn.textContent = 'Excluir';
+                deleteBtn.addEventListener('click', () => deleteList(i));
+
+                actionsEl.appendChild(openBtn);
+                actionsEl.appendChild(deleteBtn);
+                item.appendChild(nameEl);
+                item.appendChild(countEl);
+                item.appendChild(actionsEl);
+                list.appendChild(item);
+            });
         }
 
         function shouldShowResults() {
@@ -1573,16 +1636,21 @@
             const grid = document.getElementById('hymn-grid');
             const headerEl = document.getElementById('suggestions-header');
             const btnMore = document.getElementById('btn-more');
-            
+
+            grid.textContent = '';
+
             if (!shouldShowResults()) {
                 resultsSection.style.display = 'none';
                 return;
             }
 
             resultsSection.style.display = 'block';
-            
+
             if (filteredHymns.length === 0) {
-                grid.innerHTML = '<div class="no-results">Nenhum hino encontrado.</div>';
+                const noResults = document.createElement('div');
+                noResults.className = 'no-results';
+                noResults.textContent = 'Nenhum hino encontrado.';
+                grid.appendChild(noResults);
                 headerEl.textContent = '';
                 btnMore.style.display = 'none';
                 return;
@@ -1592,13 +1660,12 @@
                 generateSuggestions();
             }
 
-            headerEl.textContent = `Sugestões`;
+            headerEl.textContent = 'Sugestões';
 
-            grid.innerHTML = currentSuggestions.map(h => {
+            currentSuggestions.forEach(h => {
                 const source = getHymnalSource(h);
                 let ctpEquivalent = null;
-                
-                // Check for CTP equivalent if not already CTP
+
                 if (source !== 'CTP') {
                     const hymnId = `${source}-${h.number}`;
                     const equiv = hymnReverseEquivalences[hymnId];
@@ -1606,26 +1673,73 @@
                         ctpEquivalent = equiv.equivalents.find(eq => eq.hymnal === 'CTP');
                     }
                 }
-                
-                return `
-                    <div class="hymn-card">
-                        <div class="card-header">
-                            <span class="card-source">${source}</span>
-                            <span class="card-number">nº ${h.number}</span>
-                            <div class="card-info">
-                                <div class="card-title">${h.title}</div>
-                            </div>
-                        </div>
-                        <div class="card-first-line">${h.first_line}</div>
-                        ${ctpEquivalent ? `<div class="card-ctp-equivalent">⭐ Também no CTP: ${ctpEquivalent.id}</div>` : ''}
-                        ${h.metric ? `<div class="card-metric">${h.metric}</div>` : ''}
-                        <div class="card-actions">
-                            <button class="btn btn-view" onclick="showHymn(${h.number}, true, '${source}')">Ver letra</button>
-                            <button class="btn btn-choose" onclick="chooseHymn(${h.number}, '${h.title.replace(/'/g, "\\'")}', '${source}')">Escolher</button>
-                        </div>
-                    </div>
-                `;
-            }).join('');
+
+                const card = document.createElement('div');
+                card.className = 'hymn-card';
+
+                const cardHeader = document.createElement('div');
+                cardHeader.className = 'card-header';
+
+                const sourceEl = document.createElement('span');
+                sourceEl.className = 'card-source';
+                sourceEl.textContent = source;
+
+                const numberEl = document.createElement('span');
+                numberEl.className = 'card-number';
+                numberEl.textContent = 'nº ' + h.number;
+
+                const cardInfo = document.createElement('div');
+                cardInfo.className = 'card-info';
+
+                const titleEl = document.createElement('div');
+                titleEl.className = 'card-title';
+                titleEl.textContent = h.title;
+
+                cardInfo.appendChild(titleEl);
+                cardHeader.appendChild(sourceEl);
+                cardHeader.appendChild(numberEl);
+                cardHeader.appendChild(cardInfo);
+
+                const firstLineEl = document.createElement('div');
+                firstLineEl.className = 'card-first-line';
+                firstLineEl.textContent = h.first_line;
+
+                card.appendChild(cardHeader);
+                card.appendChild(firstLineEl);
+
+                if (ctpEquivalent) {
+                    const equivEl = document.createElement('div');
+                    equivEl.className = 'card-ctp-equivalent';
+                    equivEl.textContent = '⭐ Também no CTP: ' + ctpEquivalent.id;
+                    card.appendChild(equivEl);
+                }
+
+                if (h.metric) {
+                    const metricEl = document.createElement('div');
+                    metricEl.className = 'card-metric';
+                    metricEl.textContent = h.metric;
+                    card.appendChild(metricEl);
+                }
+
+                const actionsEl = document.createElement('div');
+                actionsEl.className = 'card-actions';
+
+                const viewBtn = document.createElement('button');
+                viewBtn.className = 'btn btn-view';
+                viewBtn.textContent = 'Ver letra';
+                viewBtn.addEventListener('click', () => showHymn(h.number, true, source));
+
+                const chooseBtn = document.createElement('button');
+                chooseBtn.className = 'btn btn-choose';
+                chooseBtn.textContent = 'Escolher';
+                chooseBtn.addEventListener('click', () => chooseHymn(h.number, h.title, source));
+
+                actionsEl.appendChild(viewBtn);
+                actionsEl.appendChild(chooseBtn);
+                card.appendChild(actionsEl);
+
+                grid.appendChild(card);
+            });
 
             btnMore.style.display = filteredHymns.length > currentSuggestions.length ? 'block' : 'none';
         }
@@ -1688,16 +1802,35 @@
 
         function renderRelatedGrid() {
             const relatedGrid = document.getElementById('related-grid');
-            
-            relatedGrid.innerHTML = currentRelatedSuggestions.map(h => `
-                <div class="related-card" onclick="navigateToHymn(${h.number}, '${getHymnalSource(h)}')">
-                    <div class="related-card-header">
-                        <span class="related-card-number">${getHymnalSource(h)}-${h.number}</span>
-                        <span class="related-card-title">${h.title}</span>
-                    </div>
-                    <div class="related-card-first-line">${h.first_line}</div>
-                </div>
-            `).join('');
+            relatedGrid.textContent = '';
+
+            currentRelatedSuggestions.forEach(h => {
+                const card = document.createElement('div');
+                card.className = 'related-card';
+                card.addEventListener('click', () => navigateToHymn(h.number, getHymnalSource(h)));
+
+                const header = document.createElement('div');
+                header.className = 'related-card-header';
+
+                const numberEl = document.createElement('span');
+                numberEl.className = 'related-card-number';
+                numberEl.textContent = getHymnalSource(h) + '-' + h.number;
+
+                const titleEl = document.createElement('span');
+                titleEl.className = 'related-card-title';
+                titleEl.textContent = h.title;
+
+                header.appendChild(numberEl);
+                header.appendChild(titleEl);
+
+                const firstLineEl = document.createElement('div');
+                firstLineEl.className = 'related-card-first-line';
+                firstLineEl.textContent = h.first_line;
+
+                card.appendChild(header);
+                card.appendChild(firstLineEl);
+                relatedGrid.appendChild(card);
+            });
         }
 
         function navigateToHymn(number, source) {
@@ -1759,11 +1892,16 @@
             const topicsSection = document.getElementById('detail-topics-section');
             const topicsEl = document.getElementById('detail-topics');
             const topics = hymn.topics || hymn.topics_hcc || [];
+            topicsEl.textContent = '';
             if (topics.length > 0) {
                 topicsSection.style.display = 'block';
-                topicsEl.innerHTML = topics.map(t => 
-                    `<span class="detail-topic" onclick="showRelated('topic', '${t.replace(/'/g, "\\'")}', ${hymn.number}, '${getHymnalSource(hymn)}')">${t}</span>`
-                ).join('');
+                topics.forEach(t => {
+                    const tag = document.createElement('span');
+                    tag.className = 'detail-topic';
+                    tag.textContent = t;
+                    tag.addEventListener('click', () => showRelated('topic', t, hymn.number, getHymnalSource(hymn)));
+                    topicsEl.appendChild(tag);
+                });
             } else {
                 topicsSection.style.display = 'none';
             }
@@ -1810,21 +1948,45 @@
             
             if (equivalents.length > 0) {
                 equivalentsSection.style.display = 'block';
-                equivalentsGrid.innerHTML = equivalents.map(eq => {
+                equivalentsGrid.textContent = '';
+                equivalents.forEach(eq => {
                     const source = eq.hymnal;
                     const num = eq.id.replace(source + '-', '');
                     const isCtp = source === 'CTP';
-                    return `
-                        <div class="equivalent-card ${isCtp ? 'equivalent-card-ctp' : ''}" onclick="navigateToEquivalent(${num}, '${source}')">
-                            <div class="equivalent-card-header">
-                                <span class="equivalent-card-source">${source}</span>
-                                <span class="equivalent-card-number">nº ${num}</span>
-                                ${isCtp ? '<span class="equivalent-card-badge">⭐ Hinário oficial</span>' : ''}
-                            </div>
-                            <div class="equivalent-card-title">${eq.title}</div>
-                        </div>
-                    `;
-                }).join('');
+
+                    const card = document.createElement('div');
+                    card.className = 'equivalent-card' + (isCtp ? ' equivalent-card-ctp' : '');
+                    card.addEventListener('click', () => navigateToEquivalent(num, source));
+
+                    const header = document.createElement('div');
+                    header.className = 'equivalent-card-header';
+
+                    const sourceEl = document.createElement('span');
+                    sourceEl.className = 'equivalent-card-source';
+                    sourceEl.textContent = source;
+
+                    const numEl = document.createElement('span');
+                    numEl.className = 'equivalent-card-number';
+                    numEl.textContent = 'nº ' + num;
+
+                    header.appendChild(sourceEl);
+                    header.appendChild(numEl);
+
+                    if (isCtp) {
+                        const badge = document.createElement('span');
+                        badge.className = 'equivalent-card-badge';
+                        badge.textContent = '⭐ Hinário oficial';
+                        header.appendChild(badge);
+                    }
+
+                    const titleEl = document.createElement('div');
+                    titleEl.className = 'equivalent-card-title';
+                    titleEl.textContent = eq.title;
+
+                    card.appendChild(header);
+                    card.appendChild(titleEl);
+                    equivalentsGrid.appendChild(card);
+                });
             } else {
                 equivalentsSection.style.display = 'none';
             }
