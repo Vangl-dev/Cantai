@@ -1,70 +1,83 @@
-"""Import metrics and melodies from the CTP metrics markdown file."""
+"""Importa métricas e melodias do índice de métricas do CTP (markdown).
+
+O arquivo HinarioCTP_metricas.md veio de OCR e é irregular: algumas métricas
+estão em cabeçalhos "## ", outras em linhas soltas; há tabelas HTML, linhas
+com vários hinos ("OLD HUNDREDTH ..... 30, 488") e métricas coladas com a
+melodia na mesma linha. A versão anterior deste importador só reconhecia
+"## " e, ao pular as demais métricas, aplicava a métrica anterior a dezenas
+de hinos (69 hinos ficaram com "8.8.8.6 - 6.6.8.6").
+"""
 
 import re
 from pathlib import Path
 
+_METRIC_START = re.compile(r"^[\(\[]?\d+[\.\]\)]")
+_NUMBERS = r"(\d{1,3}\s*[A-Ba-b]?(?:\s*[,;e]\s*\d{1,3}\s*[A-Ba-b]?)*)\s*$"
+_ENTRY = re.compile(r"^(.+?)\s*\.*\s*" + _NUMBERS)
+_METRIC_WITH_ENTRY = re.compile(
+    r"^(.*?(?:com [a-zçãé ]+?|irregular)?)\s+"
+    r"([A-ZÀ-Ü][A-ZÀ-Ü'’ .,!-]+?)\s*\.*\s*" + _NUMBERS
+)
+_SKIP_HEADERS = ("indice", "índice", "métrica", "metrica")
 
-def import_metrics(metrics_path: str | Path) -> dict[int, dict]:
-    """Import metrics and melodies from the CTP metrics markdown file.
+
+def _is_garbage_metric(metric: str) -> bool:
+    """Métricas com componente "0" são lixo de OCR ("0.0.0.0", "8.0.8.0")."""
+    return any(part == "0" for part in re.findall(r"\d+", metric))
+
+
+def import_metrics(metrics_path: str | Path) -> dict[str, list[tuple[str, str]]]:
+    """Lê o índice de métricas do CTP.
 
     Args:
-        metrics_path: Path to the HinarioCTP_metricas.md file
+        metrics_path: Caminho do HinarioCTP_metricas.md
 
     Returns:
-        dict: Dictionary mapping hymn number to {metric, melody}
+        Dicionário número do hino ("30", "314A") -> lista de (métrica, melodia).
+        Um hino pode ter mais de uma melodia (melodias alternativas).
     """
-    with open(metrics_path, "r", encoding="utf-8") as f:
-        content = f.read()
+    text = Path(metrics_path).read_text(encoding="utf-8")
+    text = re.sub(r"</td><td>", " ", text)
+    text = re.sub(r"</tr>", "\n", text)
+    text = re.sub(r"<[^>]+>", "", text)
 
-    hymn_data: dict[int, dict] = {}
-    current_metric = None
+    result: dict[str, list[tuple[str, str]]] = {}
+    current_metric: str | None = None
 
-    lines = content.split("\n")
-
-    for line in lines:
-        line = line.strip()
-
-        # Check for metric header (## metric)
-        if line.startswith("## "):
-            metric_candidate = line[3:].strip()
-            # Skip non-metric headers
-            if metric_candidate and not metric_candidate.startswith("Indice") and not metric_candidate.startswith("Métrica"):
-                current_metric = metric_candidate
-            continue
-
-        # Skip empty lines and image lines
+    for raw in text.split("\n"):
+        line = raw.strip()
         if not line or line.startswith("!["):
             continue
-
-        # Skip lines that are just metric patterns (not melody entries)
-        if re.match(r"^[\d\.\(\)\[\],\s\-]+$", line):
+        line = re.sub(r"^#+\s*", "", line)
+        if line.lower().startswith(_SKIP_HEADERS):
             continue
 
-        # Try to extract melody name and hymn number
-        # Pattern: MELODY_NAME .... NUMBER or MELODY_NAME NUMBER
-        match = re.match(r"^(.+?)\s*\.+\s*(\d+[A-Za-z]?)\s*$", line)
-        if not match:
-            # Try pattern without dots: MELODY_NAME NUMBER
-            match = re.match(r"^(.+?)\s+(\d+[A-Za-z]?)\s*$", line)
+        melody: str | None = None
+        numbers: str | None = None
+        if _METRIC_START.match(line):
+            match = _METRIC_WITH_ENTRY.match(line)
+            if match and re.search(r"[A-ZÀ-Ü]{3}", match.group(2)):
+                metric, melody, numbers = (
+                    match.group(1).strip(),
+                    match.group(2).strip(),
+                    match.group(3),
+                )
+            else:
+                metric = line
+            if not _is_garbage_metric(metric):
+                current_metric = metric
+            if not melody:
+                continue
+        else:
+            match = _ENTRY.match(line)
+            if not match:
+                continue
+            melody, numbers = match.group(1).strip(" ."), match.group(2)
 
-        if match:
-            melody_name = match.group(1).strip()
-            hymn_number_str = match.group(2).strip()
+        if current_metric is None or numbers is None:
+            continue
+        for number in re.findall(r"\d{1,3}\s*[A-Ba-b]?", numbers):
+            key = re.sub(r"\s", "", number).upper()
+            result.setdefault(key, []).append((current_metric, melody))
 
-            # Extract numeric part of hymn number
-            num_match = re.match(r"(\d+)", hymn_number_str)
-            if num_match:
-                hymn_number = int(num_match.group(1))
-
-                if hymn_number not in hymn_data:
-                    hymn_data[hymn_number] = {"metric": None, "melody": None}
-
-                # Set metric if not already set
-                if current_metric and hymn_data[hymn_number]["metric"] is None:
-                    hymn_data[hymn_number]["metric"] = current_metric
-
-                # Set melody if not already set
-                if melody_name and hymn_data[hymn_number]["melody"] is None:
-                    hymn_data[hymn_number]["melody"] = melody_name
-
-    return hymn_data
+    return result

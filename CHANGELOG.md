@@ -5,6 +5,59 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.2.0] - 2026-10-27
+
+### Added
+- Novo visual inspirado no hinário impresso: capa verde, números dourados,
+  melodia em versalete, letra em Literata; modo escuro automático
+- Novo logo (hinário aberto com nota) e ícones do app; os antigos estão em
+  `arquivo/logo-antigo`
+- Painel "Culto": nome e data, momento litúrgico de cada hino, arrastar para
+  reordenar, Compartilhar (WhatsApp no celular), cultos salvos no mesmo painel
+- No celular, barra fixa com o culto atual; no computador, painel ao lado
+- Tamanho da letra ajustável na página do hino (A− / A+)
+- Atalhos de tema na tela inicial
+
+### Changed
+- Resultados em lista, com botão "+" para incluir no culto direto da busca
+- "Salvar este culto" atualiza o culto salvo de mesmo nome e data
+
+## [1.1.0] - 2026-10-27
+
+### Added
+- Harpa Cristã (640 hinos, temas do índice de assuntos onde disponível)
+- Novo Cântico (405 hinos, temas pelas seções do índice por assunto)
+- Equivalências automáticas entre os 5 hinários, pelo texto da letra
+  (`web/data/equivalencias.json`), mais o índice oficial CTP × SH
+- Métrica e melodia herdadas do hino equivalente quando o hinário não as
+  traz (SH, Harpa, Novo Cântico), indicando a origem ("via CTP-13")
+- "Mesma métrica" e "mesma melodia" comparam entre hinários
+  (8.7.8.7.D = 8.7.8.7.8.7.8.7; C.M. = 8.6.8.6)
+- Busca por número com hinário ("sh 30", "ctp 314b") e resultados por relevância
+- Botão "Escolher" na tela do hino
+- Build reproduzível (`cantai build`) a partir de `data/base`
+- Testes automatizados (`pytest`) contra regressão dos dados publicados
+
+### Fixed
+- Métricas do CTP: o importador só lia cabeçalhos "##" e aplicava a métrica
+  anterior a dezenas de hinos (69 com "8.8.8.6 - 6.6.8.6")
+- Métricas e melodias do HCC: cerca de 60% estavam erradas; agora vêm do
+  índice de métricas do HCC lido por colunas
+- 172 letras do CTP cortadas na quebra de página do PDF, com rodapé
+  ("Hinário 1 - 136.pmd") dentro da letra
+- CTP 30, 36 e 314: as variantes A e B tinham o mesmo número e a segunda
+  ficava inacessível
+- Clicar num equivalente não abria o hino (número comparado como texto)
+- "Voltar" voltava para o hinário errado e empilhava a navegação em dobro
+- SH: números de página, notas de rodapé e marcas " i" dentro das letras
+- Temas do SH não eram mapeados para os temas canônicos
+- Link "GitHub" do Sobre apontava para um repositório que não é do projeto
+
+### Changed
+- Dados no formato unificado (`id`, `hymnal`, `topics_canonical`,
+  `metric_key`, `melody_keys`, `via`) em todos os hinários
+- Scripts antigos que sobrescreviam dados arquivados em `arquivo/scripts-antigos`
+
 ## [0.4.0] - 2026-07-13
 
 ### Added
