@@ -1,4 +1,4 @@
 #!/bin/bash
-cd "$(dirname "$0")/cantai"
-source .venv/bin/activate
-python -m cantai preview
+# Abre o site localmente em http://localhost:8000
+cd "$(dirname "$0")"
+PYTHONPATH=src python3 -m cantai.cli preview

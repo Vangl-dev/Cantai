@@ -1,73 +1,60 @@
-# Cantai2
+# Cantai
 
-Aplicação web para busca e consulta do Hinário Cantai Todos os Povos (CTP).
+Selecionador de hinos para o culto: letra, métrica, melodia original, temas e
+o mesmo hino em outros hinários. Ajuda a pianista a escolher as músicas.
 
-## Visão Geral
+## Hinários
 
-O projeto Cantai2 é uma aplicação web simples e testável para importar, armazenar e buscar hinos do hinário CTP (Cantai Todos os Povos). A aplicação permite busca por número, título, primeira linha, letra completa e tema.
+| Código | Hinário | Hinos | Métrica/melodia |
+|--------|---------|-------|-----------------|
+| CTP | Cantai Todos os Povos | 504 | índice de métricas |
+| HCC | Hinário para o Culto Cristão | 609 | índice de métricas |
+| SH  | Salmos e Hinos | 621 | herdada do equivalente |
+| HC  | Harpa Cristã | 640 | herdada do equivalente |
+| NC  | Novo Cântico | 405 | herdada do equivalente |
 
-## Funcionalidades
+Quando um hinário não traz métrica nem melodia, o hino herda as do mesmo
+hino em outro hinário (CTP primeiro, depois HCC), e a tela mostra de onde veio.
 
-- Importação de PDF do hinário CTP
-- Extração e armazenamento de todos os hinos
-- Busca textual por número, título, primeira linha, letra e tema
-- Interface web simples e responsiva
+## Como funciona
 
-## Pré-requisitos
-
-- Python 3.12+
-- pip ou uv
-
-## Instalação
-
-```bash
-# Clonar repositório
-git clone https://github.com/[org]/cantai2.git
-
-# Entrar no diretório
-cd cantai2
-
-# Criar ambiente virtual
-python -m venv .venv
-source .venv/bin/activate
-
-# Instalar dependências
-pip install -e ".[dev]"
 ```
+data/input/   PDFs e índices originais (fora do git)
+     │  cantai importar-harpa | importar-nc | importar-metricas | importar-continuacoes-ctp
+     ▼
+data/base/    dados de base, versionados (não editar à mão)
+     │  cantai build
+     ▼
+web/data/     o que o site publica (Netlify publica a pasta web/)
+```
+
+`cantai build` pode rodar quantas vezes quiser: não altera `data/base` e dá
+sempre o mesmo resultado. As equivalências entre hinários são calculadas pelo
+texto da letra (mesma sequência de palavras), mais o índice oficial CTP × SH.
 
 ## Uso
 
 ```bash
-# Executar CLI
-cantai --help
+pip install -e ".[dev]"
 
-# Rodar testes
-pytest
-
-# Verificar código
-ruff check src/ tests/
-mypy src/
+PYTHONPATH=src python3 -m cantai.cli build      # gera web/data
+PYTHONPATH=src python3 -m cantai.cli preview    # http://localhost:8000
+python3 -m pytest                                # testes
 ```
 
-## Estrutura
+## Antes de publicar
 
-```
-cantai2/
-├── src/
-│   └── cantai/           # Código fonte principal
-├── tests/                # Testes
-├── docs/                 # Documentação
-├── data/
-│   ├── input/            # Arquivos de entrada (PDFs)
-│   └── output/           # Arquivos de saída
-├── config.toml           # Configurações
-├── pyproject.toml        # Configurações do projeto
-└── README.md
-```
+Rode `pytest`. Os testes conferem contagens, métricas conhecidas,
+equivalências e se `web/data` está igual ao resultado do build. Se algum
+falhar, algo que estava certo foi desfeito.
 
-## Documentação
+## Limitações conhecidas
 
-- [CHANGELOG.md](CHANGELOG.md) - Histórico de versões
+- Traduções diferentes do mesmo hino original (ex.: "Castelo Forte" na Harpa
+  e no CTP) não são ligadas, pois o texto é outro.
+- O índice de temas da Harpa disponível está incompleto (403 de 640 hinos).
+- O hino 378 do Novo Cântico não existe no PDF de origem.
+- O HCC não tem tema de Natal no índice usado.
 
 ## Licença
 

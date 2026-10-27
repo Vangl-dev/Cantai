@@ -7,18 +7,32 @@
     "hcc": [
       "ADORAÇÃO E LOUVOR"
     ],
+    "hc": [
+      "DEUS, O FILHO: Louvores",
+      "LOUVORES AO DEUS TRINO",
+      "DEUS, O PAI",
+      "CULTO PÚBLICO"
+    ],
+    "nc": [
+      "Intróitos",
+      "Deus Santo",
+      "Deus Soberano",
+      "Deus Criador",
+      "Deus Senhor",
+      "Deus Salvador",
+      "Deus Vencedor"
+    ],
     "notes": "Tema central de adoração"
   },
-  "Palavra de Deus": {
+  "Advento": {
     "ctp": [
-      "Palavra de Deus",
-      "Proclamação da Palavra",
-      "Leitura da Palavra (Após a)"
+      "Advento"
     ],
-    "hcc": [
-      "A PALAVRA DE DEUS"
-    ],
-    "notes": "Proclamação e estudo da Palavra"
+    "hcc": [],
+    "hc": [],
+    "nc": [
+      "Advento"
+    ]
   },
   "Aniversário": {
     "ctp": [
@@ -26,6 +40,10 @@
     ],
     "hcc": [
       "ANIVERSÁRIO"
+    ],
+    "hc": [],
+    "nc": [
+      "Aniversário"
     ],
     "notes": "Celebração de aniversário"
   },
@@ -36,6 +54,10 @@
     "hcc": [
       "ANO NOVO"
     ],
+    "hc": [],
+    "nc": [
+      "Ano Novo"
+    ],
     "notes": "Celebração do Ano Novo"
   },
   "Ascensão": {
@@ -45,52 +67,26 @@
     "hcc": [
       "ASCENSÃO"
     ],
+    "hc": [],
+    "nc": [
+      "Ascensão"
+    ],
     "notes": "Ascensão de Cristo"
   },
-  "Comunhão": {
+  "Ação de Graças": {
     "ctp": [
-      "Comunhão"
+      "Ação de Graças",
+      "Oração de Gratidão (Após"
     ],
     "hcc": [
-      "COMUNHÃO COM DEUS"
+      "GRATIDÃO"
     ],
-    "notes": "Comunhão com Deus e entre irmãos"
-  },
-  "Consagração": {
-    "ctp": [
-      "Consagração"
+    "hc": [
+      "Gratidão"
     ],
-    "hcc": [
-      "CONSAGRAÇÃO"
-    ],
-    "notes": "Consagração e entrega a Deus"
-  },
-  "Trindade": {
-    "ctp": [
-      "Trindade"
-    ],
-    "hcc": [
-      "DEUS TRIÚNO"
-    ],
-    "notes": "Doutrina da Trindade"
-  },
-  "Confiança": {
-    "ctp": [
-      "Confiança"
-    ],
-    "hcc": [
-      "FÉ E CONFIANÇA"
-    ],
-    "notes": "Fé e confiança em Deus"
-  },
-  "Igreja": {
-    "ctp": [
-      "Igreja"
-    ],
-    "hcc": [
-      "IGREJA, BATISMO"
-    ],
-    "notes": "A Igreja de Cristo"
+    "nc": [
+      "Gratidão"
+    ]
   },
   "Batismo": {
     "ctp": [
@@ -101,7 +97,124 @@
     "hcc": [
       "IGREJA, BATISMO"
     ],
+    "hc": [],
+    "nc": [
+      "Batismo"
+    ],
     "notes": "Sacramento do batismo"
+  },
+  "Comunhão": {
+    "ctp": [
+      "Comunhão"
+    ],
+    "hcc": [
+      "COMUNHÃO COM DEUS",
+      "FRATERNAL"
+    ],
+    "hc": [
+      "Comunhão"
+    ],
+    "nc": [
+      "Companhia do Senhor",
+      "Fraternidade",
+      "Ceia do Senhor"
+    ],
+    "notes": "Comunhão com Deus e entre irmãos"
+  },
+  "Confiança": {
+    "ctp": [
+      "Confiança"
+    ],
+    "hcc": [
+      "FÉ E CONFIANÇA",
+      "GUIA",
+      "DIREÇÃO"
+    ],
+    "hc": [
+      "Firmeza",
+      "Proteção e ajuda",
+      "Guia",
+      "Paz e descanso"
+    ],
+    "nc": [
+      "Confiança",
+      "Proteção",
+      "Deus Fiel",
+      "Deus Providente",
+      "Fé",
+      "Fidelidade"
+    ],
+    "notes": "Fé e confiança em Deus"
+  },
+  "Consagração": {
+    "ctp": [
+      "Consagração"
+    ],
+    "hcc": [
+      "CONSAGRAÇÃO",
+      "SUBMISSÃO",
+      "ASPIRAÇÃO CRISTÃ"
+    ],
+    "hc": [
+      "Consagração",
+      "Aspiração"
+    ],
+    "nc": [
+      "Submissão",
+      "Dedicação",
+      "Aspiração",
+      "Santificação"
+    ],
+    "notes": "Consagração e entrega a Deus"
+  },
+  "Espírito Santo": {
+    "ctp": [
+      "Espírito Santo",
+      "Pentecostes"
+    ],
+    "hcc": [],
+    "hc": [
+      "DEUS, O ESPÍRITO SANTO",
+      "Anunciado",
+      "Invocado",
+      "Recebido"
+    ],
+    "nc": [
+      "Espírito Instruidor",
+      "Espírito Consolador",
+      "Espírito Vivificador"
+    ]
+  },
+  "Evangelho": {
+    "ctp": [
+      "Evangelho",
+      "Leitura do Evangelho"
+    ],
+    "hcc": [
+      "SALVAÇÃO",
+      "REDENTOR"
+    ],
+    "hc": [
+      "A mensagem do Evangelho",
+      "Sua graça, vida e amor"
+    ],
+    "nc": [
+      "Salvação",
+      "Ministério"
+    ]
+  },
+  "Igreja": {
+    "ctp": [
+      "Igreja"
+    ],
+    "hcc": [
+      "IGREJA, BATISMO"
+    ],
+    "hc": [],
+    "nc": [
+      "Igreja Militante"
+    ],
+    "notes": "A Igreja de Cristo"
   },
   "Intercessão": {
     "ctp": [
@@ -111,76 +224,28 @@
     "hcc": [
       "INTERCESSÃO"
     ],
+    "hc": [],
+    "nc": [
+      "Cidade"
+    ],
     "notes": "Oração de intercessão"
-  },
-  "Oração": {
-    "ctp": [
-      "Súplica",
-      "Oração de Confissão",
-      "Oração de Gratidão (Após",
-      "Oração por Iluminação",
-      "Pai Nosso"
-    ],
-    "hcc": [
-      "ORAÇÃO E SÚPLICA"
-    ],
-    "notes": "Oração em suas diversas formas"
-  },
-  "Pátria": {
-    "ctp": [
-      "Pátria"
-    ],
-    "hcc": [
-      "PATRIA"
-    ],
-    "notes": "Amor à pátria"
-  },
-  "Perdão": {
-    "ctp": [
-      "Confissão",
-      "Declaração de Perdão"
-    ],
-    "hcc": [
-      "PERDÃO"
-    ],
-    "notes": "Confissão e perdão dos pecados"
-  },
-  "Segunda Vinda": {
-    "ctp": [
-      "Segunda Vinda"
-    ],
-    "hcc": [
-      "SEGUNDA VINDA"
-    ],
-    "notes": "Retorno de Cristo"
-  },
-  "Testemunho": {
-    "ctp": [
-      "Testemunho"
-    ],
-    "hcc": [
-      "TESTEMUNHO"
-    ],
-    "notes": "Testemunho de fé"
-  },
-  "Morte e Funerais": {
-    "ctp": [
-      "Funeral"
-    ],
-    "hcc": [
-      "MORTE"
-    ],
-    "notes": "Morte e esperança eterna"
   },
   "Louvor": {
     "ctp": [
       "Louvor",
-      "Jubilação"
+      "Jubilação",
+      "Introito"
     ],
     "hcc": [
       "E LOUVOR",
       "ALEGRIA CRISTÃ"
     ],
+    "hc": [
+      "Gozo",
+      "Satisfação",
+      "DEUS, O FILHO: Louvores"
+    ],
+    "nc": [],
     "notes": "Louvor e adoração alegre"
   },
   "Missões": {
@@ -192,17 +257,36 @@
     ],
     "hcc": [
       "APELO",
-      "SERVIÇO CRISTÃO"
+      "SERVIÇO CRISTÃO",
+      "MINISTÉRIO"
+    ],
+    "hc": [
+      "Apelo",
+      "Decisão"
+    ],
+    "nc": [
+      "A Grande Comissão",
+      "Evangelização",
+      "Trabalho Cristão",
+      "Convite",
+      "Decisão"
     ],
     "notes": "Missões e evangelismo"
   },
-  "Espírito Santo": {
+  "Morte e Funerais": {
     "ctp": [
-      "Espírito Santo",
-      "Pentecostes"
+      "Funeral"
     ],
-    "hcc": [],
-    "notes": "Somente CTP possui este tema"
+    "hcc": [
+      "MORTE",
+      "VIDA FUTURA"
+    ],
+    "hc": [],
+    "nc": [
+      "Lar Celestial",
+      "Esperança"
+    ],
+    "notes": "Morte e esperança eterna"
   },
   "Natal": {
     "ctp": [
@@ -211,16 +295,28 @@
       "Epifania"
     ],
     "hcc": [],
-    "notes": "Somente CTP possui este tema"
-  },
-  "Páscoa": {
-    "ctp": [
-      "Páscoa",
-      "Ressurreição",
-      "Tempo Pascal"
+    "hc": [
+      "Seu nascimento (Natal)"
     ],
-    "hcc": [],
-    "notes": "Somente CTP possui este tema"
+    "nc": [
+      "Natal"
+    ]
+  },
+  "Oração": {
+    "ctp": [
+      "Súplica",
+      "Oração de Confissão",
+      "Oração por Iluminação",
+      "Pai Nosso"
+    ],
+    "hcc": [
+      "ORAÇÃO E SÚPLICA"
+    ],
+    "hc": [],
+    "nc": [
+      "Oração"
+    ],
+    "notes": "Oração em suas diversas formas"
   },
   "Paixão de Cristo": {
     "ctp": [
@@ -230,14 +326,120 @@
       "Domingo de Ramos"
     ],
     "hcc": [],
-    "notes": "Somente CTP possui este tema"
+    "hc": [
+      "Seus sofrimentos",
+      "Sua morte",
+      "Seu Sangue"
+    ],
+    "nc": [
+      "Paixão e Morte",
+      "Entrada Triunfal"
+    ]
   },
-  "Evangelho": {
+  "Palavra de Deus": {
     "ctp": [
-      "Evangelho",
-      "Leitura do Evangelho"
+      "Palavra de Deus",
+      "Proclamação da Palavra",
+      "Leitura da Palavra (Após a)"
+    ],
+    "hcc": [
+      "A PALAVRA DE DEUS"
+    ],
+    "hc": [
+      "A Palavra do Senhor"
+    ],
+    "nc": [
+      "Bíblia",
+      "Escola Dominical"
+    ],
+    "notes": "Proclamação e estudo da Palavra"
+  },
+  "Perdão": {
+    "ctp": [
+      "Confissão",
+      "Declaração de Perdão"
+    ],
+    "hcc": [
+      "PERDÃO"
+    ],
+    "hc": [],
+    "nc": [
+      "Contrição e Arrependimento",
+      "Perdão"
+    ],
+    "notes": "Confissão e perdão dos pecados"
+  },
+  "Páscoa": {
+    "ctp": [
+      "Páscoa",
+      "Ressurreição",
+      "Tempo Pascal"
     ],
     "hcc": [],
-    "notes": "Somente CTP possui este tema"
+    "hc": [
+      "Sua ressurreição"
+    ],
+    "nc": [
+      "Ressurreição"
+    ]
+  },
+  "Pátria": {
+    "ctp": [
+      "Pátria"
+    ],
+    "hcc": [
+      "PATRIA"
+    ],
+    "hc": [],
+    "nc": [
+      "Pátria"
+    ],
+    "notes": "Amor à pátria"
+  },
+  "Segunda Vinda": {
+    "ctp": [
+      "Segunda Vinda"
+    ],
+    "hcc": [
+      "SEGUNDA VINDA"
+    ],
+    "hc": [
+      "Sua segunda vinda"
+    ],
+    "nc": [
+      "Segunda Vinda"
+    ],
+    "notes": "Retorno de Cristo"
+  },
+  "Testemunho": {
+    "ctp": [
+      "Testemunho"
+    ],
+    "hcc": [
+      "TESTEMUNHO"
+    ],
+    "hc": [
+      "Testemunhos"
+    ],
+    "nc": [
+      "Testemunho",
+      "Convertidos"
+    ],
+    "notes": "Testemunho de fé"
+  },
+  "Trindade": {
+    "ctp": [
+      "Trindade"
+    ],
+    "hcc": [
+      "DEUS TRIÚNO"
+    ],
+    "hc": [
+      "LOUVORES AO DEUS TRINO"
+    ],
+    "nc": [
+      "Deus Trino"
+    ],
+    "notes": "Doutrina da Trindade"
   }
 }
