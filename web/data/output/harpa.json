@@ -20,6 +20,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -36,6 +37,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -57,6 +59,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -77,6 +80,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -97,6 +101,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -113,6 +118,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -129,6 +135,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -147,6 +154,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -163,6 +171,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -184,6 +193,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -200,6 +210,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -220,6 +231,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -240,6 +252,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -260,6 +273,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -280,6 +294,7 @@
    ],
    "metric": "6.6.9.6.6.10. com estribilho",
    "melody": "HUDSON",
+   "key": null,
    "via": "HCC-293",
    "metric_key": "6.6.9.6.6.10",
    "melody_keys": [
@@ -298,6 +313,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -318,6 +334,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -338,6 +355,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -358,6 +376,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -376,6 +395,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -396,6 +416,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -412,6 +433,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -433,6 +455,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -453,6 +476,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -474,6 +498,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -490,6 +515,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -510,6 +536,7 @@
    ],
    "metric": "9.9.9.8.6",
    "melody": "ST. MARGARET",
+   "key": null,
    "via": "CTP-117",
    "metric_key": "9.9.9.8.6",
    "melody_keys": [
@@ -528,6 +555,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -548,6 +576,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -568,6 +597,7 @@
    ],
    "metric": "8.7.8.7. com estribilho",
    "melody": "RECONHECIMENTO",
+   "key": null,
    "via": "HCC-435",
    "metric_key": "8.7.8.7",
    "melody_keys": [
@@ -591,6 +621,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -611,6 +642,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -631,6 +663,7 @@
    ],
    "metric": "11.10.11.10",
    "melody": "HOLD THOU MY HAND",
+   "key": null,
    "via": "CTP-154",
    "metric_key": "11.10.11.10",
    "melody_keys": [
@@ -649,6 +682,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -669,6 +703,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -685,6 +720,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -705,6 +741,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -725,6 +762,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -745,6 +783,7 @@
    ],
    "metric": "8.8.8.9.8.7.8.9 - 6.6.8.8",
    "melody": "BLESSED BE THE FOUNTAIN",
+   "key": null,
    "via": "CTP-98",
    "metric_key": "8.8.8.9.8.7.8.9",
    "melody_keys": [
@@ -763,6 +802,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -784,6 +824,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -802,6 +843,7 @@
    "topics_canonical": [],
    "metric": "8.6.8.6 com estribilho",
    "melody": "DIADEM",
+   "key": null,
    "via": "CTP-91",
    "metric_key": "8.6.8.6",
    "melody_keys": [
@@ -820,6 +862,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -840,6 +883,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -858,6 +902,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -874,6 +919,7 @@
    "topics_canonical": [],
    "metric": "11.6.11.6 - 6.8.8.7",
    "melody": "THE BANNER OF THE CROSS",
+   "key": null,
    "via": "CTP-412",
    "metric_key": "11.6.11.6",
    "melody_keys": [
@@ -894,6 +940,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -914,6 +961,7 @@
    ],
    "metric": "15.11.15.11 - 8.7.8.11",
    "melody": "WHEN THE ROLL IS CALLED",
+   "key": null,
    "via": "CTP-199",
    "metric_key": "15.11.15.11",
    "melody_keys": [
@@ -936,6 +984,7 @@
    ],
    "metric": "11.11 - 12.11.[12.11]",
    "melody": "PROMISE OF GOD",
+   "key": null,
    "via": "CTP-140",
    "metric_key": "11.11",
    "melody_keys": [
@@ -954,6 +1003,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -975,6 +1025,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -995,6 +1046,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -1011,6 +1063,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -1031,6 +1084,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -1051,6 +1105,7 @@
    ],
    "metric": "10.7.10.7. com estribilho",
    "melody": "I AM THINE",
+   "key": null,
    "via": "HCC-361",
    "metric_key": "10.7.10.7",
    "melody_keys": [
@@ -1073,6 +1128,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -1089,6 +1145,7 @@
    "topics_canonical": [],
    "metric": "8.7.8.7 - 8.7.8.7",
    "melody": "GOD IS HERE",
+   "key": null,
    "via": "CTP-229",
    "metric_key": "8.7.8.7",
    "melody_keys": [
@@ -1111,6 +1168,7 @@
    ],
    "metric": "11.11.11.14 - 8.13.[8.13]",
    "melody": "NEVER ALONE",
+   "key": null,
    "via": "CTP-184",
    "metric_key": "11.11.11.14",
    "melody_keys": [
@@ -1133,6 +1191,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -1153,6 +1212,7 @@
    ],
    "metric": "14.14.12.10 - 12.12.12.10",
    "melody": "REALIDADE",
+   "key": null,
    "via": "CTP-86",
    "metric_key": "14.14.12.10",
    "melody_keys": [
@@ -1175,6 +1235,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -1195,6 +1256,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -1211,6 +1273,7 @@
    "topics_canonical": [],
    "metric": "11.11.11.7.D - 12.13.11.11.11.7",
    "melody": "HAPPY SONG",
+   "key": null,
    "via": "CTP-167",
    "metric_key": "11.11.11.7.11.11.11.7",
    "melody_keys": [
@@ -1234,6 +1297,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -1250,6 +1314,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -1270,6 +1335,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -1286,6 +1352,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -1306,6 +1373,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -1326,6 +1394,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -1346,6 +1415,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -1362,6 +1432,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -1378,6 +1449,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -1398,6 +1470,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -1418,6 +1491,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -1438,6 +1512,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -1458,6 +1533,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -1474,6 +1550,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -1494,6 +1571,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -1514,6 +1592,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -1534,6 +1613,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -1554,6 +1634,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -1574,6 +1655,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -1594,6 +1676,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -1614,6 +1697,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -1634,6 +1718,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -1654,6 +1739,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -1674,6 +1760,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -1690,6 +1777,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -1710,6 +1798,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -1730,6 +1819,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -1746,6 +1836,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -1762,6 +1853,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -1778,6 +1870,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -1794,6 +1887,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -1814,6 +1908,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -1830,6 +1925,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -1850,6 +1946,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -1870,6 +1967,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -1890,6 +1988,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -1910,6 +2009,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -1930,6 +2030,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -1950,6 +2051,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -1966,6 +2068,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -1986,6 +2089,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -2006,6 +2110,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -2024,6 +2129,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -2044,6 +2150,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -2060,6 +2167,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -2080,6 +2188,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -2096,6 +2205,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -2116,6 +2226,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -2134,6 +2245,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -2154,6 +2266,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -2174,6 +2287,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -2190,6 +2304,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -2210,6 +2325,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -2230,6 +2346,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -2246,6 +2363,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -2266,6 +2384,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -2286,6 +2405,7 @@
    ],
    "metric": "8.7.9.9.6.[6]",
    "melody": "STILLE NACHT",
+   "key": null,
    "via": "CTP-337",
    "metric_key": "8.7.9.9.6",
    "melody_keys": [
@@ -2308,6 +2428,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -2328,6 +2449,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -2348,6 +2470,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -2369,6 +2492,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -2389,6 +2513,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -2409,6 +2534,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -2425,6 +2551,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -2445,6 +2572,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -2465,6 +2593,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -2485,6 +2614,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -2505,6 +2635,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -2521,6 +2652,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -2541,6 +2673,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -2561,6 +2694,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -2579,6 +2713,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -2595,6 +2730,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -2615,6 +2751,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -2635,6 +2772,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -2655,6 +2793,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -2675,6 +2814,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -2695,6 +2835,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -2711,6 +2852,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -2729,6 +2871,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -2747,6 +2890,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -2767,6 +2911,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -2787,6 +2932,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -2803,6 +2949,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -2824,6 +2971,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -2840,6 +2988,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -2856,6 +3005,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -2872,6 +3022,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -2888,6 +3039,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -2904,6 +3056,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -2922,6 +3075,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -2942,6 +3096,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -2962,6 +3117,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -2982,6 +3138,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -3002,6 +3159,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -3018,6 +3176,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -3034,6 +3193,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -3050,6 +3210,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -3070,6 +3231,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -3090,6 +3252,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -3110,6 +3273,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -3126,6 +3290,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -3146,6 +3311,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -3162,6 +3328,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -3182,6 +3349,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -3202,6 +3370,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -3222,6 +3391,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -3242,6 +3412,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -3262,6 +3433,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -3283,6 +3455,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -3304,6 +3477,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -3322,6 +3496,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -3343,6 +3518,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -3363,6 +3539,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -3383,6 +3560,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -3403,6 +3581,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -3423,6 +3602,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -3439,6 +3619,7 @@
    "topics_canonical": [],
    "metric": "8.7.8.7.D",
    "melody": "AWAYS CHEERFUL",
+   "key": null,
    "via": "CTP-193",
    "metric_key": "8.7.8.7.8.7.8.7",
    "melody_keys": [
@@ -3461,6 +3642,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -3481,6 +3663,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -3501,6 +3684,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -3522,6 +3706,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -3538,6 +3723,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -3558,6 +3744,7 @@
    ],
    "metric": "6.4.6.4.6.6.[6.]4",
    "melody": "BETHANY",
+   "key": null,
    "via": "CTP-180",
    "metric_key": "6.4.6.4.6.6.4",
    "melody_keys": [
@@ -3580,6 +3767,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -3600,6 +3788,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -3618,6 +3807,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -3638,6 +3828,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -3658,6 +3849,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -3678,6 +3870,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -3698,6 +3891,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -3714,6 +3908,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -3732,6 +3927,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -3748,6 +3944,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -3766,6 +3963,7 @@
    "topics_canonical": [],
    "metric": "7.6.11. T - 7.6.11",
    "melody": "THE LILY OF THE VALLEY",
+   "key": null,
    "via": "CTP-113",
    "metric_key": "7.6.11",
    "melody_keys": [
@@ -3784,6 +3982,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -3802,6 +4001,7 @@
    "topics_canonical": [],
    "metric": "8.7.8.7.D",
    "melody": "ERIE",
+   "key": null,
    "via": "CTP-212",
    "metric_key": "8.7.8.7.8.7.8.7",
    "melody_keys": [
@@ -3826,6 +4026,7 @@
    ],
    "metric": "8.8.8.8 com estribilho",
    "melody": "HAPPY DAY",
+   "key": null,
    "via": "CTP-116",
    "metric_key": "8.8.8.8",
    "melody_keys": [
@@ -3844,6 +4045,7 @@
    "topics_canonical": [],
    "metric": "10.9.10.9.3.[3.]10.9.9",
    "melody": "WE SPEAK OF THE REALMS",
+   "key": null,
    "via": "CTP-402",
    "metric_key": "10.9.10.9.3.10.9.9",
    "melody_keys": [
@@ -3862,6 +4064,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -3878,6 +4081,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -3894,6 +4098,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -3914,6 +4119,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -3930,6 +4136,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -3950,6 +4157,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -3970,6 +4178,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -3990,6 +4199,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -4010,6 +4220,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -4026,6 +4237,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -4042,6 +4254,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -4058,6 +4271,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -4074,6 +4288,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -4094,6 +4309,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -4114,6 +4330,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -4134,6 +4351,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -4154,6 +4372,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -4170,6 +4389,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -4186,6 +4406,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -4206,6 +4427,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -4226,6 +4448,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -4242,6 +4465,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -4258,6 +4482,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -4274,6 +4499,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -4294,6 +4520,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -4316,6 +4543,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -4336,6 +4564,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -4352,6 +4581,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -4372,6 +4602,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -4392,6 +4623,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -4408,6 +4640,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -4428,6 +4661,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -4448,6 +4682,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -4468,6 +4703,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -4488,6 +4724,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -4508,6 +4745,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -4528,6 +4766,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -4548,6 +4787,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -4564,6 +4804,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -4580,6 +4821,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -4600,6 +4842,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -4621,6 +4864,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -4641,6 +4885,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -4661,6 +4906,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -4677,6 +4923,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -4697,6 +4944,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -4717,6 +4965,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -4737,6 +4986,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -4753,6 +5003,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -4774,6 +5025,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -4790,6 +5042,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -4810,6 +5063,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -4830,6 +5084,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -4850,6 +5105,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -4866,6 +5122,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -4886,6 +5143,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -4906,6 +5164,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -4922,6 +5181,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -4942,6 +5202,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -4962,6 +5223,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -4978,6 +5240,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -4998,6 +5261,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -5018,6 +5282,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -5038,6 +5303,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -5058,6 +5324,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -5074,6 +5341,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -5095,6 +5363,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -5115,6 +5384,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -5131,6 +5401,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -5151,6 +5422,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -5171,6 +5443,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -5189,6 +5462,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -5209,6 +5483,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -5225,6 +5500,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -5245,6 +5521,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -5265,6 +5542,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -5281,6 +5559,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -5297,6 +5576,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -5317,6 +5597,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -5337,6 +5618,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -5357,6 +5639,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -5377,6 +5660,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -5397,6 +5681,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -5417,6 +5702,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -5437,6 +5723,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -5457,6 +5744,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -5477,6 +5765,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -5497,6 +5786,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -5517,6 +5807,7 @@
    ],
    "metric": "6.6.9.D com estribilho",
    "melody": "OLD RUGGED CROSS",
+   "key": null,
    "via": "CTP-368",
    "metric_key": "6.6.9.6.6.9",
    "melody_keys": [
@@ -5539,6 +5830,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -5555,6 +5847,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -5577,6 +5870,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -5598,6 +5892,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -5614,6 +5909,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -5634,6 +5930,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -5650,6 +5947,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -5670,6 +5968,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -5690,6 +5989,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -5710,6 +6010,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -5726,6 +6027,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -5746,6 +6048,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -5762,6 +6065,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -5778,6 +6082,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -5798,6 +6103,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -5819,6 +6125,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -5839,6 +6146,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -5859,6 +6167,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -5881,6 +6190,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -5899,6 +6209,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -5919,6 +6230,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -5940,6 +6252,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -5956,6 +6269,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -5976,6 +6290,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -5992,6 +6307,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -6012,6 +6328,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -6032,6 +6349,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -6052,6 +6370,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -6073,6 +6392,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -6095,6 +6415,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -6115,6 +6436,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -6135,6 +6457,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -6151,6 +6474,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -6171,6 +6495,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -6187,6 +6512,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -6205,6 +6531,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -6223,6 +6550,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -6243,6 +6571,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -6263,6 +6592,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -6279,6 +6609,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -6295,6 +6626,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -6311,6 +6643,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -6331,6 +6664,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -6351,6 +6685,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -6371,6 +6706,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -6387,6 +6723,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -6407,6 +6744,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -6423,6 +6761,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -6443,6 +6782,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -6463,6 +6803,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -6483,6 +6824,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -6503,6 +6845,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -6521,6 +6864,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -6541,6 +6885,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -6557,6 +6902,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -6577,6 +6923,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -6597,6 +6944,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -6617,6 +6965,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -6637,6 +6986,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -6657,6 +7007,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -6673,6 +7024,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -6693,6 +7045,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -6713,6 +7066,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -6729,6 +7083,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -6745,6 +7100,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -6761,6 +7117,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -6781,6 +7138,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -6801,6 +7159,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -6821,6 +7180,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -6837,6 +7197,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -6857,6 +7218,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -6877,6 +7239,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -6897,6 +7260,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -6913,6 +7277,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -6933,6 +7298,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -6949,6 +7315,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -6969,6 +7336,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -6989,6 +7357,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -7009,6 +7378,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -7029,6 +7399,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -7045,6 +7416,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -7065,6 +7437,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -7085,6 +7458,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -7101,6 +7475,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -7117,6 +7492,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -7137,6 +7513,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -7153,6 +7530,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -7173,6 +7551,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -7195,6 +7574,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -7211,6 +7591,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -7231,6 +7612,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -7251,6 +7633,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -7271,6 +7654,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -7287,6 +7671,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -7303,6 +7688,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -7323,6 +7709,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -7341,6 +7728,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -7357,6 +7745,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -7377,6 +7766,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -7397,6 +7787,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -7413,6 +7804,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -7431,6 +7823,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -7447,6 +7840,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -7463,6 +7857,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -7483,6 +7878,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -7503,6 +7899,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -7523,6 +7920,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -7539,6 +7937,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -7559,6 +7958,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -7579,6 +7979,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -7597,6 +7998,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -7617,6 +8019,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -7637,6 +8040,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -7657,6 +8061,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -7677,6 +8082,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -7693,6 +8099,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -7709,6 +8116,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -7725,6 +8133,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -7745,6 +8154,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -7765,6 +8175,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -7786,6 +8197,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -7804,6 +8216,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -7820,6 +8233,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -7836,6 +8250,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -7852,6 +8267,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -7872,6 +8288,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -7888,6 +8305,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -7904,6 +8322,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -7924,6 +8343,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -7944,6 +8364,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -7960,6 +8381,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -7976,6 +8398,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -7996,6 +8419,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -8016,6 +8440,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -8036,6 +8461,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -8052,6 +8478,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -8070,6 +8497,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -8090,6 +8518,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -8112,6 +8541,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -8132,6 +8562,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -8152,6 +8583,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -8168,6 +8600,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -8188,6 +8621,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -8208,6 +8642,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -8229,6 +8664,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -8249,6 +8685,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -8269,6 +8706,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -8289,6 +8727,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -8309,6 +8748,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -8329,6 +8769,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -8349,6 +8790,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -8369,6 +8811,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -8389,6 +8832,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -8409,6 +8853,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -8429,6 +8874,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -8449,6 +8895,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -8465,6 +8912,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -8481,6 +8929,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -8499,6 +8948,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -8519,6 +8969,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -8539,6 +8990,7 @@
    ],
    "metric": "12.12.13.11. com estribilho",
    "melody": "FOLLOW ON",
+   "key": null,
    "via": "HCC-469",
    "metric_key": "12.12.13.11",
    "melody_keys": [
@@ -8561,6 +9013,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -8582,6 +9035,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -8602,6 +9056,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -8622,6 +9077,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -8642,6 +9098,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -8662,6 +9119,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -8682,6 +9140,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -8700,6 +9159,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -8720,6 +9180,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -8741,6 +9202,7 @@
    ],
    "metric": "7.7.7.7",
    "melody": "TRUSTING MORE",
+   "key": null,
    "via": "CTP-186",
    "metric_key": "7.7.7.7",
    "melody_keys": [
@@ -8759,6 +9221,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -8779,6 +9242,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -8799,6 +9263,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -8819,6 +9284,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -8835,6 +9301,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -8855,6 +9322,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -8875,6 +9343,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -8891,6 +9360,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -8907,6 +9377,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -8927,6 +9398,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -8947,6 +9419,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -8967,6 +9440,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -8987,6 +9461,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -9008,6 +9483,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -9024,6 +9500,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -9044,6 +9521,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -9060,6 +9538,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -9076,6 +9555,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -9096,6 +9576,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -9112,6 +9593,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -9132,6 +9614,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -9152,6 +9635,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -9168,6 +9652,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -9188,6 +9673,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -9209,6 +9695,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -9225,6 +9712,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -9245,6 +9733,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -9265,6 +9754,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -9285,6 +9775,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -9305,6 +9796,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -9325,6 +9817,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -9341,6 +9834,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -9361,6 +9855,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -9381,6 +9876,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -9401,6 +9897,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -9421,6 +9918,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -9441,6 +9939,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -9457,6 +9956,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -9473,6 +9973,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -9489,6 +9990,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -9505,6 +10007,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -9521,6 +10024,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -9541,6 +10045,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -9561,6 +10066,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -9581,6 +10087,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -9601,6 +10108,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -9617,6 +10125,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -9633,6 +10142,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -9655,6 +10165,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -9675,6 +10186,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -9695,6 +10207,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -9715,6 +10228,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -9731,6 +10245,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -9749,6 +10264,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -9765,6 +10281,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -9785,6 +10302,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -9805,6 +10323,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -9821,6 +10340,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -9841,6 +10361,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -9859,6 +10380,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -9879,6 +10401,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -9899,6 +10422,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -9919,6 +10443,7 @@
    ],
    "metric": "8.7.8.7.8.7.6. com estribilho",
    "melody": "BATTLE HYMN",
+   "key": null,
    "via": "HCC-153",
    "metric_key": "8.7.8.7.8.7.6",
    "melody_keys": [
@@ -9941,6 +10466,7 @@
    ],
    "metric": "11.10.11.10 - 10.8.10.8",
    "melody": "O STORE GUD / HOW GREAT",
+   "key": null,
    "via": "CTP-94",
    "metric_key": "11.10.11.10",
    "melody_keys": [
@@ -9964,6 +10490,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -9984,6 +10511,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -10000,6 +10528,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -10018,6 +10547,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -10036,6 +10566,7 @@
    "topics_canonical": [],
    "metric": "6.7.6.7 - 6.7.[6.7]",
    "melody": "PRECIOUS NAME",
+   "key": null,
    "via": "CTP-283",
    "metric_key": "6.7.6.7",
    "melody_keys": [
@@ -10056,6 +10587,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -10074,6 +10606,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -10094,6 +10627,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -10114,6 +10648,7 @@
    ],
    "metric": "11.10.11.10 com estribilho",
    "melody": "FAITHFULNESS",
+   "key": null,
    "via": "CTP-63",
    "metric_key": "11.10.11.10",
    "melody_keys": [
@@ -10134,6 +10669,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -10154,6 +10690,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -10172,6 +10709,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -10192,6 +10730,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -10212,6 +10751,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -10232,6 +10772,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -10252,6 +10793,7 @@
    ],
    "metric": "7.6.7.6.D - 7.6.7.6",
    "melody": "EVANGEL",
+   "key": null,
    "via": "CTP-109",
    "metric_key": "7.6.7.6.7.6.7.6",
    "melody_keys": [
@@ -10274,6 +10816,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -10294,6 +10837,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -10314,6 +10858,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -10334,6 +10879,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -10354,6 +10900,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -10374,6 +10921,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -10394,6 +10942,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -10414,6 +10963,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -10434,6 +10984,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -10450,6 +11001,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -10470,6 +11022,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -10490,6 +11043,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -10508,6 +11062,7 @@
    "topics_canonical": [],
    "metric": "7.7.7.7.",
    "melody": "EQUATORIAL",
+   "key": null,
    "via": "HCC-146",
    "metric_key": "7.7.7.7",
    "melody_keys": [
@@ -10530,6 +11085,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -10550,6 +11106,7 @@
    ],
    "metric": "8.7.8.7.4.[4.]7.[7]",
    "melody": "CWM RHONDDA",
+   "key": null,
    "via": "CTP-101",
    "metric_key": "8.7.8.7.4.7",
    "melody_keys": [
@@ -10572,6 +11129,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -10592,6 +11150,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -10612,6 +11171,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -10632,6 +11192,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -10650,6 +11211,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -10670,6 +11232,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -10690,6 +11253,7 @@
    ],
    "metric": "11.11.11.11 - 9.9.9.11",
    "melody": "COUNT YOUR BLESSINGS",
+   "key": null,
    "via": "CTP-231",
    "metric_key": "11.11.11.11",
    "melody_keys": [
@@ -10712,6 +11276,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -10732,6 +11297,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -10752,6 +11318,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -10772,6 +11339,7 @@
    ],
    "metric": "11.7.11.7. - 11.11.7",
    "melody": "SOFTLY AND TENDERLY",
+   "key": null,
    "via": "CTP-305",
    "metric_key": "11.7.11.7",
    "melody_keys": [
@@ -10794,6 +11362,7 @@
    ],
    "metric": "6.6.6.6. com estribilho",
    "melody": "KENOSIS",
+   "key": null,
    "via": "HCC-124",
    "metric_key": "6.6.6.6",
    "melody_keys": [
@@ -10816,6 +11385,7 @@
    ],
    "metric": "10.9.10.9. com estribilho",
    "melody": "DESTINO",
+   "key": null,
    "via": "HCC-248",
    "metric_key": "10.9.10.9",
    "melody_keys": [
@@ -10838,6 +11408,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -10856,6 +11427,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -10874,6 +11446,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -10890,6 +11463,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -10910,6 +11484,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -10930,6 +11505,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -10946,6 +11522,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -10966,6 +11543,7 @@
    ],
    "metric": "8.7.9.7.8.6.10.7 - Irregular",
    "melody": "PEACE! BE STILL!",
+   "key": null,
    "via": "CTP-182",
    "metric_key": "8.7.9.7.8.6.10.7",
    "melody_keys": [
@@ -10988,6 +11566,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -11004,6 +11583,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -11024,6 +11604,7 @@
    ],
    "metric": "8.7.8.7.6.6.6.6.7",
    "melody": "EIN' FESTE BURG",
+   "key": null,
    "via": "CTP-409",
    "metric_key": "8.7.8.7.6.6.6.6.7",
    "melody_keys": [
@@ -11046,6 +11627,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -11066,6 +11648,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -11086,6 +11669,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -11106,6 +11690,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -11126,6 +11711,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -11146,6 +11732,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -11166,6 +11753,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -11186,6 +11774,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -11206,6 +11795,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -11226,6 +11816,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -11246,6 +11837,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -11266,6 +11858,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -11286,6 +11879,7 @@
    ],
    "metric": "8.6.8.6. (C.M.,Common Meter)",
    "melody": "EVAN",
+   "key": null,
    "via": "HCC-339",
    "metric_key": "8.6.8.6",
    "melody_keys": [
@@ -11308,6 +11902,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -11328,6 +11923,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -11348,6 +11944,7 @@
    ],
    "metric": "8.7.8.7.D",
    "melody": "TACKSÄGELSE",
+   "key": null,
    "via": "CTP-225",
    "metric_key": "8.7.8.7.8.7.8.7",
    "melody_keys": [
@@ -11370,6 +11967,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -11390,6 +11988,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -11406,6 +12005,7 @@
    "topics_canonical": [],
    "metric": "7.6.7.5.D.",
    "melody": "WORK SONG",
+   "key": null,
    "via": "HCC-492",
    "metric_key": "7.6.7.5.7.6.7.5",
    "melody_keys": [
@@ -11424,6 +12024,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -11440,6 +12041,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -11456,6 +12058,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -11472,6 +12075,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -11488,6 +12092,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -11504,6 +12109,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -11520,6 +12126,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -11536,6 +12143,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -11552,6 +12160,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -11568,6 +12177,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -11584,6 +12194,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -11600,6 +12211,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -11616,6 +12228,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -11632,6 +12245,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -11648,6 +12262,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -11664,6 +12279,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -11680,6 +12296,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -11696,6 +12313,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -11712,6 +12330,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -11728,6 +12347,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -11744,6 +12364,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -11760,6 +12381,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -11780,6 +12402,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -11796,6 +12419,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -11812,6 +12436,7 @@
    "topics_canonical": [],
    "metric": "10.9.10.9.10.8.10.8 - 8.8.9.8",
    "melody": "THE BEAUTIFUL CITY",
+   "key": null,
    "via": "CTP-401",
    "metric_key": "10.9.10.9.10.8.10.8",
    "melody_keys": [
@@ -11834,6 +12459,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -11850,6 +12476,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -11866,6 +12493,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -11882,6 +12510,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -11898,6 +12527,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -11914,6 +12544,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -11930,6 +12561,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -11946,6 +12578,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -11962,6 +12595,7 @@
    "topics_canonical": [],
    "metric": "8.7.8.7.D.",
    "melody": "ICHTER",
+   "key": null,
    "via": "HCC-603",
    "metric_key": "8.7.8.7.8.7.8.7",
    "melody_keys": [
@@ -11980,6 +12614,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -11996,6 +12631,7 @@
    "topics_canonical": [],
    "metric": "7.6.7.6.8.8.8.5.",
    "melody": "COMMONWEALTH",
+   "key": null,
    "via": "HCC-601",
    "metric_key": "7.6.7.6.8.8.8.5",
    "melody_keys": [
@@ -12014,6 +12650,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -12030,6 +12667,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -12046,6 +12684,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -12062,6 +12701,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []

@@ -8,7 +8,7 @@ o mesmo hino em outros hinários. Ajuda a pianista a escolher as músicas.
 ## O que o app faz
 
 - **Busca** por título, primeira linha, número ("sh 30", "ctp 314b") ou tema,
-  nos cinco hinários de uma vez ou só nos marcados.
+  nos hinários de uma vez ou só nos marcados.
 - **Página do hino**: letra (tamanho ajustável com A / A), métrica, melodia
   original e temas. Tocar na métrica ou na melodia lista os hinos que podem
   ser cantados com a mesma música, em qualquer hinário.
@@ -30,15 +30,23 @@ o mesmo hino em outros hinários. Ajuda a pianista a escolher as músicas.
 | SH  | Salmos e Hinos | 621 | herdada do equivalente |
 | HC  | Harpa Cristã | 640 | herdada do equivalente |
 | NC  | Novo Cântico | 405 | herdada do equivalente |
+| CE  | Celebration Hymnal (inglês) | 693 | índice do livro, mais o tom |
 
 Quando um hinário não traz métrica nem melodia, o hino herda as do mesmo
 hino em outro hinário (CTP primeiro, depois HCC), e a tela mostra de onde veio.
+
+O Celebration Hymnal entra **sem letra**: só existe em PDF de partitura, então
+título, primeira linha, tom, melodia, métrica e temas vêm dos índices do fim do
+livro (OCR). Ele se liga aos outros hinários pela **melodia**: a página de um
+hino em português mostra o número e o tom no Celebration, e vice-versa. Mesma
+melodia não quer dizer necessariamente a mesma letra.
 
 ## Como funciona
 
 ```
 data/input/   PDFs e índices originais (fora do git)
-     │  cantai importar-harpa | importar-nc | importar-metricas | importar-continuacoes-ctp
+     │  cantai importar-harpa | importar-nc | importar-metricas
+     │         importar-continuacoes-ctp | importar-celebration
      ▼
 data/base/    dados de base, versionados (não editar à mão)
      │  cantai build
@@ -73,6 +81,9 @@ falhar, algo que estava certo foi desfeito.
 - O índice de temas da Harpa disponível está incompleto (403 de 640 hinos).
 - O hino 378 do Novo Cântico não existe no PDF de origem.
 - O HCC não tem tema de Natal no índice usado.
+- Celebration: 26 primeiras linhas do índice ficaram sem número no OCR e não
+  entraram (o hino entra pelo título); os nomes de melodia vêm do OCR e podem
+  ter algum erro não detectado.
 
 ## Licença
 

@@ -524,6 +524,9 @@
             max-width: 38rem;
         }
 
+        .sem-letra { color: var(--grafite); font-size: 1rem; line-height: 1.6; }
+        .sem-letra q { display: block; font-style: italic; color: var(--tinta); font-size: var(--letra-hino); margin-bottom: 10px; }
+
         .temas { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 28px; }
 
         .tema {
@@ -976,6 +979,7 @@
                     <label class="hinario-chip"><input type="checkbox" value="HCC"><span>Culto Cristão</span></label>
                     <label class="hinario-chip"><input type="checkbox" value="SH"><span>Salmos e Hinos</span></label>
                     <label class="hinario-chip"><input type="checkbox" value="NC"><span>Novo Cântico</span></label>
+                    <label class="hinario-chip"><input type="checkbox" value="CE"><span>Celebration</span></label>
                     </div>
                     <label for="theme-select" class="sr-only">Tema</label>
                     <select id="theme-select" class="tema-select">
@@ -1028,6 +1032,11 @@
                     <section id="equivalents-section" class="secao-extra" hidden>
                         <h3>O mesmo hino em outros hinários</h3>
                         <ul id="equivalents-grid" class="lista-hinos"></ul>
+                    </section>
+
+                    <section id="tune-section" class="secao-extra" hidden>
+                        <h3 id="tune-header"></h3>
+                        <ul id="tune-grid" class="lista-hinos"></ul>
                     </section>
 
                     <section id="related-section" class="secao-extra" hidden>
@@ -1095,7 +1104,7 @@
         <h2>Cantai</h2>
         <p>Letra, métrica e melodia dos hinos, o mesmo hino em outros hinários e a ordem do culto num só lugar.</p>
         <table class="contagem"><tbody id="about-db-rows"></tbody></table>
-        <p>Versão 1.2</p>
+        <p>Versão 1.3</p>
         <button class="botao-contorno" type="button" onclick="closeAbout()">Fechar</button>
     </dialog>
 
@@ -1106,8 +1115,11 @@
             { code: 'HCC', name: 'Hinário para o Culto Cristão', file: 'data/output/hcc.json' },
             { code: 'SH', name: 'Salmos e Hinos', file: 'data/output/sh.json' },
             { code: 'HC', name: 'Harpa Cristã', file: 'data/output/harpa.json' },
-            { code: 'NC', name: 'Novo Cântico', file: 'data/output/nc.json' }
+            { code: 'NC', name: 'Novo Cântico', file: 'data/output/nc.json' },
+            { code: 'CE', name: 'Celebration Hymnal', file: 'data/output/celebration.json' }
         ];
+        // Hinário em inglês que entra só pelos índices (sem letra)
+        const INDEX_ONLY_HYMNAL = 'CE';
         const PRIMARY_HYMNAL = 'CTP';
         const PAGE_SIZE = 12;
         // Momentos da liturgia que podem marcar cada hino da ordem do culto
@@ -1698,6 +1710,7 @@
             const meta = el('span', 'hino-meta');
             if (h.metric) meta.appendChild(el('span', null, h.metric));
             if (h.melody) meta.appendChild(el('span', 'melodia', h.melody));
+            if (h.key) meta.appendChild(el('span', null, `Tom ${formatKey(h.key)}`));
             const note = equivalentNote(h);
             if (note) meta.appendChild(el('span', 'tambem', note));
             if (meta.childElementCount) text.appendChild(meta);
@@ -1854,7 +1867,7 @@
             document.getElementById('detail-number').textContent = hymn.number + (hymn.variant || '').toLowerCase();
             document.getElementById('detail-hymnal').textContent = hymnalName(hymn.hymnal);
             document.getElementById('detail-title').textContent = hymn.title;
-            document.getElementById('detail-lyrics').textContent = hymn.lyrics;
+            renderLyrics(hymn);
 
             const ficha = document.getElementById('detail-ficha');
             ficha.textContent = '';
@@ -1867,6 +1880,7 @@
                 fichaRow(ficha, 'Melodia', textButton('melodia', hymn.melody,
                     () => showRelated('melody', hymn.melody_keys || [], hymn, hymn.melody)));
             }
+            if (hymn.key) fichaRow(ficha, 'Tom', el('span', null, formatKey(hymn.key)));
             if (hymn.via) {
                 ficha.appendChild(el('dt'));
                 ficha.appendChild(el('dd', 'via',
@@ -1884,11 +1898,52 @@
 
             updateDetailChoose(hymn);
             renderEquivalents(hymn);
+            renderSameTune(hymn);
             document.getElementById('related-section').hidden = true;
 
             document.getElementById('tela-busca').hidden = true;
             document.getElementById('hymn-detail').hidden = false;
             window.scrollTo(0, 0);
+        }
+
+        // "G/Ab" -> "G/A♭"
+        function formatKey(key) {
+            return key.replace(/([A-Ga-g])b/g, '$1♭').replace(/([A-Ga-g])#/g, '$1♯');
+        }
+
+        function renderLyrics(hymn) {
+            const box = document.getElementById('detail-lyrics');
+            box.textContent = '';
+            if (hymn.lyrics) {
+                box.textContent = hymn.lyrics;
+                return;
+            }
+            const note = el('div', 'sem-letra');
+            if (hymn.first_line) note.appendChild(el('q', null, hymn.first_line));
+            note.appendChild(document.createTextNode(hymn.hymnal === INDEX_ONLY_HYMNAL
+                ? 'A letra do Celebration Hymnal não está no app. Tom, melodia, métrica e temas vêm do índice do livro.'
+                : 'Letra não disponível.'));
+            box.appendChild(note);
+        }
+
+        // Liga o Celebration aos hinários em português pela melodia (não há
+        // letra para comparar). Mesma melodia não garante a mesma letra.
+        function renderSameTune(hymn) {
+            const section = document.getElementById('tune-section');
+            const grid = document.getElementById('tune-grid');
+            const keys = hymn.melody_keys || [];
+            const fromCelebration = hymn.hymnal === INDEX_ONLY_HYMNAL;
+            const items = keys.length === 0 ? [] : allHymns.filter(h =>
+                h.id !== hymn.id &&
+                (h.hymnal === INDEX_ONLY_HYMNAL) !== fromCelebration &&
+                (h.melody_keys || []).some(k => keys.includes(k)));
+            grid.textContent = '';
+            section.hidden = items.length === 0;
+            if (section.hidden) return;
+            document.getElementById('tune-header').textContent = fromCelebration
+                ? `Com a melodia ${hymn.melody} nos hinários em português`
+                : `Com a melodia ${hymn.melody} no Celebration Hymnal`;
+            items.forEach(h => grid.appendChild(hymnRow(h)));
         }
 
         function renderEquivalents(hymn) {

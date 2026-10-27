@@ -88,6 +88,22 @@ def importar_continuacoes_ctp(pdf: Path = INPUT_DIR / "Hinário Cantai Todos os 
     typer.echo(f"{len(data)} hinos com linhas recuperadas.")
 
 
+@app.command("importar-celebration")
+def importar_celebration(pdf: Path = INPUT_DIR / "celebration_indice_ocr.pdf") -> None:
+    """Importa o Celebration Hymnal dos índices do livro para data/base/celebration.json.
+
+    O PDF precisa ter OCR (ex.: `ocrmypdf -l eng indice.pdf celebration_indice_ocr.pdf`).
+    """
+    from cantai.importers.celebration import import_celebration
+
+    hymns, unresolved = import_celebration(pdf)
+    if len(hymns) < 680:
+        typer.echo(f"ERRO: só {len(hymns)} hinos encontrados; nada foi salvo.", err=True)
+        raise typer.Exit(1)
+    _save("celebration.json", hymns)
+    typer.echo(f"{len(hymns)} hinos; {len(unresolved)} entradas do índice sem número (ignoradas).")
+
+
 @app.command()
 def build() -> None:
     """Gera web/data a partir de data/base (pode rodar quantas vezes quiser)."""
