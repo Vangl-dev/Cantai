@@ -22,7 +22,13 @@
       "Deus Salvador",
       "Deus Vencedor"
     ],
-    "notes": "Tema central de adoração"
+    "notes": "Tema central de adoração",
+    "ce": [
+      "ADORATION AND PRAISE — God Our Father",
+      "WORSHIP",
+      "OPENING OF WORSHIP — Calls to Worship",
+      "OPENING OF WORSHIP — Hymns and Songs"
+    ]
   },
   "Advento": {
     "ctp": [
@@ -32,6 +38,9 @@
     "hc": [],
     "nc": [
       "Advento"
+    ],
+    "ce": [
+      "CHRIST — Advent"
     ]
   },
   "Aniversário": {
@@ -45,7 +54,8 @@
     "nc": [
       "Aniversário"
     ],
-    "notes": "Celebração de aniversário"
+    "notes": "Celebração de aniversário",
+    "ce": []
   },
   "Ano Novo": {
     "ctp": [
@@ -58,7 +68,10 @@
     "nc": [
       "Ano Novo"
     ],
-    "notes": "Celebração do Ano Novo"
+    "notes": "Celebração do Ano Novo",
+    "ce": [
+      "NEW YEAR"
+    ]
   },
   "Ascensão": {
     "ctp": [
@@ -71,7 +84,10 @@
     "nc": [
       "Ascensão"
     ],
-    "notes": "Ascensão de Cristo"
+    "notes": "Ascensão de Cristo",
+    "ce": [
+      "CHRIST — Ascension and Reign"
+    ]
   },
   "Ação de Graças": {
     "ctp": [
@@ -86,6 +102,9 @@
     ],
     "nc": [
       "Gratidão"
+    ],
+    "ce": [
+      "THANKSGIVING (Thankfulness)"
     ]
   },
   "Batismo": {
@@ -101,7 +120,10 @@
     "nc": [
       "Batismo"
     ],
-    "notes": "Sacramento do batismo"
+    "notes": "Sacramento do batismo",
+    "ce": [
+      "BAPTISM"
+    ]
   },
   "Comunhão": {
     "ctp": [
@@ -119,7 +141,13 @@
       "Fraternidade",
       "Ceia do Senhor"
     ],
-    "notes": "Comunhão com Deus e entre irmãos"
+    "notes": "Comunhão com Deus e entre irmãos",
+    "ce": [
+      "FELLOWSHIP WITH GOD",
+      "FELLOWSHIP WITH CHRIST",
+      "CHURCH — Family of Believers",
+      "COMMUNION"
+    ]
   },
   "Confiança": {
     "ctp": [
@@ -144,7 +172,15 @@
       "Fé",
       "Fidelidade"
     ],
-    "notes": "Fé e confiança em Deus"
+    "notes": "Fé e confiança em Deus",
+    "ce": [
+      "ASSURANCE AND TRUST",
+      "TRUST",
+      "FAITH AND HOPE",
+      "GOD — Guidance and Care",
+      "PROVISION AND DELIVERANCE",
+      "COMFORT AND ENCOURAGEMENT"
+    ]
   },
   "Consagração": {
     "ctp": [
@@ -165,7 +201,13 @@
       "Aspiração",
       "Santificação"
     ],
-    "notes": "Consagração e entrega a Deus"
+    "notes": "Consagração e entrega a Deus",
+    "ce": [
+      "ASPIRATION AND CONSECRATION",
+      "COMMITMENT AND OBEDIENCE",
+      "DISCIPLESHIP",
+      "PURITY AND HOLINESS"
+    ]
   },
   "Espírito Santo": {
     "ctp": [
@@ -183,6 +225,9 @@
       "Espírito Instruidor",
       "Espírito Consolador",
       "Espírito Vivificador"
+    ],
+    "ce": [
+      "HOLY SPIRIT"
     ]
   },
   "Evangelho": {
@@ -201,6 +246,11 @@
     "nc": [
       "Salvação",
       "Ministério"
+    ],
+    "ce": [
+      "SALVATION",
+      "CHRIST — Grace, Love and Mercy",
+      "INVITATION AND ACCEPTANCE"
     ]
   },
   "Igreja": {
@@ -214,7 +264,11 @@
     "nc": [
       "Igreja Militante"
     ],
-    "notes": "A Igreja de Cristo"
+    "notes": "A Igreja de Cristo",
+    "ce": [
+      "CHURCH — Nature and Foundation",
+      "CHURCH — Family of Believers"
+    ]
   },
   "Intercessão": {
     "ctp": [
@@ -246,7 +300,13 @@
       "DEUS, O FILHO: Louvores"
     ],
     "nc": [],
-    "notes": "Louvor e adoração alegre"
+    "notes": "Louvor e adoração alegre",
+    "ce": [
+      "ADORATION AND PRAISE — Jesus Our Savior",
+      "DOXOLOGIES",
+      "GLORIAS",
+      "JOY"
+    ]
   },
   "Missões": {
     "ctp": [
@@ -271,7 +331,12 @@
       "Convite",
       "Decisão"
     ],
-    "notes": "Missões e evangelismo"
+    "notes": "Missões e evangelismo",
+    "ce": [
+      "MISSIONS AND MINISTRY",
+      "STEWARDSHIP AND SERVICE",
+      "ZEAL"
+    ]
   },
   "Morte e Funerais": {
     "ctp": [
@@ -286,7 +351,11 @@
       "Lar Celestial",
       "Esperança"
     ],
-    "notes": "Morte e esperança eterna"
+    "notes": "Morte e esperança eterna",
+    "ce": [
+      "FUNERAL HYMNS",
+      "ETERNAL LIFE AND HEAVEN"
+    ]
   },
   "Natal": {
     "ctp": [
@@ -300,6 +369,10 @@
     ],
     "nc": [
       "Natal"
+    ],
+    "ce": [
+      "CHRIST — Birth",
+      "CHRIST — The Coming of the Wisemen"
     ]
   },
   "Oração": {
@@ -316,7 +389,11 @@
     "nc": [
       "Oração"
     ],
-    "notes": "Oração em suas diversas formas"
+    "notes": "Oração em suas diversas formas",
+    "ce": [
+      "PRAYER AND DEVOTION",
+      "RESPONSES — Prayer"
+    ]
   },
   "Paixão de Cristo": {
     "ctp": [
@@ -334,6 +411,11 @@
     "nc": [
       "Paixão e Morte",
       "Entrada Triunfal"
+    ],
+    "ce": [
+      "CHRIST — Atonement, Crucifixion, Suffering and Death",
+      "CHRIST — Triumphal Entry",
+      "CHRIST — His Blood"
     ]
   },
   "Palavra de Deus": {
@@ -352,7 +434,11 @@
       "Bíblia",
       "Escola Dominical"
     ],
-    "notes": "Proclamação e estudo da Palavra"
+    "notes": "Proclamação e estudo da Palavra",
+    "ce": [
+      "WORD OF GOD",
+      "EDUCATION, CHRISTIAN"
+    ]
   },
   "Perdão": {
     "ctp": [
@@ -367,7 +453,10 @@
       "Contrição e Arrependimento",
       "Perdão"
     ],
-    "notes": "Confissão e perdão dos pecados"
+    "notes": "Confissão e perdão dos pecados",
+    "ce": [
+      "REPENTANCE AND FORGIVENESS"
+    ]
   },
   "Páscoa": {
     "ctp": [
@@ -381,6 +470,9 @@
     ],
     "nc": [
       "Ressurreição"
+    ],
+    "ce": [
+      "CHRIST — Resurrection"
     ]
   },
   "Pátria": {
@@ -394,7 +486,11 @@
     "nc": [
       "Pátria"
     ],
-    "notes": "Amor à pátria"
+    "notes": "Amor à pátria",
+    "ce": [
+      "GOD AND COUNTRY",
+      "MEMORIAL DAY"
+    ]
   },
   "Segunda Vinda": {
     "ctp": [
@@ -409,7 +505,10 @@
     "nc": [
       "Segunda Vinda"
     ],
-    "notes": "Retorno de Cristo"
+    "notes": "Retorno de Cristo",
+    "ce": [
+      "CHRIST — Second Coming"
+    ]
   },
   "Testemunho": {
     "ctp": [
@@ -425,7 +524,10 @@
       "Testemunho",
       "Convertidos"
     ],
-    "notes": "Testemunho de fé"
+    "notes": "Testemunho de fé",
+    "ce": [
+      "WITNESS AND PRAISE"
+    ]
   },
   "Trindade": {
     "ctp": [
@@ -440,6 +542,9 @@
     "nc": [
       "Deus Trino"
     ],
-    "notes": "Doutrina da Trindade"
+    "notes": "Doutrina da Trindade",
+    "ce": [
+      "TRINITY"
+    ]
   }
 }

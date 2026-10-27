@@ -5,6 +5,17 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.3.0] - 2026-10-27
+
+### Added
+- Celebration Hymnal (693 hinos, em inglês, sem letra): título, primeira
+  linha, tom, melodia, métrica e temas lidos dos índices do livro com OCR
+  (`cantai importar-celebration`)
+- Ligação pela melodia entre o Celebration e os hinários em português, nos
+  dois sentidos ("Com a melodia EIN' FESTE BURG no Celebration Hymnal")
+- Tom do hino na ficha e na lista (A♭, D♭…), quando o hinário informa
+- Temas do Celebration mapeados para os temas do app
+
 ## [1.2.0] - 2026-10-27
 
 ### Added

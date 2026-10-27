@@ -2,6 +2,14 @@
 
 from pathlib import Path
 
+from cantai.importers.celebration import (
+    choose_meter,
+    looks_like_first_line,
+    normalize_meter,
+    parse_topical_index,
+    parse_tune_index,
+    split_key,
+)
 from cantai.importers.harpa import format_lyrics, import_harpa_themes, split_hymns
 from cantai.importers.metrics import import_metrics
 from cantai.importers.novo_cantico import section_for
@@ -100,3 +108,59 @@ def test_nc_sections() -> None:
     assert section_for(237, "A") == "Natal"
     assert section_for(400) == "Final de Culto"
     assert section_for(400, "A") == "Ofertório e Améns"
+
+
+def test_celebration_meters() -> None:
+    assert normalize_meter("C.M. with Refrain") == "8.6.8.6. (C.M.) com estribilho"
+    assert normalize_meter("Long Meter L.M. (8.8.8.8.)") == "8.8.8.8. (L.M.)"
+    assert normalize_meter("(C.M.D.)") == "8.6.8.6.8.6.8.6. (C.M.D.)"
+    assert normalize_meter("8.7.8.7.1D.") == "8.7.8.7.D."  # OCR
+    assert normalize_meter("8.7.87.") == "8.7.8.7."  # OCR perdeu um ponto
+    assert normalize_meter("7.7.7.7.D. w/Ret.") == "7.7.7.7.D. com estribilho"
+    assert normalize_meter("lrreg.") == "Irregular"
+    assert choose_meter("8.8.85.", "8.8.8.5") == "8.8.8.5"
+    assert choose_meter("Irreg.", None) == "Irreg."
+    assert choose_meter("C.M.", "GOLDEN CHAIN (REFRAIN") == "C.M."
+
+
+def test_celebration_tune_index_lines() -> None:
+    lines = [
+        "AZMON (CM.), 21, 221, 650",
+        "HYMN TO JOY (8.7.8.7.D.), 90, 271, 365 1 AM THINE (10.7.10.7. w/Ref.), 552",
+        "LONDONDERRY AIR",
+        "(11.10.11.10.11.10.11.12.), 354",
+        "ADESTE FIDELES (Ref. only), (7.7.10.),",
+        "196, 247",
+        "CARMICHAEL (11.7.11.7. w/Ref.), 483 ©",
+    ]
+    tunes = parse_tune_index(lines)
+    assert tunes[221] == ("AZMON", "CM.")
+    assert tunes[365][0] == "HYMN TO JOY"
+    assert tunes[552][0] == "I AM THINE"
+    assert tunes[354][0] == "LONDONDERRY AIR"
+    assert tunes[247] == ("ADESTE FIDELES", "7.7.10. (Ref. only)")
+    assert tunes[483][0] == "CARMICHAEL"
+
+
+def test_celebration_topical_index_headings() -> None:
+    lines = [
+        "When I Survey the Wondrous Cross,",
+        "324",
+        "CHRIST — Atonement, Crucifixion,",
+        "Suffering and Death",
+        "Amazing Grace, 343",
+        "COMFORT AND",
+        "ENCOURAGEMENT",
+        "A Mighty Fortress Is Our God, 151",
+    ]
+    topics, titles = parse_topical_index(lines)
+    assert topics[343] == ["CHRIST — Atonement, Crucifixion, Suffering and Death"]
+    assert topics[151] == ["COMFORT AND ENCOURAGEMENT"]
+    assert titles["amazinggrace"] == {343}
+
+
+def test_celebration_song_entries() -> None:
+    assert split_key("Amazing Grace (G/Ab)") == ("Amazing Grace", "G/Ab")
+    assert split_key("Sing unto the Lord (FENDER) (d min.)") == ("Sing unto the Lord (FENDER)", "d min.")
+    assert looks_like_first_line("A pilgrim was I, and a wand'ring")
+    assert not looks_like_first_line("A Mighty Fortress Is Our God")

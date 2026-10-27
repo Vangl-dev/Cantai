@@ -21,6 +21,7 @@
    ],
    "metric": "10.11.11.11.",
    "melody": "WAREHAM",
+   "key": null,
    "via": null,
    "metric_key": "10.11.11.11",
    "melody_keys": [
@@ -43,6 +44,7 @@
    ],
    "metric": "12.12.12.10.",
    "melody": "NICAEA",
+   "key": null,
    "via": null,
    "metric_key": "12.12.12.10",
    "melody_keys": [
@@ -61,6 +63,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -81,6 +84,7 @@
    ],
    "metric": "Irregular",
    "melody": "HOLY, HOLY",
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": [
@@ -99,6 +103,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -119,6 +124,7 @@
    ],
    "metric": "6.6.4.6.6.6.4.",
    "melody": "ITALIAN HYMN",
+   "key": null,
    "via": null,
    "metric_key": "6.6.4.6.6.6.4",
    "melody_keys": [
@@ -137,6 +143,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -157,6 +164,7 @@
    ],
    "metric": "10.10.10.8.",
    "melody": "EVENTIDE",
+   "key": null,
    "via": null,
    "metric_key": "10.10.10.8",
    "melody_keys": [
@@ -179,6 +187,7 @@
    ],
    "metric": "5.6.7.5. com estribilho",
    "melody": "REVIVE US AGAIN",
+   "key": null,
    "via": null,
    "metric_key": "5.6.7.5",
    "melody_keys": [
@@ -202,6 +211,7 @@
    ],
    "metric": "6.7.6.7.6.6.6.6.",
    "melody": "NUN DANKET",
+   "key": null,
    "via": null,
    "metric_key": "6.7.6.7.6.6.6.6",
    "melody_keys": [
@@ -220,6 +230,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -236,6 +247,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -256,6 +268,7 @@
    ],
    "metric": "11.11.11.11.",
    "melody": "ST. DENIO",
+   "key": null,
    "via": null,
    "metric_key": "11.11.11.11",
    "melody_keys": [
@@ -283,6 +296,7 @@
    ],
    "metric": "6.6.8.4.D.",
    "melody": "LEONI",
+   "key": null,
    "via": null,
    "metric_key": "6.6.8.4.6.6.8.4",
    "melody_keys": [
@@ -305,6 +319,7 @@
    ],
    "metric": "8.7.8.7.8.7.",
    "melody": "LAUDA ANIMA (Andrews)",
+   "key": null,
    "via": null,
    "metric_key": "8.7.8.7.8.7",
    "melody_keys": [
@@ -323,6 +338,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -343,6 +359,7 @@
    ],
    "metric": "8.7.8.7.D.",
    "melody": "NETTLETON",
+   "key": null,
    "via": null,
    "metric_key": "8.7.8.7.8.7.8.7",
    "melody_keys": [
@@ -365,6 +382,7 @@
    ],
    "metric": "6.6.6.6.",
    "melody": "PARKSTONE",
+   "key": null,
    "via": null,
    "metric_key": "6.6.6.6",
    "melody_keys": [
@@ -383,6 +401,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -399,6 +418,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -419,6 +439,7 @@
    ],
    "metric": "8.7.8.7.",
    "melody": "PARKERS",
+   "key": null,
    "via": null,
    "metric_key": "8.7.8.7",
    "melody_keys": [
@@ -441,6 +462,7 @@
    ],
    "metric": "Irregular",
    "melody": "JUSTUS DOMINUS",
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": [
@@ -463,6 +485,7 @@
    ],
    "metric": "Irregular com estribilho",
    "melody": "SALMO 115",
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": [
@@ -485,6 +508,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -506,6 +530,7 @@
    ],
    "metric": "11.10.11.10. com estribilho",
    "melody": "FAITHFULNESS",
+   "key": null,
    "via": null,
    "metric_key": "11.10.11.10",
    "melody_keys": [
@@ -528,6 +553,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -549,6 +575,7 @@
    ],
    "metric": "7.6.7.6.D.",
    "melody": "ELLACOMBE",
+   "key": null,
    "via": null,
    "metric_key": "7.6.7.6.7.6.7.6",
    "melody_keys": [
@@ -567,6 +594,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -587,6 +615,7 @@
    ],
    "metric": "8.7.8.7.",
    "melody": "LARIE",
+   "key": null,
    "via": null,
    "metric_key": "8.7.8.7",
    "melody_keys": [
@@ -611,6 +640,7 @@
    ],
    "metric": "7.6.7.6.D.",
    "melody": "WIR PFLÜGEN",
+   "key": null,
    "via": null,
    "metric_key": "7.6.7.6.7.6.7.6",
    "melody_keys": [
@@ -629,6 +659,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -650,6 +681,7 @@
    ],
    "metric": "11.10.11.10. com estribilho",
    "melody": "TRUEHEARTED",
+   "key": null,
    "via": null,
    "metric_key": "11.10.11.10",
    "melody_keys": [
@@ -676,6 +708,7 @@
    ],
    "metric": "8.6.8.6. com estribilho (C.M. com estribilho)",
    "melody": "GOD CARES",
+   "key": null,
    "via": null,
    "metric_key": "8.6.8.6",
    "melody_keys": [
@@ -699,6 +732,7 @@
    ],
    "metric": "10.10.10.10.",
    "melody": "NATIONAL HYMN",
+   "key": null,
    "via": null,
    "metric_key": "10.10.10.10",
    "melody_keys": [
@@ -722,6 +756,7 @@
    ],
    "metric": "11.8.11.8. com estribilho",
    "melody": "GOD LEADS US",
+   "key": null,
    "via": null,
    "metric_key": "11.8.11.8",
    "melody_keys": [
@@ -740,6 +775,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -762,6 +798,7 @@
    ],
    "metric": "9.8.8.9. com estribilho",
    "melody": "GOD BE WITH YOU",
+   "key": null,
    "via": null,
    "metric_key": "9.8.8.9",
    "melody_keys": [
@@ -786,6 +823,7 @@
    ],
    "metric": "8.6.8.6. (C.M.,Common Meter)",
    "melody": "ST. ANNE",
+   "key": null,
    "via": null,
    "metric_key": "8.6.8.6",
    "melody_keys": [
@@ -804,6 +842,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -826,6 +865,7 @@
    ],
    "metric": "11.10.11.10.",
    "melody": "MEU DESTINO",
+   "key": null,
    "via": null,
    "metric_key": "11.10.11.10",
    "melody_keys": [
@@ -844,6 +884,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -868,6 +909,7 @@
    ],
    "metric": "8.7.8.7.8.7. com repetição",
    "melody": "CWM RHONDDA",
+   "key": null,
    "via": null,
    "metric_key": "8.7.8.7.8.7",
    "melody_keys": [
@@ -890,6 +932,7 @@
    ],
    "metric": "Irregular",
    "melody": "WORTHY",
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": [
@@ -908,6 +951,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -928,6 +972,7 @@
    ],
    "metric": "6.6.8.6.D. (S.M.D.)",
    "melody": "TERRA PATRIS",
+   "key": null,
    "via": null,
    "metric_key": "6.6.8.6.6.6.8.6",
    "melody_keys": [
@@ -952,6 +997,7 @@
    ],
    "metric": "7.7.7.7. com estribilho",
    "melody": "DIX",
+   "key": null,
    "via": null,
    "metric_key": "7.7.7.7",
    "melody_keys": [
@@ -974,6 +1020,7 @@
    ],
    "metric": "8.7.8.7.D.",
    "melody": "AN DIE FREUDE",
+   "key": null,
    "via": null,
    "metric_key": "8.7.8.7.8.7.8.7",
    "melody_keys": [
@@ -996,6 +1043,7 @@
    ],
    "metric": "8.6.8.6.D. (C.M.D.)",
    "melody": "CURITIBA",
+   "key": null,
    "via": null,
    "metric_key": "8.6.8.6.8.6.8.6",
    "melody_keys": [
@@ -1014,6 +1062,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -1030,6 +1079,7 @@
    "topics_canonical": [],
    "metric": "8.7.8.7.8.8.7.",
    "melody": "MIT FREUDEN ZART",
+   "key": null,
    "via": null,
    "metric_key": "8.7.8.7.8.8.7",
    "melody_keys": [
@@ -1048,6 +1098,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -1071,6 +1122,7 @@
    ],
    "metric": "11.10.11.10. com estribilho",
    "melody": "O STORE GUD",
+   "key": null,
    "via": null,
    "metric_key": "11.10.11.10",
    "melody_keys": [
@@ -1093,6 +1145,7 @@
    ],
    "metric": "8.5.8.5.",
    "melody": "GENEVA (Lowden)",
+   "key": null,
    "via": null,
    "metric_key": "8.5.8.5",
    "melody_keys": [
@@ -1115,6 +1168,7 @@
    ],
    "metric": "Irregular",
    "melody": "CONTEMPLAÇÃO",
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": [
@@ -1137,6 +1191,7 @@
    ],
    "metric": "Irregular",
    "melody": "A LA PUERTA",
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": [
@@ -1164,6 +1219,7 @@
    ],
    "metric": "8.6.8.6. com repetição (C.M. com repetição)",
    "melody": "DIADEM",
+   "key": null,
    "via": null,
    "metric_key": "8.6.8.6",
    "melody_keys": [
@@ -1182,6 +1238,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -1198,6 +1255,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -1221,6 +1279,7 @@
    ],
    "metric": "8.6.8.6. com repetição (C.M. com repetição)",
    "melody": "CORONATION",
+   "key": null,
    "via": null,
    "metric_key": "8.6.8.6",
    "melody_keys": [
@@ -1245,6 +1304,7 @@
    ],
    "metric": "8.7.8.7.D.",
    "melody": "HYMN TO JOY",
+   "key": null,
    "via": null,
    "metric_key": "8.7.8.7.8.7.8.7",
    "melody_keys": [
@@ -1263,6 +1323,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -1285,6 +1346,7 @@
    ],
    "metric": "11.11.11.11.",
    "melody": "GORDON",
+   "key": null,
    "via": null,
    "metric_key": "11.11.11.11",
    "melody_keys": [
@@ -1307,6 +1369,7 @@
    ],
    "metric": "5.6.8.5.5.8.",
    "melody": "SCHONSTER HERR JESU",
+   "key": null,
    "via": null,
    "metric_key": "5.6.8.5.5.8",
    "melody_keys": [
@@ -1331,6 +1394,7 @@
    ],
    "metric": "8.7.8.7. com estribilho",
    "melody": "GLORIOUS NAE",
+   "key": null,
    "via": null,
    "metric_key": "8.7.8.7",
    "melody_keys": [
@@ -1349,6 +1413,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -1373,6 +1438,7 @@
    ],
    "metric": "13.13.13.13. com estribilho",
    "melody": "ALMA LIBERTA",
+   "key": null,
    "via": null,
    "metric_key": "13.13.13.13",
    "melody_keys": [
@@ -1397,6 +1463,7 @@
    ],
    "metric": "11.11.11.11.",
    "melody": "FAUSTA",
+   "key": null,
    "via": null,
    "metric_key": "11.11.11.11",
    "melody_keys": [
@@ -1423,6 +1490,7 @@
    ],
    "metric": "11.11.12.11",
    "melody": "MINNA",
+   "key": null,
    "via": null,
    "metric_key": "11.11.12.11",
    "melody_keys": [
@@ -1445,6 +1513,7 @@
    ],
    "metric": "12.12.12.12.",
    "melody": "ADORAÇÃO",
+   "key": null,
    "via": null,
    "metric_key": "12.12.12.12",
    "melody_keys": [
@@ -1463,6 +1532,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -1483,6 +1553,7 @@
    ],
    "metric": "10.10.10.8.",
    "melody": "SINE NOMINE",
+   "key": null,
    "via": null,
    "metric_key": "10.10.10.8",
    "melody_keys": [
@@ -1507,6 +1578,7 @@
    ],
    "metric": "8.6.8.6. (C.M.,Common Meter)",
    "melody": "AZMON",
+   "key": null,
    "via": null,
    "metric_key": "8.6.8.6",
    "melody_keys": [
@@ -1529,6 +1601,7 @@
    ],
    "metric": "12.12.11.11.",
    "melody": "KREMSER",
+   "key": null,
    "via": null,
    "metric_key": "12.12.11.11",
    "melody_keys": [
@@ -1547,6 +1620,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -1567,6 +1641,7 @@
    ],
    "metric": "8.6.8.6. com repetição (C.M. com repetição)",
    "melody": "ORTONVILLE",
+   "key": null,
    "via": null,
    "metric_key": "8.6.8.6",
    "melody_keys": [
@@ -1589,6 +1664,7 @@
    ],
    "metric": "9.9.10.10.",
    "melody": "TODO O LOUVOR",
+   "key": null,
    "via": null,
    "metric_key": "9.9.10.10",
    "melody_keys": [
@@ -1613,6 +1689,7 @@
    ],
    "metric": "8.8.8.8. (L.M., Long Meter)",
    "melody": "LUZ",
+   "key": null,
    "via": null,
    "metric_key": "8.8.8.8",
    "melody_keys": [
@@ -1631,6 +1708,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -1653,6 +1731,7 @@
    ],
    "metric": "7.7.7.7.7.4.",
    "melody": "TOMES",
+   "key": null,
    "via": null,
    "metric_key": "7.7.7.7.7.4",
    "melody_keys": [
@@ -1675,6 +1754,7 @@
    ],
    "metric": "6.5.7.6.6.5.6.5. com estribilho",
    "melody": "DE TODAS AS TRIBOS",
+   "key": null,
    "via": null,
    "metric_key": "6.5.7.6.6.5.6.5",
    "melody_keys": [
@@ -1693,6 +1773,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -1713,6 +1794,7 @@
    ],
    "metric": "8.6.8.6. (C.M.,Common Meter)",
    "melody": "BRACONDALE",
+   "key": null,
    "via": null,
    "metric_key": "8.6.8.6",
    "melody_keys": [
@@ -1731,6 +1813,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -1753,6 +1836,7 @@
    ],
    "metric": "11.11.11.11.",
    "melody": "I LOVE THEE",
+   "key": null,
    "via": null,
    "metric_key": "11.11.11.11",
    "melody_keys": [
@@ -1775,6 +1859,7 @@
    ],
    "metric": "8.8.8.8. ccom estribilho (L.M. com estribilho)",
    "melody": "VENI EMMANUEL",
+   "key": null,
    "via": null,
    "metric_key": "8.8.8.8",
    "melody_keys": [
@@ -1793,6 +1878,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -1813,6 +1899,7 @@
    ],
    "metric": "8.7.8.7.",
    "melody": "EVERSLEY",
+   "key": null,
    "via": null,
    "metric_key": "8.7.8.7",
    "melody_keys": [
@@ -1831,6 +1918,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -1851,6 +1939,7 @@
    ],
    "metric": "8.7.8.7.8.7.",
    "melody": "PICARDY",
+   "key": null,
    "via": null,
    "metric_key": "8.7.8.7.8.7",
    "melody_keys": [
@@ -1869,6 +1958,7 @@
    "topics_canonical": [],
    "metric": "12.11.12. com estribilho",
    "melody": "ADESTE FIDELES",
+   "key": null,
    "via": null,
    "metric_key": "12.11.12",
    "melody_keys": [
@@ -1887,6 +1977,7 @@
    "topics_canonical": [],
    "metric": "Irregular",
    "melody": "STILLE NACHT",
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": [
@@ -1905,6 +1996,7 @@
    "topics_canonical": [],
    "metric": "8.6.8.6.D. (C.M.D.)",
    "melody": "CAROL",
+   "key": null,
    "via": null,
    "metric_key": "8.6.8.6.8.6.8.6",
    "melody_keys": [
@@ -1923,6 +2015,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -1939,6 +2032,7 @@
    "topics_canonical": [],
    "metric": "7.6.7.6. com estribilho",
    "melody": "GO TELL IT",
+   "key": null,
    "via": null,
    "metric_key": "7.6.7.6",
    "melody_keys": [
@@ -1957,6 +2051,7 @@
    "topics_canonical": [],
    "metric": "8.7.8.7.8.7. com repetição",
    "melody": "W ZLOBIE LEZY",
+   "key": null,
    "via": null,
    "metric_key": "8.7.8.7.8.7",
    "melody_keys": [
@@ -1979,6 +2074,7 @@
    ],
    "metric": "8.7.8.7.8.8.7.7.com estribilho",
    "melody": "MENDELSSOHN",
+   "key": null,
    "via": null,
    "metric_key": "8.7.8.7.8.8.7.7",
    "melody_keys": [
@@ -2001,6 +2097,7 @@
    ],
    "metric": "8.7.8.7. com estribilho",
    "melody": "REGENT SQUARE",
+   "key": null,
    "via": null,
    "metric_key": "8.7.8.7",
    "melody_keys": [
@@ -2019,6 +2116,7 @@
    "topics_canonical": [],
    "metric": "8.6.8.6.7.6.8.6.",
    "melody": "ST. LOUIS",
+   "key": null,
    "via": null,
    "metric_key": "8.6.8.6.7.6.8.6",
    "melody_keys": [
@@ -2037,6 +2135,7 @@
    "topics_canonical": [],
    "metric": "6.5.6.5.D.",
    "melody": "MUELLER",
+   "key": null,
    "via": null,
    "metric_key": "6.5.6.5.6.5.6.5",
    "melody_keys": [
@@ -2055,6 +2154,7 @@
    "topics_canonical": [],
    "metric": "13.12.13.12. com estribilho",
    "melody": "THE FIRST NOWELL",
+   "key": null,
    "via": null,
    "metric_key": "13.12.13.12",
    "melody_keys": [
@@ -2073,6 +2173,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -2089,6 +2190,7 @@
    "topics_canonical": [],
    "metric": "10.8.10.9.7.10.8.8.",
    "melody": "GREENSLEEVES",
+   "key": null,
    "via": null,
    "metric_key": "10.8.10.9.7.10.8.8",
    "melody_keys": [
@@ -2107,6 +2209,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -2123,6 +2226,7 @@
    "topics_canonical": [],
    "metric": "8.7.8.7. com estribilho",
    "melody": "GLORIA",
+   "key": null,
    "via": null,
    "metric_key": "8.7.8.7",
    "melody_keys": [
@@ -2141,6 +2245,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -2161,6 +2266,7 @@
    ],
    "metric": "8.6.8.6. com repetição (C.M. com repetição)",
    "melody": "ANTIOCH",
+   "key": null,
    "via": null,
    "metric_key": "8.6.8.6",
    "melody_keys": [
@@ -2179,6 +2285,7 @@
    "topics_canonical": [],
    "metric": "8.7.8.7.7.7.",
    "melody": "IRBY",
+   "key": null,
    "via": null,
    "metric_key": "8.7.8.7.7.7",
    "melody_keys": [
@@ -2197,6 +2304,7 @@
    "topics_canonical": [],
    "metric": "8.3.3.6.D.",
    "melody": "WARUM SOLLT ICH",
+   "key": null,
    "via": null,
    "metric_key": "8.3.3.6.8.3.3.6",
    "melody_keys": [
@@ -2215,6 +2323,7 @@
    "topics_canonical": [],
    "metric": "6.5.6.5.D.",
    "melody": "TRANQÜILIDADE",
+   "key": null,
    "via": null,
    "metric_key": "6.5.6.5.6.5.6.5",
    "melody_keys": [
@@ -2237,6 +2346,7 @@
    ],
    "metric": "9.9.7.5.9. com estribilho",
    "melody": "JESUS, CRIANÇA COMO EU",
+   "key": null,
    "via": null,
    "metric_key": "9.9.7.5.9",
    "melody_keys": [
@@ -2255,6 +2365,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -2275,6 +2386,7 @@
    ],
    "metric": "6.6.9.D. com estribilho",
    "melody": "ROOM IN MY HEART",
+   "key": null,
    "via": null,
    "metric_key": "6.6.9.6.6.9",
    "melody_keys": [
@@ -2293,6 +2405,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -2313,6 +2426,7 @@
    ],
    "metric": "9.6.9.6.8.8.8.6. com estribilho",
    "melody": "SECOND COMING",
+   "key": null,
    "via": null,
    "metric_key": "9.6.9.6.8.8.8.6",
    "melody_keys": [
@@ -2331,6 +2445,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -2353,6 +2468,7 @@
    ],
    "metric": "11.10.11.10. com estribilho",
    "melody": "CHAPMAN",
+   "key": null,
    "via": null,
    "metric_key": "11.10.11.10",
    "melody_keys": [
@@ -2375,6 +2491,7 @@
    ],
    "metric": "7.7.7. com aleluias",
    "melody": "HALLELUJAH! WHAT ASAVIOUR",
+   "key": null,
    "via": null,
    "metric_key": "7.7.7",
    "melody_keys": [
@@ -2399,6 +2516,7 @@
    ],
    "metric": "12.12.9.9.",
    "melody": "STORIES OF JESUS",
+   "key": null,
    "via": null,
    "metric_key": "12.12.9.9",
    "melody_keys": [
@@ -2417,6 +2535,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -2439,6 +2558,7 @@
    ],
    "metric": "8.6.8.6. (C.M.,Common Meter)",
    "melody": "GETSËMANE",
+   "key": null,
    "via": null,
    "metric_key": "8.6.8.6",
    "melody_keys": [
@@ -2457,6 +2577,7 @@
    "topics_canonical": [],
    "metric": "8.6.8.6.D. (C.M.D.)",
    "melody": "CRAM",
+   "key": null,
    "via": null,
    "metric_key": "8.6.8.6.8.6.8.6",
    "melody_keys": [
@@ -2475,6 +2596,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -2497,6 +2619,7 @@
    ],
    "metric": "7.6.7.6.D.",
    "melody": "ST. THEODULPH",
+   "key": null,
    "via": null,
    "metric_key": "7.6.7.6.7.6.7.6",
    "melody_keys": [
@@ -2521,6 +2644,7 @@
    ],
    "metric": "6.6.6.6. com estribilho",
    "melody": "KENOSIS",
+   "key": null,
    "via": null,
    "metric_key": "6.6.6.6",
    "melody_keys": [
@@ -2543,6 +2667,7 @@
    ],
    "metric": "8.6.8.6. com estribilho (C.M. com estribilho)",
    "melody": "MONTE VERDE",
+   "key": null,
    "via": null,
    "metric_key": "8.6.8.6",
    "melody_keys": [
@@ -2561,6 +2686,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -2581,6 +2707,7 @@
    ],
    "metric": "8.8.8.8. (L.M., Long Meter)",
    "melody": "HAMBURG",
+   "key": null,
    "via": null,
    "metric_key": "8.8.8.8",
    "melody_keys": [
@@ -2603,6 +2730,7 @@
    ],
    "metric": "Irregular",
    "melody": "WORTHY IS THE LAMB",
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": [
@@ -2621,6 +2749,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -2641,6 +2770,7 @@
    ],
    "metric": "7.6.7.6.D.",
    "melody": "PASSION CHORALE",
+   "key": null,
    "via": null,
    "metric_key": "7.6.7.6.7.6.7.6",
    "melody_keys": [
@@ -2659,6 +2789,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -2679,6 +2810,7 @@
    ],
    "metric": "6.6.9.D. com estribilho",
    "melody": "OLD RUGGED CROSS",
+   "key": null,
    "via": null,
    "metric_key": "6.6.9.6.6.9",
    "melody_keys": [
@@ -2697,6 +2829,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -2719,6 +2852,7 @@
    ],
    "metric": "7.6.7.6.D.",
    "melody": "ST. CHRISTOPHER",
+   "key": null,
    "via": null,
    "metric_key": "7.6.7.6.7.6.7.6",
    "melody_keys": [
@@ -2741,6 +2875,7 @@
    ],
    "metric": "7.7.7.7. com aleluias",
    "melody": "EASTER HYMN",
+   "key": null,
    "via": null,
    "metric_key": "7.7.7.7",
    "melody_keys": [
@@ -2763,6 +2898,7 @@
    ],
    "metric": "13.13.13.11. com estribilho",
    "melody": "ACKLEY",
+   "key": null,
    "via": null,
    "metric_key": "13.13.13.11",
    "melody_keys": [
@@ -2786,6 +2922,7 @@
    ],
    "metric": "9.8.9.12. com estribilho",
    "melody": "RESURRECTION",
+   "key": null,
    "via": null,
    "metric_key": "9.8.9.12",
    "melody_keys": [
@@ -2808,6 +2945,7 @@
    ],
    "metric": "7.6.7.6.D.",
    "melody": "ST. KEVIN",
+   "key": null,
    "via": null,
    "metric_key": "7.6.7.6.7.6.7.6",
    "melody_keys": [
@@ -2826,6 +2964,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -2846,6 +2985,7 @@
    ],
    "metric": "6.5.6.4. com estribilho",
    "melody": "CHRIST AROSE",
+   "key": null,
    "via": null,
    "metric_key": "6.5.6.4",
    "melody_keys": [
@@ -2864,6 +3004,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -2884,6 +3025,7 @@
    ],
    "metric": "8.8.8. com repetição e estribilho",
    "melody": "FINITA JAM SUNT PRAELIA",
+   "key": null,
    "via": null,
    "metric_key": "8.8.8",
    "melody_keys": [
@@ -2902,6 +3044,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -2922,6 +3065,7 @@
    ],
    "metric": "8.8.8.4.",
    "melody": "VICTORY",
+   "key": null,
    "via": null,
    "metric_key": "8.8.8.4",
    "melody_keys": [
@@ -2944,6 +3088,7 @@
    ],
    "metric": "11.11.11.11.11.",
    "melody": "SALVE FESTA DIES (Barnby)",
+   "key": null,
    "via": null,
    "metric_key": "11.11.11.11.11",
    "melody_keys": [
@@ -2969,6 +3114,7 @@
    ],
    "metric": "7.7.7.7.",
    "melody": "EQUATORIAL",
+   "key": null,
    "via": null,
    "metric_key": "7.7.7.7",
    "melody_keys": [
@@ -2987,6 +3133,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -3007,6 +3154,7 @@
    ],
    "metric": "8.7.8.7. com estribilho",
    "melody": "COMING AGAIN",
+   "key": null,
    "via": null,
    "metric_key": "8.7.8.7",
    "melody_keys": [
@@ -3025,6 +3173,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -3045,6 +3194,7 @@
    ],
    "metric": "12.12.12.9. com estribilho",
    "melody": "CHRIST RETURNETH",
+   "key": null,
    "via": null,
    "metric_key": "12.12.12.9",
    "melody_keys": [
@@ -3063,6 +3213,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -3083,6 +3234,7 @@
    ],
    "metric": "13.12.13.12.8.8.12.8.8.12. coda repetição com e",
    "melody": "COMPARAÇÃO",
+   "key": null,
    "via": null,
    "metric_key": "13.12.13.12.8.8.12.8.8.12",
    "melody_keys": [
@@ -3105,6 +3257,7 @@
    ],
    "metric": "8.7.8.7.8.7.6. com estribilho",
    "melody": "BATTLE HYMN",
+   "key": null,
    "via": null,
    "metric_key": "8.7.8.7.8.7.6",
    "melody_keys": [
@@ -3123,6 +3276,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -3139,6 +3293,7 @@
    "topics_canonical": [],
    "metric": "12.9.12.9. com estribilho",
    "melody": "STARS IN MY CROWN",
+   "key": null,
    "via": null,
    "metric_key": "12.9.12.9",
    "melody_keys": [
@@ -3157,6 +3312,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -3177,6 +3333,7 @@
    ],
    "metric": "15.11.15.11. com estribilho",
    "melody": "ROLL CALL",
+   "key": null,
    "via": null,
    "metric_key": "15.11.15.11",
    "melody_keys": [
@@ -3195,6 +3352,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -3211,6 +3369,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -3233,6 +3392,7 @@
    ],
    "metric": "9.6.9.8. com estribilho",
    "melody": "RAPTURE",
+   "key": null,
    "via": null,
    "metric_key": "9.6.9.8",
    "melody_keys": [
@@ -3251,6 +3411,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -3271,6 +3432,7 @@
    ],
    "metric": "8.5.11.D.",
    "melody": "FAIRCLOTH",
+   "key": null,
    "via": null,
    "metric_key": "8.5.11.8.5.11",
    "melody_keys": [
@@ -3295,6 +3457,7 @@
    ],
    "metric": "8.7.8.7.",
    "melody": "INMOLADO",
+   "key": null,
    "via": null,
    "metric_key": "8.7.8.7",
    "melody_keys": [
@@ -3313,6 +3476,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -3335,6 +3499,7 @@
    ],
    "metric": "8.7.8.7.D.",
    "melody": "CONVERSE",
+   "key": null,
    "via": null,
    "metric_key": "8.7.8.7.8.7.8.7",
    "melody_keys": [
@@ -3361,6 +3526,7 @@
    ],
    "metric": "7.6.7.6.D.",
    "melody": "ANGEL'S STORY",
+   "key": null,
    "via": null,
    "metric_key": "7.6.7.6.7.6.7.6",
    "melody_keys": [
@@ -3383,6 +3549,7 @@
    ],
    "metric": "9.7.9.7.9.8.",
    "melody": "ST. PETERSBURG",
+   "key": null,
    "via": null,
    "metric_key": "9.7.9.7.9.8",
    "melody_keys": [
@@ -3405,6 +3572,7 @@
    ],
    "metric": "7.7.4.4.5.5.7.",
    "melody": "HE LOVES YOU AND ME",
+   "key": null,
    "via": null,
    "metric_key": "7.7.4.4.5.5.7",
    "melody_keys": [
@@ -3429,6 +3597,7 @@
    ],
    "metric": "7.6.7.6.8.8. com estribilho",
    "melody": "CLARENDON",
+   "key": null,
    "via": null,
    "metric_key": "7.6.7.6.8.8",
    "melody_keys": [
@@ -3451,6 +3620,7 @@
    ],
    "metric": "12.9.6.6.6.6.9.",
    "melody": "WONDROUS LOVE",
+   "key": null,
    "via": null,
    "metric_key": "12.9.6.6.6.6.9",
    "melody_keys": [
@@ -3473,6 +3643,7 @@
    ],
    "metric": "8.8.8.8.6.",
    "melody": "ST. MARGARET",
+   "key": null,
    "via": null,
    "metric_key": "8.8.8.8.6",
    "melody_keys": [
@@ -3491,6 +3662,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -3511,6 +3683,7 @@
    ],
    "metric": "7.7.7.7. com estribilho",
    "melody": "CHINA",
+   "key": null,
    "via": null,
    "metric_key": "7.7.7.7",
    "melody_keys": [
@@ -3535,6 +3708,7 @@
    ],
    "metric": "8.7.8.7. com estribilho",
    "melody": "PRECIOUS NAME",
+   "key": null,
    "via": null,
    "metric_key": "8.7.8.7",
    "melody_keys": [
@@ -3559,6 +3733,7 @@
    ],
    "metric": "7.6.8.6.8.6.8.6.",
    "melody": "ESCOLÁSTICA",
+   "key": null,
    "via": null,
    "metric_key": "7.6.8.6.8.6.8.6",
    "melody_keys": [
@@ -3577,6 +3752,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -3597,6 +3773,7 @@
    ],
    "metric": "8.6.8.7. com estribilho",
    "melody": "O NOME DO SALVADOR",
+   "key": null,
    "via": null,
    "metric_key": "8.6.8.7",
    "melody_keys": [
@@ -3615,6 +3792,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -3637,6 +3815,7 @@
    ],
    "metric": "11.11.11.11.",
    "melody": "HOLDEN",
+   "key": null,
    "via": null,
    "metric_key": "11.11.11.11",
    "melody_keys": [
@@ -3661,6 +3840,7 @@
    ],
    "metric": "8.8.8.7.",
    "melody": "COME TOGETHER",
+   "key": null,
    "via": null,
    "metric_key": "8.8.8.7",
    "melody_keys": [
@@ -3683,6 +3863,7 @@
    ],
    "metric": "8.8.8.8. ccom estribilho (L.M. com estribilho)",
    "melody": "HE LEADETH ME",
+   "key": null,
    "via": null,
    "metric_key": "8.8.8.8",
    "melody_keys": [
@@ -3707,6 +3888,7 @@
    ],
    "metric": "10.9.10.9.D.",
    "melody": "BLOTT EN DAG",
+   "key": null,
    "via": null,
    "metric_key": "10.9.10.9.10.9.10.9",
    "melody_keys": [
@@ -3729,6 +3911,7 @@
    ],
    "metric": "10.10.10.10. com estribilho",
    "melody": "WHITTLE",
+   "key": null,
    "via": null,
    "metric_key": "10.10.10.10",
    "melody_keys": [
@@ -3747,6 +3930,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -3767,6 +3951,7 @@
    ],
    "metric": "Irregular",
    "melody": "SHEPHERD OF LOVE",
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": [
@@ -3785,6 +3970,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -3805,6 +3991,7 @@
    ],
    "metric": "8.6.8.6. (C.M.,Common Meter)",
    "melody": "CRIMOND",
+   "key": null,
    "via": null,
    "metric_key": "8.6.8.6",
    "melody_keys": [
@@ -3827,6 +4014,7 @@
    ],
    "metric": "9.9.9.5. com estribilho",
    "melody": "GLORY TO HIS NAME",
+   "key": null,
    "via": null,
    "metric_key": "9.9.9.5",
    "melody_keys": [
@@ -3849,6 +4037,7 @@
    ],
    "metric": "8.5.8.3.",
    "melody": "LENE",
+   "key": null,
    "via": null,
    "metric_key": "8.5.8.3",
    "melody_keys": [
@@ -3871,6 +4060,7 @@
    ],
    "metric": "8.6.8.6. (C.M.,Common Meter)",
    "melody": "HUDSON",
+   "key": null,
    "via": null,
    "metric_key": "8.6.8.6",
    "melody_keys": [
@@ -3895,6 +4085,7 @@
    ],
    "metric": "8.7.8.7.D.",
    "melody": "HYFRYDOL",
+   "key": null,
    "via": null,
    "metric_key": "8.7.8.7.8.7.8.7",
    "melody_keys": [
@@ -3913,6 +4104,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -3933,6 +4125,7 @@
    ],
    "metric": "13.13.7.7.12. com estribilho",
    "melody": "WONDERFUL GRACE",
+   "key": null,
    "via": null,
    "metric_key": "13.13.7.7.12",
    "melody_keys": [
@@ -3955,6 +4148,7 @@
    ],
    "metric": "Irregular",
    "melody": "O REI DA GLÓRIA",
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": [
@@ -3977,6 +4171,7 @@
    ],
    "metric": "6.6.8.6.D. (S.M.D.)",
    "melody": "DIADEMATA",
+   "key": null,
    "via": null,
    "metric_key": "6.6.8.6.6.6.8.6",
    "melody_keys": [
@@ -3999,6 +4194,7 @@
    ],
    "metric": "8.7.8.7. com estribilho",
    "melody": "CROWN HIM",
+   "key": null,
    "via": null,
    "metric_key": "8.7.8.7",
    "melody_keys": [
@@ -4023,6 +4219,7 @@
    ],
    "metric": "10.8.8.8.",
    "melody": "DUKE STREET",
+   "key": null,
    "via": null,
    "metric_key": "10.8.8.8",
    "melody_keys": [
@@ -4045,6 +4242,7 @@
    ],
    "metric": "8.7.8.5",
    "melody": "CASCADURA",
+   "key": null,
    "via": null,
    "metric_key": "8.7.8.5",
    "melody_keys": [
@@ -4068,6 +4266,7 @@
    ],
    "metric": "8.7.8.7.8.7.",
    "melody": "ERIN",
+   "key": null,
    "via": null,
    "metric_key": "8.7.8.7.8.7",
    "melody_keys": [
@@ -4092,6 +4291,7 @@
    ],
    "metric": "8.6.8.6.8.8.4.4.3.",
    "melody": "ELIZABETH",
+   "key": null,
    "via": null,
    "metric_key": "8.6.8.6.8.8.4.4.3",
    "melody_keys": [
@@ -4110,6 +4310,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -4132,6 +4333,7 @@
    ],
    "metric": "12.12.12.9. com estribilho",
    "melody": "WARD",
+   "key": null,
    "via": null,
    "metric_key": "12.12.12.9",
    "melody_keys": [
@@ -4156,6 +4358,7 @@
    ],
    "metric": "10.7.10.6. com estribilho",
    "melody": "LORDSHIP OF CHRIST",
+   "key": null,
    "via": null,
    "metric_key": "10.7.10.6",
    "melody_keys": [
@@ -4174,6 +4377,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -4194,6 +4398,7 @@
    ],
    "metric": "8.5.8.5. com estribilho",
    "melody": "MEU SENHOR",
+   "key": null,
    "via": null,
    "metric_key": "8.5.8.5",
    "melody_keys": [
@@ -4214,6 +4419,7 @@
    "topics_canonical": [],
    "metric": "8.5.8.5. com estribilho",
    "melody": "CORO INFANTIL",
+   "key": null,
    "via": null,
    "metric_key": "8.5.8.5",
    "melody_keys": [
@@ -4237,6 +4443,7 @@
    ],
    "metric": "6.6.8.6. (S.M., Short Meter)",
    "melody": "TRENTHAM",
+   "key": null,
    "via": null,
    "metric_key": "6.6.8.6",
    "melody_keys": [
@@ -4262,6 +4469,7 @@
    ],
    "metric": "Irregular",
    "melody": "BURGESS",
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": [
@@ -4282,6 +4490,7 @@
    "topics_canonical": [],
    "metric": "10.10.10.10.",
    "melody": "CONSOLADOR",
+   "key": null,
    "via": null,
    "metric_key": "10.10.10.10",
    "melody_keys": [
@@ -4307,6 +4516,7 @@
    ],
    "metric": "7.7.7.7.D.",
    "melody": "EVERLASTING LOVE",
+   "key": null,
    "via": null,
    "metric_key": "7.7.7.7.7.7.7.7",
    "melody_keys": [
@@ -4327,6 +4537,7 @@
    "topics_canonical": [],
    "metric": "10.10.9.10. com estribilho",
    "melody": "DESPERTA-ME",
+   "key": null,
    "via": null,
    "metric_key": "10.10.9.10",
    "melody_keys": [
@@ -4347,6 +4558,7 @@
    "topics_canonical": [],
    "metric": "10.10.9.10. com estribilho",
    "melody": "DESPERTA-ME",
+   "key": null,
    "via": "CTP-294",
    "metric_key": "10.10.9.10",
    "melody_keys": [
@@ -4370,6 +4582,7 @@
    ],
    "metric": "8.6.8.6. com estribilho (C.M. com estribilho)",
    "melody": "TRUETT",
+   "key": null,
    "via": null,
    "metric_key": "8.6.8.6",
    "melody_keys": [
@@ -4392,6 +4605,7 @@
    ],
    "metric": "8.7.8.7.D.",
    "melody": "PROMISE",
+   "key": null,
    "via": null,
    "metric_key": "8.7.8.7.8.7.8.7",
    "melody_keys": [
@@ -4414,6 +4628,7 @@
    ],
    "metric": "10.9.10.9. com estribilho",
    "melody": "LIVRO SANTO",
+   "key": null,
    "via": null,
    "metric_key": "10.9.10.9",
    "melody_keys": [
@@ -4438,6 +4653,7 @@
    ],
    "metric": "10.10.10.10.",
    "melody": "BREAD OF LIFE",
+   "key": null,
    "via": null,
    "metric_key": "10.10.10.10",
    "melody_keys": [
@@ -4460,6 +4676,7 @@
    ],
    "metric": "7.7.7.7.",
    "melody": "ALETTA",
+   "key": null,
    "via": null,
    "metric_key": "7.7.7.7",
    "melody_keys": [
@@ -4478,6 +4695,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -4498,6 +4716,7 @@
    ],
    "metric": "8.7.8.7.4.7.",
    "melody": "HEBER",
+   "key": null,
    "via": null,
    "metric_key": "8.7.8.7.4.7",
    "melody_keys": [
@@ -4520,6 +4739,7 @@
    ],
    "metric": "8.7.8.7.",
    "melody": "RETREAT",
+   "key": null,
    "via": null,
    "metric_key": "8.7.8.7",
    "melody_keys": [
@@ -4538,6 +4758,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -4556,6 +4777,7 @@
    "topics_canonical": [],
    "metric": "6.6.8.6.6.8.3.3.6.6.",
    "melody": "ARNSBERG",
+   "key": null,
    "via": null,
    "metric_key": "6.6.8.6.6.8.3.3.6.6",
    "melody_keys": [
@@ -4579,6 +4801,7 @@
    ],
    "metric": "6.6.6.6. com estribilho",
    "melody": "DARWALL",
+   "key": null,
    "via": null,
    "metric_key": "6.6.6.6",
    "melody_keys": [
@@ -4599,6 +4822,7 @@
    "topics_canonical": [],
    "metric": "8.8.8.8. com acréscimos (L.M. com acrécimos)",
    "melody": "LASST UNS ERFREUEN",
+   "key": null,
    "via": null,
    "metric_key": "8.8.8.8",
    "melody_keys": [
@@ -4617,6 +4841,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -4635,6 +4860,7 @@
    "topics_canonical": [],
    "metric": "7.7.7.7.7.7. com repetição",
    "melody": "RAYMER",
+   "key": null,
    "via": null,
    "metric_key": "7.7.7.7.7.7",
    "melody_keys": [
@@ -4655,6 +4881,7 @@
    "topics_canonical": [],
    "metric": "14.14.4.7.8.",
    "melody": "LOBE DEN HERREN",
+   "key": null,
    "via": null,
    "metric_key": "14.14.4.7.8",
    "melody_keys": [
@@ -4680,6 +4907,7 @@
    ],
    "metric": "11.11.11.11. com estribilho",
    "melody": "TO GOD BE THE GLORY",
+   "key": null,
    "via": null,
    "metric_key": "11.11.11.11",
    "melody_keys": [
@@ -4700,6 +4928,7 @@
    "topics_canonical": [],
    "metric": "7.7. com estribilho",
    "melody": "MONKLAND",
+   "key": null,
    "via": null,
    "metric_key": "7.7",
    "melody_keys": [
@@ -4723,6 +4952,7 @@
    ],
    "metric": "6.8.6.8. com estribilho",
    "melody": "MARION",
+   "key": null,
    "via": null,
    "metric_key": "6.8.6.8",
    "melody_keys": [
@@ -4741,6 +4971,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -4757,6 +4988,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -4778,6 +5010,7 @@
    ],
    "metric": "10.10.11.11.",
    "melody": "LYONS",
+   "key": null,
    "via": null,
    "metric_key": "10.10.11.11",
    "melody_keys": [
@@ -4801,6 +5034,7 @@
    ],
    "metric": "9.8.9.7.8.7.8.7.",
    "melody": "CONSTANCY",
+   "key": null,
    "via": null,
    "metric_key": "9.8.9.7.8.7.8.7",
    "melody_keys": [
@@ -4821,6 +5055,7 @@
    "topics_canonical": [],
    "metric": "6.6.6.6.D.",
    "melody": "MADRID",
+   "key": null,
    "via": null,
    "metric_key": "6.6.6.6.6.6.6.6",
    "melody_keys": [
@@ -4844,6 +5079,7 @@
    ],
    "metric": "Irregular",
    "melody": "SURELY THE PRESENCE",
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": [
@@ -4862,6 +5098,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -4883,6 +5120,7 @@
    ],
    "metric": "8.8.8.9.",
    "melody": "OLD HUNDREDTH, alt.",
+   "key": null,
    "via": null,
    "metric_key": "8.8.8.9",
    "melody_keys": [
@@ -4903,6 +5141,7 @@
    "topics_canonical": [],
    "metric": "Irregular",
    "melody": "HEILIG, HEILIG, HEILIG",
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": [
@@ -4926,6 +5165,7 @@
    ],
    "metric": "Irregular",
    "melody": "ADORE THEE",
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": [
@@ -4946,6 +5186,7 @@
    "topics_canonical": [],
    "metric": "9.10.9.10.",
    "melody": "DEDICAÇÃO",
+   "key": null,
    "via": null,
    "metric_key": "9.10.9.10",
    "melody_keys": [
@@ -4964,6 +5205,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -4982,6 +5224,7 @@
    "topics_canonical": [],
    "metric": "Irregular",
    "melody": "PRECENDA",
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": [
@@ -5002,6 +5245,7 @@
    "topics_canonical": [],
    "metric": "10.9.10.10. com estribilho",
    "melody": "GIVING",
+   "key": null,
    "via": null,
    "metric_key": "10.9.10.10",
    "melody_keys": [
@@ -5020,6 +5264,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -5038,6 +5283,7 @@
    "topics_canonical": [],
    "metric": "7.7.7.7. com estribilho",
    "melody": "RAQUEL",
+   "key": null,
    "via": null,
    "metric_key": "7.7.7.7",
    "melody_keys": [
@@ -5058,6 +5304,7 @@
    "topics_canonical": [],
    "metric": "7.7.7.7.",
    "melody": "BURROUGHS",
+   "key": null,
    "via": null,
    "metric_key": "7.7.7.7",
    "melody_keys": [
@@ -5078,6 +5325,7 @@
    "topics_canonical": [],
    "metric": "10.9.10.9. com estribilho",
    "melody": "DESTINO",
+   "key": null,
    "via": null,
    "metric_key": "10.9.10.9",
    "melody_keys": [
@@ -5096,6 +5344,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -5119,6 +5368,7 @@
    ],
    "metric": "8.7.8.7.8.7. com repetição",
    "melody": "BEACH SPRING",
+   "key": null,
    "via": null,
    "metric_key": "8.7.8.7.8.7",
    "melody_keys": [
@@ -5139,6 +5389,7 @@
    "topics_canonical": [],
    "metric": "7.7.7.9. com estribilho",
    "melody": "FISHER",
+   "key": null,
    "via": null,
    "metric_key": "7.7.7.9",
    "melody_keys": [
@@ -5159,6 +5410,7 @@
    "topics_canonical": [],
    "metric": "9.8.9.8.9.8.9.5",
    "melody": "TAYLOR",
+   "key": null,
    "via": null,
    "metric_key": "9.8.9.8.9.8.9.5",
    "melody_keys": [
@@ -5177,6 +5429,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -5200,6 +5453,7 @@
    ],
    "metric": "8.7.8.9. com estribilho",
    "melody": "WITHOUT HIM",
+   "key": null,
    "via": null,
    "metric_key": "8.7.8.9",
    "melody_keys": [
@@ -5220,6 +5474,7 @@
    "topics_canonical": [],
    "metric": "8.5.8.3.",
    "melody": "WRIGHT",
+   "key": null,
    "via": null,
    "metric_key": "8.5.8.3",
    "melody_keys": [
@@ -5240,6 +5495,7 @@
    "topics_canonical": [],
    "metric": "11.7.11.7. com estribilho",
    "melody": "CARMICHAEL",
+   "key": null,
    "via": null,
    "metric_key": "11.7.11.7",
    "melody_keys": [
@@ -5260,6 +5516,7 @@
    "topics_canonical": [],
    "metric": "11.10.11.10.",
    "melody": "CAMACHA",
+   "key": null,
    "via": null,
    "metric_key": "11.10.11.10",
    "melody_keys": [
@@ -5278,6 +5535,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -5296,6 +5554,7 @@
    "topics_canonical": [],
    "metric": "8.6.8.6.8.8.8.6",
    "melody": "GINSBURG",
+   "key": null,
    "via": null,
    "metric_key": "8.6.8.6.8.8.8.6",
    "melody_keys": [
@@ -5316,6 +5575,7 @@
    "topics_canonical": [],
    "metric": "Irregular",
    "melody": "HUMAITÁ",
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": [
@@ -5334,6 +5594,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -5355,6 +5616,7 @@
    ],
    "metric": "Irregular com estribilho",
    "melody": "JENSEN",
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": [
@@ -5373,6 +5635,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -5391,6 +5654,7 @@
    "topics_canonical": [],
    "metric": "11.8.11.9. com estribilho",
    "melody": "LOOK AND LIVE",
+   "key": null,
    "via": null,
    "metric_key": "11.8.11.9",
    "melody_keys": [
@@ -5414,6 +5678,7 @@
    ],
    "metric": "12.9.12.9. com estribilho",
    "melody": "LATAKIA",
+   "key": null,
    "via": null,
    "metric_key": "12.9.12.9",
    "melody_keys": [
@@ -5434,6 +5699,7 @@
    "topics_canonical": [],
    "metric": "Irregular",
    "melody": "BÊNÇÃO ANTIGA",
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": [
@@ -5452,6 +5718,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -5473,6 +5740,7 @@
    ],
    "metric": "Irregular",
    "melody": "ALLEN",
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": [
@@ -5496,6 +5764,7 @@
    ],
    "metric": "11.11.11.11.",
    "melody": "LYNDHURST",
+   "key": null,
    "via": null,
    "metric_key": "11.11.11.11",
    "melody_keys": [
@@ -5516,6 +5785,7 @@
    "topics_canonical": [],
    "metric": "11.11.11.11.",
    "melody": "LYNDHURST",
+   "key": null,
    "via": null,
    "metric_key": "11.11.11.11",
    "melody_keys": [
@@ -5534,6 +5804,7 @@
    "topics_canonical": [],
    "metric": "8.7.8.7.8.7.",
    "melody": "PATRIXBOURNE",
+   "key": null,
    "via": null,
    "metric_key": "8.7.8.7.8.7",
    "melody_keys": [
@@ -5552,6 +5823,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -5568,6 +5840,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -5586,6 +5859,7 @@
    "topics_canonical": [],
    "metric": "8.7.8.7.8.7.",
    "melody": "LAUDA ANIMA (Goss)",
+   "key": null,
    "via": null,
    "metric_key": "8.7.8.7.8.7",
    "melody_keys": [
@@ -5610,6 +5884,7 @@
    ],
    "metric": "14.14.14.6.10.10.10.6.6.10.",
    "melody": "ALDEOTA",
+   "key": null,
    "via": null,
    "metric_key": "14.14.14.6.10.10.10.6.6.10",
    "melody_keys": [
@@ -5628,6 +5903,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -5648,6 +5924,7 @@
    ],
    "metric": "6.4.6.4.6.6.6.4. com repetição",
    "melody": "CONTRIÇÃO",
+   "key": null,
    "via": null,
    "metric_key": "6.4.6.4.6.6.6.4",
    "melody_keys": [
@@ -5666,6 +5943,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -5688,6 +5966,7 @@
    ],
    "metric": "10.10.10.10.",
    "melody": "DACYR",
+   "key": null,
    "via": null,
    "metric_key": "10.10.10.10",
    "melody_keys": [
@@ -5714,6 +5993,7 @@
    ],
    "metric": "10.10.10.4.",
    "melody": "CAMACUÁ",
+   "key": null,
    "via": null,
    "metric_key": "10.10.10.4",
    "melody_keys": [
@@ -5732,6 +6012,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -5752,6 +6033,7 @@
    ],
    "metric": "10.8.10.8. com estribilho",
    "melody": "JANGA",
+   "key": null,
    "via": null,
    "metric_key": "10.8.10.8",
    "melody_keys": [
@@ -5776,6 +6058,7 @@
    ],
    "metric": "12.11.12.11.",
    "melody": "TELFORD",
+   "key": null,
    "via": null,
    "metric_key": "12.11.12.11",
    "melody_keys": [
@@ -5794,6 +6077,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -5814,6 +6098,7 @@
    ],
    "metric": "8.8.8.7.",
    "melody": "SWEET PEACE",
+   "key": null,
    "via": null,
    "metric_key": "8.8.8.7",
    "melody_keys": [
@@ -5832,6 +6117,7 @@
    "topics_canonical": [],
    "metric": "8.8.8.9.D. com estribilho",
    "melody": "BLESSED BE THE FOUNTAIN",
+   "key": null,
    "via": null,
    "metric_key": "8.8.8.9.8.8.8.9",
    "melody_keys": [
@@ -5850,6 +6136,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -5872,6 +6159,7 @@
    ],
    "metric": "8.7.8.7.D.",
    "melody": "OWENS",
+   "key": null,
    "via": null,
    "metric_key": "8.7.8.7.8.7.8.7",
    "melody_keys": [
@@ -5890,6 +6178,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -5914,6 +6203,7 @@
    ],
    "metric": "8.6.8.6. (C.M.,Common Meter)",
    "melody": "LAND OF REST",
+   "key": null,
    "via": null,
    "metric_key": "8.6.8.6",
    "melody_keys": [
@@ -5938,6 +6228,7 @@
    ],
    "metric": "9.9.9.9. com estribilho",
    "melody": "MOODY",
+   "key": null,
    "via": null,
    "metric_key": "9.9.9.9",
    "melody_keys": [
@@ -5956,6 +6247,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -5978,6 +6270,7 @@
    ],
    "metric": "6.6.9.6.6.10. com estribilho",
    "melody": "HUDSON",
+   "key": null,
    "via": null,
    "metric_key": "6.6.9.6.6.10",
    "melody_keys": [
@@ -5996,6 +6289,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -6018,6 +6312,7 @@
    ],
    "metric": "11.7.11.8. com estribilho",
    "melody": "WAY OF THE CROSS",
+   "key": null,
    "via": null,
    "metric_key": "11.7.11.8",
    "melody_keys": [
@@ -6042,6 +6337,7 @@
    ],
    "metric": "7.6.7.6. com estribilho",
    "melody": "AVELINO",
+   "key": null,
    "via": null,
    "metric_key": "7.6.7.6",
    "melody_keys": [
@@ -6066,6 +6362,7 @@
    ],
    "metric": "8.8.8.8. ccom estribilho (L.M. com estribilho)",
    "melody": "HAPPY DAY",
+   "key": null,
    "via": null,
    "metric_key": "8.8.8.8",
    "melody_keys": [
@@ -6084,6 +6381,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -6104,6 +6402,7 @@
    ],
    "metric": "7.7.8.7.6.7.8.7.",
    "melody": "THE GOSPEL BELLS",
+   "key": null,
    "via": null,
    "metric_key": "7.7.8.7.6.7.8.7",
    "melody_keys": [
@@ -6126,6 +6425,7 @@
    ],
    "metric": "8.8.8.8. (L.M., Long Meter)",
    "melody": "WOODWORTH",
+   "key": null,
    "via": null,
    "metric_key": "8.8.8.8",
    "melody_keys": [
@@ -6150,6 +6450,7 @@
    ],
    "metric": "8.8.9.8. com estribilho",
    "melody": "ADA",
+   "key": null,
    "via": null,
    "metric_key": "8.8.9.8",
    "melody_keys": [
@@ -6168,6 +6469,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -6190,6 +6492,7 @@
    ],
    "metric": "9.8.9.6. com estribilho",
    "melody": "NEW ORLEANS",
+   "key": null,
    "via": null,
    "metric_key": "9.8.9.6",
    "melody_keys": [
@@ -6214,6 +6517,7 @@
    ],
    "metric": "8.6.8.6. (C.M.,Common Meter)",
    "melody": "AMADOR",
+   "key": null,
    "via": null,
    "metric_key": "8.6.8.6",
    "melody_keys": [
@@ -6236,6 +6540,7 @@
    ],
    "metric": "7.7.7.7.7.7. com repetição",
    "melody": "OTTMAR",
+   "key": null,
    "via": null,
    "metric_key": "7.7.7.7.7.7",
    "melody_keys": [
@@ -6254,6 +6559,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -6274,6 +6580,7 @@
    ],
    "metric": "7.7.7.7.7.7.",
    "melody": "TOPLADY",
+   "key": null,
    "via": null,
    "metric_key": "7.7.7.7.7.7",
    "melody_keys": [
@@ -6298,6 +6605,7 @@
    ],
    "metric": "9.8.9.7. com estribilho",
    "melody": "LIVRE EM CRISTO",
+   "key": null,
    "via": null,
    "metric_key": "9.8.9.7",
    "melody_keys": [
@@ -6316,6 +6624,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -6336,6 +6645,7 @@
    ],
    "metric": "6.6.6.6.6.6.",
    "melody": "LAUDES DOMINI",
+   "key": null,
    "via": null,
    "metric_key": "6.6.6.6.6.6",
    "melody_keys": [
@@ -6358,6 +6668,7 @@
    ],
    "metric": "Irregular",
    "melody": "MESSIAS",
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": [
@@ -6380,6 +6691,7 @@
    ],
    "metric": "8.6.8.6. com estribilho (C.M. com estribilho)",
    "melody": "MARAVILHOSO OLHAR",
+   "key": null,
    "via": null,
    "metric_key": "8.6.8.6",
    "melody_keys": [
@@ -6398,6 +6710,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -6420,6 +6733,7 @@
    ],
    "metric": "8.6.8.6. (C.M.,Common Meter)",
    "melody": "AMAZING GRACE",
+   "key": null,
    "via": null,
    "metric_key": "8.6.8.6",
    "melody_keys": [
@@ -6447,6 +6761,7 @@
    ],
    "metric": "6.6.5.6.6.5.7.8.6.",
    "melody": "JESU MEINE FREUDE",
+   "key": null,
    "via": null,
    "metric_key": "6.6.5.6.6.5.7.8.6",
    "melody_keys": [
@@ -6473,6 +6788,7 @@
    ],
    "metric": "8.6.8.6. (C.M.,Common Meter)",
    "melody": "ST. AGNES",
+   "key": null,
    "via": null,
    "metric_key": "8.6.8.6",
    "melody_keys": [
@@ -6491,6 +6807,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -6513,6 +6830,7 @@
    ],
    "metric": "8.7.8.7. com estribilho",
    "melody": "TRUST IN JESUS",
+   "key": null,
    "via": null,
    "metric_key": "8.7.8.7",
    "melody_keys": [
@@ -6539,6 +6857,7 @@
    ],
    "metric": "8.6.8.6.8.8. com estribilho",
    "melody": "CONTENTE",
+   "key": null,
    "via": null,
    "metric_key": "8.6.8.6.8.8",
    "melody_keys": [
@@ -6557,6 +6876,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -6577,6 +6897,7 @@
    ],
    "metric": "8.7.8.7.D.",
    "melody": "CRISTO É MAIS",
+   "key": null,
    "via": null,
    "metric_key": "8.7.8.7.8.7.8.7",
    "melody_keys": [
@@ -6595,6 +6916,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -6617,6 +6939,7 @@
    ],
    "metric": "8.6.8.6. com estribilho (C.M. com estribilho)",
    "melody": "SEMPRE ALEGRE",
+   "key": null,
    "via": null,
    "metric_key": "8.6.8.6",
    "melody_keys": [
@@ -6643,6 +6966,7 @@
    ],
    "metric": "6.5.6.5.D.",
    "melody": "CRANHAM",
+   "key": null,
    "via": null,
    "metric_key": "6.5.6.5.6.5.6.5",
    "melody_keys": [
@@ -6661,6 +6985,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -6681,6 +7006,7 @@
    ],
    "metric": "8.8.8.8. repetição (L.M. com com repetição)",
    "melody": "PAZ",
+   "key": null,
    "via": null,
    "metric_key": "8.8.8.8",
    "melody_keys": [
@@ -6703,6 +7029,7 @@
    ],
    "metric": "12.12.12.12. com estribilho",
    "melody": "CORAÇÃO EM PAZ",
+   "key": null,
    "via": null,
    "metric_key": "12.12.12.12",
    "melody_keys": [
@@ -6721,6 +7048,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -6743,6 +7071,7 @@
    ],
    "metric": "11.8.11.9. com estribilho",
    "melody": "VILLE DE HAVRE",
+   "key": null,
    "via": null,
    "metric_key": "11.8.11.9",
    "melody_keys": [
@@ -6769,6 +7098,7 @@
    ],
    "metric": "10.9.10.9. com estribilho",
    "melody": "SHOWALTER",
+   "key": null,
    "via": null,
    "metric_key": "10.9.10.9",
    "melody_keys": [
@@ -6791,6 +7121,7 @@
    ],
    "metric": "11.11.11.11. com estribilho",
    "melody": "WYE VALLEY",
+   "key": null,
    "via": null,
    "metric_key": "11.11.11.11",
    "melody_keys": [
@@ -6809,6 +7140,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -6832,6 +7164,7 @@
    ],
    "metric": "Irregular",
    "melody": "WORLD PEACE",
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": [
@@ -6856,6 +7189,7 @@
    ],
    "metric": "7.7.7.7.D.",
    "melody": "ABERYSTWYTH",
+   "key": null,
    "via": null,
    "metric_key": "7.7.7.7.7.7.7.7",
    "melody_keys": [
@@ -6880,6 +7214,7 @@
    ],
    "metric": "7.6.8.6.D.",
    "melody": "COMPANHEIRO",
+   "key": null,
    "via": null,
    "metric_key": "7.6.8.6.7.6.8.6",
    "melody_keys": [
@@ -6902,6 +7237,7 @@
    ],
    "metric": "8.6.8.6. com estribilho (C.M. com estribilho)",
    "melody": "LANDAS",
+   "key": null,
    "via": null,
    "metric_key": "8.6.8.6",
    "melody_keys": [
@@ -6924,6 +7260,7 @@
    ],
    "metric": "8.7.8.7. com estribilho",
    "melody": "SHOWERS OF BLESSINGS",
+   "key": null,
    "via": null,
    "metric_key": "8.7.8.7",
    "melody_keys": [
@@ -6948,6 +7285,7 @@
    ],
    "metric": "11.11.11.9. com estribilho",
    "melody": "FÉ CONTEMPLADA",
+   "key": null,
    "via": null,
    "metric_key": "11.11.11.9",
    "melody_keys": [
@@ -6972,6 +7310,7 @@
    ],
    "metric": "8.6.8.6. (C.M.,Common Meter)",
    "melody": "EVAN",
+   "key": null,
    "via": null,
    "metric_key": "8.6.8.6",
    "melody_keys": [
@@ -6996,6 +7335,7 @@
    ],
    "metric": "11.11.11.11. com estribilho",
    "melody": "ST. GERTRUDE",
+   "key": null,
    "via": null,
    "metric_key": "11.11.11.11",
    "melody_keys": [
@@ -7014,6 +7354,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -7036,6 +7377,7 @@
    ],
    "metric": "9.8.9.8.8.8.",
    "melody": "BEGINNINGS",
+   "key": null,
    "via": null,
    "metric_key": "9.8.9.8.8.8",
    "melody_keys": [
@@ -7060,6 +7402,7 @@
    ],
    "metric": "9.8.9.8.8.8.",
    "melody": "NEUMARK",
+   "key": null,
    "via": null,
    "metric_key": "9.8.9.8.8.8",
    "melody_keys": [
@@ -7088,6 +7431,7 @@
    ],
    "metric": "11.11.11.9. com estribilho",
    "melody": "PROMISES",
+   "key": null,
    "via": null,
    "metric_key": "11.11.11.9",
    "melody_keys": [
@@ -7116,6 +7460,7 @@
    ],
    "metric": "11.11.11.9. com repetição",
    "melody": "TURLOCK",
+   "key": null,
    "via": null,
    "metric_key": "11.11.11.9",
    "melody_keys": [
@@ -7138,6 +7483,7 @@
    ],
    "metric": "8.7.8.7. com estribilho",
    "melody": "REIS",
+   "key": null,
    "via": null,
    "metric_key": "8.7.8.7",
    "melody_keys": [
@@ -7160,6 +7506,7 @@
    ],
    "metric": "8.7.8.7. com estribilho",
    "melody": "IBER",
+   "key": null,
    "via": null,
    "metric_key": "8.7.8.7",
    "melody_keys": [
@@ -7184,6 +7531,7 @@
    ],
    "metric": "8.8.8.8. ccom estribilho (L.M. com estribilho)",
    "melody": "SOLID ROCK",
+   "key": null,
    "via": null,
    "metric_key": "8.8.8.8",
    "melody_keys": [
@@ -7209,6 +7557,7 @@
    ],
    "metric": "11.11.11.11.",
    "melody": "MALDWYN",
+   "key": null,
    "via": null,
    "metric_key": "11.11.11.11",
    "melody_keys": [
@@ -7233,6 +7582,7 @@
    ],
    "metric": "10.9.10.9. com estribilho",
    "melody": "ORWIGSBURG",
+   "key": null,
    "via": null,
    "metric_key": "10.9.10.9",
    "melody_keys": [
@@ -7257,6 +7607,7 @@
    ],
    "metric": "11.10.11.10.",
    "melody": "CONSOLATION",
+   "key": null,
    "via": null,
    "metric_key": "11.10.11.10",
    "melody_keys": [
@@ -7281,6 +7632,7 @@
    ],
    "metric": "13.14.13.10. com estribilho",
    "melody": "REACH OUT TO JESUS",
+   "key": null,
    "via": null,
    "metric_key": "13.14.13.10",
    "melody_keys": [
@@ -7304,6 +7656,7 @@
    ],
    "metric": "10.10.10.10. com estribilho",
    "melody": "SUPERAÇÃO",
+   "key": null,
    "via": null,
    "metric_key": "10.10.10.10",
    "melody_keys": [
@@ -7322,6 +7675,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -7342,6 +7696,7 @@
    ],
    "metric": "Irregular com estribilho",
    "melody": "DESCANSO",
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": [
@@ -7368,6 +7723,7 @@
    ],
    "metric": "8.5.8.5.D.",
    "melody": "NATÉRCIA",
+   "key": null,
    "via": null,
    "metric_key": "8.5.8.5.8.5.8.5",
    "melody_keys": [
@@ -7390,6 +7746,7 @@
    ],
    "metric": "7.7.7.7. com estribilho",
    "melody": "TICHFIELD",
+   "key": null,
    "via": null,
    "metric_key": "7.7.7.7",
    "melody_keys": [
@@ -7415,6 +7772,7 @@
    ],
    "metric": "7.6.7.6.D.",
    "melody": "LLANGLOFFAN",
+   "key": null,
    "via": null,
    "metric_key": "7.6.7.6.7.6.7.6",
    "melody_keys": [
@@ -7433,6 +7791,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -7457,6 +7816,7 @@
    ],
    "metric": "6.6.4.6.6.6.4.",
    "melody": "OLIVET",
+   "key": null,
    "via": null,
    "metric_key": "6.6.4.6.6.6.4",
    "melody_keys": [
@@ -7481,6 +7841,7 @@
    ],
    "metric": "10.7.10.7. com estribilho",
    "melody": "I AM THINE",
+   "key": null,
    "via": null,
    "metric_key": "10.7.10.7",
    "melody_keys": [
@@ -7503,6 +7864,7 @@
    ],
    "metric": "7.6.7.6.D.",
    "melody": "CLOVELLY",
+   "key": null,
    "via": null,
    "metric_key": "7.6.7.6.7.6.7.6",
    "melody_keys": [
@@ -7527,6 +7889,7 @@
    ],
    "metric": "10.10.10.10.",
    "melody": "SLANE",
+   "key": null,
    "via": null,
    "metric_key": "10.10.10.10",
    "melody_keys": [
@@ -7550,6 +7913,7 @@
    ],
    "metric": "7.7.7.7. com estribilho",
    "melody": "SWENEY",
+   "key": null,
    "via": null,
    "metric_key": "7.7.7.7",
    "melody_keys": [
@@ -7568,6 +7932,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -7592,6 +7957,7 @@
    ],
    "metric": "6.4.6.4.6.6.4.4.",
    "melody": "MORE LOVE TO THEE",
+   "key": null,
    "via": null,
    "metric_key": "6.4.6.4.6.6.4.4",
    "melody_keys": [
@@ -7616,6 +7982,7 @@
    ],
    "metric": "8.6.8.6. com estribilho (C.M. com estribilho)",
    "melody": "ALEGRIA",
+   "key": null,
    "via": null,
    "metric_key": "8.6.8.6",
    "melody_keys": [
@@ -7634,6 +8001,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -7656,6 +8024,7 @@
    ],
    "metric": "9.9.9.9.",
    "melody": "ADELAIDE",
+   "key": null,
    "via": null,
    "metric_key": "9.9.9.9",
    "melody_keys": [
@@ -7680,6 +8049,7 @@
    ],
    "metric": "10.10.10.10.",
    "melody": "SALMO 139",
+   "key": null,
    "via": null,
    "metric_key": "10.10.10.10",
    "melody_keys": [
@@ -7704,6 +8074,7 @@
    ],
    "metric": "10.10.6.6.8.",
    "melody": "PURER IN HEART",
+   "key": null,
    "via": null,
    "metric_key": "10.10.6.6.8",
    "melody_keys": [
@@ -7728,6 +8099,7 @@
    ],
    "metric": "8.7.8.7. com estribilho",
    "melody": "IVES",
+   "key": null,
    "via": null,
    "metric_key": "8.7.8.7",
    "melody_keys": [
@@ -7754,6 +8126,7 @@
    ],
    "metric": "8.7.8.7. com estribilho",
    "melody": "CLOSE TO THEE",
+   "key": null,
    "via": null,
    "metric_key": "8.7.8.7",
    "melody_keys": [
@@ -7777,6 +8150,7 @@
    ],
    "metric": "Irregular",
    "melody": "TRANSFORMAÇÃO",
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": [
@@ -7801,6 +8175,7 @@
    ],
    "metric": "8.7.8.7. com repetição",
    "melody": "BRADBURY",
+   "key": null,
    "via": null,
    "metric_key": "8.7.8.7",
    "melody_keys": [
@@ -7819,6 +8194,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -7845,6 +8221,7 @@
    ],
    "metric": "11.10.11.10.",
    "melody": "HOLD THOU MY HAND",
+   "key": null,
    "via": null,
    "metric_key": "11.10.11.10",
    "melody_keys": [
@@ -7869,6 +8246,7 @@
    ],
    "metric": "8.8.8.8.D",
    "melody": "SWEET HOUR",
+   "key": null,
    "via": null,
    "metric_key": "8.8.8.8.8.8.8.8",
    "melody_keys": [
@@ -7893,6 +8271,7 @@
    ],
    "metric": "10.10.6.6.6.4.",
    "melody": "MINHA ORAÇÃO",
+   "key": null,
    "via": null,
    "metric_key": "10.10.6.6.6.4",
    "melody_keys": [
@@ -7917,6 +8296,7 @@
    ],
    "metric": "Irregular com estribilho",
    "melody": "SALMO 142",
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": [
@@ -7939,6 +8319,7 @@
    ],
    "metric": "7.6.7.6.",
    "melody": "HORA BENDITA",
+   "key": null,
    "via": null,
    "metric_key": "7.6.7.6",
    "melody_keys": [
@@ -7961,6 +8342,7 @@
    ],
    "metric": "7.6.7.6.D.",
    "melody": "WHITFORD",
+   "key": null,
    "via": null,
    "metric_key": "7.6.7.6.7.6.7.6",
    "melody_keys": [
@@ -7984,6 +8366,7 @@
    ],
    "metric": "10.10.10.10.",
    "melody": "ELLERS",
+   "key": null,
    "via": null,
    "metric_key": "10.10.10.10",
    "melody_keys": [
@@ -8006,6 +8389,7 @@
    ],
    "metric": "7.7.8.7.D. com repetição",
    "melody": "PAI NOSSO SERTANEJO",
+   "key": null,
    "via": null,
    "metric_key": "7.7.8.7.7.7.8.7",
    "melody_keys": [
@@ -8024,6 +8408,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -8046,6 +8431,7 @@
    ],
    "metric": "11.10.11.8. com estribilho",
    "melody": "VEILLE TOUJOURS",
+   "key": null,
    "via": null,
    "metric_key": "11.10.11.8",
    "melody_keys": [
@@ -8070,6 +8456,7 @@
    ],
    "metric": "9.8.8.9.5.",
    "melody": "RICHIER",
+   "key": null,
    "via": null,
    "metric_key": "9.8.8.9.5",
    "melody_keys": [
@@ -8095,6 +8482,7 @@
    ],
    "metric": "8.7.8.7.8.7. com repetição",
    "melody": "EBENEZER",
+   "key": null,
    "via": null,
    "metric_key": "8.7.8.7.8.7",
    "melody_keys": [
@@ -8113,6 +8501,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -8133,6 +8522,7 @@
    ],
    "metric": "10.6.10.6.9.9.4. com repetição",
    "melody": "FILHOS DA LUZ",
+   "key": null,
    "via": null,
    "metric_key": "10.6.10.6.9.9.4",
    "melody_keys": [
@@ -8151,6 +8541,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -8171,6 +8562,7 @@
    ],
    "metric": "6.6.8.6. com estribilho (S.M. com estribilho)",
    "melody": "REVIVE THY WORK, O LORD",
+   "key": null,
    "via": null,
    "metric_key": "6.6.8.6",
    "melody_keys": [
@@ -8193,6 +8585,7 @@
    ],
    "metric": "8.6.8.6. com estribilho (C.M. com estribilho)",
    "melody": "MCAFEE",
+   "key": null,
    "via": null,
    "metric_key": "8.6.8.6",
    "melody_keys": [
@@ -8219,6 +8612,7 @@
    ],
    "metric": "8.8.8.8. (L.M., Long Meter)",
    "melody": "MARYTON",
+   "key": null,
    "via": null,
    "metric_key": "8.8.8.8",
    "melody_keys": [
@@ -8241,6 +8635,7 @@
    ],
    "metric": "7.6.7.6. com estribilho",
    "melody": "NEAR THE CROSS",
+   "key": null,
    "via": null,
    "metric_key": "7.6.7.6",
    "melody_keys": [
@@ -8265,6 +8660,7 @@
    ],
    "metric": "9.8.8.8. com estribilho",
    "melody": "CATARINA",
+   "key": null,
    "via": null,
    "metric_key": "9.8.8.8",
    "melody_keys": [
@@ -8283,6 +8679,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -8299,6 +8696,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -8323,6 +8721,7 @@
    ],
    "metric": "10.10.6.6.4. com repetição",
    "melody": "BETHANY",
+   "key": null,
    "via": null,
    "metric_key": "10.10.6.6.4",
    "melody_keys": [
@@ -8347,6 +8746,7 @@
    ],
    "metric": "15.15.15.15. com repetição",
    "melody": "COMUNHÃO",
+   "key": null,
    "via": null,
    "metric_key": "15.15.15.15",
    "melody_keys": [
@@ -8371,6 +8771,7 @@
    ],
    "metric": "Irregular",
    "melody": "LOGO DE MANHÃ",
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": [
@@ -8397,6 +8798,7 @@
    ],
    "metric": "10.10.10.10.",
    "melody": "PAX IAM",
+   "key": null,
    "via": null,
    "metric_key": "10.10.10.10",
    "melody_keys": [
@@ -8415,6 +8817,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -8435,6 +8838,7 @@
    ],
    "metric": "8.7.8.7. com estribilho",
    "melody": "FOREST PARK",
+   "key": null,
    "via": null,
    "metric_key": "8.7.8.7",
    "melody_keys": [
@@ -8453,6 +8857,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -8474,6 +8879,7 @@
    ],
    "metric": "8.7.8.7.6.6.6.6.7.",
    "melody": "EIN' FESTE BURG",
+   "key": null,
    "via": null,
    "metric_key": "8.7.8.7.6.6.6.6.7",
    "melody_keys": [
@@ -8498,6 +8904,7 @@
    ],
    "metric": "16.16.7.7.16.",
    "melody": "SALMO 1",
+   "key": null,
    "via": null,
    "metric_key": "16.16.7.7.16",
    "melody_keys": [
@@ -8520,6 +8927,7 @@
    ],
    "metric": "8.7.9.7.8.6.9.7.com estribilho",
    "melody": "SOSSEGAI",
+   "key": null,
    "via": null,
    "metric_key": "8.7.9.7.8.6.9.7",
    "melody_keys": [
@@ -8544,6 +8952,7 @@
    ],
    "metric": "Irregular",
    "melody": "BOLLBACK",
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": [
@@ -8562,6 +8971,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -8584,6 +8994,7 @@
    ],
    "metric": "11.10.11.10. com estribilho",
    "melody": "UNDER HIS WINGS",
+   "key": null,
    "via": null,
    "metric_key": "11.10.11.10",
    "melody_keys": [
@@ -8608,6 +9019,7 @@
    ],
    "metric": "8.8.8.8. (L.M., Long Meter)",
    "melody": "TRYGGARE KAN INGEN VARA",
+   "key": null,
    "via": null,
    "metric_key": "8.8.8.8",
    "melody_keys": [
@@ -8632,6 +9044,7 @@
    ],
    "metric": "8.6.8.6.D. (C.M.D.)",
    "melody": "VOX DILECTI",
+   "key": null,
    "via": null,
    "metric_key": "8.6.8.6.8.6.8.6",
    "melody_keys": [
@@ -8650,6 +9063,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -8666,6 +9080,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -8686,6 +9101,7 @@
    ],
    "metric": "10.10.10.10. com estribilho",
    "melody": "ROCHA FIRME",
+   "key": null,
    "via": null,
    "metric_key": "10.10.10.10",
    "melody_keys": [
@@ -8710,6 +9126,7 @@
    ],
    "metric": "9.9.9.9. com estribilho",
    "melody": "ASSURANCE",
+   "key": null,
    "via": null,
    "metric_key": "9.9.9.9",
    "melody_keys": [
@@ -8728,6 +9145,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -8752,6 +9170,7 @@
    ],
    "metric": "8.7.8.7.D.",
    "melody": "TACK O GUD",
+   "key": null,
    "via": null,
    "metric_key": "8.7.8.7.8.7.8.7",
    "melody_keys": [
@@ -8774,6 +9193,7 @@
    ],
    "metric": "8.7.8.7.",
    "melody": "REPOUSO",
+   "key": null,
    "via": null,
    "metric_key": "8.7.8.7",
    "melody_keys": [
@@ -8792,6 +9212,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -8816,6 +9237,7 @@
    ],
    "metric": "Irregular",
    "melody": "MY TRIBUTE",
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": [
@@ -8842,6 +9264,7 @@
    ],
    "metric": "7.6.7.6.",
    "melody": "DANKET, DANKET",
+   "key": null,
    "via": null,
    "metric_key": "7.6.7.6",
    "melody_keys": [
@@ -8867,6 +9290,7 @@
    ],
    "metric": "9.9.11.11.11.11.",
    "melody": "SAUDAÇÃO",
+   "key": null,
    "via": null,
    "metric_key": "9.9.11.11.11.11",
    "melody_keys": [
@@ -8885,6 +9309,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -8909,6 +9334,7 @@
    ],
    "metric": "6.5.6.5.D.",
    "melody": "CARIOCA",
+   "key": null,
    "via": null,
    "metric_key": "6.5.6.5.6.5.6.5",
    "melody_keys": [
@@ -8935,6 +9361,7 @@
    ],
    "metric": "8.7.8.7. com repetição",
    "melody": "NOSSO LAR",
+   "key": null,
    "via": null,
    "metric_key": "8.7.8.7",
    "melody_keys": [
@@ -8953,6 +9380,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -8977,6 +9405,7 @@
    ],
    "metric": "8.7.8.7.",
    "melody": "MOZART",
+   "key": null,
    "via": null,
    "metric_key": "8.7.8.7",
    "melody_keys": [
@@ -9000,6 +9429,7 @@
    ],
    "metric": "7.6.8.6.D.",
    "melody": "PERKINS",
+   "key": null,
    "via": null,
    "metric_key": "7.6.8.6.7.6.8.6",
    "melody_keys": [
@@ -9023,6 +9453,7 @@
    ],
    "metric": "7.6.7.6.D.",
    "melody": "LANCASHIRE",
+   "key": null,
    "via": null,
    "metric_key": "7.6.7.6.7.6.7.6",
    "melody_keys": [
@@ -9041,6 +9472,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -9062,6 +9494,7 @@
    ],
    "metric": "Irregular",
    "melody": "COROPOS",
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": [
@@ -9084,6 +9517,7 @@
    ],
    "metric": "6.5.6.5.D.",
    "melody": "SOMETHING FOR JESUS",
+   "key": null,
    "via": null,
    "metric_key": "6.5.6.5.6.5.6.5",
    "melody_keys": [
@@ -9107,6 +9541,7 @@
    ],
    "metric": "8.7.8.7. com estribilho",
    "melody": "RECONHECIMENTO",
+   "key": null,
    "via": null,
    "metric_key": "8.7.8.7",
    "melody_keys": [
@@ -9130,6 +9565,7 @@
    ],
    "metric": "10.12.15.10.",
    "melody": "MAIS E MAIS",
+   "key": null,
    "via": null,
    "metric_key": "10.12.15.10",
    "melody_keys": [
@@ -9153,6 +9589,7 @@
    ],
    "metric": "8.6.8.6. (C.M.,Common Meter)",
    "melody": "VERMONT",
+   "key": null,
    "via": null,
    "metric_key": "8.6.8.6",
    "melody_keys": [
@@ -9178,6 +9615,7 @@
    ],
    "metric": "9.9.10.9. com estribilho",
    "melody": "EUCLID",
+   "key": null,
    "via": null,
    "metric_key": "9.9.10.9",
    "melody_keys": [
@@ -9203,6 +9641,7 @@
    ],
    "metric": "7.7.7.7.",
    "melody": "SHAFFER",
+   "key": null,
    "via": null,
    "metric_key": "7.7.7.7",
    "melody_keys": [
@@ -9227,6 +9666,7 @@
    ],
    "metric": "8.7.8.7. com estribilho",
    "melody": "HAWKINS",
+   "key": null,
    "via": null,
    "metric_key": "8.7.8.7",
    "melody_keys": [
@@ -9245,6 +9685,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -9269,6 +9710,7 @@
    ],
    "metric": "9.10.9.10. com repetição",
    "melody": "MORRIS",
+   "key": null,
    "via": null,
    "metric_key": "9.10.9.10",
    "melody_keys": [
@@ -9295,6 +9737,7 @@
    ],
    "metric": "9.9.10.9. com estribilho",
    "melody": "ENCONTRADO",
+   "key": null,
    "via": null,
    "metric_key": "9.9.10.9",
    "melody_keys": [
@@ -9321,6 +9764,7 @@
    ],
    "metric": "11.11.11.11. com estribilho",
    "melody": "BLESSINGS",
+   "key": null,
    "via": null,
    "metric_key": "11.11.11.11",
    "melody_keys": [
@@ -9339,6 +9783,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -9363,6 +9808,7 @@
    ],
    "metric": "10.9.10.9. com estribilho",
    "melody": "SUNLIGHT",
+   "key": null,
    "via": null,
    "metric_key": "10.9.10.9",
    "melody_keys": [
@@ -9387,6 +9833,7 @@
    ],
    "metric": "8.6.8.6. com estribilho (C.M. com estribilho)",
    "melody": "EL NATHAN",
+   "key": null,
    "via": null,
    "metric_key": "8.6.8.6",
    "melody_keys": [
@@ -9409,6 +9856,7 @@
    ],
    "metric": "8.7.8.7. com estribilho",
    "melody": "MCDANIEL",
+   "key": null,
    "via": null,
    "metric_key": "8.7.8.7",
    "melody_keys": [
@@ -9427,6 +9875,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -9447,6 +9896,7 @@
    ],
    "metric": "9.8.9.6.9.9.9.6.",
    "melody": "JESUS, I COME",
+   "key": null,
    "via": null,
    "metric_key": "9.8.9.6.9.9.9.6",
    "melody_keys": [
@@ -9471,6 +9921,7 @@
    ],
    "metric": "8.7.8.7. com estribilho",
    "melody": "DOCE LUZ",
+   "key": null,
    "via": null,
    "metric_key": "8.7.8.7",
    "melody_keys": [
@@ -9495,6 +9946,7 @@
    ],
    "metric": "8.7.8.7. com estribilho",
    "melody": "ROUTH",
+   "key": null,
    "via": null,
    "metric_key": "8.7.8.7",
    "melody_keys": [
@@ -9513,6 +9965,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -9534,6 +9987,7 @@
    ],
    "metric": "11.11.11.11. com estribilho",
    "melody": "EU SOU DE JESUS",
+   "key": null,
    "via": null,
    "metric_key": "11.11.11.11",
    "melody_keys": [
@@ -9552,6 +10006,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -9576,6 +10031,7 @@
    ],
    "metric": "11.11.11.8. com estribilho",
    "melody": "PRECIOUS TO ME",
+   "key": null,
    "via": null,
    "metric_key": "11.11.11.8",
    "melody_keys": [
@@ -9594,6 +10050,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -9614,6 +10071,7 @@
    ],
    "metric": "8.8.8.6. com estribilho",
    "melody": "HE LIFTED ME",
+   "key": null,
    "via": null,
    "metric_key": "8.8.8.6",
    "melody_keys": [
@@ -9638,6 +10096,7 @@
    ],
    "metric": "8.7.8.7. com estribilho",
    "melody": "HARRIS",
+   "key": null,
    "via": null,
    "metric_key": "8.7.8.7",
    "melody_keys": [
@@ -9656,6 +10115,7 @@
    "topics_canonical": [],
    "metric": "6.8.6.7.D.",
    "melody": "JUSTIFICAÇÃO PELA FÉ",
+   "key": null,
    "via": null,
    "metric_key": "6.8.6.7.6.8.6.7",
    "melody_keys": [
@@ -9674,6 +10134,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -9694,6 +10155,7 @@
    ],
    "metric": "7.6.7.6.7.6.7.4. com estribilho",
    "melody": "SAFETY",
+   "key": null,
    "via": null,
    "metric_key": "7.6.7.6.7.6.7.4",
    "melody_keys": [
@@ -9716,6 +10178,7 @@
    ],
    "metric": "8.8.8.8. ccom estribilho (L.M. com estribilho)",
    "melody": "CANTAI",
+   "key": null,
    "via": null,
    "metric_key": "8.8.8.8",
    "melody_keys": [
@@ -9734,6 +10197,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -9759,6 +10223,7 @@
    ],
    "metric": "6.6.9.D. com estribilho",
    "melody": "TRUST AND OBEY",
+   "key": null,
    "via": null,
    "metric_key": "6.6.9.6.6.9",
    "melody_keys": [
@@ -9783,6 +10248,7 @@
    ],
    "metric": "8.7.8.7.D.",
    "melody": "CHARLES",
+   "key": null,
    "via": null,
    "metric_key": "8.7.8.7.8.7.8.7",
    "melody_keys": [
@@ -9806,6 +10272,7 @@
    ],
    "metric": "8.6.8.7. com estribilho",
    "melody": "FALLS CREEK",
+   "key": null,
    "via": null,
    "metric_key": "8.6.8.7",
    "melody_keys": [
@@ -9829,6 +10296,7 @@
    ],
    "metric": "11.11.11.11. com estribilho",
    "melody": "I CAN SAFELY GO",
+   "key": null,
    "via": null,
    "metric_key": "11.11.11.11",
    "melody_keys": [
@@ -9852,6 +10320,7 @@
    ],
    "metric": "12.12.13.11. com estribilho",
    "melody": "FOLLOW ON",
+   "key": null,
    "via": null,
    "metric_key": "12.12.13.11",
    "melody_keys": [
@@ -9870,6 +10339,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -9890,6 +10360,7 @@
    ],
    "metric": "8.7.8.7.",
    "melody": "CRENTE",
+   "key": null,
    "via": null,
    "metric_key": "8.7.8.7",
    "melody_keys": [
@@ -9912,6 +10383,7 @@
    ],
    "metric": "5.4.5.4.D.",
    "melody": "THEODORA",
+   "key": null,
    "via": null,
    "metric_key": "5.4.5.4.5.4.5.4",
    "melody_keys": [
@@ -9934,6 +10406,7 @@
    ],
    "metric": "11.10.11.11. com repetição e estribilho",
    "melody": "NORDESTE",
+   "key": null,
    "via": null,
    "metric_key": "11.10.11.11",
    "melody_keys": [
@@ -9952,6 +10425,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -9974,6 +10448,7 @@
    ],
    "metric": "6.6.8.6.D. (S.M.D.)",
    "melody": "RAMONA",
+   "key": null,
    "via": null,
    "metric_key": "6.6.8.6.6.6.8.6",
    "melody_keys": [
@@ -9992,6 +10467,7 @@
    "topics_canonical": [],
    "metric": "8.7.8.7. com estribilho",
    "melody": "BEACON HILL",
+   "key": null,
    "via": null,
    "metric_key": "8.7.8.7",
    "melody_keys": [
@@ -10010,6 +10486,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -10031,6 +10508,7 @@
    ],
    "metric": "10.9.10.9. com estribilho",
    "melody": "EIS-ME AQUI",
+   "key": null,
    "via": null,
    "metric_key": "10.9.10.9",
    "melody_keys": [
@@ -10049,6 +10527,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -10069,6 +10548,7 @@
    ],
    "metric": "11.10.11.10. com estribilho",
    "melody": "FOLLOW",
+   "key": null,
    "via": null,
    "metric_key": "11.10.11.10",
    "melody_keys": [
@@ -10087,6 +10567,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -10110,6 +10591,7 @@
    ],
    "metric": "11.8.11.8.D. com estribilho",
    "melody": "MANCHESTER",
+   "key": null,
    "via": null,
    "metric_key": "11.8.11.8.11.8.11.8",
    "melody_keys": [
@@ -10128,6 +10610,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -10148,6 +10631,7 @@
    ],
    "metric": "8.8.8.7. com estribilho",
    "melody": "SEGUIREI",
+   "key": null,
    "via": null,
    "metric_key": "8.8.8.7",
    "melody_keys": [
@@ -10166,6 +10650,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -10190,6 +10675,7 @@
    ],
    "metric": "12.11.12.11.D.",
    "melody": "ASH GROVE",
+   "key": null,
    "via": null,
    "metric_key": "12.11.12.11.12.11.12.11",
    "melody_keys": [
@@ -10208,6 +10694,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -10230,6 +10717,7 @@
    ],
    "metric": "13.9.13.9. com estribilho",
    "melody": "BRILHA NO VIVER",
+   "key": null,
    "via": null,
    "metric_key": "13.9.13.9",
    "melody_keys": [
@@ -10248,6 +10736,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -10270,6 +10759,7 @@
    ],
    "metric": "8.7.8.7.D.",
    "melody": "ANO NOVO",
+   "key": null,
    "via": null,
    "metric_key": "8.7.8.7.8.7.8.7",
    "melody_keys": [
@@ -10294,6 +10784,7 @@
    ],
    "metric": "11.8.11.7. com estribilho",
    "melody": "SERVIÇO",
+   "key": null,
    "via": null,
    "metric_key": "11.8.11.7",
    "melody_keys": [
@@ -10316,6 +10807,7 @@
    ],
    "metric": "7.6.7.5.D.",
    "melody": "WORK SONG",
+   "key": null,
    "via": null,
    "metric_key": "7.6.7.5.7.6.7.5",
    "melody_keys": [
@@ -10338,6 +10830,7 @@
    ],
    "metric": "8.7.8.7.8.6.1248.",
    "melody": "KEEGAN",
+   "key": null,
    "via": null,
    "metric_key": "8.7.8.7.8.6.1248",
    "melody_keys": [
@@ -10360,6 +10853,7 @@
    ],
    "metric": "8.7.8.7.8.6.1248.",
    "melody": "PURPOSE",
+   "key": null,
    "via": null,
    "metric_key": "8.7.8.7.8.6.1248",
    "melody_keys": [
@@ -10378,6 +10872,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -10400,6 +10895,7 @@
    ],
    "metric": "Irregular com estribilho",
    "melody": "BARNABÉ",
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": [
@@ -10425,6 +10921,7 @@
    ],
    "metric": "11.11.11.11. com estribilho",
    "melody": "CRISTO AMADO",
+   "key": null,
    "via": null,
    "metric_key": "11.11.11.11",
    "melody_keys": [
@@ -10443,6 +10940,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -10461,6 +10959,7 @@
    "topics_canonical": [],
    "metric": "Irregular com estribilho",
    "melody": "HARTFORD",
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": [
@@ -10486,6 +10985,7 @@
    ],
    "metric": "8.8.8.10. com estribilho",
    "melody": "ARISE, SING!",
+   "key": null,
    "via": null,
    "metric_key": "8.8.8.10",
    "melody_keys": [
@@ -10504,6 +11004,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -10526,6 +11027,7 @@
    ],
    "metric": "8.7.8.7.8.8.7.8.com estribilho",
    "melody": "VITÓRIA NAS LUTAS",
+   "key": null,
    "via": null,
    "metric_key": "8.7.8.7.8.8.7.8",
    "melody_keys": [
@@ -10544,6 +11046,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -10564,6 +11067,7 @@
    ],
    "metric": "7.6.7.6.D.",
    "melody": "AURELIA",
+   "key": null,
    "via": null,
    "metric_key": "7.6.7.6.7.6.7.6",
    "melody_keys": [
@@ -10586,6 +11090,7 @@
    ],
    "metric": "6.6.6.5.D.",
    "melody": "IGREJAS FORTES NO MUNDO",
+   "key": null,
    "via": null,
    "metric_key": "6.6.6.5.6.6.6.5",
    "melody_keys": [
@@ -10610,6 +11115,7 @@
    ],
    "metric": "7.6.7.6.D. com estribilho",
    "melody": "MONT'SERRAT",
+   "key": null,
    "via": null,
    "metric_key": "7.6.7.6.7.6.7.6",
    "melody_keys": [
@@ -10633,6 +11139,7 @@
    ],
    "metric": "6.6.8.6. (S.M., Short Meter)",
    "melody": "ST. THOMAS",
+   "key": null,
    "via": null,
    "metric_key": "6.6.8.6",
    "melody_keys": [
@@ -10658,6 +11165,7 @@
    ],
    "metric": "7.7.7.6.D.",
    "melody": "FAR OFF LANDS",
+   "key": null,
    "via": null,
    "metric_key": "7.7.7.6.7.7.7.6",
    "melody_keys": [
@@ -10676,6 +11184,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -10699,6 +11208,7 @@
    ],
    "metric": "8.6.8.6. (C.M.,Common Meter)",
    "melody": "BELÉM",
+   "key": null,
    "via": null,
    "metric_key": "8.6.8.6",
    "melody_keys": [
@@ -10717,6 +11227,7 @@
    "topics_canonical": [],
    "metric": "9.8.9.8.8.8.",
    "melody": "HOLY FAITH",
+   "key": null,
    "via": null,
    "metric_key": "9.8.9.8.8.8",
    "melody_keys": [
@@ -10740,6 +11251,7 @@
    ],
    "metric": "7.6.7.6.D.",
    "melody": "WHITFIELD",
+   "key": null,
    "via": null,
    "metric_key": "7.6.7.6.7.6.7.6",
    "melody_keys": [
@@ -10763,6 +11275,7 @@
    ],
    "metric": "8.7.8.7.7.7.",
    "melody": "BATISTA",
+   "key": null,
    "via": null,
    "metric_key": "8.7.8.7.7.7",
    "melody_keys": [
@@ -10783,6 +11296,7 @@
    "topics_canonical": [],
    "metric": "10.7.10.7. com estribilho",
    "melody": "NOVA ALIANÇA",
+   "key": null,
    "via": null,
    "metric_key": "10.7.10.7",
    "melody_keys": [
@@ -10803,6 +11317,7 @@
    "topics_canonical": [],
    "metric": "8.6.8.6. (C.M.,Common Meter)",
    "melody": "ST. PETER",
+   "key": null,
    "via": null,
    "metric_key": "8.6.8.6",
    "melody_keys": [
@@ -10826,6 +11341,7 @@
    ],
    "metric": "7.7.7.7. com repetição",
    "melody": "DISMISSAL",
+   "key": null,
    "via": null,
    "metric_key": "7.7.7.7",
    "melody_keys": [
@@ -10844,6 +11360,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -10862,6 +11379,7 @@
    "topics_canonical": [],
    "metric": "8.7.8.7.",
    "melody": "ALL FOR JESUS",
+   "key": null,
    "via": null,
    "metric_key": "8.7.8.7",
    "melody_keys": [
@@ -10882,6 +11400,7 @@
    "topics_canonical": [],
    "metric": "Irregular com coda",
    "melody": "A CEIA DO SENHOR",
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": [
@@ -10902,6 +11421,7 @@
    "topics_canonical": [],
    "metric": "8.6.8.6.D. (C.M.D.)",
    "melody": "FERREIRA",
+   "key": null,
    "via": null,
    "metric_key": "8.6.8.6.8.6.8.6",
    "melody_keys": [
@@ -10920,6 +11440,7 @@
    "topics_canonical": [],
    "metric": "11.11.11.11. com estribilho",
    "melody": "CONSAGRAÇÃO",
+   "key": null,
    "via": null,
    "metric_key": "11.11.11.11",
    "melody_keys": [
@@ -10938,6 +11459,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -10954,6 +11476,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -10975,6 +11498,7 @@
    ],
    "metric": "8.6.8.6. (C.M.,Common Meter)",
    "melody": "MANOAH",
+   "key": null,
    "via": null,
    "metric_key": "8.6.8.6",
    "melody_keys": [
@@ -10999,6 +11523,7 @@
    ],
    "metric": "8.6.8.6. com estribilho (C.M. com estribilho)",
    "melody": "NELSON",
+   "key": null,
    "via": null,
    "metric_key": "8.6.8.6",
    "melody_keys": [
@@ -11023,6 +11548,7 @@
    ],
    "metric": "8.7.8.7.D. com estribilho",
    "melody": "CAMPANHA",
+   "key": null,
    "via": null,
    "metric_key": "8.7.8.7.8.7.8.7",
    "melody_keys": [
@@ -11041,6 +11567,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -11061,6 +11588,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -11077,6 +11605,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -11097,6 +11626,7 @@
    ],
    "metric": "9.8.9.8. com estribilho",
    "melody": "FILLMORE",
+   "key": null,
    "via": null,
    "metric_key": "9.8.9.8",
    "melody_keys": [
@@ -11119,6 +11649,7 @@
    ],
    "metric": "12.11.12.11. com estribilho",
    "melody": "LUZ DO MUNDO",
+   "key": null,
    "via": null,
    "metric_key": "12.11.12.11",
    "melody_keys": [
@@ -11143,6 +11674,7 @@
    ],
    "metric": "9.7.9.7. com repetição e estribilho",
    "melody": "BONS MINISTROS",
+   "key": null,
    "via": null,
    "metric_key": "9.7.9.7",
    "melody_keys": [
@@ -11165,6 +11697,7 @@
    ],
    "metric": "12.11.12.11.12.11.com estribilho",
    "melody": "PESO DE NOSSA TERRA",
+   "key": null,
    "via": null,
    "metric_key": "12.11.12.11.12.11",
    "melody_keys": [
@@ -11187,6 +11720,7 @@
    ],
    "metric": "7.6.7.6.D. com estribilho",
    "melody": "CONQUISTAR O MUNDO",
+   "key": null,
    "via": null,
    "metric_key": "7.6.7.6.7.6.7.6",
    "melody_keys": [
@@ -11205,6 +11739,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -11226,6 +11761,7 @@
    ],
    "metric": "8.7.8.7. com estribilho",
    "melody": "MISSAO JOVEM",
+   "key": null,
    "via": null,
    "metric_key": "8.7.8.7",
    "melody_keys": [
@@ -11248,6 +11784,7 @@
    ],
    "metric": "8.7.8.7.D.",
    "melody": "WINDERMERE",
+   "key": null,
    "via": null,
    "metric_key": "8.7.8.7.8.7.8.7",
    "melody_keys": [
@@ -11272,6 +11809,7 @@
    ],
    "metric": "9.9.7.7.7.7.7.7. com estribilho",
    "melody": "FALA E NÃO TE CALES",
+   "key": null,
    "via": null,
    "metric_key": "9.9.7.7.7.7.7.7",
    "melody_keys": [
@@ -11290,6 +11828,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -11310,6 +11849,7 @@
    ],
    "metric": "7.6.7.6.D.",
    "melody": "MISSIONARY HYMN",
+   "key": null,
    "via": null,
    "metric_key": "7.6.7.6.7.6.7.6",
    "melody_keys": [
@@ -11336,6 +11876,7 @@
    ],
    "metric": "11.10.11.10. com estribilho",
    "melody": "TIDINGS",
+   "key": null,
    "via": null,
    "metric_key": "11.10.11.10",
    "melody_keys": [
@@ -11360,6 +11901,7 @@
    ],
    "metric": "8.7.8.7.D.",
    "melody": "SÓ JESUS CRISTO SALVA",
+   "key": null,
    "via": null,
    "metric_key": "8.7.8.7.8.7.8.7",
    "melody_keys": [
@@ -11384,6 +11926,7 @@
    ],
    "metric": "10.9.9.8. com estribilho",
    "melody": "MACEIÓ",
+   "key": null,
    "via": null,
    "metric_key": "10.9.9.8",
    "melody_keys": [
@@ -11402,6 +11945,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -11422,6 +11966,7 @@
    ],
    "metric": "11.10.11.10. com coda",
    "melody": "TORONTO",
+   "key": null,
    "via": null,
    "metric_key": "11.10.11.10",
    "melody_keys": [
@@ -11446,6 +11991,7 @@
    ],
    "metric": "8.6.9.6. estribilho com",
    "melody": "NOVA VISÃO",
+   "key": null,
    "via": null,
    "metric_key": "8.6.9.6",
    "melody_keys": [
@@ -11464,6 +12010,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -11484,6 +12031,7 @@
    ],
    "metric": "10.10.7.D. com estribilho",
    "melody": "NOVA CANÇÃO",
+   "key": null,
    "via": null,
    "metric_key": "10.10.7.10.10.7",
    "melody_keys": [
@@ -11502,6 +12050,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -11524,6 +12073,7 @@
    ],
    "metric": "8.8.8. com estribilho",
    "melody": "HUNTER'S GLEN",
+   "key": null,
    "via": null,
    "metric_key": "8.8.8",
    "melody_keys": [
@@ -11546,6 +12096,7 @@
    ],
    "metric": "9.9.9.9.D.",
    "melody": "CONSCIÊNCIA",
+   "key": null,
    "via": null,
    "metric_key": "9.9.9.9.9.9.9.9",
    "melody_keys": [
@@ -11568,6 +12119,7 @@
    ],
    "metric": "10.9.10.9.",
    "melody": "MEGALÓPOLIS",
+   "key": null,
    "via": null,
    "metric_key": "10.9.10.9",
    "melody_keys": [
@@ -11586,6 +12138,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -11606,6 +12159,7 @@
    ],
    "metric": "8.7.10.8. com estribilho",
    "melody": "CRISTO, PAZ PARA A CIDADE",
+   "key": null,
    "via": null,
    "metric_key": "8.7.10.8",
    "melody_keys": [
@@ -11624,6 +12178,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -11644,6 +12199,7 @@
    ],
    "metric": "7.6.7.6.D.",
    "melody": "RUTHERFORD",
+   "key": null,
    "via": null,
    "metric_key": "7.6.7.6.7.6.7.6",
    "melody_keys": [
@@ -11668,6 +12224,7 @@
    ],
    "metric": "12.11.12.11. com estribilho",
    "melody": "PASTOR",
+   "key": null,
    "via": null,
    "metric_key": "12.11.12.11",
    "melody_keys": [
@@ -11686,6 +12243,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -11706,6 +12264,7 @@
    ],
    "metric": "14.13.14.10. com estribilho",
    "melody": "SOREN",
+   "key": null,
    "via": null,
    "metric_key": "14.13.14.10",
    "melody_keys": [
@@ -11724,6 +12283,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -11742,6 +12302,7 @@
    "topics_canonical": [],
    "metric": "11.10.11.10.",
    "melody": "LAVAPÉS",
+   "key": null,
    "via": null,
    "metric_key": "11.10.11.10",
    "melody_keys": [
@@ -11765,6 +12326,7 @@
    ],
    "metric": "6.6.8.6. (S.M., Short Meter)",
    "melody": "DENNIS",
+   "key": null,
    "via": null,
    "metric_key": "6.6.8.6",
    "melody_keys": [
@@ -11789,6 +12351,7 @@
    ],
    "metric": "Irregular",
    "melody": "RIDINGS",
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": [
@@ -11807,6 +12370,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -11825,6 +12389,7 @@
    "topics_canonical": [],
    "metric": "7.6.7.6.D.",
    "melody": "WEBB",
+   "key": null,
    "via": null,
    "metric_key": "7.6.7.6.7.6.7.6",
    "melody_keys": [
@@ -11845,6 +12410,7 @@
    "topics_canonical": [],
    "metric": "8.6.8.6. (C.M.,Common Meter)",
    "melody": "MCKEE",
+   "key": null,
    "via": null,
    "metric_key": "8.6.8.6",
    "melody_keys": [
@@ -11863,6 +12429,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -11881,6 +12448,7 @@
    "topics_canonical": [],
    "metric": "8.6.8.6.8.8.5. com repetição",
    "melody": "BETTER WORLD",
+   "key": null,
    "via": null,
    "metric_key": "8.6.8.6.8.8.5",
    "melody_keys": [
@@ -11899,6 +12467,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -11915,6 +12484,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -11933,6 +12503,7 @@
    "topics_canonical": [],
    "metric": "9.9.15.9.",
    "melody": "SKILLINGS",
+   "key": null,
    "via": null,
    "metric_key": "9.9.15.9",
    "melody_keys": [
@@ -11951,6 +12522,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -11974,6 +12546,7 @@
    ],
    "metric": "9.10.9.10. com repetição",
    "melody": "MORRIS",
+   "key": null,
    "via": null,
    "metric_key": "9.10.9.10",
    "melody_keys": [
@@ -11996,6 +12569,7 @@
    ],
    "metric": "11.11.11.11.",
    "melody": "JACOB'S VISION",
+   "key": null,
    "via": null,
    "metric_key": "11.11.11.11",
    "melody_keys": [
@@ -12014,6 +12588,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -12034,6 +12609,7 @@
    ],
    "metric": "8.6.8.6. com estribilho (C.M. com estribilho)",
    "melody": "CHILDREN'S PRAISE",
+   "key": null,
    "via": null,
    "metric_key": "8.6.8.6",
    "melody_keys": [
@@ -12052,6 +12628,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -12072,6 +12649,7 @@
    ],
    "metric": "7.6.7.6.D.",
    "melody": "EWING",
+   "key": null,
    "via": null,
    "metric_key": "7.6.7.6.7.6.7.6",
    "melody_keys": [
@@ -12094,6 +12672,7 @@
    ],
    "metric": "Irregular com estribilho",
    "melody": "TORRANS",
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": [
@@ -12116,6 +12695,7 @@
    ],
    "metric": "8.7.8.7. com estribilho",
    "melody": "GENEVA (Day)",
+   "key": null,
    "via": null,
    "metric_key": "8.7.8.7",
    "melody_keys": [
@@ -12134,6 +12714,7 @@
    "topics_canonical": [],
    "metric": "11.10.11.10. com estribilho",
    "melody": "FAR, FAR AWAY",
+   "key": null,
    "via": null,
    "metric_key": "11.10.11.10",
    "melody_keys": [
@@ -12156,6 +12737,7 @@
    ],
    "metric": "8.7.8.7. com estribilho",
    "melody": "HEAVEN",
+   "key": null,
    "via": null,
    "metric_key": "8.7.8.7",
    "melody_keys": [
@@ -12174,6 +12756,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -12194,6 +12777,7 @@
    ],
    "metric": "8.7.8.7.",
    "melody": "BABYLONIAN RIVERS",
+   "key": null,
    "via": null,
    "metric_key": "8.7.8.7",
    "melody_keys": [
@@ -12217,6 +12801,7 @@
    ],
    "metric": "8.8.8.4.",
    "melody": "SULLIVAN",
+   "key": null,
    "via": null,
    "metric_key": "8.8.8.4",
    "melody_keys": [
@@ -12235,6 +12820,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -12253,6 +12839,7 @@
    "topics_canonical": [],
    "metric": "11.11.11.11.",
    "melody": "DOROTHY",
+   "key": null,
    "via": null,
    "metric_key": "11.11.11.11",
    "melody_keys": [
@@ -12273,6 +12860,7 @@
    "topics_canonical": [],
    "metric": "8.7.8.7.",
    "melody": "OTTERY ST. MARY",
+   "key": null,
    "via": null,
    "metric_key": "8.7.8.7",
    "melody_keys": [
@@ -12297,6 +12885,7 @@
    ],
    "metric": "11.10.11.10.11.10.",
    "melody": "LAR CRISTÃO",
+   "key": null,
    "via": null,
    "metric_key": "11.10.11.10.11.10",
    "melody_keys": [
@@ -12315,6 +12904,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -12337,6 +12927,7 @@
    ],
    "metric": "11.10.11.10.10.",
    "melody": "LAR FELIZ",
+   "key": null,
    "via": null,
    "metric_key": "11.10.11.10.10",
    "melody_keys": [
@@ -12359,6 +12950,7 @@
    ],
    "metric": "8.7.8.7.D.",
    "melody": "ECOLOGIA",
+   "key": null,
    "via": null,
    "metric_key": "8.7.8.7.8.7.8.7",
    "melody_keys": [
@@ -12377,6 +12969,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -12399,6 +12992,7 @@
    ],
    "metric": "10.9.10.9. com estribilho",
    "melody": "FAMÍLIA FELIZ",
+   "key": null,
    "via": null,
    "metric_key": "10.9.10.9",
    "melody_keys": [
@@ -12423,6 +13017,7 @@
    ],
    "metric": "7.5.7.5.7.6.7.5.",
    "melody": "MARTINS",
+   "key": null,
    "via": null,
    "metric_key": "7.5.7.5.7.6.7.5",
    "melody_keys": [
@@ -12447,6 +13042,7 @@
    ],
    "metric": "11.10.11.10.",
    "melody": "O PERFECT LOVE",
+   "key": null,
    "via": null,
    "metric_key": "11.10.11.10",
    "melody_keys": [
@@ -12473,6 +13069,7 @@
    ],
    "metric": "7.7.7.7.D.",
    "melody": "BLESS THIS HOUSE",
+   "key": null,
    "via": null,
    "metric_key": "7.7.7.7.7.7.7.7",
    "melody_keys": [
@@ -12491,6 +13088,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -12513,6 +13111,7 @@
    ],
    "metric": "6.6.4.6.6.6.4.",
    "melody": "ELIENAI",
+   "key": null,
    "via": null,
    "metric_key": "6.6.4.6.6.6.4",
    "melody_keys": [
@@ -12539,6 +13138,7 @@
    ],
    "metric": "7.6.7.6.8.8.8.5.",
    "melody": "COMMONWEALTH",
+   "key": null,
    "via": null,
    "metric_key": "7.6.7.6.8.8.8.5",
    "melody_keys": [
@@ -12557,6 +13157,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -12579,6 +13180,7 @@
    ],
    "metric": "8.7.8.7.D.",
    "melody": "ICHTER",
+   "key": null,
    "via": null,
    "metric_key": "8.7.8.7.8.7.8.7",
    "melody_keys": [
@@ -12597,6 +13199,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -12613,6 +13216,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -12635,6 +13239,7 @@
    ],
    "metric": "10.4.6.6.6.6. com repetição",
    "melody": "ALL THE WORLD",
+   "key": null,
    "via": null,
    "metric_key": "10.4.6.6.6.6",
    "melody_keys": [
@@ -12657,6 +13262,7 @@
    ],
    "metric": "7.7.7.7. com repetição",
    "melody": "MARCOS",
+   "key": null,
    "via": null,
    "metric_key": "7.7.7.7",
    "melody_keys": [
@@ -12675,6 +13281,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -12697,6 +13304,7 @@
    ],
    "metric": "Irregular com estribilho",
    "melody": "PEQUENINOS PRA JESUS",
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": [
@@ -12719,6 +13327,7 @@
    ],
    "metric": "Irregular",
    "melody": "DENISE",
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": [

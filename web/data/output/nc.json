@@ -20,6 +20,7 @@
    ],
    "metric": "Irregular",
    "melody": "JUSTUS DOMINUS",
+   "key": null,
    "via": "HCC-22",
    "metric_key": null,
    "melody_keys": [
@@ -42,6 +43,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -62,6 +64,7 @@
    ],
    "metric": "11.10.11.10.D",
    "melody": "HARK! HARK! MY SOUL!",
+   "key": null,
    "via": "CTP-172",
    "metric_key": "11.10.11.10.11.10.11.10",
    "melody_keys": [
@@ -84,6 +87,7 @@
    ],
    "metric": "6.6.8.6.6.8.6.6.6",
    "melody": "ARNSBERG",
+   "key": null,
    "via": "CTP-2",
    "metric_key": "6.6.8.6.6.8.6.6.6",
    "melody_keys": [
@@ -106,6 +110,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -126,6 +131,7 @@
    ],
    "metric": "8.8.8.9.",
    "melody": "OLD HUNDREDTH, alt.",
+   "key": null,
    "via": "HCC-238",
    "metric_key": "8.8.8.9",
    "melody_keys": [
@@ -148,6 +154,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -168,6 +175,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -188,6 +196,7 @@
    ],
    "metric": "10.10.10.8",
    "melody": "SARUM",
+   "key": null,
    "via": "CTP-59",
    "metric_key": "10.10.10.8",
    "melody_keys": [
@@ -210,6 +219,7 @@
    ],
    "metric": "8.8.4.[4]8.8.4.[4] com Aleluias",
    "melody": "LASST UNS ERFREUN",
+   "key": null,
    "via": "CTP-96",
    "metric_key": "8.8.4.8.8.4",
    "melody_keys": [
@@ -232,6 +242,7 @@
    ],
    "metric": "12.12.12.10",
    "melody": "NICÆA",
+   "key": null,
    "via": "CTP-34",
    "metric_key": "12.12.12.10",
    "melody_keys": [
@@ -254,6 +265,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -274,6 +286,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -294,6 +307,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -314,6 +328,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -334,6 +349,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -354,6 +370,7 @@
    ],
    "metric": "7.7.7.7.7",
    "melody": "DIX",
+   "key": null,
    "via": "CTP-66",
    "metric_key": "7.7.7.7.7",
    "melody_keys": [
@@ -376,6 +393,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -396,6 +414,7 @@
    ],
    "metric": "11.10.11.10 com estribilho",
    "melody": "PILGRIMS",
+   "key": null,
    "via": "CTP-29",
    "metric_key": "11.10.11.10",
    "melody_keys": [
@@ -418,6 +437,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -438,6 +458,7 @@
    ],
    "metric": "6.6.8.4.D",
    "melody": "LEONI",
+   "key": null,
    "via": "CTP-56",
    "metric_key": "6.6.8.4.6.6.8.4",
    "melody_keys": [
@@ -460,6 +481,7 @@
    ],
    "metric": "8.7.8.7.D",
    "melody": "AUSTRIAN HYMN",
+   "key": null,
    "via": "CTP-4",
    "metric_key": "8.7.8.7.8.7.8.7",
    "melody_keys": [
@@ -482,6 +504,7 @@
    ],
    "metric": "10.10.11.11",
    "melody": "ST. JOSEPH",
+   "key": null,
    "via": "CTP-28",
    "metric_key": "10.10.11.11",
    "melody_keys": [
@@ -504,6 +527,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -524,6 +548,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -544,6 +569,7 @@
    ],
    "metric": "11.10.11.10 - 10.8.10.8",
    "melody": "O STORE GUD / HOW GREAT",
+   "key": null,
    "via": "CTP-94",
    "metric_key": "11.10.11.10",
    "melody_keys": [
@@ -567,6 +593,7 @@
    ],
    "metric": "9.8.9.8 com estribilho",
    "melody": "OH! SWEET IS THE STORY",
+   "key": null,
    "via": "CTP-11",
    "metric_key": "9.8.9.8",
    "melody_keys": [
@@ -589,6 +616,7 @@
    ],
    "metric": "8.7.8.7.D",
    "melody": "HYMN TO JOY",
+   "key": null,
    "via": "CTP-36A",
    "metric_key": "8.7.8.7.8.7.8.7",
    "melody_keys": [
@@ -611,6 +639,7 @@
    ],
    "metric": "8.7.8.7.8.7.",
    "melody": "LAUDA ANIMA (Andrews)",
+   "key": null,
    "via": "HCC-15",
    "metric_key": "8.7.8.7.8.7",
    "melody_keys": [
@@ -633,6 +662,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -653,6 +683,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -673,6 +704,7 @@
    ],
    "metric": "11.10.11.10 com estribilho",
    "melody": "FAITHFULNESS",
+   "key": null,
    "via": "CTP-63",
    "metric_key": "11.10.11.10",
    "melody_keys": [
@@ -695,6 +727,7 @@
    ],
    "metric": "11.10.11.10. com estribilho",
    "melody": "TRUEHEARTED",
+   "key": null,
    "via": "HCC-32",
    "metric_key": "11.10.11.10",
    "melody_keys": [
@@ -717,6 +750,7 @@
    ],
    "metric": "7.7. com estribilho",
    "melody": "MONKLAND",
+   "key": null,
    "via": "HCC-229",
    "metric_key": "7.7",
    "melody_keys": [
@@ -739,6 +773,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -759,6 +794,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -779,6 +815,7 @@
    ],
    "metric": "7.6.8.6.8.6.8.6",
    "melody": "CLEPHANE",
+   "key": null,
    "via": "CTP-18",
    "metric_key": "7.6.8.6.8.6.8.6",
    "melody_keys": [
@@ -801,6 +838,7 @@
    ],
    "metric": "13.13.13.13 - 8.6.8.6",
    "melody": "SALOMÃO",
+   "key": null,
    "via": "CTP-80",
    "metric_key": "13.13.13.13",
    "melody_keys": [
@@ -823,6 +861,7 @@
    ],
    "metric": "14.14.12.10 - 12.12.12.10",
    "melody": "REALIDADE",
+   "key": null,
    "via": "CTP-86",
    "metric_key": "14.14.12.10",
    "melody_keys": [
@@ -845,6 +884,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -865,6 +905,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -885,6 +926,7 @@
    ],
    "metric": "11.11.11.11 - 12.12.11.11",
    "melody": "TO GOD BE THE GLORY",
+   "key": null,
    "via": "CTP-52",
    "metric_key": "11.11.11.11",
    "melody_keys": [
@@ -907,6 +949,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -927,6 +970,7 @@
    ],
    "metric": "6.7.6.7.6.6.6.6",
    "melody": "NUN DUNKET ALLE GOTT",
+   "key": null,
    "via": "CTP-72",
    "metric_key": "6.7.6.7.6.6.6.6",
    "melody_keys": [
@@ -949,6 +993,7 @@
    ],
    "metric": "9.8.9.8.D",
    "melody": "JUBILEE",
+   "key": null,
    "via": "CTP-81",
    "metric_key": "9.8.9.8.9.8.9.8",
    "melody_keys": [
@@ -971,6 +1016,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -991,6 +1037,7 @@
    ],
    "metric": "5.6.7.5 - 8.6.8.6",
    "melody": "THE NEW SONG",
+   "key": null,
    "via": "CTP-78",
    "metric_key": "5.6.7.5",
    "melody_keys": [
@@ -1013,6 +1060,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -1033,6 +1081,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -1053,6 +1102,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -1073,6 +1123,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -1093,6 +1144,7 @@
    ],
    "metric": "8.6.8.6 com estribilho",
    "melody": "DIADEM",
+   "key": null,
    "via": "CTP-91",
    "metric_key": "8.6.8.6",
    "melody_keys": [
@@ -1115,6 +1167,7 @@
    ],
    "metric": "11.11.11.11",
    "melody": "O QUANTA QUALIA",
+   "key": null,
    "via": "CTP-17",
    "metric_key": "11.11.11.11",
    "melody_keys": [
@@ -1137,6 +1190,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -1157,6 +1211,7 @@
    ],
    "metric": "7.6.7.6.D",
    "melody": "WIE LIEBLICH IST DER MAIEN",
+   "key": null,
    "via": "CTP-60",
    "metric_key": "7.6.7.6.7.6.7.6",
    "melody_keys": [
@@ -1179,6 +1234,7 @@
    ],
    "metric": "5.5.6.5.6.5.6.5",
    "melody": "JUDAS MACCABEUS",
+   "key": null,
    "via": "CTP-223",
    "metric_key": "5.5.6.5.6.5.6.5",
    "melody_keys": [
@@ -1201,6 +1257,7 @@
    ],
    "metric": "7.6.7.6.D",
    "melody": "NYLAND / WIR PFLÜGEN",
+   "key": null,
    "via": "CTP-54",
    "metric_key": "7.6.7.6.7.6.7.6",
    "melody_keys": [
@@ -1224,6 +1281,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -1244,6 +1302,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -1264,6 +1323,7 @@
    ],
    "metric": "8.7.8.7",
    "melody": "MANOAH",
+   "key": null,
    "via": "CTP-232",
    "metric_key": "8.7.8.7",
    "melody_keys": [
@@ -1286,6 +1346,7 @@
    ],
    "metric": "8.7.8.7.D",
    "melody": "TACKSÄGELSE",
+   "key": null,
    "via": "CTP-225",
    "metric_key": "8.7.8.7.8.7.8.7",
    "melody_keys": [
@@ -1308,6 +1369,7 @@
    ],
    "metric": "11.11.11.11 com estribilho",
    "melody": "MIL GRAÇAS",
+   "key": null,
    "via": "CTP-226",
    "metric_key": "11.11.11.11",
    "melody_keys": [
@@ -1330,6 +1392,7 @@
    ],
    "metric": "11.11.11.11 - 9.9.9.11",
    "melody": "COUNT YOUR BLESSINGS",
+   "key": null,
    "via": "CTP-231",
    "metric_key": "11.11.11.11",
    "melody_keys": [
@@ -1352,6 +1415,7 @@
    ],
    "metric": "11.11.11.5",
    "melody": "FLEMMING",
+   "key": null,
    "via": "CTP-92",
    "metric_key": "11.11.11.5",
    "melody_keys": [
@@ -1374,6 +1438,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -1394,6 +1459,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -1414,6 +1480,7 @@
    ],
    "metric": "10.10.10.10.",
    "melody": "DACYR",
+   "key": null,
    "via": "HCC-279",
    "metric_key": "10.10.10.10",
    "melody_keys": [
@@ -1436,6 +1503,7 @@
    ],
    "metric": "12.11.12.11",
    "melody": "TELFORD",
+   "key": null,
    "via": "CTP-46",
    "metric_key": "12.11.12.11",
    "melody_keys": [
@@ -1458,6 +1526,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -1478,6 +1547,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -1498,6 +1568,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -1518,6 +1589,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -1538,6 +1610,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -1558,6 +1631,7 @@
    ],
    "metric": "8.8.8.6 - 6.6.8.6",
    "melody": "TAKE ME AS I AM",
+   "key": null,
    "via": "CTP-205",
    "metric_key": "8.8.8.6",
    "melody_keys": [
@@ -1580,6 +1654,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -1600,6 +1675,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -1620,6 +1696,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -1640,6 +1717,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -1660,6 +1738,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -1680,6 +1759,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -1700,6 +1780,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -1720,6 +1801,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -1740,6 +1822,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -1760,6 +1843,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -1780,6 +1864,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -1800,6 +1885,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -1818,6 +1904,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -1836,6 +1923,7 @@
    "topics_canonical": [],
    "metric": "13.12.13.13.4.6",
    "melody": "SUIVEZ L'AGNEAU",
+   "key": null,
    "via": "CTP-118",
    "metric_key": "13.12.13.13.4.6",
    "melody_keys": [
@@ -1856,6 +1944,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -1874,6 +1963,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -1894,6 +1984,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -1914,6 +2005,7 @@
    ],
    "metric": "11.11.11.9. com estribilho",
    "melody": "FÉ CONTEMPLADA",
+   "key": null,
    "via": "HCC-338",
    "metric_key": "11.11.11.9",
    "melody_keys": [
@@ -1936,6 +2028,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -1956,6 +2049,7 @@
    ],
    "metric": "8.7.8.7 com estribilho",
    "melody": "THE GATE AJAR FOR ME",
+   "key": null,
    "via": "CTP-214",
    "metric_key": "8.7.8.7",
    "melody_keys": [
@@ -1978,6 +2072,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -1998,6 +2093,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -2018,6 +2114,7 @@
    ],
    "metric": "8.7.8.7 - 8.7.8.7",
    "melody": "LONE AND WEARY",
+   "key": null,
    "via": "CTP-45",
    "metric_key": "8.7.8.7",
    "melody_keys": [
@@ -2040,6 +2137,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -2060,6 +2158,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -2080,6 +2179,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -2100,6 +2200,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -2120,6 +2221,7 @@
    ],
    "metric": "8.8.8.8 - 8.8.8.8",
    "melody": "WHERE JESUS IS",
+   "key": null,
    "via": "CTP-160",
    "metric_key": "8.8.8.8",
    "melody_keys": [
@@ -2142,6 +2244,7 @@
    ],
    "metric": "8.6.8.6 - 8.6.8.6",
    "melody": "NONE BUT CHRIST",
+   "key": null,
    "via": "CTP-141",
    "metric_key": "8.6.8.6",
    "melody_keys": [
@@ -2164,6 +2267,7 @@
    ],
    "metric": "13.13.13.13. com estribilho",
    "melody": "ALMA LIBERTA",
+   "key": null,
    "via": "HCC-66",
    "metric_key": "13.13.13.13",
    "melody_keys": [
@@ -2186,6 +2290,7 @@
    ],
    "metric": "8.6.8.6 - 9.10.8.7",
    "melody": "EL NATHAN",
+   "key": null,
    "via": "CTP-142",
    "metric_key": "8.6.8.6",
    "melody_keys": [
@@ -2208,6 +2313,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -2228,6 +2334,7 @@
    ],
    "metric": "7.6.7.6 - 6.6.7.6",
    "melody": "NEAR THE CROSS",
+   "key": null,
    "via": "CTP-366",
    "metric_key": "7.6.7.6",
    "melody_keys": [
@@ -2250,6 +2357,7 @@
    ],
    "metric": "11.8.11.9 com estribilho",
    "melody": "VILLE DE HAVRE",
+   "key": null,
    "via": "CTP-208",
    "metric_key": "11.8.11.9",
    "melody_keys": [
@@ -2272,6 +2380,7 @@
    ],
    "metric": "8.7.8.7 - 7.7.8.7",
    "melody": "THE SAVIOUR WITH ME",
+   "key": null,
    "via": "CTP-203",
    "metric_key": "8.7.8.7",
    "melody_keys": [
@@ -2294,6 +2403,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -2314,6 +2424,7 @@
    ],
    "metric": "6.6.9.D com estribilho",
    "melody": "TRUST AND OBEY",
+   "key": null,
    "via": "CTP-107",
    "metric_key": "6.6.9.6.6.9",
    "melody_keys": [
@@ -2336,6 +2447,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -2356,6 +2468,7 @@
    ],
    "metric": "11.11.11.14 - 8.13.[8.13]",
    "melody": "NEVER ALONE",
+   "key": null,
    "via": "CTP-184",
    "metric_key": "11.11.11.14",
    "melody_keys": [
@@ -2378,6 +2491,7 @@
    ],
    "metric": "7.6.11. T - 7.6.11",
    "melody": "THE LILY OF THE VALLEY",
+   "key": null,
    "via": "CTP-113",
    "metric_key": "7.6.11",
    "melody_keys": [
@@ -2400,6 +2514,7 @@
    ],
    "metric": "10.9.10.9 - 10.9.10.9",
    "melody": "HEAVENLY SUNLIGHT",
+   "key": null,
    "via": "CTP-89",
    "metric_key": "10.9.10.9",
    "melody_keys": [
@@ -2422,6 +2537,7 @@
    ],
    "metric": "10.10.10.10 - 10.10.10.10",
    "melody": "MOMENT BY MOMENT",
+   "key": null,
    "via": "CTP-236",
    "metric_key": "10.10.10.10",
    "melody_keys": [
@@ -2444,6 +2560,7 @@
    ],
    "metric": "6.4.6.4.6.6.[6.]4",
    "melody": "BETHANY",
+   "key": null,
    "via": "CTP-180",
    "metric_key": "6.4.6.4.6.6.4",
    "melody_keys": [
@@ -2466,6 +2583,7 @@
    ],
    "metric": "8.7.8.7.D",
    "melody": "SHEPHERD / BRADBURY",
+   "key": null,
    "via": "CTP-26",
    "metric_key": "8.7.8.7.8.7.8.7",
    "melody_keys": [
@@ -2489,6 +2607,7 @@
    ],
    "metric": "8.7.8.7.8.8.7.7",
    "melody": "FREU DICH SEHR, O MEINE / HOMENAGEM",
+   "key": null,
    "via": "CTP-201",
    "metric_key": "8.7.8.7.8.8.7.7",
    "melody_keys": [
@@ -2512,6 +2631,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -2532,6 +2652,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -2552,6 +2673,7 @@
    ],
    "metric": "11.11.11.11",
    "melody": "ASPIRATION",
+   "key": null,
    "via": "CTP-181",
    "metric_key": "11.11.11.11",
    "melody_keys": [
@@ -2574,6 +2696,7 @@
    ],
    "metric": "9.8.8.9.5",
    "melody": "RICHIER",
+   "key": null,
    "via": "CTP-144",
    "metric_key": "9.8.8.9.5",
    "melody_keys": [
@@ -2596,6 +2719,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -2616,6 +2740,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -2636,6 +2761,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -2656,6 +2782,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -2676,6 +2803,7 @@
    ],
    "metric": "8.8.8.8.D.[8.8]",
    "melody": "SWEET HOUR",
+   "key": null,
    "via": "CTP-147",
    "metric_key": "8.8.8.8.8.8.8.8",
    "melody_keys": [
@@ -2698,6 +2826,7 @@
    ],
    "metric": "8.7.8.7.D.[7]",
    "melody": "IN THE SECRET OF HIS",
+   "key": null,
    "via": "CTP-165",
    "metric_key": "8.7.8.7.8.7.8.7",
    "melody_keys": [
@@ -2720,6 +2849,7 @@
    ],
    "metric": "11.10.11.8 - 8.6",
    "melody": "VEILLE TOUJOURS",
+   "key": null,
    "via": "CTP-148",
    "metric_key": "11.10.11.8",
    "melody_keys": [
@@ -2742,6 +2872,7 @@
    ],
    "metric": "6.4.6.4.6.6.6.4",
    "melody": "JACKSONVILLE",
+   "key": null,
    "via": "CTP-164",
    "metric_key": "6.4.6.4.6.6.6.4",
    "melody_keys": [
@@ -2764,6 +2895,7 @@
    ],
    "metric": "6.5.6.5.D",
    "melody": "HOLINESS",
+   "key": null,
    "via": "CTP-249",
    "metric_key": "6.5.6.5.6.5.6.5",
    "melody_keys": [
@@ -2786,6 +2918,7 @@
    ],
    "metric": "7.7.7.7 - 7.7.7.7.4.7",
    "melody": "COME, THOU BURNING SPIRIT",
+   "key": null,
    "via": "CTP-211",
    "metric_key": "7.7.7.7",
    "melody_keys": [
@@ -2808,6 +2941,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -2828,6 +2962,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -2848,6 +2983,7 @@
    ],
    "metric": "7.7.7.7 - 5.5.8.8",
    "melody": "MORE ABOUT JESUS",
+   "key": null,
    "via": "CTP-245",
    "metric_key": "7.7.7.7",
    "melody_keys": [
@@ -2870,6 +3006,7 @@
    ],
    "metric": "7.7.7.7.7",
    "melody": "TOPLADY",
+   "key": null,
    "via": "CTP-158",
    "metric_key": "7.7.7.7.7",
    "melody_keys": [
@@ -2892,6 +3029,7 @@
    ],
    "metric": "8.8.8.8 - 11.8.11.8",
    "melody": "A SHELTER IN THE TIME OF",
+   "key": null,
    "via": "CTP-194",
    "metric_key": "8.8.8.8",
    "melody_keys": [
@@ -2914,6 +3052,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -2934,6 +3073,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -2954,6 +3094,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -2974,6 +3115,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -2994,6 +3136,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -3014,6 +3157,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -3034,6 +3178,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -3054,6 +3199,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -3074,6 +3220,7 @@
    ],
    "metric": "10.9.10.9 - 8.9.8.9",
    "melody": "PRECIOUS PROMISE",
+   "key": null,
    "via": "CTP-191",
    "metric_key": "10.9.10.9",
    "melody_keys": [
@@ -3096,6 +3243,7 @@
    ],
    "metric": "15.15.15.6 - 8.[8.8.] 6",
    "melody": "BATTLE HYMN",
+   "key": null,
    "via": "CTP-314A",
    "metric_key": "15.15.15.6",
    "melody_keys": [
@@ -3118,6 +3266,7 @@
    ],
    "metric": "6.5.6.5.D",
    "melody": "LYNDHURST",
+   "key": null,
    "via": "CTP-175",
    "metric_key": "6.5.6.5.6.5.6.5",
    "melody_keys": [
@@ -3140,6 +3289,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -3160,6 +3310,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -3180,6 +3331,7 @@
    ],
    "metric": "8.7.8.7.D com estribilho",
    "melody": "LUNGO RIVI QUETI, OMBROSI",
+   "key": null,
    "via": "CTP-195",
    "metric_key": "8.7.8.7.8.7.8.7",
    "melody_keys": [
@@ -3202,6 +3354,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -3222,6 +3375,7 @@
    ],
    "metric": "11.10.11.10",
    "melody": "HOLD THOU MY HAND",
+   "key": null,
    "via": "CTP-154",
    "metric_key": "11.10.11.10",
    "melody_keys": [
@@ -3244,6 +3398,7 @@
    ],
    "metric": "6.5.6.5.D",
    "melody": "STERN, AUF DEN ICH SCHAUE",
+   "key": null,
    "via": "CTP-202",
    "metric_key": "6.5.6.5.6.5.6.5",
    "melody_keys": [
@@ -3266,6 +3421,7 @@
    ],
    "metric": "8.7.8.7.6.6.6.6.7",
    "melody": "EIN' FESTE BURG",
+   "key": null,
    "via": "CTP-409",
    "metric_key": "8.7.8.7.6.6.6.6.7",
    "melody_keys": [
@@ -3288,6 +3444,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -3308,6 +3465,7 @@
    ],
    "metric": "8.6.8.6 - 8.6.8.6",
    "melody": "GETHSEMANE",
+   "key": null,
    "via": "CTP-363",
    "metric_key": "8.6.8.6",
    "melody_keys": [
@@ -3330,6 +3488,7 @@
    ],
    "metric": "6.5.6.5.D",
    "melody": "BURY THY SORROW",
+   "key": null,
    "via": "CTP-213",
    "metric_key": "6.5.6.5.6.5.6.5",
    "melody_keys": [
@@ -3352,6 +3511,7 @@
    ],
    "metric": "8.7.8.7.D",
    "melody": "ERIE",
+   "key": null,
    "via": "CTP-212",
    "metric_key": "8.7.8.7.8.7.8.7",
    "melody_keys": [
@@ -3374,6 +3534,7 @@
    ],
    "metric": "8.7.8.7",
    "melody": "STUTTGART",
+   "key": null,
    "via": "CTP-31",
    "metric_key": "8.7.8.7",
    "melody_keys": [
@@ -3396,6 +3557,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -3416,6 +3578,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -3436,6 +3599,7 @@
    ],
    "metric": "11.10.11.10.D",
    "melody": "BEYOND!",
+   "key": null,
    "via": "CTP-145",
    "metric_key": "11.10.11.10.11.10.11.10",
    "melody_keys": [
@@ -3458,6 +3622,7 @@
    ],
    "metric": "6.7.6.7 - 6.7.[6.7]",
    "melody": "PRECIOUS NAME",
+   "key": null,
    "via": "CTP-283",
    "metric_key": "6.7.6.7",
    "melody_keys": [
@@ -3480,6 +3645,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -3500,6 +3666,7 @@
    ],
    "metric": "8.8.8.8. (L.M., Long Meter)",
    "melody": "LUZ",
+   "key": null,
    "via": "HCC-77",
    "metric_key": "8.8.8.8",
    "melody_keys": [
@@ -3522,6 +3689,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -3542,6 +3710,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -3562,6 +3731,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -3582,6 +3752,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -3602,6 +3773,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -3622,6 +3794,7 @@
    ],
    "metric": "8.7.8.7 - 5.7.8.7",
    "melody": "SHOWERS OF BLESSING",
+   "key": null,
    "via": "CTP-234",
    "metric_key": "8.7.8.7",
    "melody_keys": [
@@ -3644,6 +3817,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -3664,6 +3838,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -3684,6 +3859,7 @@
    ],
    "metric": "7.6.7.6",
    "melody": "EMMANUEL",
+   "key": null,
    "via": "CTP-110",
    "metric_key": "7.6.7.6",
    "melody_keys": [
@@ -3706,6 +3882,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -3726,6 +3903,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -3746,6 +3924,7 @@
    ],
    "metric": "8.6.8.6.8.8.[8.]6",
    "melody": "BETTER WORLD",
+   "key": null,
    "via": "CTP-126",
    "metric_key": "8.6.8.6.8.8.6",
    "melody_keys": [
@@ -3768,6 +3947,7 @@
    ],
    "metric": "9.9.11.11.11.11.",
    "melody": "SAUDAÇÃO",
+   "key": null,
    "via": "HCC-424",
    "metric_key": "9.9.11.11.11.11",
    "melody_keys": [
@@ -3790,6 +3970,7 @@
    ],
    "metric": "7.6.7.6.D",
    "melody": "RUTHERFORD",
+   "key": null,
    "via": "CTP-177",
    "metric_key": "7.6.7.6.7.6.7.6",
    "melody_keys": [
@@ -3812,6 +3993,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -3832,6 +4014,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -3852,6 +4035,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -3872,6 +4056,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -3892,6 +4077,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -3912,6 +4098,7 @@
    ],
    "metric": "9.9.10.9 - 6.9.9.9",
    "melody": "OH, THINK THE HOME",
+   "key": null,
    "via": "CTP-404",
    "metric_key": "9.9.10.9",
    "melody_keys": [
@@ -3934,6 +4121,7 @@
    ],
    "metric": "10.9.10.9.10.8.10.8 - 8.8.9.8",
    "melody": "THE BEAUTIFUL CITY",
+   "key": null,
    "via": "CTP-401",
    "metric_key": "10.9.10.9.10.8.10.8",
    "melody_keys": [
@@ -3956,6 +4144,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -3976,6 +4165,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -3996,6 +4186,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -4016,6 +4207,7 @@
    ],
    "metric": "7.6.7.6.8.5.8.5",
    "melody": "RIVER OF LIFE",
+   "key": null,
    "via": "CTP-405",
    "metric_key": "7.6.7.6.8.5.8.5",
    "melody_keys": [
@@ -4038,6 +4230,7 @@
    ],
    "metric": "10.9.10.9.3.[3.]10.9.9",
    "melody": "WE SPEAK OF THE REALMS",
+   "key": null,
    "via": "CTP-402",
    "metric_key": "10.9.10.9.3.10.9.9",
    "melody_keys": [
@@ -4060,6 +4253,7 @@
    ],
    "metric": "9.11.10.11 - 9.11.9.11",
    "melody": "I AM A PILGRIM",
+   "key": null,
    "via": "CTP-400",
    "metric_key": "9.11.10.11",
    "melody_keys": [
@@ -4082,6 +4276,7 @@
    ],
    "metric": "9.9.9.9 - 6.9.[6,9]",
    "melody": "SWEET BY-AND-BY",
+   "key": null,
    "via": "CTP-153",
    "metric_key": "9.9.9.9",
    "melody_keys": [
@@ -4104,6 +4299,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -4124,6 +4320,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -4144,6 +4341,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -4164,6 +4362,7 @@
    ],
    "metric": "11.8.11.8. com estribilho",
    "melody": "LOOK AND LIVE!",
+   "key": null,
    "via": "CTP-108",
    "metric_key": "11.8.11.8",
    "melody_keys": [
@@ -4186,6 +4385,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -4206,6 +4406,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -4226,6 +4427,7 @@
    ],
    "metric": "11.7.11.7. - 11.11.7",
    "melody": "SOFTLY AND TENDERLY",
+   "key": null,
    "via": "CTP-305",
    "metric_key": "11.7.11.7",
    "melody_keys": [
@@ -4248,6 +4450,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -4268,6 +4471,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -4288,6 +4492,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -4308,6 +4513,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -4328,6 +4534,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -4348,6 +4555,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -4368,6 +4576,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -4388,6 +4597,7 @@
    ],
    "metric": "11.11.11.7 - 7.7.11.7",
    "melody": "RADIANCY",
+   "key": null,
    "via": "CTP-284",
    "metric_key": "11.11.11.7",
    "melody_keys": [
@@ -4410,6 +4620,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -4430,6 +4641,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -4450,6 +4662,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -4470,6 +4683,7 @@
    ],
    "metric": "10.9.10.9. com estribilho",
    "melody": "DESTINO",
+   "key": null,
    "via": "HCC-248",
    "metric_key": "10.9.10.9",
    "melody_keys": [
@@ -4492,6 +4706,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -4512,6 +4727,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -4532,6 +4748,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -4552,6 +4769,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -4572,6 +4790,7 @@
    ],
    "metric": "9.9.9.9",
    "melody": "THEODORA",
+   "key": null,
    "via": "CTP-210",
    "metric_key": "9.9.9.9",
    "melody_keys": [
@@ -4594,6 +4813,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -4614,6 +4834,7 @@
    ],
    "metric": "8.7.8.7 - 6.7",
    "melody": "COBLENTZ",
+   "key": null,
    "via": "CTP-244",
    "metric_key": "8.7.8.7",
    "melody_keys": [
@@ -4636,6 +4857,7 @@
    ],
    "metric": "9.9.10.9 - 10.10.5.5.10",
    "melody": "CHANNEL OF BLESSING",
+   "key": null,
    "via": "CTP-241",
    "metric_key": "9.9.10.9",
    "melody_keys": [
@@ -4658,6 +4880,7 @@
    ],
    "metric": "10.7.10.7. com estribilho",
    "melody": "I AM THINE",
+   "key": null,
    "via": "HCC-361",
    "metric_key": "10.7.10.7",
    "melody_keys": [
@@ -4680,6 +4903,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -4700,6 +4924,7 @@
    ],
    "metric": "8.7.8.7",
    "melody": "MOZART / MINHA VIDA CONSAGRADA",
+   "key": null,
    "via": "CTP-247",
    "metric_key": "8.7.8.7",
    "melody_keys": [
@@ -4723,6 +4948,7 @@
    ],
    "metric": "7.7.7.7",
    "melody": "ALETTA",
+   "key": null,
    "via": "CTP-246",
    "metric_key": "7.7.7.7",
    "melody_keys": [
@@ -4745,6 +4971,7 @@
    ],
    "metric": "7.6.7.6.D - 7.6.7.6",
    "melody": "EVANGEL",
+   "key": null,
    "via": "CTP-109",
    "metric_key": "7.6.7.6.7.6.7.6",
    "melody_keys": [
@@ -4767,6 +4994,7 @@
    ],
    "metric": "8.7.8.7.D.[8.7]",
    "melody": "TELL ME THE STORY",
+   "key": null,
    "via": "CTP-111",
    "metric_key": "8.7.8.7.8.7.8.7",
    "melody_keys": [
@@ -4789,6 +5017,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -4809,6 +5038,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -4829,6 +5059,7 @@
    ],
    "metric": "12.11.12. com estribilho",
    "melody": "ADESTE FIDELES",
+   "key": null,
    "via": "HCC-90",
    "metric_key": "12.11.12",
    "melody_keys": [
@@ -4851,6 +5082,7 @@
    ],
    "metric": "13.12.13.12 - 8.10",
    "melody": "THE FIRST NOEL",
+   "key": null,
    "via": "CTP-335",
    "metric_key": "13.12.13.12",
    "melody_keys": [
@@ -4873,6 +5105,7 @@
    ],
    "metric": "8.6.8.6.7.6.8.6",
    "melody": "ST. LOUIS",
+   "key": null,
    "via": "CTP-344",
    "metric_key": "8.6.8.6.7.6.8.6",
    "melody_keys": [
@@ -4895,6 +5128,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -4915,6 +5149,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -4935,6 +5170,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -4955,6 +5191,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -4975,6 +5212,7 @@
    ],
    "metric": "8.6.8.6.[6.]8",
    "melody": "ANTIOCH",
+   "key": null,
    "via": "CTP-345",
    "metric_key": "8.6.8.6.8",
    "melody_keys": [
@@ -4997,6 +5235,7 @@
    ],
    "metric": "11.10.11.10",
    "melody": "MORNING STAR",
+   "key": null,
    "via": "CTP-355",
    "metric_key": "11.10.11.10",
    "melody_keys": [
@@ -5019,6 +5258,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -5039,6 +5279,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -5059,6 +5300,7 @@
    ],
    "metric": "8.7.8.7.8.8.7.7.7.7",
    "melody": "MENDELSSOHN",
+   "key": null,
    "via": "CTP-351",
    "metric_key": "8.7.8.7.8.8.7.7.7.7",
    "melody_keys": [
@@ -5081,6 +5323,7 @@
    ],
    "metric": "8.7.8.5.D - 8.7.8.5",
    "melody": "WAITING AT THE WELL",
+   "key": null,
    "via": "CTP-348",
    "metric_key": "8.7.8.5.8.7.8.5",
    "melody_keys": [
@@ -5103,6 +5346,7 @@
    ],
    "metric": "8.7.8.7. com estribilho",
    "melody": "REGENT SQUARE",
+   "key": null,
    "via": "HCC-97",
    "metric_key": "8.7.8.7",
    "melody_keys": [
@@ -5125,6 +5369,7 @@
    ],
    "metric": "8.7.9.9.6.[6]",
    "melody": "STILLE NACHT",
+   "key": null,
    "via": "CTP-337",
    "metric_key": "8.7.9.9.6",
    "melody_keys": [
@@ -5147,6 +5392,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -5167,6 +5413,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -5187,6 +5434,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -5207,6 +5455,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -5227,6 +5476,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -5247,6 +5497,7 @@
    ],
    "metric": "11.11.11.11",
    "melody": "MUELLER",
+   "key": null,
    "via": "CTP-342",
    "metric_key": "11.11.11.11",
    "melody_keys": [
@@ -5269,6 +5520,7 @@
    ],
    "metric": "8.6.8.6.D",
    "melody": "VOX DILECTI",
+   "key": null,
    "via": "CTP-192",
    "metric_key": "8.6.8.6.8.6.8.6",
    "melody_keys": [
@@ -5291,6 +5543,7 @@
    ],
    "metric": "7.6.7.6.D.",
    "melody": "LLANGLOFFAN",
+   "key": null,
    "via": "HCC-358",
    "metric_key": "7.6.7.6.7.6.7.6",
    "melody_keys": [
@@ -5313,6 +5566,7 @@
    ],
    "metric": "7.7.7.7. com repetição",
    "melody": "DISMISSAL",
+   "key": null,
    "via": "HCC-516",
    "metric_key": "7.7.7.7",
    "melody_keys": [
@@ -5335,6 +5589,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -5355,6 +5610,7 @@
    ],
    "metric": "8.7.9.7.8.6.10.7 - Irregular",
    "melody": "PEACE! BE STILL!",
+   "key": null,
    "via": "CTP-182",
    "metric_key": "8.7.9.7.8.6.10.7",
    "melody_keys": [
@@ -5377,6 +5633,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -5397,6 +5654,7 @@
    ],
    "metric": "8.8.8.8",
    "melody": "WAREHAM",
+   "key": null,
    "via": "CTP-360",
    "metric_key": "8.8.8.8",
    "melody_keys": [
@@ -5419,6 +5677,7 @@
    ],
    "metric": "8.6.8.6.D.8.6 com Hosana",
    "melody": "VISTA ALEGRE",
+   "key": null,
    "via": "CTP-370",
    "metric_key": "8.6.8.6.8.6.8.6.8.6",
    "melody_keys": [
@@ -5441,6 +5700,7 @@
    ],
    "metric": "8.8.8.8",
    "melody": "PREGAÇÃO",
+   "key": null,
    "via": "CTP-371",
    "metric_key": "8.8.8.8",
    "melody_keys": [
@@ -5463,6 +5723,7 @@
    ],
    "metric": "7.6.7.6.D.",
    "melody": "ST. THEODULPH",
+   "key": null,
    "via": "HCC-123",
    "metric_key": "7.6.7.6.7.6.7.6",
    "melody_keys": [
@@ -5485,6 +5746,7 @@
    ],
    "metric": "9.9.9.8.6",
    "melody": "ST. MARGARET",
+   "key": null,
    "via": "CTP-117",
    "metric_key": "9.9.9.8.6",
    "melody_keys": [
@@ -5507,6 +5769,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -5527,6 +5790,7 @@
    ],
    "metric": "8.8.8.8",
    "melody": "HAMBURG",
+   "key": null,
    "via": "CTP-364",
    "metric_key": "8.8.8.8",
    "melody_keys": [
@@ -5549,6 +5813,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -5569,6 +5834,7 @@
    ],
    "metric": "7.6.7.6.D",
    "melody": "HERZLICH THUT MICH",
+   "key": null,
    "via": "CTP-361",
    "metric_key": "7.6.7.6.7.6.7.6",
    "melody_keys": [
@@ -5591,6 +5857,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -5611,6 +5878,7 @@
    ],
    "metric": "6.6.9.D com estribilho",
    "melody": "OLD RUGGED CROSS",
+   "key": null,
    "via": "CTP-368",
    "metric_key": "6.6.9.6.6.9",
    "melody_keys": [
@@ -5633,6 +5901,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -5653,6 +5922,7 @@
    ],
    "metric": "8.7.8.7.D",
    "melody": "AGEU",
+   "key": null,
    "via": "CTP-365",
    "metric_key": "8.7.8.7.8.7.8.7",
    "melody_keys": [
@@ -5675,6 +5945,7 @@
    ],
    "metric": "8.8.8.9.8.7.8.9 - 6.6.8.8",
    "melody": "BLESSED BE THE FOUNTAIN",
+   "key": null,
    "via": "CTP-98",
    "metric_key": "8.8.8.9.8.7.8.9",
    "melody_keys": [
@@ -5697,6 +5968,7 @@
    ],
    "metric": "6.6.6.6. com estribilho",
    "melody": "KENOSIS",
+   "key": null,
    "via": "HCC-124",
    "metric_key": "6.6.6.6",
    "melody_keys": [
@@ -5719,6 +5991,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -5739,6 +6012,7 @@
    ],
    "metric": "7.4.7.4.D",
    "melody": "EASTER HYMN",
+   "key": null,
    "via": "CTP-373",
    "metric_key": "7.4.7.4.7.4.7.4",
    "melody_keys": [
@@ -5761,6 +6035,7 @@
    ],
    "metric": "11.11.11.11.11.",
    "melody": "SALVE FESTA DIES (Barnby)",
+   "key": null,
    "via": "HCC-145",
    "metric_key": "11.11.11.11.11",
    "melody_keys": [
@@ -5783,6 +6058,7 @@
    ],
    "metric": "6.5.6.4 - Irregular",
    "melody": "CHRIST AROSE",
+   "key": null,
    "via": "CTP-375",
    "metric_key": "6.5.6.4",
    "melody_keys": [
@@ -5805,6 +6081,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -5825,6 +6102,7 @@
    ],
    "metric": "7.6.7.6.D",
    "melody": "ST. KEVIN",
+   "key": null,
    "via": "CTP-376",
    "metric_key": "7.6.7.6.7.6.7.6",
    "melody_keys": [
@@ -5847,6 +6125,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -5867,6 +6146,7 @@
    ],
    "metric": "8.8.8.[8] com Aleluias",
    "melody": "FINITA / The Strife Is O'er / FINITA",
+   "key": null,
    "via": "CTP-374",
    "metric_key": "8.8.8",
    "melody_keys": [
@@ -5891,6 +6171,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -5911,6 +6192,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -5931,6 +6213,7 @@
    ],
    "metric": "8.7.8.7.D",
    "melody": "HALLELUJAH, HE IS RISEN!",
+   "key": null,
    "via": "CTP-377",
    "metric_key": "8.7.8.7.8.7.8.7",
    "melody_keys": [
@@ -5953,6 +6236,7 @@
    ],
    "metric": "8.6.8.6",
    "melody": "ST. MAGNUS",
+   "key": null,
    "via": "CTP-53",
    "metric_key": "8.6.8.6",
    "melody_keys": [
@@ -5975,6 +6259,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -5995,6 +6280,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -6015,6 +6301,7 @@
    ],
    "metric": "11.8.11.8.11.9.11.9 - 12.8.12.9",
    "melody": "CONSECRATION",
+   "key": null,
    "via": "CTP-292",
    "metric_key": "11.8.11.8.11.9.11.9",
    "melody_keys": [
@@ -6037,6 +6324,7 @@
    ],
    "metric": "7.6.7.6 - 7.6.7.6",
    "melody": "LYMINGTON",
+   "key": null,
    "via": "CTP-276",
    "metric_key": "7.6.7.6",
    "melody_keys": [
@@ -6059,6 +6347,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -6079,6 +6368,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -6099,6 +6389,7 @@
    ],
    "metric": "12.12.12.8 - 8.8.12.8",
    "melody": "THE KING'S BUSINESS",
+   "key": null,
    "via": "CTP-306",
    "metric_key": "12.12.12.8",
    "melody_keys": [
@@ -6121,6 +6412,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -6141,6 +6433,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -6161,6 +6454,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -6181,6 +6475,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -6201,6 +6496,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -6221,6 +6517,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -6241,6 +6538,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -6261,6 +6559,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -6281,6 +6580,7 @@
    ],
    "metric": "15.11.15.11 - 8.7.8.11",
    "melody": "WHEN THE ROLL IS CALLED",
+   "key": null,
    "via": "CTP-199",
    "metric_key": "15.11.15.11",
    "melody_keys": [
@@ -6303,6 +6603,7 @@
    ],
    "metric": "7.6.7.6.D",
    "melody": "AURELIA",
+   "key": null,
    "via": "CTP-410",
    "metric_key": "7.6.7.6.7.6.7.6",
    "melody_keys": [
@@ -6325,6 +6626,7 @@
    ],
    "metric": "8.7.8.7.D",
    "melody": "EBENEZER",
+   "key": null,
    "via": "CTP-151",
    "metric_key": "8.7.8.7.8.7.8.7",
    "melody_keys": [
@@ -6347,6 +6649,7 @@
    ],
    "metric": "8.7.8.7 - 7.8.7.8",
    "melody": "BEAUTIFUL RIVER",
+   "key": null,
    "via": "CTP-411",
    "metric_key": "8.7.8.7",
    "melody_keys": [
@@ -6369,6 +6672,7 @@
    ],
    "metric": "6.6.6.6.6.6.",
    "melody": "LAUDES DOMINI",
+   "key": null,
    "via": "HCC-310",
    "metric_key": "6.6.6.6.6.6",
    "melody_keys": [
@@ -6391,6 +6695,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -6411,6 +6716,7 @@
    ],
    "metric": "11.6.11.6 - 6.8.8.7",
    "melody": "THE BANNER OF THE CROSS",
+   "key": null,
    "via": "CTP-412",
    "metric_key": "11.6.11.6",
    "melody_keys": [
@@ -6433,6 +6739,7 @@
    ],
    "metric": "7.7.8.7.6.7.8.7 com estribilho",
    "melody": "THE GOSPEL BELLS",
+   "key": null,
    "via": "CTP-103",
    "metric_key": "7.7.8.7.6.7.8.7",
    "melody_keys": [
@@ -6455,6 +6762,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -6475,6 +6783,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -6495,6 +6804,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -6515,6 +6825,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -6535,6 +6846,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -6555,6 +6867,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -6575,6 +6888,7 @@
    ],
    "metric": "7.6.7.6.D",
    "melody": "WEBB",
+   "key": null,
    "via": "CTP-282",
    "metric_key": "7.6.7.6.7.6.7.6",
    "melody_keys": [
@@ -6597,6 +6911,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -6617,6 +6932,7 @@
    ],
    "metric": "11.11.11.11 - 11.11.11.11",
    "melody": "WHO IS ON THE LORD'S SIDE?",
+   "key": null,
    "via": "CTP-298",
    "metric_key": "11.11.11.11",
    "melody_keys": [
@@ -6639,6 +6955,7 @@
    ],
    "metric": "8.7.8.7.D",
    "melody": "BEECHER / CONVERSE / PROVIDENCE",
+   "key": null,
    "via": "CTP-295",
    "metric_key": "8.7.8.7.8.7.8.7",
    "melody_keys": [
@@ -6663,6 +6980,7 @@
    ],
    "metric": "12.12.12.12 - 6.6.10.8",
    "melody": "TO THE WORK!",
+   "key": null,
    "via": "CTP-309",
    "metric_key": "12.12.12.12",
    "melody_keys": [
@@ -6685,6 +7003,7 @@
    ],
    "metric": "8.7.8.7.8.6.1248.",
    "melody": "KEEGAN",
+   "key": null,
    "via": "HCC-493",
    "metric_key": "8.7.8.7.8.6.1248",
    "melody_keys": [
@@ -6707,6 +7026,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -6727,6 +7047,7 @@
    ],
    "metric": "9.6.9.6. - 14.15.15.[15.]14",
    "melody": "THEY THAT WAIT",
+   "key": null,
    "via": "CTP-274",
    "metric_key": "9.6.9.6",
    "melody_keys": [
@@ -6749,6 +7070,7 @@
    ],
    "metric": "11.11.11.7.D - 12.13.11.11.11.7",
    "melody": "HAPPY SONG",
+   "key": null,
    "via": "CTP-167",
    "metric_key": "11.11.11.7.11.11.11.7",
    "melody_keys": [
@@ -6771,6 +7093,7 @@
    ],
    "metric": "13.9.13.9 com estribilho",
    "melody": "BRIGHTEN THE CORNER",
+   "key": null,
    "via": "CTP-285",
    "metric_key": "13.9.13.9",
    "melody_keys": [
@@ -6793,6 +7116,7 @@
    ],
    "metric": "7.6.7.5.D.",
    "melody": "WORK SONG",
+   "key": null,
    "via": "HCC-492",
    "metric_key": "7.6.7.5.7.6.7.5",
    "melody_keys": [
@@ -6813,6 +7137,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -6831,6 +7156,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -6849,6 +7175,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -6867,6 +7194,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -6885,6 +7213,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -6903,6 +7232,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -6921,6 +7251,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -6939,6 +7270,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -6957,6 +7289,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -6977,6 +7310,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -6997,6 +7331,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -7017,6 +7352,7 @@
    ],
    "metric": "8.7.8.7.7.7",
    "melody": "ALIANÇA",
+   "key": null,
    "via": "CTP-270",
    "metric_key": "8.7.8.7.7.7",
    "melody_keys": [
@@ -7039,6 +7375,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -7059,6 +7396,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -7079,6 +7417,7 @@
    ],
    "metric": "11.9.11.9 - 9.9.11.9",
    "melody": "RING THE BELL",
+   "key": null,
    "via": "CTP-87",
    "metric_key": "11.9.11.9",
    "melody_keys": [
@@ -7101,6 +7440,7 @@
    ],
    "metric": "7.6.7.6.7.6.7.4. com estribilho",
    "melody": "SAFETY",
+   "key": null,
    "via": "HCC-462",
    "metric_key": "7.6.7.6.7.6.7.4",
    "melody_keys": [
@@ -7121,6 +7461,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -7139,6 +7480,7 @@
    "topics_canonical": [],
    "metric": "10.9.10.9",
    "melody": "SUBIR",
+   "key": null,
    "via": "CTP-135",
    "metric_key": "10.9.10.9",
    "melody_keys": [
@@ -7159,6 +7501,7 @@
    "topics_canonical": [],
    "metric": "8.8.8.8 com estribilho",
    "melody": "HAPPY DAY",
+   "key": null,
    "via": "CTP-116",
    "metric_key": "8.8.8.8",
    "melody_keys": [
@@ -7181,6 +7524,7 @@
    ],
    "metric": "8.6.8.6",
    "melody": "EVAN",
+   "key": null,
    "via": "CTP-252",
    "metric_key": "8.6.8.6",
    "melody_keys": [
@@ -7203,6 +7547,7 @@
    ],
    "metric": "8.8.8.7",
    "melody": "PRIUS PETENDAM",
+   "key": null,
    "via": "CTP-254",
    "metric_key": "8.8.8.7",
    "melody_keys": [
@@ -7225,6 +7570,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -7245,6 +7591,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -7265,6 +7612,7 @@
    ],
    "metric": "8.7.8.7",
    "melody": "SARDIS",
+   "key": null,
    "via": "CTP-251",
    "metric_key": "8.7.8.7",
    "melody_keys": [
@@ -7287,6 +7635,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -7307,6 +7656,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -7325,6 +7675,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -7343,6 +7694,7 @@
    "topics_canonical": [],
    "metric": "8.6.8.6",
    "melody": "GRÄFENBERG/NUN DANKET",
+   "key": null,
    "via": "CTP-7",
    "metric_key": "8.6.8.6",
    "melody_keys": [
@@ -7363,6 +7715,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -7383,6 +7736,7 @@
    ],
    "metric": "8.7.8.7.4.[4.]7.[7]",
    "melody": "CWM RHONDDA",
+   "key": null,
    "via": "CTP-101",
    "metric_key": "8.7.8.7.4.7",
    "melody_keys": [
@@ -7405,6 +7759,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -7425,6 +7780,7 @@
    ],
    "metric": "10.10.10.10",
    "melody": "BREAD OF LIFE",
+   "key": null,
    "via": "CTP-100",
    "metric_key": "10.10.10.10",
    "melody_keys": [
@@ -7447,6 +7803,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -7467,6 +7824,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -7487,6 +7845,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -7505,6 +7864,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -7523,6 +7883,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -7541,6 +7902,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -7559,6 +7921,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -7577,6 +7940,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -7595,6 +7959,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -7613,6 +7978,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -7631,6 +7997,7 @@
    "topics_canonical": [],
    "metric": "8.6.8.6 - 6.7.6.7",
    "melody": "I'LL BE A SUNBEAM",
+   "key": null,
    "via": "CTP-242",
    "metric_key": "8.6.8.6",
    "melody_keys": [
@@ -7651,6 +8018,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -7669,6 +8037,7 @@
    "topics_canonical": [],
    "metric": "8.7.8.7.",
    "melody": "REPOUSO",
+   "key": null,
    "via": "HCC-420",
    "metric_key": "8.7.8.7",
    "melody_keys": [
@@ -7689,6 +8058,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -7707,6 +8077,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -7725,6 +8096,7 @@
    "topics_canonical": [],
    "metric": "9.9.9.6 - 9.9.9.6",
    "melody": "COME TO THE SAVIOR",
+   "key": null,
    "via": "CTP-267",
    "metric_key": "9.9.9.6",
    "melody_keys": [
@@ -7745,6 +8117,7 @@
    "topics_canonical": [],
    "metric": "9.8.8.9 - 10.9.10.9",
    "melody": "GOD BE WITH YOU",
+   "key": null,
    "via": "CTP-163",
    "metric_key": "9.8.8.9",
    "melody_keys": [
@@ -7767,6 +8140,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -7787,6 +8161,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -7807,6 +8182,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -7827,6 +8203,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -7847,6 +8224,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -7867,6 +8245,7 @@
    ],
    "metric": "8.7.8.7.4.[4.]7",
    "melody": "HAVILAH",
+   "key": null,
    "via": "CTP-397",
    "metric_key": "8.7.8.7.4.7",
    "melody_keys": [
@@ -7889,6 +8268,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -7909,6 +8289,7 @@
    ],
    "metric": "6.6.4.6.6.6.4",
    "melody": "NATIONAL ANTHEM",
+   "key": null,
    "via": "CTP-418",
    "metric_key": "6.6.4.6.6.6.4",
    "melody_keys": [
@@ -7931,6 +8312,7 @@
    ],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -7951,6 +8333,7 @@
    ],
    "metric": "8.7.8.7.D.",
    "melody": "ICHTER",
+   "key": null,
    "via": "HCC-603",
    "metric_key": "8.7.8.7.8.7.8.7",
    "melody_keys": [
@@ -7973,6 +8356,7 @@
    ],
    "metric": "7.6.7.6.D",
    "melody": "KOMM, SEELE",
+   "key": null,
    "via": "CTP-419",
    "metric_key": "7.6.7.6.7.6.7.6",
    "melody_keys": [
@@ -7995,6 +8379,7 @@
    ],
    "metric": "8.7.8.7.",
    "melody": "BEM-TE-VI",
+   "key": null,
    "via": "CTP-215",
    "metric_key": "8.7.8.7",
    "melody_keys": [
@@ -8015,6 +8400,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -8033,6 +8419,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -8051,6 +8438,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -8069,6 +8457,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -8087,6 +8476,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -8105,6 +8495,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -8123,6 +8514,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -8141,6 +8533,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -8159,6 +8552,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -8177,6 +8571,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -8195,6 +8590,7 @@
    "topics_canonical": [],
    "metric": "11.11.11.11. com estribilho",
    "melody": "CRISTO AMADO",
+   "key": null,
    "via": "HCC-497",
    "metric_key": "11.11.11.11",
    "melody_keys": [
@@ -8215,6 +8611,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -8233,6 +8630,7 @@
    "topics_canonical": [],
    "metric": "11.10.11.10.",
    "melody": "O PERFECT LOVE",
+   "key": null,
    "via": "HCC-597",
    "metric_key": "11.10.11.10",
    "melody_keys": [
@@ -8253,6 +8651,7 @@
    "topics_canonical": [],
    "metric": "10.9.10.9",
    "melody": "DOCE LAR / LOVE AT HOME",
+   "key": null,
    "via": "CTP-390",
    "metric_key": "10.9.10.9",
    "melody_keys": [
@@ -8276,6 +8675,7 @@
    ],
    "metric": "7.6.7.6 - 7.6.7.6",
    "melody": "DIVINO AMOR",
+   "key": null,
    "via": "CTP-391",
    "metric_key": "7.6.7.6",
    "melody_keys": [
@@ -8296,6 +8696,7 @@
    "topics_canonical": [],
    "metric": "6.6.6.6 - 4.4.4.4",
    "melody": "DARWALL'S",
+   "key": null,
    "via": "CTP-396",
    "metric_key": "6.6.6.6",
    "melody_keys": [
@@ -8316,6 +8717,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -8334,6 +8736,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []
@@ -8352,6 +8755,7 @@
    "topics_canonical": [],
    "metric": "8.7.8.7.4.7",
    "melody": "ULPHA",
+   "key": null,
    "via": "CTP-316",
    "metric_key": "8.7.8.7.4.7",
    "melody_keys": [
@@ -8372,6 +8776,7 @@
    "topics_canonical": [],
    "metric": null,
    "melody": null,
+   "key": null,
    "via": null,
    "metric_key": null,
    "melody_keys": []

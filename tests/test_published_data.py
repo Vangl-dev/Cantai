@@ -14,7 +14,7 @@ from cantai.build import HYMNALS, build
 PROJECT = Path(__file__).resolve().parents[1]
 WEB_DATA = PROJECT / "web" / "data"
 
-MINIMUM = {"CTP": 504, "HCC": 609, "SH": 621, "HC": 640, "NC": 405}
+MINIMUM = {"CTP": 504, "HCC": 609, "SH": 621, "HC": 640, "NC": 405, "CE": 690}
 
 
 @pytest.fixture(scope="module")
@@ -144,3 +144,26 @@ def test_every_canonical_theme_has_hymns(hymns: dict[str, dict]) -> None:
     topics = json.loads((WEB_DATA / "canonical_topics.json").read_text(encoding="utf-8"))
     used = {t for h in hymns.values() for t in h["topics_canonical"]}
     assert set(topics) <= used, set(topics) - used
+
+
+def test_celebration_from_indexes(hymns: dict[str, dict]) -> None:
+    """Celebration: dados conferidos nas páginas impressas dos índices."""
+    assert hymns["CE-343"]["melody"] == "AMAZING GRACE"
+    assert hymns["CE-343"]["key"] == "G/Ab"
+    assert hymns["CE-343"]["metric_key"] == "8.6.8.6"
+    assert hymns["CE-16"]["melody"] == "DIADEM" and hymns["CE-43"]["melody"] == "CORONATION"
+    assert hymns["CE-221"]["title"] == "All Praise to Our Redeeming Lord"  # OCR leu "21"
+    assert hymns["CE-324"]["key"] == "F/g min./Ab"
+    assert "Natal" in hymns["CE-253"]["topics_canonical"]
+    # A Mighty Fortress: mesma melodia do "Castelo forte" em português
+    assert "EINFESTEBURG" in hymns["CE-151"]["melody_keys"]
+    assert "EINFESTEBURG" in hymns["CTP-409"]["melody_keys"]
+
+
+def test_celebration_has_no_lyrics_or_text_equivalences(
+    hymns: dict[str, dict], equivalences: dict[str, list[dict]]
+) -> None:
+    for hymn in hymns.values():
+        if hymn["hymnal"] == "CE":
+            assert hymn["lyrics"] == "" and hymn["via"] is None
+            assert hymn["id"] not in equivalences

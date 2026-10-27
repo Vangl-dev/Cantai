@@ -7,6 +7,8 @@ Entradas (todas versionadas no git):
     data/base/ctp_metricas.json             gerado por `cantai importar-metricas`
     data/base/hcc_metricas.json             idem
     data/base/ctp_continuacoes.json         gerado por `cantai importar-continuacoes-ctp`
+    data/base/celebration.json              gerado por `cantai importar-celebration`
+                                            (só índices: sem letra)
     data/canonical_topics.json              temas canônicos por hinário
     correspondencias ctp x sh.md            índice oficial CTP x SH
 
@@ -34,6 +36,7 @@ HYMNALS: dict[str, dict[str, str]] = {
     "SH": {"name": "Salmos e Hinos", "base": "sh.json", "output": "sh.json"},
     "HC": {"name": "Harpa Cristã", "base": "harpa.json", "output": "harpa.json"},
     "NC": {"name": "Novo Cântico", "base": "nc.json", "output": "nc.json"},
+    "CE": {"name": "Celebration Hymnal", "base": "celebration.json", "output": "celebration.json"},
 }
 
 # Ordem de preferência ao herdar métrica/melodia de um hino equivalente
@@ -66,6 +69,7 @@ def _make(hymnal: str, raw: dict, **extra: Any) -> dict:
         "topics_canonical": [],
         "metric": None,
         "melody": None,
+        "key": raw.get("key"),
         "via": None,
     }
     hymn.update(extra)
@@ -187,11 +191,16 @@ def normalize_simple(hymnal: str, base: list[dict]) -> list[dict]:
     return [_make(hymnal, raw) for raw in base]
 
 
+def normalize_celebration(base: list[dict]) -> list[dict]:
+    """Celebration Hymnal: melodia, métrica e tom vêm do próprio índice."""
+    return [_make("CE", raw, metric=raw["metric"], melody=raw["melody"]) for raw in base]
+
+
 # --- Temas, equivalências e herança -----------------------------------------
 
 
 # O SH usa o mesmo vocabulário de temas do CTP
-_TOPIC_KEYS = {"CTP": "ctp", "HCC": "hcc", "SH": "ctp", "HC": "hc", "NC": "nc"}
+_TOPIC_KEYS = {"CTP": "ctp", "HCC": "hcc", "SH": "ctp", "HC": "hc", "NC": "nc", "CE": "ce"}
 
 
 def apply_canonical_topics(hymns: list[dict], canonical: dict[str, dict]) -> None:
@@ -287,6 +296,7 @@ def build(project_dir: Path, web_dir: Path | None = None) -> dict[str, Any]:
         "SH": normalize_sh(_load(base_dir / "sh.json")),
         "HC": normalize_simple("HC", _load(base_dir / "harpa.json")),
         "NC": normalize_simple("NC", _load(base_dir / "nc.json")),
+        "CE": normalize_celebration(_load(base_dir / "celebration.json")),
     }
     all_hymns = [h for hymns in hymns_by_hymnal.values() for h in hymns]
 
@@ -295,7 +305,9 @@ def build(project_dir: Path, web_dir: Path | None = None) -> dict[str, Any]:
 
     manual = official_pairs(all_hymns, project_dir / "correspondencias ctp x sh.md")
     manual += hcc_manual_pairs(hcc_base)
-    equivalences = build_equivalences(all_hymns, manual)
+    # Equivalência é pelo texto da letra; o Celebration (sem letra) se liga
+    # aos outros pela melodia, na própria tela do hino
+    equivalences = build_equivalences([h for h in all_hymns if h["hymnal"] != "CE"], manual)
     inherit_from_equivalents(all_hymns, equivalences)
     add_keys(all_hymns)
 
