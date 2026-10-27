@@ -3,6 +3,24 @@
 Selecionador de hinos para o culto: letra, métrica, melodia original, temas e
 o mesmo hino em outros hinários. Ajuda a pianista a escolher as músicas.
 
+![Página do hino no computador, com o culto ao lado](docs/img/tela-computador.png)
+
+## O que o app faz
+
+- **Busca** por título, primeira linha, número ("sh 30", "ctp 314b") ou tema,
+  nos cinco hinários de uma vez ou só nos marcados.
+- **Página do hino**: letra (tamanho ajustável com A / A), métrica, melodia
+  original e temas. Tocar na métrica ou na melodia lista os hinos que podem
+  ser cantados com a mesma música, em qualquer hinário.
+- **Em outros hinários**: o mesmo hino no CTP, HCC, SH, Harpa e Novo Cântico.
+- **Culto**: o "+" ao lado de cada hino monta a ordem do culto. Dá para dar
+  nome e data, marcar o momento (Abertura, Ofertório, Ceia…), arrastar para
+  reordenar, compartilhar pelo WhatsApp e guardar cultos para reabrir depois.
+  No celular, o culto fica numa barra embaixo da tela; no computador, ao lado.
+- Modo escuro automático e instalação na tela inicial do celular.
+
+<img src="docs/img/tela-celular-culto.png" alt="Painel do culto no celular" width="300">
+
 ## Hinários
 
 | Código | Hinário | Hinos | Métrica/melodia |
@@ -38,7 +56,7 @@ texto da letra (mesma sequência de palavras), mais o índice oficial CTP × SH.
 pip install -e ".[dev]"
 
 PYTHONPATH=src python3 -m cantai.cli build      # gera web/data
-PYTHONPATH=src python3 -m cantai.cli preview    # http://localhost:8000
+PYTHONPATH=src python3 -m cantai.cli preview    # http://localhost:8000 (--port 8080 para outra porta)
 python3 -m pytest                                # testes
 ```
 
